@@ -1,0 +1,22 @@
+﻿<fscm:GeneralView x:Class="ForensicStudio.Module.Main.View.Company.CompanyPanelView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:fsc="ForensicStudioControls"
+                  xmlns:fscm="ForensicStudioCoreModule"
+                  mc:Ignorable="d"
+                  d:DesignHeight="300" d:DesignWidth="300">
+    <fsc:FsFlowLayoutControl>
+        <fsc:FsSimpleButton Content="Button 01" />
+        <fsc:FsSimpleButton Content="Button 02" />
+        <fsc:FsSimpleButton Content="Button 03" />
+        <fsc:FsSimpleButton Content="Button 04" />
+        <fsc:FsSimpleButton Content="Button 05" />
+        <fsc:FsSimpleButton Content="Button 06" />
+        <fsc:FsSimpleButton Content="Button 07" />
+        <fsc:FsSimpleButton Content="Button 08" />
+        <fsc:FsSimpleButton Content="Button 09" />
+        <fsc:FsSimpleButton Content="Button 10" />
+    </fsc:FsFlowLayoutControl>
+</fscm:GeneralView>

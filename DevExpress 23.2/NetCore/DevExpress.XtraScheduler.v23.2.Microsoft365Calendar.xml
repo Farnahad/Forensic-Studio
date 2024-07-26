@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.XtraScheduler.v23.2.Microsoft365Calendar</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.XtraScheduler.Microsoft365Calendar">
+      <summary>
+        <para>Includes API that implements <see href="https://docs.devexpress.com/WindowsForms/404317/controls-and-libraries/scheduler/import-and-export/synchronization-with-outlook-365-calendars">synchronization with Microsoft 365 Calendars</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.Microsoft365Calendar.ConvertEventArgs">
+      <summary>
+        <para>Contains data for the <see cref="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.CustomizeAppointmentToEvent"/> and <see cref="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.CustomizeEventToAppointment"/> events.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.ConvertEventArgs.#ctor(DevExpress.XtraScheduler.Appointment,Microsoft.Graph.Event)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.ConvertEventArgs"/> class.</para>
+      </summary>
+      <param name="appointment">The appointment. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.ConvertEventArgs.Appointment"/> property.</param>
+      <param name="outlookEvent">The Outlook 365 event. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.ConvertEventArgs.Event"/> property.</param>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.ConvertEventArgs.Appointment">
+      <summary>
+        <para>Gets a user appointment in the Scheduler control.</para>
+      </summary>
+      <value>The appointment.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.ConvertEventArgs.Event">
+      <summary>
+        <para>Gets an Outlook 365 event.</para>
+      </summary>
+      <value>The event.</value>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync">
+      <summary>
+        <para>A component that allows you to synchronize user appointments in WinForms Scheduler/WPF Scheduler with Outlook 365 Calendars (bi-directionally).</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.#ctor(DevExpress.XtraScheduler.ISchedulerStorageBase,DevExpress.XtraScheduler.Microsoft365Calendar.IOutlookEngine)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync"/> class with the specified storage and access token.</para>
+      </summary>
+      <param name="_storage">An object that implements the <see cref="T:DevExpress.XtraScheduler.ISchedulerStorage"/> interface. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.Storage"/> property.</param>
+      <param name="engine">An object that implements the IOutlookEngine interface (with the specified access token). This value is assigned to the <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.OutlookEngine"/> property.</param>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.#ctor(DevExpress.XtraScheduler.ISchedulerStorageBase)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync"/> class with the specified Scheduler Storage component.</para>
+      </summary>
+      <param name="_storage">An object that implements the <see cref="T:DevExpress.XtraScheduler.ISchedulerStorage"/> interface. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.Storage"/> property.</param>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync"/> class with the specified container.</para>
+      </summary>
+      <param name="components">An object that implements the IContainer interface and owns the DXOutlook365Sync component.</param>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.Calendars">
+      <summary>
+        <para>Gets a collection of Outlook 365 calendars.</para>
+      </summary>
+      <value>A collection of <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.OutlookCalendarItem"/> objects that correspond to Office365 calendars.</value>
+    </member>
+    <member name="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.CalendarSynchronizeComplete">
+      <summary>
+        <para>Occurs once the calendar synchronization is complete (with or without errors).</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.CustomizeAppointmentToEvent">
+      <summary>
+        <para>Allows you to customize an event when the corresponding appointment is exported (or merged) to an Outlook 365 calendar.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.CustomizeEventToAppointment">
+      <summary>
+        <para>Allows you to customize an appointment when the corresponding event is imported (or merged) from an Outlook 365 calendar.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.EnableAllCalendars">
+      <summary>
+        <para>Enables synchronization for all calendars in <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.Calendars"/>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.EnableCalendar(System.String)">
+      <summary>
+        <para>Enables synchronization for the specified calendar and disables synchronization for other calendars in <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.Calendars"/>.</para>
+      </summary>
+      <param name="calendarId">A string value that identifies a specific calendar in <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.Calendars"/>.</param>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.ExportSchedulerToOutlookAsync(System.Boolean)">
+      <summary>
+        <para>Exports the Scheduler’s appointments to Outlook 365 calendars with synchronization enabled.</para>
+      </summary>
+      <param name="canRemoveOutlookEvents">true to clear Outlook 365 calendars before export; otherwise, false.</param>
+      <returns>The asynchronous operation.</returns>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.ImportOutlookToSchedulerAsync(System.Boolean)">
+      <summary>
+        <para>Imports events from Outlook 365 calendars with synchronization enabled to the Scheduler control.</para>
+      </summary>
+      <param name="canRemoveSchedulerAppointments">true to clear appointments before import; otherwise, false.</param>
+      <returns>The asynchronous operation.</returns>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.InitAsync">
+      <summary>
+        <para>Initializes the DXOutlook365Sync component.</para>
+      </summary>
+      <returns>A value that indicates the result of initialization.</returns>
+    </member>
+    <member name="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.InitComplete">
+      <summary>
+        <para>Occurs once the initialization of DXOutlook365Sync is finished (with or without errors).</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.MergeComplete">
+      <summary>
+        <para>Occurs after a merge operation has completed.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.MergeConflictResolve">
+      <summary>
+        <para>Allows you to resolve a merge conflict.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.MergeSchedulerAndOutlookAsync(DevExpress.XtraScheduler.Microsoft365Calendar.MergeSolvers.IMergeSolver)">
+      <summary>
+        <para>Merges the Scheduler control with Outlook 365 calendars based on a custom merge rule.</para>
+      </summary>
+      <param name="solver">An object that implements a merge rule.</param>
+      <returns>The task.</returns>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.MergeSchedulerAndOutlookAsync(System.Boolean)">
+      <summary>
+        <para>Merges the Scheduler control with Outlook 365 calendars.</para>
+      </summary>
+      <param name="useTracker">true to use a version control system of the <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync"/> component; otherwise, false.</param>
+      <returns>The task.</returns>
+    </member>
+    <member name="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.MergeSingleItem">
+      <summary>
+        <para>Allows you to specify a merge action based on a condition.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.OutlookEngine">
+      <summary>
+        <para>Gets or sets an object that implements the code required to acquire a token using the Microsoft Authentication Library (MSAL).</para>
+      </summary>
+      <value>An object that implements the IOutlookEngine interface (with the specified access token).</value>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.ResetTracker">
+      <summary>
+        <para>This method supports the internal infrastructure and is not intended for use in code.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.Storage">
+      <summary>
+        <para>Gets or sets a storage whose appointments should be synchronized with Outlook 365 calendars.</para>
+      </summary>
+      <value>An object that implements the <see cref="T:DevExpress.XtraScheduler.ISchedulerStorage"/> interface. Accepts the <see cref="T:DevExpress.XtraScheduler.SchedulerStorage"/> and <see cref="T:DevExpress.XtraScheduler.SchedulerDataStorage"/> storages.</value>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.SynchronizeCalendarsAsync">
+      <summary>
+        <para>Synchronizes the calendars.</para>
+      </summary>
+      <returns>The asynchronous operation.</returns>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.Microsoft365Calendar.InitCompleteEventArgs">
+      <summary>
+        <para>Contains data for the <see cref="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.InitComplete"/> event.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.InitCompleteEventArgs.#ctor(DevExpress.XtraScheduler.Microsoft365Calendar.InitStatus,System.Exception)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.InitCompleteEventArgs"/> class with specified settings.</para>
+      </summary>
+      <param name="initStatus">A value that indicates whether the initialization succeeded or failed. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.InitCompleteEventArgs.InitStatus"/> property.</param>
+      <param name="exception">The exception (if initialization failed).</param>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.InitCompleteEventArgs.InitStatus">
+      <summary>
+        <para>Gets a value that indicates whether DXOutlook365Sync initialization succeeded or failed.</para>
+      </summary>
+      <value>A value that indicates whether the initialization succeeded or failed.</value>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.Microsoft365Calendar.InitStatus">
+      <summary>
+        <para>Enumerates values that indicate the result of DXOutlook365Sync initialization.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraScheduler.Microsoft365Calendar.InitStatus.Error">
+      <summary>
+        <para>A DXOutlook365Sync component was not initialized. The initialization failed.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraScheduler.Microsoft365Calendar.InitStatus.InitializedBefore">
+      <summary>
+        <para>A DXOutlook365Sync component has already been initialized.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraScheduler.Microsoft365Calendar.InitStatus.Success">
+      <summary>
+        <para>A DXOutlook365Sync component was initialized without errors.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.Microsoft365Calendar.MergeActionType">
+      <summary>
+        <para>Enumerates values that specify a merge action.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraScheduler.Microsoft365Calendar.MergeActionType.DeleteAppointment">
+      <summary>
+        <para>Delete an appointment.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraScheduler.Microsoft365Calendar.MergeActionType.DeleteEvent">
+      <summary>
+        <para>Delete an event.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraScheduler.Microsoft365Calendar.MergeActionType.DoNothing">
+      <summary>
+        <para>Do nothing.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraScheduler.Microsoft365Calendar.MergeActionType.InsertOrUpdateAppointment">
+      <summary>
+        <para>Insert or update an appointment.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraScheduler.Microsoft365Calendar.MergeActionType.InsertOrUpdateEvent">
+      <summary>
+        <para>Insert or update an event.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs">
+      <summary>
+        <para>Contains data for the <see cref="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.MergeSingleItem"/> and <see cref="E:DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync.MergeConflictResolve"/> events.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.#ctor(DevExpress.XtraScheduler.Microsoft365Calendar.DXOutlook365Sync)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.ActionType">
+      <summary>
+        <para>Gets or sets a merge action.</para>
+      </summary>
+      <value>A value that specifies the merge action.</value>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.ConvertAppointmentToEvent(DevExpress.XtraScheduler.Appointment)">
+      <summary>
+        <para>Converts the specified appointment to an Outlook 365 event.</para>
+      </summary>
+      <param name="apt">The appointment to convert to an event.</param>
+      <returns>The event that is the result of the conversion.</returns>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.ConvertEventToAppointment(Microsoft.Graph.Event,System.String,System.Boolean)">
+      <summary>
+        <para>Converts the specified Outlook 365 event to an appointment.</para>
+      </summary>
+      <param name="outlookEvent">The Outlook 365 event to convert to an appointment.</param>
+      <param name="calendarId">A string value that uniquely identifies an Outlook 365 calendar.</param>
+      <param name="addReminders">true to add event reminders to an appointment; otherwise, false.</param>
+      <returns>The appointment that is the result of the conversion.</returns>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.Handled">
+      <summary>
+        <para>Gets or sets a value that specifies whether a merge operation was handled and no default processing is required.</para>
+      </summary>
+      <value>true if a merge operation was handled and no default processing is required; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.IsMergeConflict">
+      <summary>
+        <para>Gets a value that indicates whether a merge conflict was detected.</para>
+      </summary>
+      <value>true if a merge conflict was detected; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.OutlookEvent">
+      <summary>
+        <para>Gets a source event in a user calendar or the default calendar in Outlook365.</para>
+      </summary>
+      <value>The event.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.SchedulerAppointment">
+      <summary>
+        <para>Gets a source <see href="https://docs.devexpress.com/WindowsForms/1753/controls-and-libraries/scheduler/appointments">appointment</see>.</para>
+      </summary>
+      <value>The appointment.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.TargetOutlookEvent">
+      <summary>
+        <para>Gets or sets the target Outlook 365 event.</para>
+      </summary>
+      <value>The event.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.Outlook365CalendarMergeEventArgs.TargetSchedulerAppointment">
+      <summary>
+        <para>Gets or sets the target <see href="https://docs.devexpress.com/WindowsForms/1753/controls-and-libraries/scheduler/appointments">appointment</see>.</para>
+      </summary>
+      <value>The appointment.</value>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.Microsoft365Calendar.OutlookCalendarItem">
+      <summary>
+        <para>Contains settings of an Outlook 365 calendar.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.Microsoft365Calendar.OutlookCalendarItem.#ctor(System.String,System.String,System.Boolean)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.Microsoft365Calendar.OutlookCalendarItem"/> class with specified settings.</para>
+      </summary>
+      <param name="calendarId">A string value that uniquely identifies the calendar. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.OutlookCalendarItem.CalendarId"/> property.</param>
+      <param name="calendarName">The calendar name. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.Microsoft365Calendar.OutlookCalendarItem.CalendarName"/> property.</param>
+      <param name="enableSynchronization">true to enable synchronization; otherwise, false.</param>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.OutlookCalendarItem.CalendarId">
+      <summary>
+        <para>Gets a value that uniquely identifies the calendar.</para>
+      </summary>
+      <value>A string value that uniquely identifies the calendar.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.OutlookCalendarItem.CalendarName">
+      <summary>
+        <para>Gets the calendar name.</para>
+      </summary>
+      <value>The calendar name.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.Microsoft365Calendar.OutlookCalendarItem.EnableSynchronization">
+      <summary>
+        <para>Gets or sets whether to enable synchronization.</para>
+      </summary>
+      <value>true to enable synchronization; otherwise, false.</value>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.AspNetCore.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.AspNetCore">
+      <summary>
+        <para>Contains additional services for XAF and non-XAF ASP.NET Core applications.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.AspNetCore.AspNetCoreApplication">
+      <summary>
+        <para>The base class with additional services for XAF and non-XAF ASP.NET Core applications.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.AspNetCore.AspNetCoreApplication.#ctor(DevExpress.ExpressApp.DC.ITypesInfo)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.AspNetCore.AspNetCoreApplication"/> class with specified settings.</para>
+      </summary>
+    </member>
+  </members>
+</doc>

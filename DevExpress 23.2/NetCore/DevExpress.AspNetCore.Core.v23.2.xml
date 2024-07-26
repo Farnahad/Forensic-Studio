@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.AspNetCore.Core.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.Web.Office">
+      <summary>
+        <para>Contains classes that implement the document management functionality common for the ASP.NET Core Spreadsheet control.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Web.Office.AutoSaveMode">
+      <summary>
+        <para>Lists values specifying the auto-save mode.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Web.Office.AutoSaveMode.Default">
+      <summary>
+        <para>Specifies the default auto-saving mode.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Web.Office.AutoSaveMode.On">
+      <summary>
+        <para>The auto-saving mode is explicitly set to “On” for the control.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Web.Office.HibernationOptions">
+      <summary>
+        <para>Contains the Spreadsheet hibernation options.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Web.Office.HibernationOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Web.Office.HibernationOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Web.Office.HibernationOptions.AllDocumentsOnApplicationEnd">
+      <summary>
+        <para>Specifies whether all open documents should be hibernated on application end.</para>
+      </summary>
+      <value>true, if all documents should be hibernated; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Web.Office.HibernationOptions.DocumentsDisposeTimeout">
+      <summary>
+        <para>Specifies how long hibernated documents are stored on the server before disposal.</para>
+      </summary>
+      <value>An object that specifies the storage time for hibernated documents.</value>
+    </member>
+    <member name="P:DevExpress.Web.Office.HibernationOptions.StoragePath">
+      <summary>
+        <para>Specifies a path to a server directory where to store hibernated documents.</para>
+      </summary>
+      <value>A path to a server directory.</value>
+    </member>
+    <member name="P:DevExpress.Web.Office.HibernationOptions.Timeout">
+      <summary>
+        <para>Specifies the idle timeout after which an open document is hibernated.</para>
+      </summary>
+      <value>An object that specifies the idle timeout.</value>
+    </member>
+    <member name="T:DevExpress.Web.Office.IOfficeStateStorageRemote">
+      <summary>
+        <para>Declares members to store session-states in a remote storage.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Web.Office.IOfficeStateStorageRemote.AddCheckedOut(System.String,System.String)">
+      <summary>
+        <para>Adds a state of a checked out session to the storage.</para>
+      </summary>
+      <param name="workSessionId">The ID of a session.</param>
+      <param name="documentId">The ID of a document.</param>
+      <returns>true if a session state was successfully added to the storage; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Web.Office.IOfficeStateStorageRemote.CheckIn(System.String,System.String,System.String)">
+      <summary>
+        <para>Checks in the session with the specified ID.</para>
+      </summary>
+      <param name="workSessionId">The ID of a session.</param>
+      <param name="documentId">The ID of a document.</param>
+      <param name="workSessionState">The session state.</param>
+      <returns>true, if the session was successfully checked in; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Web.Office.IOfficeStateStorageRemote.CheckOut(System.String,System.String@)">
+      <summary>
+        <para>Checks out the session with the specified ID.</para>
+      </summary>
+      <param name="workSessionId">The ID of a session to check out.</param>
+      <param name="workSessionState">The session state.</param>
+      <returns>true, if the session was successfully checked out; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Web.Office.IOfficeStateStorageRemote.FindWorkSessionId(System.String)">
+      <summary>
+        <para>Returns an ID of the specified document’s session.</para>
+      </summary>
+      <param name="documentId">The ID of a document.</param>
+      <returns>The ID of a session.</returns>
+    </member>
+    <member name="M:DevExpress.Web.Office.IOfficeStateStorageRemote.Get(System.String)">
+      <summary>
+        <para>Returns a value of the variable with the specified name.</para>
+      </summary>
+      <param name="key">The key name.</param>
+      <returns>The value.</returns>
+    </member>
+    <member name="M:DevExpress.Web.Office.IOfficeStateStorageRemote.HasWorkSessionId(System.String)">
+      <summary>
+        <para>Indicates whether the storage has a session with the specified ID.</para>
+      </summary>
+      <param name="workSessionId">The ID of a session.</param>
+      <returns>true, if the provider stores a session with the specified ID; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Web.Office.IOfficeStateStorageRemote.Remove(System.String)">
+      <summary>
+        <para>Removes a session with the specified ID.</para>
+      </summary>
+      <param name="workSessionId">The ID of a session to remove.</param>
+    </member>
+    <member name="M:DevExpress.Web.Office.IOfficeStateStorageRemote.Set(System.String,System.String)">
+      <summary>
+        <para>Sets a value for the variable with the specified name.</para>
+      </summary>
+      <param name="key">The key name.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:DevExpress.Web.Office.IOfficeStateStorageRemote.UndoCheckOut(System.String)">
+      <summary>
+        <para>Discards all changes to the session since the last call to the <see cref="M:DevExpress.Web.Office.IOfficeStateStorageRemote.CheckOut(System.String,System.String@)"/> method.</para>
+      </summary>
+      <param name="workSessionId">The ID of a session.</param>
+    </member>
+    <member name="T:DevExpress.Web.Office.OfficeStateProviderBase">
+      <summary>
+        <para>Defines the required members of a session-state store provider.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Web.Office.OfficeStateProviderBase.#ctor(DevExpress.Web.Office.IOfficeStateStorageRemote)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Web.Office.OfficeStateProviderBase"/> class with specified settings.</para>
+      </summary>
+      <param name="storageRemote">The remote storage.</param>
+    </member>
+    <member name="M:DevExpress.Web.Office.OfficeStateProviderBase.FindWorkSessionId(System.String)">
+      <summary>
+        <para>Returns an ID of the specified document’s session.</para>
+      </summary>
+      <param name="documentId">The ID of a document.</param>
+      <returns>The ID of a session.</returns>
+    </member>
+    <member name="M:DevExpress.Web.Office.OfficeStateProviderBase.Get(System.String)">
+      <summary>
+        <para>Returns a value of the variable with the specified name.</para>
+      </summary>
+      <param name="key">The key name.</param>
+      <returns>The value.</returns>
+    </member>
+    <member name="P:DevExpress.Web.Office.OfficeStateProviderBase.GlobalLockerId">
+      <summary>
+        <para>Returns an identifier of a global lock.</para>
+      </summary>
+      <value>The global lock identifier.</value>
+    </member>
+    <member name="M:DevExpress.Web.Office.OfficeStateProviderBase.HasWorkSessionId(System.Guid)">
+      <summary>
+        <para>Indicates whether the provider stores a session with the specified ID.</para>
+      </summary>
+      <param name="workSessionId">The ID of a session.</param>
+      <returns>true, if the provider stores a session with the specified ID; otherwise, false.</returns>
+    </member>
+    <member name="P:DevExpress.Web.Office.OfficeStateProviderBase.LocalLockerId">
+      <summary>
+        <para>Returns an identifier of a local lock.</para>
+      </summary>
+      <value>The local lock identifier.</value>
+    </member>
+    <member name="M:DevExpress.Web.Office.OfficeStateProviderBase.Remove(System.Guid)">
+      <summary>
+        <para>Removes a session with the specified ID.</para>
+      </summary>
+      <param name="workSessionId">The ID of a session to remove.</param>
+    </member>
+    <member name="M:DevExpress.Web.Office.OfficeStateProviderBase.Set(System.String,System.String)">
+      <summary>
+        <para>Sets a value for the variable with the specified name.</para>
+      </summary>
+      <param name="key">The key name.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="P:DevExpress.Web.Office.OfficeStateProviderBase.Storage">
+      <summary>
+        <para>Specifies a remote storage for session states.</para>
+      </summary>
+      <value>An object that is the session-state storage.</value>
+    </member>
+    <member name="M:DevExpress.Web.Office.OfficeStateProviderBase.UndoCheckOut(System.Guid)">
+      <summary>
+        <para>Discards all changes to the session since the last check out.</para>
+      </summary>
+      <param name="workSessionId">The ID of a session.</param>
+    </member>
+  </members>
+</doc>

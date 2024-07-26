@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.Dashboard.v23.2.Blazor</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.DashboardBlazor">
+      <summary>
+        <para>Contains classes for the DevExpress Dashboard component for Blazor.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxBackendOptions">
+      <summary>
+        <para>Contains options that allow you to configure the Dashboard component’s backend.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxBackendOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxBackendOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxBackendOptions.RequestHttpHeaders">
+      <summary>
+        <para>Specifies HTTP headers that are sent to the server.</para>
+      </summary>
+      <value>An object that is a collection of request headers and values.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxDashboard">
+      <summary>
+        <para>A Dashboard component.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxDashboard.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxDashboard"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.AllowMaximizeItems">
+      <summary>
+        <para>Specifies whether users can maximize dashboard items.</para>
+      </summary>
+      <value>true to allow users to maximize dashboard items; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.DashboardId">
+      <summary>
+        <para>Specifies the identifier of the dashboard to be opened in the Dashboard component.</para>
+      </summary>
+      <value>A string that is a dashboard identifier.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.DashboardIdChanged">
+      <summary>
+        <para>Fires after the dashboard identifier is changed.</para>
+      </summary>
+      <param>A string that is a new value of the <see cref="P:DevExpress.DashboardBlazor.DxDashboard.DashboardId"/> property.</param>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.EncodeHtml">
+      <summary>
+        <para>Specifies whether the DxDashboard’s value and element content are rendered as HTML or if HTML markers are omitted.</para>
+      </summary>
+      <value>true if the HTML code in the DxDashboard’s value and element content are not executed and converted to text; false if the DxDashboard’s value and element content can contain HTML code.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.Endpoint">
+      <summary>
+        <para>Specifies the URL the Dashboard component uses to send data requests to a server.</para>
+      </summary>
+      <value>A string value that specifies the endpoint URL prefix used to send data requests to a server.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.InitialDashboardId">
+      <summary>
+        <para>Specifies the identifier of the dashboard to be loaded to the DxDashboard before the component is rendered.</para>
+      </summary>
+      <value>A string value that specifies the dashboard identifier.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.InitialDashboardState">
+      <summary>
+        <para>Specifies the state of the dashboard to be loaded to the DxDashboard before the component is rendered.</para>
+      </summary>
+      <value>A string value that specifies the dashboard state in JSON format.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.LimitVisibleDataMode">
+      <summary>
+        <para>Specifies a data limitation mode that allows you to display a reduced form of visible data.</para>
+      </summary>
+      <value>A value that specifies the data limitation mode.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.LoadDefaultDashboard">
+      <summary>
+        <para>Specifies whether the default dashboard should be loaded from dashboard storage.</para>
+      </summary>
+      <value>true to load the default dashboard from the dashboard storage; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.Nonce">
+      <summary>
+        <para>Specifies the nonce value.</para>
+      </summary>
+      <value>A <see cref="T:System.String"/> that specifies the nonce value.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.ResizeByTimer">
+      <summary>
+        <para>Specifies whether to redraw the Dashboard component when the size of its container changes.</para>
+      </summary>
+      <value>true to redraw the Dashboard component when the size of its container changes; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.ShowConfirmationOnBrowserClosing">
+      <summary>
+        <para>Specifies whether to show a warning in a browser if a user attempts to leave the page with unsaved data.</para>
+      </summary>
+      <value>true to show a warning; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.UseCardLegacyLayout">
+      <summary>
+        <para>Specifies whether to enable the legacy card layout used before v17.1.</para>
+      </summary>
+      <value>true to enable the legacy card layout used before v17.1; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.UseNeutralFilterMode">
+      <summary>
+        <para>Specifies whether to show all items in the filter elements deselected by default.</para>
+      </summary>
+      <value>true to activate <see href="https://docs.devexpress.com/Dashboard/400262/common-features/interactivity/neutral-filter-mode">Neutral Filter Mode</see>; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.WorkingMode">
+      <summary>
+        <para>Specifies the Dashboard component’s working mode.</para>
+      </summary>
+      <value>A value that specifies the Dashboard component’s working mode.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboard.WorkingModeChanged">
+      <summary>
+        <para>Fires after the working mode is changed.</para>
+      </summary>
+      <param>A new <see cref="P:DevExpress.DashboardBlazor.DxDashboard.WorkingMode"/> property value.</param>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxDashboardExport">
+      <summary>
+        <para>Contains export settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxDashboardExport.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxDashboardExport"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboardExport.AllowExportDashboard">
+      <summary>
+        <para>Specifies whether a user can export a dashboard.</para>
+      </summary>
+      <value>true if a user can export a dashboard; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboardExport.AllowExportDashboardItems">
+      <summary>
+        <para>Specifies whether a user can export dashboard items.</para>
+      </summary>
+      <value>true if a user can export dashboard items; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDashboardExport.Unregister">
+      <summary>
+        <para>Specifies whether to unregister the <b>DevExpress.Dashboard.DashboardExportExtension</b> to remove its functionality from the Web Dashboard.</para>
+      </summary>
+      <value>true to unregister the extension; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxDataInspector">
+      <summary>
+        <para>Contains <see href="https://docs.devexpress.com/Dashboard/401194/common-features/underlying-and-displayed-data/data-inspector">Data Inspector</see> settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxDataInspector.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxDataInspector"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDataInspector.AllowInspectAggregatedData">
+      <summary>
+        <para>Specifies whether to display aggregated data in the <see href="https://docs.devexpress.com/Dashboard/401194/common-features/underlying-and-displayed-data/data-inspector">Data Inspector</see>.</para>
+      </summary>
+      <value>true to display aggregated data in the Data Inspector; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDataInspector.AllowInspectRawData">
+      <summary>
+        <para>Specifies whether to display raw data in the <see href="https://docs.devexpress.com/Dashboard/401194/common-features/underlying-and-displayed-data/data-inspector">Data Inspector</see>.</para>
+      </summary>
+      <value>true to display raw data in the Data Inspector; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDataInspector.Unregister">
+      <summary>
+        <para>Specifies whether to unregister the <b>DevExpress.Dashboard.DataInspectorExtension</b> to remove its functionality from the Web Dashboard.</para>
+      </summary>
+      <value>true to unregister the extension; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxDataRequestOptions">
+      <summary>
+        <para>Contains options that allow you to configure data request parameters.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxDataRequestOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxDataRequestOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDataRequestOptions.ItemDataLoadingMode">
+      <summary>
+        <para>Specifies whether to load data for items that are not displayed.</para>
+      </summary>
+      <value>An <see cref="T:DevExpress.DashboardWeb.ItemDataLoadingMode"/> enumeration value that specifies whether to load data for items that are not displayed.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDataRequestOptions.ItemDataRequestMode">
+      <summary>
+        <para>Specifies whether a dashboard control uses batch requests or separate requests to load dashboard items’ data.</para>
+      </summary>
+      <value>An <see cref="T:DevExpress.DashboardWeb.ItemDataRequestMode"/> enumeration value that specifies how DxDashboard loads data.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxDataSourceWizard">
+      <summary>
+        <para>Contains <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Data Source Wizard</see> settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxDataSourceWizard.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxDataSourceWizard"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDataSourceWizard.AllowCreateNewJsonConnection">
+      <summary>
+        <para>Specifies whether a user can create a JSON data source with a new data connection.</para>
+      </summary>
+      <value>true to allow a user to create a JSON data source with a new data connection; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDataSourceWizard.EnableCustomSql">
+      <summary>
+        <para>Allows a user to specify a custom SQL string in the <see href="https://docs.devexpress.com/Dashboard/116414/web-dashboard/integrate-dashboard-component/aspnet-web-forms-dashboard-control/register-default-data-connections">Data Source</see> wizard.</para>
+      </summary>
+      <value>true to allow a user to specify a custom SQL string in the Data Source wizard; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxDataSourceWizard.Unregister">
+      <summary>
+        <para>Specifies whether to unregister the <b>DevExpress.Dashboard.Designer.DataSourceWizardExtension</b> to remove its functionality from the Web Dashboard.</para>
+      </summary>
+      <value>true to unregister the extension; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxExcelExportOptions">
+      <summary>
+        <para>Contains options related to exporting a dashboard/dashboard item to Excel format</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxExcelExportOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxExcelExportOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxExcelExportOptions.CsvValueSeparator">
+      <summary>
+        <para>Specifies a character used to separate values in an exported CSV document.</para>
+      </summary>
+      <value>A string value that specifies the character used to separate values in an exported CSV document.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxExcelExportOptions.DashboardStatePosition">
+      <summary>
+        <para>Specifies the position of the dashboard state (such as master filter or current parameter values) in the exported document.</para>
+      </summary>
+      <value>The <see cref="T:DevExpress.DashboardCommon.DashboardStateExcelExportPosition"/> object that specify the position of the dashboard state in the exported Excel document.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxExcelExportOptions.ExportFilters">
+      <summary>
+        <para>Specifies whether to add the state of master filter items to the exported document.</para>
+      </summary>
+      <value>true to add the state of master filter items to the exported document; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxExcelExportOptions.ExportParameters">
+      <summary>
+        <para>Specifies whether to add current parameter values to the exported document.</para>
+      </summary>
+      <value>true to add current parameter values to the exported document; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxExcelExportOptions.Format">
+      <summary>
+        <para>Specifies the Excel format in which the dashboard item is exported.</para>
+      </summary>
+      <value>An <see cref="T:DevExpress.DashboardCommon.ExcelFormat"/> object that specifies the Excel format in which the dashboard item is exported.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxExcelExportOptions.IncludeHiddenParameters">
+      <summary>
+        <para>Specifies whether to add current parameter values to the exported document.</para>
+      </summary>
+      <value>true to add current parameter values to the exported document; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxExtensions">
+      <summary>
+        <para>Contains Web Dashboard extension options.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxExtensions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxExtensions"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxFontInfoBase">
+      <summary>
+        <para>A base class that contains font settings of the exported document.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxFontInfoBase.GdiCharSet">
+      <summary>
+        <para>Specifies a value that specifies the GDI character set for the current font.</para>
+      </summary>
+      <value>A <see cref="T:System.Byte"/> value that specifies the GDI character set for the current font.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxFontInfoBase.Name">
+      <summary>
+        <para>Specifies the name of the font used in the exported document.</para>
+      </summary>
+      <value>A font name.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxFontInfoBase.UseCustomFontInfo">
+      <summary>
+        <para>Specifies whether custom font settings are used in the exported document.</para>
+      </summary>
+      <value>true if custom font settings are used in the exported document; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxImageExportFontInfo">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.DashboardBlazor.DxFontInfoBase"/> properties.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxImageExportFontInfo.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxImageExportFontInfo"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxImageExportOptions">
+      <summary>
+        <para>Contains options related to exporting a dashboard/dashboard item as an image.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxImageExportOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxImageExportOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxImageExportOptions.ExportFilters">
+      <summary>
+        <para>Specifies whether to add the state of <see href="https://docs.devexpress.com/Dashboard/116912/common-features/interactivity/master-filtering">master filter</see> items to the exported document.</para>
+      </summary>
+      <value>true to add the state of master filter items to the exported document; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxImageExportOptions.ExportParameters">
+      <summary>
+        <para>Specifies whether to add current parameter values to the exported document.</para>
+      </summary>
+      <value>true to add current parameter values to the exported document; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxImageExportOptions.Format">
+      <summary>
+        <para>Specifies the image format of the exported dashboard/dashboard item.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.DashboardCommon.DashboardExportImageFormat"/> object that specifies the image format of the exported dashboard/dashboard item.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxImageExportOptions.IncludeHiddenParameters">
+      <summary>
+        <para>Specifies whether to add current values of a hidden parameter to the exported document.</para>
+      </summary>
+      <value>true to add current values of a hidden parameter to the exported document; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxImageExportOptions.Resolution">
+      <summary>
+        <para>Specifies the resolution (in dpi) used to export a dashboard/dashboard item to an image.</para>
+      </summary>
+      <value>An integer value that specifies the resolution (in dpi) used when you export a dashboard/dashboard item as an image. The default value is 96.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxImageExportOptions.ScaleFactor">
+      <summary>
+        <para>Specifies the scale factor (in fractions of 1) by which a dashboard/dashboard item is scaled in the printed document.</para>
+      </summary>
+      <value>A <see cref="T:System.Single"/> value that specifies the scale factor by which a dashboard/dashboard item is scaled in the printed document.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxImageExportOptions.ShowTitle">
+      <summary>
+        <para>Specifies whether a <see href="https://docs.devexpress.com/Dashboard/117383/web-dashboard/ui-elements-and-customization/dashboard-title">dashboard title</see> or <see href="https://docs.devexpress.com/Dashboard/117384/web-dashboard/ui-elements-and-customization/dashboard-item-caption">dashboard item caption</see> is used as the title of the exported document.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether a dashboard title or dashboard item’s caption is used as the title of the exported document.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxJSCustomization">
+      <summary>
+        <para>Contains options that allow you to customize the Dashboard component with JavaScript.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxJSCustomization.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxJSCustomization"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxJSCustomization.Identifier">
+      <summary>
+        <para>Specifies the name of the object in window that contains the event handlers.</para>
+      </summary>
+      <value>An identifier that is a name of the object in window.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxJSCustomization.OnScriptsLoading">
+      <summary>
+        <para>Allows you to add custom scripts after the Dashboard component scripts.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxMobileLayout">
+      <summary>
+        <para>Contains settings that allow you to enable a mobile layout for phones.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxMobileLayout.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxMobileLayout"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxMobileLayout.MobileLayoutEnabled">
+      <summary>
+        <para>Specifies whether a mobile layout is enabled for the current DxDashboard component.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.DashboardWeb.MobileLayoutMode"/> object that specifies the mobile layout mode.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxMobileLayout.Unregister">
+      <summary>
+        <para>Specifies whether to unregister the <b>DevExpress.Dashboard.MobileLayoutExtension</b> to remove its functionality from the Web Dashboard.</para>
+      </summary>
+      <value>true to unregister the extension; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxPdfExportFontInfo">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.DashboardBlazor.DxFontInfoBase"/> properties.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxPdfExportFontInfo.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxPdfExportFontInfo"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxPdfExportOptions">
+      <summary>
+        <para>Contains options related to exporting a dashboard/dashboard item to PDF format.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxPdfExportOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxPdfExportOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.AutoFitPageCount">
+      <summary>
+        <para>Specifies the number of horizontal/vertical pages that span the total width/height of a dashboard/dashboard item.</para>
+      </summary>
+      <value>An integer value that specifies the number of horizontal/vertical pages that span the total width/height of a dashboard/dashboard item.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.CardAutoArrangeContent">
+      <summary>
+        <para>Specifies whether cards within the Card dashboard item are automatically arranged on the exported page.</para>
+      </summary>
+      <value>true to automatically arrange cards on the exported page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.ChartAutomaticPageLayout">
+      <summary>
+        <para>Specifies whether the page orientation used to export the Chart dashboard item is selected automatically.</para>
+      </summary>
+      <value>true to automatically select the page orientation used to export the Chart dashboard item; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.ChartSizeMode">
+      <summary>
+        <para>Specifies the export size mode for the Chart dashboard item.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.DashboardCommon.ChartExportSizeMode"/> value that specifies the export size mode for the Chart dashboard item.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.DashboardAutomaticPageLayout">
+      <summary>
+        <para>Specifies whether the page orientation used to export a dashboard is selected automatically.</para>
+      </summary>
+      <value>true to automatically select the page orientation used to export a dashboard; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.DashboardStatePosition">
+      <summary>
+        <para>Specifies the position of the dashboard state (such as master filter or current parameter values) in the exported document.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.DashboardCommon.DashboardStateExportPosition"/> value that specifies the position of the dashboard state in the exported document.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.DocumentScaleMode">
+      <summary>
+        <para>Specifies a dashboard / dashboard item scaling mode in the exported document.</para>
+      </summary>
+      <value>A value that specifies the mode for scaling a dashboard/dashboard item in the exported document.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.ExportFilters">
+      <summary>
+        <para>Specifies whether to add the state of master filter items to the exported document.</para>
+      </summary>
+      <value>true to add the state of master filter items to the exported document; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.ExportParameters">
+      <summary>
+        <para>Specifies whether to add current parameter values to the exported document.</para>
+      </summary>
+      <value>true to add current parameter values to the exported document; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.GaugeAutoArrangeContent">
+      <summary>
+        <para>Specifies whether gauges within the Gauge dashboard item are automatically arranged on the exported page.</para>
+      </summary>
+      <value>true to arrange gauges automatically on the exported page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.GridFitToPageWidth">
+      <summary>
+        <para>Specifies whether the size of the Grid dashboard item is changed according to the width of the exported page.</para>
+      </summary>
+      <value>true to change the size of the Grid dashboard item according to the width of the exported page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.GridPrintHeadersOnEveryPage">
+      <summary>
+        <para>Specifies whether to add column headers of the Grid dashboard item to every page.</para>
+      </summary>
+      <value>true to add column headers to every page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.IncludeHiddenParameters">
+      <summary>
+        <para>Specifies whether to add current parameter values to the exported document.</para>
+      </summary>
+      <value>true to add current parameter values to the exported document; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.MapAutomaticPageLayout">
+      <summary>
+        <para>Specifies whether the page orientation used to export the Map dashboard item is selected automatically.</para>
+      </summary>
+      <value>true to automatically select the page orientation used to export the Map dashboard item; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.MapSizeMode">
+      <summary>
+        <para>Specifies the export size mode for the Map dashboard item.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.DashboardCommon.MapExportSizeMode"/> value that specifies the export size mode for the Map dashboard item.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.PageLayout">
+      <summary>
+        <para>Specifies the page orientation used to export a dashboard/dashboard item.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.DashboardCommon.DashboardExportPageLayout"/> value that specifies the page orientation used to export a dashboard/dashboard item.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.PaperKind">
+      <summary>
+        <para>Specifies the type of paper for the exported document.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Drawing.Printing.DXPaperKind"/> value that specifies the type of paper for the exported document.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.PieAutoArrangeContent">
+      <summary>
+        <para>Specifies whether pies within the Pie dashboard item are automatically arranged on the exported page.</para>
+      </summary>
+      <value>true to arrange pies automatically on the exported page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.PivotPrintHeadersOnEveryPage">
+      <summary>
+        <para>Specifies whether to add column headers of the Pivot dashboard item to every page.</para>
+      </summary>
+      <value>true to add column headers to every page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.RangeFilterAutomaticPageLayout">
+      <summary>
+        <para>Specifies whether the page orientation for the exported Range Filter dashboard item is selected automatically.</para>
+      </summary>
+      <value>true to automatically select the page orientation for the exported Range Filter dashboard item; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.RangeFilterSizeMode">
+      <summary>
+        <para>Specifies the export size mode for the Range Filter dashboard item.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.DashboardCommon.RangeFilterExportSizeMode"/> value that specifies the export size mode for the Range Filter dashboard item.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.ScaleFactor">
+      <summary>
+        <para>Specifies the scale factor (in fractions of 1) by which a dashboard/dashboard item is scaled in the exported document.</para>
+      </summary>
+      <value>A number that specifies the scale factor by which a dashboard/dashboard item is scaled in the exported document.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.ShowTitle">
+      <summary>
+        <para>Specifies whether a dashboard title or dashboard item’s caption is used as the exported document title.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether a dashboard title or dashboard item’s caption is used as the exported document title.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.TreemapAutomaticPageLayout">
+      <summary>
+        <para>Specifies whether the page orientation used to export the Treemap dashboard item is selected automatically.</para>
+      </summary>
+      <value>true to automatically select the page orientation used to export the Treemap dashboard item; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxPdfExportOptions.TreemapSizeMode">
+      <summary>
+        <para>Specifies the export size mode for the Treemap dashboard item.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.DashboardCommon.TreemapExportSizeMode"/> object that specifies how the Treemap dashboard item should be resized when it is exported.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.DxWizardSettings">
+      <summary>
+        <para>Contains the Data Source Wizard settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.DxWizardSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.DxWizardSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxWizardSettings.EnableFederationDataSource">
+      <summary>
+        <para>Specifies whether to allow users to create a federated data source in the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see>.</para>
+      </summary>
+      <value>true to allow users to create a federated data source; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxWizardSettings.EnableJsonDataSource">
+      <summary>
+        <para>Specifies whether to allow users to create a JSON data source in the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see>.</para>
+      </summary>
+      <value>true to allow users to create a JSON data source; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxWizardSettings.EnableOlapDataSource">
+      <summary>
+        <para>Specifies whether to allow users to create an OLAP data source in the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see>.</para>
+      </summary>
+      <value>true to allow users to create an OLAP data source; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.DxWizardSettings.EnableSqlDataSource">
+      <summary>
+        <para>Specifies whether to allow users to create an SQL data source in the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see>.</para>
+      </summary>
+      <value>true to allow users to create an SQL data source; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.ScriptIdentifiers">
+      <summary>
+        <para>Lists values that identify the paths to the scripts.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.DashboardBlazor.ScriptIdentifiers.Ace">
+      <summary>
+        <para>The path to the ace.js script.</para>
+      </summary>
+      <value>A string that is the path to the ace.js script.</value>
+    </member>
+    <member name="F:DevExpress.DashboardBlazor.ScriptIdentifiers.AceLanguageTools">
+      <summary>
+        <para>The path to the ext-language_tools.js script.</para>
+      </summary>
+      <value>A string that is the path to the ext-language_tools.js script.</value>
+    </member>
+    <member name="F:DevExpress.DashboardBlazor.ScriptIdentifiers.DevExtreme">
+      <summary>
+        <para>The path to the dx.all.js script.</para>
+      </summary>
+      <value>A string that is the path to the dx.all.js script.</value>
+    </member>
+    <member name="F:DevExpress.DashboardBlazor.ScriptIdentifiers.DxAnalytics">
+      <summary>
+        <para>The path to the dx-analytics-core.min.js script.</para>
+      </summary>
+      <value>A string that is the path to the dx-analytics-core.min.js script.</value>
+    </member>
+    <member name="F:DevExpress.DashboardBlazor.ScriptIdentifiers.DxDashboard">
+      <summary>
+        <para>The path to the dx-dashboard.min.js script.</para>
+      </summary>
+      <value>A string that is the path to the dx-dashboard.min.js script.</value>
+    </member>
+    <member name="F:DevExpress.DashboardBlazor.ScriptIdentifiers.DxQueryBuilder">
+      <summary>
+        <para>The path to the dx-querybuilder.min.js script.</para>
+      </summary>
+      <value>A string that is the path to the dx-querybuilder.min.js script.</value>
+    </member>
+    <member name="F:DevExpress.DashboardBlazor.ScriptIdentifiers.JQuery">
+      <summary>
+        <para>The path to the jquery.min.js script.</para>
+      </summary>
+      <value>A string that is the path to the jquery.min.js script.</value>
+    </member>
+    <member name="F:DevExpress.DashboardBlazor.ScriptIdentifiers.Knockout">
+      <summary>
+        <para>The path to the knockout-latest.js script.</para>
+      </summary>
+      <value>A string that is the path to the knockout-latest.js script.</value>
+    </member>
+    <member name="T:DevExpress.DashboardBlazor.ScriptsLoadingEventArgs">
+      <summary>
+        <para>Provides data for the <see cref="P:DevExpress.DashboardBlazor.DxJSCustomization.OnScriptsLoading"/> event.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardBlazor.ScriptsLoadingEventArgs.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardBlazor.ScriptsLoadingEventArgs"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardBlazor.ScriptsLoadingEventArgs.Scripts">
+      <summary>
+        <para>Provides access to the collection of scripts that the DxDashboard component loads.</para>
+      </summary>
+      <value>A list of scripts that the DxDashboard component loads.</value>
+    </member>
+  </members>
+</doc>

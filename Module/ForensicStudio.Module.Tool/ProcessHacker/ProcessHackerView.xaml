@@ -1,0 +1,126 @@
+﻿<fscm:GeneralView x:Class="ForensicStudio.Module.Tool.ProcessHacker.ProcessHackerView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:fscm="ForensicStudioCoreModule"
+                  xmlns:fsc="ForensicStudioControls"
+                  xmlns:processHacker="clr-namespace:ForensicStudio.Module.Tool.ProcessHacker"
+                  mc:Ignorable="d"
+                  d:DesignHeight="300" d:DesignWidth="300">
+    <fsc:FsBarManager>
+        <fsc:FsBarManager.Bars>
+            <fsc:FsBar Caption="MainMenu" IsMainMenu="True">
+                <fsc:FsBar.DockInfo>
+                    <fsc:FsBarDockInfo ContainerName="TopDockControl" />
+                </fsc:FsBar.DockInfo>
+                <fsc:FsBarSubItem Content="Hacker">
+                    <fsc:FsBarButtonItem Content="Run" />
+                    <fsc:FsBarButtonItem Content="Run as limited user" />
+                    <fsc:FsBarButtonItem Content="Run as" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Save" />
+                    <fsc:FsBarButtonItem Content="Find handles or DLLs" />
+                    <fsc:FsBarButtonItem Content="Options" />
+                    <fsc:FsBarButtonItem Content="Plugins" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarSubItem Content="Computer">
+                        <fsc:FsBarButtonItem Content="Lock" />
+                        <fsc:FsBarButtonItem Content="Log off" />
+                        <fsc:FsBarItemSeparator />
+                        <fsc:FsBarButtonItem Content="Sleep" />
+                        <fsc:FsBarButtonItem Content="Hibernate" />
+                        <fsc:FsBarItemSeparator />
+                        <fsc:FsBarButtonItem Content="Restart" />
+                        <fsc:FsBarButtonItem Content="Shut down" />
+                    </fsc:FsBarSubItem>
+                    <fsc:FsBarButtonItem Content="Exit" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="View">
+                    <fsc:FsBarButtonItem Content="System information" />
+                    <fsc:FsBarButtonItem Content="Windows" />
+                    <fsc:FsBarSubItem Content="Try icons">
+                        <fsc:FsBarButtonItem Content="CPU history" />
+                        <fsc:FsBarButtonItem Content="CPU usage" />
+                        <fsc:FsBarButtonItem Content="I/O history" />
+                        <fsc:FsBarButtonItem Content="Commit charge history" />
+                        <fsc:FsBarButtonItem Content="GPU history" />
+                        <fsc:FsBarButtonItem Content="Disk history" />
+                        <fsc:FsBarButtonItem Content="Network history" />
+                    </fsc:FsBarSubItem>
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Hide processes from other users" />
+                    <fsc:FsBarButtonItem Content="Hide signed processes" />
+                    <fsc:FsBarButtonItem Content="Scroll to new processes" />
+                    <fsc:FsBarButtonItem Content="Show CPU below 0.01" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Always on top" />
+                    <fsc:FsBarSubItem Content="Opacity">
+                        <fsc:FsBarButtonItem Content="10 %" />
+                        <fsc:FsBarButtonItem Content="20 %" />
+                        <fsc:FsBarButtonItem Content="30 %" />
+                        <fsc:FsBarButtonItem Content="40 %" />
+                        <fsc:FsBarButtonItem Content="50 %" />
+                        <fsc:FsBarButtonItem Content="60 %" />
+                        <fsc:FsBarButtonItem Content="70 %" />
+                        <fsc:FsBarButtonItem Content="80 %" />
+                        <fsc:FsBarButtonItem Content="90 %" />
+                        <fsc:FsBarButtonItem Content="100 %" />
+                    </fsc:FsBarSubItem>
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Refresh" />
+                    <fsc:FsBarSubItem Content="Refresh interval">
+                        <fsc:FsBarButtonItem Content="Fast (0.5s)" />
+                        <fsc:FsBarButtonItem Content="Normal (1s)" />
+                        <fsc:FsBarButtonItem Content="Below normal (2s)" />
+                        <fsc:FsBarButtonItem Content="Slow (5s)" />
+                        <fsc:FsBarButtonItem Content="Below slow (10s)" />
+                        <fsc:FsBarButtonItem Content="Item 01" />
+                    </fsc:FsBarSubItem>
+                    <fsc:FsBarButtonItem Content="Refresh automatically" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="Tools">
+                    <fsc:FsBarButtonItem Content="Create service" />
+                    <fsc:FsBarButtonItem Content="Inspect executable file" />
+                    <fsc:FsBarButtonItem Content="Page files" />
+                    <fsc:FsBarButtonItem Content="Start Task Manager" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="Users">
+                    <fsc:FsBarButtonItem Content="User 01" />
+                </fsc:FsBarSubItem>
+            </fsc:FsBar>
+            <fsc:FsBar>
+                <fsc:FsBar.DockInfo>
+                    <fsc:FsBarDockInfo ContainerName="TopDockControl" />
+                </fsc:FsBar.DockInfo>
+                <fsc:FsBarButtonItem Content="Refresh" />
+                <fsc:FsBarButtonItem Content="Options" />
+                <fsc:FsBarItemSeparator />
+                <fsc:FsBarButtonItem Content="Find handles or DLLs" />
+                <fsc:FsBarButtonItem Content="System information" />
+                <fsc:FsBarItemSeparator />
+                <fsc:FsBarButtonItem Content="Find window" />
+                <fsc:FsBarButtonItem Content="Find window and thread" />
+                <fsc:FsBarButtonItem Content="Find window and kill" />
+            </fsc:FsBar>
+        </fsc:FsBarManager.Bars>
+        <fsc:FsDockLayoutControl>
+            <fsc:FsBarContainerControl Name="TopDockControl"
+                                       fsc:FsDockLayoutControl.Dock="Top" />
+            <fsc:FsDxTabControl fsc:FsDockLayoutControl.Dock="Client">
+                <fsc:FsDxTabItem Header="Processes">
+                    <processHacker:ProcessView />
+                </fsc:FsDxTabItem>
+                <fsc:FsDxTabItem Header="Services">
+                    <processHacker:ServiceView />
+                </fsc:FsDxTabItem>
+                <fsc:FsDxTabItem Header="Network">
+                    <processHacker:NetworkView />
+                </fsc:FsDxTabItem>
+                <fsc:FsDxTabItem Header="Disk">
+                    <processHacker:DiskView />
+                </fsc:FsDxTabItem>
+            </fsc:FsDxTabControl>
+        </fsc:FsDockLayoutControl>
+    </fsc:FsBarManager>
+</fscm:GeneralView>

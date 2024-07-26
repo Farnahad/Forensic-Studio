@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.Validation.Blazor.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Blazor.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your ASP.NET Core Blazor application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.ValidationApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/113684/validation-module">Validation Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.ValidationApplicationBuilderExtensions.AddValidation(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder},System.Action{DevExpress.ExpressApp.Validation.ValidationOptions})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/113684/validation-module">Validation Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <param name="configureOptions">Options that you can use to configure the Validation Module.</param>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+  </members>
+</doc>

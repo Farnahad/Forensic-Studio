@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.FileAttachment.Blazor.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Blazor.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your ASP.NET Core Blazor application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.FileAttachmentsApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/112781/document-management/file-attachments-module">File Attachments Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.FileAttachmentsApplicationBuilderExtensions.AddFileAttachments(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder},System.Action{DevExpress.ExpressApp.FileAttachments.Blazor.FileAttachmentsOptions})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/112781/document-management/file-attachments-module">File Attachments Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <param name="configureOptions">Options that you can use to configure the File Attachments Module.</param>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+    <member name="N:DevExpress.ExpressApp.FileAttachments.Blazor">
+      <summary>
+        <para>Contains classes specific to the <see href="https://docs.devexpress.com/eXpressAppFramework/112781/document-management/file-attachments-module">File Attachments Module</see> ASP.NET Core Blazor functionality.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.FileAttachments.Blazor.FileAttachmentsOptions">
+      <summary>
+        <para>Contains options that you can use to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/112781/document-management/file-attachments-module">File Attachments Module</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.FileAttachments.Blazor.FileAttachmentsOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.FileAttachments.Blazor.FileAttachmentsOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.FileAttachments.Blazor.FileAttachmentsOptions.DefaultMaxFileSize">
+      <summary>
+        <para>Specifies the maximum file size.</para>
+      </summary>
+      <value>The maximum file size in bytes. The default value is 4MB.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.FileAttachments.Blazor.FileAttachmentsOptions.ExportedTypes">
+      <summary>
+        <para>Returns the list of Module-specific types exported to the Application Model.</para>
+      </summary>
+      <value>The list of Module-specific types exported to the Application Model.</value>
+    </member>
+  </members>
+</doc>

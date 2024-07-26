@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.EasyTest.BlazorAdapter.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.EasyTest.Framework">
+      <summary>
+        <para>Contains interfaces and classes that implement <see href="https://docs.devexpress.com/eXpressAppFramework/113211/debugging-testing-and-error-handling/functional-tests-easy-test">EasyTest</see> functionality.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.EasyTest.Framework.BlazorApplicationOptions">
+      <summary>
+        <para>Stores options for a tested Blazor application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.EasyTest.Framework.BlazorApplicationOptions.#ctor(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.EasyTest.Framework.BlazorApplicationOptions"/> class with specified settings.</para>
+      </summary>
+      <param name="name">Specifies the application name.</param>
+      <param name="physicalPath">Specifies a path to the folder that contains the application.</param>
+      <param name="url">Specifies the application’s web address.</param>
+      <param name="configuration">Specifies a configuration to use for running tests.</param>
+      <param name="ignoreCase">Specifies whether the test ignores a letter case when referring to UI element names, captions, or tags.</param>
+      <param name="browser">Specifies a web browser used to run tests. Available values: Chrome, Edge.</param>
+      <param name="arguments">Specifies the command-line arguments passed to the application when it is started.</param>
+      <param name="webDriverPath">Specifies a path to a web driver. Not required when a path to a web driver is added to a system PATH variable.</param>
+      <param name="browserBinaryPath">Specifies a path to the web browser application. Used when running tests in a portable browser.</param>
+    </member>
+    <member name="P:DevExpress.EasyTest.Framework.BlazorApplicationOptions.Arguments">
+      <summary>
+        <para>Specifies the command-line arguments passed to the application when it is started.</para>
+      </summary>
+      <value>The command-line arguments passed to the application when it is started.</value>
+    </member>
+    <member name="P:DevExpress.EasyTest.Framework.BlazorApplicationOptions.Browser">
+      <summary>
+        <para>Returns a web browser used for running tests. Available values: Chrome, Edge. The default value is Edge.</para>
+      </summary>
+      <value>A web browser used for running tests (Chrome or Edge).</value>
+    </member>
+    <member name="P:DevExpress.EasyTest.Framework.BlazorApplicationOptions.BrowserBinaryPath">
+      <summary>
+        <para>Returns a path to a web browser application.</para>
+      </summary>
+      <value>A path to the web browser application.</value>
+    </member>
+    <member name="P:DevExpress.EasyTest.Framework.BlazorApplicationOptions.Configuration">
+      <summary>
+        <para>Returns a configuration to use for running tests.</para>
+      </summary>
+      <value>A configuration used to run tests.</value>
+    </member>
+    <member name="M:DevExpress.EasyTest.Framework.BlazorApplicationOptions.CreateApplicationContext">
+      <summary>
+        <para>Creates an Blazor application context.</para>
+      </summary>
+      <returns>An application context.</returns>
+    </member>
+    <member name="P:DevExpress.EasyTest.Framework.BlazorApplicationOptions.IgnoreCase">
+      <summary>
+        <para>Gets whether the test ignores a letter case when referring to UI element names, captions, or tags.</para>
+      </summary>
+      <value>true, if a test ignores a letter case in UI elements; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.EasyTest.Framework.BlazorApplicationOptions.Name">
+      <summary>
+        <para>Gets the name of the Blazor application. This name is used to differentiate between different applications.</para>
+      </summary>
+      <value>A Blazor application name.</value>
+    </member>
+    <member name="P:DevExpress.EasyTest.Framework.BlazorApplicationOptions.PhysicalPath">
+      <summary>
+        <para>Gets a path to the folder that contains the application.</para>
+      </summary>
+      <value>A path to the folder that contains the application.</value>
+    </member>
+    <member name="P:DevExpress.EasyTest.Framework.BlazorApplicationOptions.Url">
+      <summary>
+        <para>Gets the application’s web address.</para>
+      </summary>
+      <value>The application’s web address.</value>
+    </member>
+    <member name="P:DevExpress.EasyTest.Framework.BlazorApplicationOptions.WebDriverPath">
+      <summary>
+        <para>Gets a path to a folder that stores a web driver executable.</para>
+      </summary>
+      <value>A path to a web driver.</value>
+    </member>
+  </members>
+</doc>

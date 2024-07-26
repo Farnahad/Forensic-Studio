@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.Blazor.Reporting.v23.2.JSBasedControls</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.Blazor.Reporting">
+      <summary>
+        <para>Contains classes that implement reporting functionality in Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.BlazorReportingConfigurationBuilder.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.BlazorReportingConfigurationBuilder"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.BlazorWasmReportingConfigurationBuilder.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.BlazorWasmReportingConfigurationBuilder"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.ClientSideModelSettingsBase">
+      <summary>
+        <para>Contains settings for the Blazor Reporting client-side controls.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.ClientSideModelSettingsBase.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.ClientSideModelSettingsBase"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.ClientSideModelSettingsBase.IncludeCldrData">
+      <summary>
+        <para>Specifies whether to load CLDR JSON data for the current locale.</para>
+      </summary>
+      <value>True, to include CLDR JSON data; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.ClientSideModelSettingsBase.IncludeCldrSupplemental">
+      <summary>
+        <para>Specifies whether to load the CLDR supplemental data.</para>
+      </summary>
+      <value>True, to include CLDR supplemental data; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.ClientSideModelSettingsBase.IncludeLocalization">
+      <summary>
+        <para>Specifies whether to load a localization script.</para>
+      </summary>
+      <value>True, to include a localization script; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.ClientSideModelSettingsModelBase.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.ClientSideModelSettingsModelBase"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewer">
+      <summary>
+        <para>A control that displays an interactive preview of a document generated from a report and allows the user to view, print, and export the report document in Blazor Server and standalone Blazor WebAssembly apps.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewer.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewer"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewer.ReportName">
+      <summary>
+        <para>Gets or sets a string that specifies the unique report name.</para>
+      </summary>
+      <value>A string that identifies a report.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewer.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)">
+      <summary>
+        <para>This method is intended for internal use. You do not need to call it directly from your code.</para>
+      </summary>
+      <param name="parameters">The parameters supplied by the component’s parent in the render tree.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that completes when the DxDocumentViewer has finished updating and rendering itself.</returns>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerClientSideModelSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewerClientSideModelSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewerRequestOptions">
+      <summary>
+        <para>A nested component that allows you to specify where to send requests from the Document Viewer.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerRequestOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewerRequestOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerRequestOptions.HandlerUri">
+      <summary>
+        <para>Specifies the URI to handle the Document Viewer requests.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxReportDesigner">
+      <summary>
+        <para>The <see href="https://docs.devexpress.com/XtraReports/17103/web-reporting/asp-net-webforms-reporting/end-user-report-designer-in-asp-net-web-forms-reporting">End-User Report Designer</see> control in Blazor Server and standalone Blazor WebAssembly applications.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesigner.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxReportDesigner"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesigner.AllowMDI">
+      <summary>
+        <para>Gets or sets whether a user can close all reports designed in the Report Designer and leave the designer empty, or a single report remains.</para>
+      </summary>
+      <value>True to allow the user to close all reports; false if a single report remains.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesigner.ClientSideModelSettings">
+      <summary>
+        <para>Allows you to access settings for the Web Report Designer’s View Model.</para>
+      </summary>
+      <value>Settings for the Web Report Designer’s View Model.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesigner.CustomControlTypes">
+      <summary>
+        <para>Adds custom controls that appear in the Report Designer Toolbox and can be used to design reports.</para>
+      </summary>
+      <value>A list of custom control types.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesigner.DataSources">
+      <summary>
+        <para>Provides access to the data sources available in the Report Designer.</para>
+      </summary>
+      <value>A dictionary that contains data sources and their names.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesigner.ReportDesignerRequestOptionsModel">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesigner.ReportName">
+      <summary>
+        <para>Gets or sets a string that specifies the unique report name.</para>
+      </summary>
+      <value>A string that identifies a report.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesigner.RightToLeft">
+      <summary>
+        <para>Gets or sets whether right-to-left layout is enabled in UI.</para>
+      </summary>
+      <value>True to enable RTL layout; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesigner.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)">
+      <summary>
+        <para>This method is intended for internal use. You do not need to call it directly from your code.</para>
+      </summary>
+      <param name="parameters">The parameters supplied by the component’s parent in the render tree.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that completes when the DxReportDesigner has finished updating and rendering itself.</returns>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesigner.WizardSettingsModel">
+      <summary>
+        <para>Gets or sets the the Report Designer’s wizard settings.</para>
+      </summary>
+      <value>A DevExpress.Blazor.Reporting.ReportDesignerWizardSettingsModel object that provides access to <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings"/>.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesignerClientSideModelSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxReportDesignerClientSideModelSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxReportDesignerRequestOptions">
+      <summary>
+        <para>Contains options that specify where to send requests from the Report Designer.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesignerRequestOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxReportDesignerRequestOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerRequestOptions.QueryBuilderHandlerUri">
+      <summary>
+        <para>Gets or sets a custom MVC controller that processes Query Builder requests.</para>
+      </summary>
+      <value>A string that is the controller’s name. Default value is DXXQB.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerRequestOptions.ReportDesignerHandlerUri">
+      <summary>
+        <para>Gets or sets a custom MVC controller that processes Report Designer requests.</para>
+      </summary>
+      <value>A string that is the controller’s name. Default value is DXXRD.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerRequestOptions.ReportPreviewHandlerUri">
+      <summary>
+        <para>Gets or sets a custom MVC controller that processes requests sent from the Document Viewer invoked by the Report Designer.</para>
+      </summary>
+      <value>A string that is the controller’s name. Default value is DXXRDV.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.StartupExtensions">
+      <summary>
+        <para>Exposes extension methods to configure reporting services within the application’s Startup class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.StartupExtensions.AddDevExpressBlazorReporting(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+      <summary>
+        <para>Adds the DevExpress Blazor Reporting services to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> collection.</para>
+      </summary>
+      <param name="services">A list of service descriptor objects that define services in an application.</param>
+      <returns>An updated list of service descriptor objects for subsequent use.</returns>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.StartupExtensions.UseDevExpressBlazorReporting(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+      <summary>
+        <para>Registers the DevExpress Blazor Reporting middleware.</para>
+      </summary>
+      <param name="applicationBuilder">An object that provides the mechanisms to configure an application’s request pipeline.</param>
+      <returns>An object that provides the mechanisms to configure an application’s request pipeline for subsequent use.</returns>
+    </member>
+  </members>
+</doc>

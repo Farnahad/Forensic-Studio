@@ -1,0 +1,12 @@
+﻿<userControl:FsUserControl x:Class="ForensicStudio.Core.Control.UserControl.ButtonSet.FsAddDeleteButtonSetUserControl"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:container="clr-namespace:ForensicStudio.Core.Control.Container"
+                           xmlns:button="clr-namespace:ForensicStudio.Core.Control.Button"
+                           xmlns:userControl="clr-namespace:ForensicStudio.Core.Control.UserControl"
+                           xmlns:fsmc="ForensicStudioMainCore">
+    <container:FsWrapPanel HorizontalAlignment="Center">
+        <button:FsSimpleAddButton Command="{fsmc:FsBinding  Path=AddCommand}" />
+        <button:FsSimpleDeleteButton Command="{fsmc:FsBinding  Path=DeleteCommand}" />
+    </container:FsWrapPanel>
+</userControl:FsUserControl>

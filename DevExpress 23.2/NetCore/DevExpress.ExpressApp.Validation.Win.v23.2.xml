@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.Validation.Win.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Validation.Win">
+      <summary>
+        <para>Contains classes specific to the Windows Forms <see href="https://docs.devexpress.com/eXpressAppFramework/113684/validation-module">Validation Module</see> functionality.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule">
+      <summary>
+        <para>The module contained in the DevExpress.ExpressApp.Validation.Win.v23.2.dll assembly.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule.#ctor">
+      <summary>
+        <para>Creates an instance of the <see cref="T:DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule.GetModuleUpdaters(DevExpress.ExpressApp.IObjectSpace,System.Version)">
+      <summary>
+        <para>Returns the list of <see cref="T:DevExpress.ExpressApp.Updating.ModuleUpdater"/> updaters that handle database updates for the <see cref="T:DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule"/> module.</para>
+      </summary>
+      <param name="objectSpace">An <see cref="T:DevExpress.ExpressApp.IObjectSpace"/> object which is the <see href="https://docs.devexpress.com/eXpressAppFramework/113707/data-manipulation-and-business-logic/object-space">Object Space</see> used to update the database.</param>
+      <param name="versionFromDB">A System.Version object which represents the current database version.</param>
+      <returns>An IEnumerable&lt;<see cref="T:DevExpress.ExpressApp.Updating.ModuleUpdater"/>&gt; list of updaters that handle database updates for the <see cref="T:DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule"/> module.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule.Setup(DevExpress.ExpressApp.XafApplication)">
+      <summary>
+        <para>Sets up the <see cref="T:DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule"/> after it has been added to the <see cref="P:DevExpress.ExpressApp.XafApplication.Modules">XafApplication.Modules</see> collection.</para>
+      </summary>
+      <param name="application">An <see cref="T:DevExpress.ExpressApp.XafApplication"/> object that provides methods and properties to manage the current application.</param>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Win.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your WinForms application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Win.ApplicationBuilder.ValidationApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/113684/validation-module">Validation Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.ValidationApplicationBuilderExtensions.AddValidation(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder},System.Action{DevExpress.ExpressApp.Validation.ValidationOptions})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/113684/validation-module">Validation Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <param name="configureOptions">Options that you can use to configure the Validation Module.</param>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+  </members>
+</doc>

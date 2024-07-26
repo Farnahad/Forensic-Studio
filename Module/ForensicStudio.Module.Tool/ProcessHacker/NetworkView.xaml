@@ -1,0 +1,21 @@
+﻿<fscm:GeneralView x:Class="ForensicStudio.Module.Tool.ProcessHacker.NetworkView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:fscm="ForensicStudioCoreModule"
+                  xmlns:fsc="ForensicStudioControls"
+                  mc:Ignorable="d"
+                  d:DesignHeight="300" d:DesignWidth="300">
+    <fsc:FsReadingGridControl>
+        <fsc:FsReadingGridControl.Columns>
+            <fsc:FsTextGridColumn Header="Name" />
+            <fsc:FsTextGridColumn Header="Local Address" />
+            <fsc:FsTextGridColumn Header="Local Port" />
+            <fsc:FsTextGridColumn Header="Remote Port" />
+            <fsc:FsTextGridColumn Header="Protocol" />
+            <fsc:FsTextGridColumn Header="State" />
+            <fsc:FsTextGridColumn Header="Owner" />
+        </fsc:FsReadingGridControl.Columns>
+    </fsc:FsReadingGridControl>
+</fscm:GeneralView>

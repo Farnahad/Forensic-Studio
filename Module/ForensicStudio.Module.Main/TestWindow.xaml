@@ -1,0 +1,42 @@
+﻿<Window x:Class="ForensicStudio.Module.Main.TestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fsc="ForensicStudioControls"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+        mc:Ignorable="d"
+        Title="TestWindow" Height="450" Width="800">
+    <fsc:FsGrid>
+        <fsc:FsGrid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </fsc:FsGrid.RowDefinitions>
+        <dxr:RibbonControl Grid.Row="0">
+            <!--<dxr:RibbonDefaultPageCategory />-->
+        </dxr:RibbonControl>
+        <!--<dockLayout:FsDockLayoutManager Grid.Row="1">
+            <dockLayout:FsDockVerticalLayoutGroup>
+                <dockLayout:FsDockHorizontalLayoutGroup regions:RegionManager.RegionName="TopLayoutGroup"
+                                                        ItemHeight="1*" />
+                <dockLayout:FsDockHorizontalLayoutGroup ItemHeight="3*">
+                    <dockLayout:FsDockVerticalLayoutGroup regions:RegionManager.RegionName="LeftLayoutGroup"
+                                                          ItemWidth="1*" />
+                    <dockLayout:FsDocumentGroup regions:RegionManager.RegionName="DocumentLayoutGroup" ItemWidth="3*" />
+                    <dockLayout:FsDockVerticalLayoutGroup regions:RegionManager.RegionName="RightLayoutGroup"
+                                                          ItemWidth="1*" />
+                </dockLayout:FsDockHorizontalLayoutGroup>
+                <dockLayout:FsDockHorizontalLayoutGroup regions:RegionManager.RegionName="BottomLayoutGroup"
+                                                        ItemHeight="1*" />
+            </dockLayout:FsDockVerticalLayoutGroup>
+            <dockLayout:FsDockLayoutManager.AutoHideGroups>
+                <dockLayout:FsAutoHideGroup regions:RegionManager.RegionName="TopAutoHideGroup" DockType="Top" />
+                <dockLayout:FsAutoHideGroup regions:RegionManager.RegionName="RightAutoHideGroup" DockType="Right" />
+                <dockLayout:FsAutoHideGroup regions:RegionManager.RegionName="BottomAutoHideGroup" DockType="Bottom" />
+                <dockLayout:FsAutoHideGroup regions:RegionManager.RegionName="LeftAutoHideGroup" DockType="Left" />
+            </dockLayout:FsDockLayoutManager.AutoHideGroups>
+        </dockLayout:FsDockLayoutManager>-->
+        <fsc:FsContentControl Grid.Row="2"  />
+    </fsc:FsGrid>
+</Window>

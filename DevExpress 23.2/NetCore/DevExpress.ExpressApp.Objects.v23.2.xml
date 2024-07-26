@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.Objects.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.ApplicationBuilder">
+      <summary>
+        <para>Contains platform-agnostic classes and interfaces that allow you to configure your application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.ApplicationBuilder.BusinessClassLibraryCustomizationApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/112571/business-model-design-orm/built-in-business-classes-and-interfaces#business-class-library-customization-module">Business Class Library Customization Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.BusinessClassLibraryCustomizationApplicationBuilderExtensions.AddBusinessClassLibraryCustomization``1(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{``0})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/112571/business-model-design-orm/built-in-business-classes-and-interfaces#business-class-library-customization-module">Business Class Library Customization Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <typeparam name="TBuilder">The <see cref="T:DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder"/> or <see cref="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder"/> type.</typeparam>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+  </members>
+</doc>

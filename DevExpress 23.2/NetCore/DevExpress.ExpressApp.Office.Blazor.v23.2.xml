@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.Office.Blazor.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Blazor.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your ASP.NET Core Blazor application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.OfficeApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/400003/document-management/office-module/office-module-overview">Office Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.OfficeApplicationBuilderExtensions.AddOffice(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder},System.Action{DevExpress.ExpressApp.Blazor.ApplicationBuilder.OfficeOptions})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/400003/document-management/office-module/office-module-overview">Office Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application and chain further Module registrations.</param>
+      <param name="configureOptions">Contains options that you can use to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/400003/document-management/office-module/office-module-overview">Office Module</see>.</param>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.OfficeOptions">
+      <summary>
+        <para>Contains options that you can use to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/400003/document-management/office-module/office-module-overview">Office Module</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.OfficeOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.OfficeOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.ApplicationBuilder.OfficeOptions.RichTextMailMergeDataType">
+      <summary>
+        <para>Specifies the mail merge template type.</para>
+      </summary>
+      <value>A <see cref="T:System.Type"/> object that is the mail merge template type.</value>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Office.Blazor">
+      <summary>
+        <para>Contains classes for the ASP.NET Core Blazor-specific <see href="https://docs.devexpress.com/eXpressAppFramework/400003/document-management/office-module/office-module-overview">Office Module</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Office.Blazor.OfficeBlazorModule">
+      <summary>
+        <para>The ASP.NET Core Blazor-specific <see href="https://docs.devexpress.com/eXpressAppFramework/400003/document-management/office-module/office-module-overview">Office Module</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Office.Blazor.OfficeBlazorModule.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Office.Blazor.OfficeBlazorModule"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Office.Blazor.OfficeBlazorModule.GetModuleUpdaters(DevExpress.ExpressApp.IObjectSpace,System.Version)">
+      <summary>
+        <para>Returns the list of <see cref="T:DevExpress.ExpressApp.Updating.ModuleUpdater"/> updaters that handle database updates for the <see cref="T:DevExpress.ExpressApp.Office.Blazor.OfficeBlazorModule"/> module.</para>
+      </summary>
+      <param name="objectSpace">The Object Space used to update the database.</param>
+      <param name="versionFromDB">The current database version.</param>
+      <returns>An IEnumerable&lt;<see cref="T:DevExpress.ExpressApp.Updating.ModuleUpdater"/>&gt; list of updaters that handle database updates for the <see cref="T:DevExpress.ExpressApp.Office.Blazor.OfficeBlazorModule"/> module.</returns>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Office.Blazor.StartupExtensions">
+      <summary>
+        <para>Extends the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> class with methods to register the <see href="https://docs.devexpress.com/eXpressAppFramework/400003/document-management/office-module/office-module-overview">Office Module</see>‘s services in your ASP.NET Core Blazor application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Office.Blazor.StartupExtensions.AddXafOffice(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+      <summary>
+        <para>Registers the required <see href="https://docs.devexpress.com/eXpressAppFramework/400003/document-management/office-module/office-module-overview">Office Module</see> services in the application’s <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</para>
+      </summary>
+      <param name="services">The collection of services registered in your application.</param>
+      <returns>The collection of services registered in your application. Allows you to chain further service registrations.</returns>
+    </member>
+  </members>
+</doc>

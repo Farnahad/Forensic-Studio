@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.AspNetCore.Reporting.v23.2.Azure</name>
+  </assembly>
+  <members>
+    <member name="M:DevExpress.AspNetCore.Reporting.Azure.WebDocumentViewer.AzureConnectionStringProvider.#ctor(System.String,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Reporting.Azure.WebDocumentViewer.AzureConnectionStringProvider"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.Azure.WebDocumentViewer.AzureConnectionStringProvider.#ctor(System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Reporting.Azure.WebDocumentViewer.AzureConnectionStringProvider"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.Azure.WebDocumentViewer.AzureStorageAccountProvider.#ctor(DevExpress.AspNetCore.Reporting.Azure.WebDocumentViewer.AzureConnectionStringProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Reporting.Azure.WebDocumentViewer.AzureStorageAccountProvider"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="N:DevExpress.AspNetCore.Reporting.WebDocumentViewer">
+      <summary>
+        <para>Contains classes that implement functionality specific to the ASP.NET Core <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Document Viewer</see>.</para>
+      </summary>
+    </member>
+  </members>
+</doc>

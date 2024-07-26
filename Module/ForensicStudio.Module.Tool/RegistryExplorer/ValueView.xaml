@@ -1,0 +1,20 @@
+﻿<fscm:GeneralView x:Class="ForensicStudio.Module.Tool.RegistryExplorer.ValueView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:fscm="ForensicStudioCoreModule"
+                  xmlns:fsc="ForensicStudioControls"
+                  mc:Ignorable="d"
+                  d:DesignHeight="300" d:DesignWidth="500">
+    <fsc:FsReadingGridControl>
+        <fsc:FsReadingGridControl.Columns>
+            <fsc:FsTextGridColumn Header="Value Name" />
+            <fsc:FsTextGridColumn Header="Value Type" />
+            <fsc:FsTextGridColumn Header="Data" />
+            <fsc:FsTextGridColumn Header="Value Slack" />
+            <fsc:FsTextGridColumn Header="Is Deleted" />
+            <fsc:FsTextGridColumn Header="Data Record Reallocated" />
+        </fsc:FsReadingGridControl.Columns>
+    </fsc:FsReadingGridControl>
+</fscm:GeneralView>

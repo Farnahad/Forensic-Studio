@@ -1,0 +1,985 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.Blazor.Reporting.v23.2.Viewer</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.Blazor.Reporting">
+      <summary>
+        <para>Contains classes that implement reporting functionality in Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Controllers.DownloadExportResultController">
+      <summary>
+        <para>A controller that processes requests to print or export the document.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Controllers.DownloadExportResultControllerBase">
+      <summary>
+        <para>Base class to implement a controller that processes requests to print or export the document.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxReportViewer">
+      <summary>
+        <para>A document viewer component for reports.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportViewer.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxReportViewer"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.CurrentPageIndex">
+      <summary>
+        <para>Gets the index of the displayed page.</para>
+      </summary>
+      <value>A zero-based page index.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.EditingFieldsHighlighted">
+      <summary>
+        <para>Specifies whether the editable fields are highlighted in the document.</para>
+      </summary>
+      <value>True to highlight the editable fields; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.ExportModel">
+      <summary>
+        <para>Provides access to the document export settings.</para>
+      </summary>
+      <value>The export settings.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportViewer.ExportToAsync(DevExpress.XtraPrinting.ExportFormat)">
+      <summary>
+        <para>Asynchronously exports the document to a file in the specified format.</para>
+      </summary>
+      <param name="format">An enumeration member that specifies the format of the exported file.</param>
+      <returns>An asynchronous operation that exports the document to a file.</returns>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeParameterLookUpSource">
+      <summary>
+        <para>Occurs when a lookup editor is created for a report parameter. Allows you to supply lookup values.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeParameters">
+      <summary>
+        <para>Allows you to specify custom editors for report parameters.</para>
+      </summary>
+      <param>An object that contains report parameters and allows you to manage them.</param>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeToolbar">
+      <summary>
+        <para>Allows you to customize the Report Viewer toolbar.</para>
+      </summary>
+      <param>An object that contains a collection of toolbar items.</param>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.OnExport">
+      <summary>
+        <para>Occurs before the Report Viewer sends a request to print the document or to get the exported document.</para>
+      </summary>
+      <param>An object that specifies the request URL and contains data to pass to the server.</param>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportViewer.OpenReportAsync(DevExpress.XtraReports.IReport)">
+      <summary>
+        <para>Asynchronously opens the specified report and builds a document for preview.</para>
+      </summary>
+      <param name="report">A report to open. You can specify an <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> instance or <see cref="T:DevExpress.XtraPrinting.Caching.CachedReportSource"/> instance for large documents.</param>
+      <returns>An asynchronous operation that loads a report.</returns>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.PageOfPagesModel">
+      <summary>
+        <para>Provides access to page number settings.</para>
+      </summary>
+      <value>An object that contains page number settings.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.ParametersModel">
+      <summary>
+        <para>Provides access to report parameters.</para>
+      </summary>
+      <value>An object that contains report parameters and allows you to manage them.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportViewer.PrintAsync">
+      <summary>
+        <para>Asynchronously prints a report.</para>
+      </summary>
+      <returns>An asynchronous operation that prints a document.</returns>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.Report">
+      <summary>
+        <para>Specifies the report to open.</para>
+      </summary>
+      <value>A report to open. You can specify an <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> instance or <see cref="T:DevExpress.XtraPrinting.Caching.CachedReportSource"/> instance for large documents.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.RootCssClasses">
+      <summary>
+        <para>Specifies the names of the CSS classes that apply to the outside DIV of the component markup.</para>
+      </summary>
+      <value>The CSS class names separated with a space.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.ShouldDisposeReport">
+      <summary>
+        <para>Specifies whether a report should be disposed of along with the DxReportViewer instance.</para>
+      </summary>
+      <value>True to dispose of the report along with the DxReportViewer; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.SinglePagePreview">
+      <summary>
+        <para>Specifies whether to display one page or mutliple pages in a preview.</para>
+      </summary>
+      <value>True to display only one page in a preview; otherwise, false. The default value is false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.SizeMode">
+      <summary>
+        <para>Specifies the size of the Report Viewer UI elements.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.TabPanelMaxWidth">
+      <summary>
+        <para>Specifies the Tab panel’s maximum width.</para>
+      </summary>
+      <value>The panel width in pixels.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.TabPanelMinWidth">
+      <summary>
+        <para>Specifies the Tab panel’s minimum width.</para>
+      </summary>
+      <value>The panel width in pixels.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.TabPanelModel">
+      <summary>
+        <para>Provides access to the Tab Panel settings.</para>
+      </summary>
+      <value>The Report Viewer Tab Panel settings.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.TabPanelWidth">
+      <summary>
+        <para>Specifies the Tab panel width.</para>
+      </summary>
+      <value>The panel width in pixels.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.ToolbarModel">
+      <summary>
+        <para>Provides access to the toolbar items.</para>
+      </summary>
+      <value>An object that contains toolbar items.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportViewer.UpdateZoomAsync(System.Double)">
+      <summary>
+        <para>Specifies a zoom level.</para>
+      </summary>
+      <param name="value">The zoom level value.</param>
+      <returns>An asynchronous operation that sets the zoom level.</returns>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportViewer.UpdateZoomAsync(System.String)">
+      <summary>
+        <para>Specifies a zoom percentage.</para>
+      </summary>
+      <param name="newValue">A string that is the zoom percentage.</param>
+      <returns>An asynchronous operation that sets the zoom level.</returns>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.Zoom">
+      <summary>
+        <para>Gets or sets the zoom level.</para>
+      </summary>
+      <value>The zoom level value.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportViewer.ZoomModel">
+      <summary>
+        <para>Provides access to properties and methods that relate to the zoom level.</para>
+      </summary>
+      <value>An object that manages the zoom level.</value>
+    </member>
+    <member name="N:DevExpress.Blazor.Reporting.EditingFields">
+      <summary>
+        <para>Contains classes related to the report’s <see href="https://docs.devexpress.com/XtraReports/117343/detailed-guide-to-devexpress-reporting/provide-interactivity/edit-content-in-print-preview">editing fields</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.EditingFields.CheckEditingFieldModel.#ctor(DevExpress.XtraPrinting.CheckEditingField)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.EditingFields.CheckEditingFieldModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.EditingFields.EditingFieldEditorModel`2.#ctor(`1)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.EditingFields.EditingFieldEditorModel`2"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.EditingFields.EditingFieldModel`2.#ctor(`1)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.EditingFields.EditingFieldModel`2"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.EditingFields.EditingFieldModelFactory">
+      <summary>
+        <para>Enables you to register custom editors for report <see href="https://docs.devexpress.com/XtraReports/117343/detailed-guide-to-devexpress-reporting/provide-interactivity/edit-content-in-print-preview">editing fields</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.EditingFields.EditingFieldModelFactory.#ctor(Microsoft.Extensions.Logging.ILogger{DevExpress.Blazor.Reporting.EditingFields.EditingFieldModelFactory})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.EditingFields.EditingFieldModelFactory"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.EditingFields.EditingFieldModelFactory.RegisterMaskEditor(System.String,DevExpress.Blazor.Reporting.EditingFields.MaskEditorOptions)">
+      <summary>
+        <para>Registers a custom mask editor for report editing fields.</para>
+      </summary>
+      <param name="name">The editor name.</param>
+      <param name="options">An object that specifies the mask type and expression.</param>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.EditingFields.MaskEditingFieldEditorModel.#ctor(DevExpress.XtraPrinting.TextEditingField)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.EditingFields.MaskEditingFieldEditorModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.EditingFields.MaskEditorOptions">
+      <summary>
+        <para>Contains settings that determine a mask used in the editor.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.EditingFields.MaskEditorOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.EditingFields.MaskEditorOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.EditingFields.MaskEditorOptions.Mask">
+      <summary>
+        <para>Specifies the mask expression.</para>
+      </summary>
+      <value>An expression that specifies the editor mask.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.EditingFields.MaskEditorOptions.MaskMode">
+      <summary>
+        <para>Specifies the mask type.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.MaskMode"/> enumeration member that identifies the mask type.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.EditingFields.NumericEditingFieldEditorModel`1.#ctor(DevExpress.XtraPrinting.TextEditingField)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.EditingFields.NumericEditingFieldEditorModel`1"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.EditingFields.NumericEditorOptions`1.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.EditingFields.NumericEditorOptions`1"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerLocalizerLocalizationService">
+      <summary>
+        <para>Allows you to change localizable text at runtime.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerLocalizerLocalizationService.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerLocalizerLocalizationService"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId">
+      <summary>
+        <para>Lists the Report Viewer localization strings.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.BooleanEditor_No">
+      <summary>
+        <para>No</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.BooleanEditor_Yes">
+      <summary>
+        <para>Yes</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.DateRange_End">
+      <summary>
+        <para>End</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.DateRange_Start">
+      <summary>
+        <para>Start</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Editor_None">
+      <summary>
+        <para>(none)</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.ErrorMessage_ExportFormatNotFound">
+      <summary>
+        <para>Export Format is not found</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Msg_EmptyDocument">
+      <summary>
+        <para>The document does not contain any pages.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.TabPanel_DocumentMap">
+      <summary>
+        <para>Document Map</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.TabPanel_ExportOptions">
+      <summary>
+        <para>Export Options</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.TabPanel_Parameters">
+      <summary>
+        <para>Parameters</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.TabPanel_Parameters_ResetButton">
+      <summary>
+        <para>Reset</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.TabPanel_Parameters_SubmitButton">
+      <summary>
+        <para>Submit</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.TabPanel_Parameters_Title">
+      <summary>
+        <para>Preview Parameters</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.TabPanel_Search">
+      <summary>
+        <para>Search</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_CancelDocumentCreation">
+      <summary>
+        <para>Cancel Document Creation</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_ExportTo">
+      <summary>
+        <para>Export To</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_FirstPage">
+      <summary>
+        <para>First Page</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_HighlightEditingFields">
+      <summary>
+        <para>Highlight Editing Fields</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_LastPage">
+      <summary>
+        <para>Last Page</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_NextPage">
+      <summary>
+        <para>Next Page</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_PageOfPagesFormat">
+      <summary>
+        <para>{0} of {1}</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_PreviousPage">
+      <summary>
+        <para>Previous Page</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_Print">
+      <summary>
+        <para>Print</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_ZoomIn">
+      <summary>
+        <para>Zoom In</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Localization.DxBlazorReportViewerStringId.Toolbar_ZoomOut">
+      <summary>
+        <para>Zoom Out</para>
+      </summary>
+    </member>
+    <member name="N:DevExpress.Blazor.Reporting.Models">
+      <summary>
+        <para>Contains classes that determine the native Blazor Reporting component functionality.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.CustomizeParameterLookUpSourceEventArgs">
+      <summary>
+        <para>Provides data for the <see cref="P:DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeParameterLookUpSource"/> event.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.CustomizeParameterLookUpSourceEventArgs.#ctor(DevExpress.Blazor.Reporting.Models.ParameterModel,DevExpress.XtraReports.Parameters.LookUpValueCollection)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.CustomizeParameterLookUpSourceEventArgs"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.CustomizeParameterLookUpSourceEventArgs.LookUpValues">
+      <summary>
+        <para>A collection of values shown in the parameter lookup editor.</para>
+      </summary>
+      <value>A collection of lookup values.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.CustomizeParameterLookUpSourceEventArgs.ParameterModel">
+      <summary>
+        <para>Provides access to the settings specified for a report parameter.</para>
+      </summary>
+      <value>An object that contains the report parameter settings.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ExportFormatItem">
+      <summary>
+        <para>A toolbar item in the ExportTo drop down list.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ExportFormatItem.#ctor(DevExpress.Blazor.Reporting.DxReportViewer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ExportFormatItem"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ExportFormatItem.Format">
+      <summary>
+        <para>Specifies the format in which the document is exported when the user clicks the toolbar item.</para>
+      </summary>
+      <value>An enumeration member that specifies the export format.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ExportModel">
+      <summary>
+        <para>Determines the available export formats.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ExportModel.#ctor(DevExpress.Blazor.Reporting.DxReportViewer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ExportModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ExportModel.AvailableFormats">
+      <summary>
+        <para>Contains items displayed in the drop-down ExportTo list in the toolbar.</para>
+      </summary>
+      <value>A list of toolbar items.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ExportResultItem">
+      <summary>
+        <para>Contains information about the exported document after the export operation is completed.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ExportResultItem.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ExportResultItem"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ExportResultItem.#ctor(System.String,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ExportResultItem"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ExportResultRequestData">
+      <summary>
+        <para>Contains data for the <see cref="P:DevExpress.Blazor.Reporting.DxReportViewer.OnExport"/> event.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ExportResultRequestData.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ExportResultRequestData"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ExportResultRequestData.FormData">
+      <summary>
+        <para>A set of key-value pairs that contain strings to pass to the server.</para>
+      </summary>
+      <value>A dictionary of strings.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ExportResultRequestData.RequestUrl">
+      <summary>
+        <para>A request URL</para>
+      </summary>
+      <value>A string that is the request URL.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.GroupModel.#ctor(DevExpress.XtraReports.Parameters.GroupLayoutItem)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.GroupModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.IToolbarItem">
+      <summary>
+        <para>Contains information about a toolbar item.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.AdaptivePriority">
+      <summary>
+        <para>Specifies the order in which items are hidden when the browser window is resized.</para>
+      </summary>
+      <value>An <see cref="T:System.Int32"/> value that specifies the item priority.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.AdaptiveText">
+      <summary>
+        <para>Specifies the item’s text that is displayed when the item is hidden in the adaptive drop-down menu.</para>
+      </summary>
+      <value>A <see cref="T:System.String"/> value that specifies the menu item text.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.BeginGroup">
+      <summary>
+        <para>Specifies whether the item is the start of a new item group.</para>
+      </summary>
+      <value>True if an item is the start of a new item group; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.Checked">
+      <summary>
+        <para>Specifies whether the item is checked.</para>
+      </summary>
+      <value>True if the toolbar item is checked; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.ChildContent">
+      <summary>
+        <para>Specifies the segment of the UI to render as a RenderFragment within the toolbar item.</para>
+      </summary>
+      <value>The UI fragment to render.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.Click">
+      <summary>
+        <para>Specifies the Click event handler.</para>
+      </summary>
+      <value>A method delegate that specifies the Click event handler.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.CssClass">
+      <summary>
+        <para>Specifies the CSS class applied to the toolbar item.</para>
+      </summary>
+      <value>The CSS class name.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.GetEnabled">
+      <summary>
+        <para>Specifies a function that determines whether the item is enabled.</para>
+      </summary>
+      <value>A function that returns True if an item is enabled; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.IconCssClass">
+      <summary>
+        <para>Specifies an item icon’s CSS class.</para>
+      </summary>
+      <value>The CSS class name.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.Id">
+      <summary>
+        <para>Gets or sets the item identifier.</para>
+      </summary>
+      <value>A string that identifies a toolbar item.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.Items">
+      <summary>
+        <para>Specifies a collection of the current item’s child items.</para>
+      </summary>
+      <value>A <see cref="T:System.Collections.Generic.List`1"/> collection that stores child items.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.Name">
+      <summary>
+        <para>Specifies the item’s name. The property is not in use.</para>
+      </summary>
+      <value>A string that is the item’s name.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.SplitDropDownButton">
+      <summary>
+        <para>Specifies whether an item’s drop-down button is split into two buttons.</para>
+      </summary>
+      <value>True to split an item’s drop-down button into two buttons; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.Template">
+      <summary>
+        <para>Specifies the template to display an item’s content.</para>
+      </summary>
+      <value>The template content for an object of the <see cref="T:DevExpress.Blazor.Reporting.Models.IToolbarItem"/> type that contains information about an item (the text, state, icon, etc.)</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.TemplateName">
+      <summary>
+        <para>Specifies the name of the template used to display an item’s content.</para>
+      </summary>
+      <value>A string that is the template name.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.Text">
+      <summary>
+        <para>Specifies the item’s text.</para>
+      </summary>
+      <value>The item’s text.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.IToolbarItem.Visible">
+      <summary>
+        <para>Specifies whether the item is visible.</para>
+      </summary>
+      <value>True*` if the processed item is visible; otherwise, **false.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.MultiValueParameterModel.#ctor(DevExpress.XtraReports.Parameters.ParameterLayoutItem)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.MultiValueParameterModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.PageOfPagesModel">
+      <summary>
+        <para>Contains page number settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.PageOfPagesModel.#ctor(DevExpress.Blazor.Reporting.DxReportViewer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.PageOfPagesModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.PageOfPagesModel.Count">
+      <summary>
+        <para>Gets the total number of pages in the document.</para>
+      </summary>
+      <value>An integer that is the number of pages.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.PageOfPagesModel.CurrentPageNumber">
+      <summary>
+        <para>Gets the current page number.</para>
+      </summary>
+      <value>An integer that is the current page number. The numbers start with 1.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.PageOfPagesModel.DisplayValue">
+      <summary>
+        <para>The text displayed in page numbers.</para>
+      </summary>
+      <value>A string that indicates the current page number and the total number of pages.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.PageOfPagesModel.GetRenderContent(DevExpress.Blazor.IToolbarItemInfo)">
+      <summary>
+        <para>Returns the inner content of the PageOfPages toolbar item.</para>
+      </summary>
+      <param name="info">Information about the parent toolbar item.</param>
+      <returns>The UI fragment to render.</returns>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ParameterModel">
+      <summary>
+        <para>Contains a report parameter, properties and methods to manage the parameter.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ParameterModel.#ctor(DevExpress.XtraReports.Parameters.ParameterLayoutItem)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ParameterModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ParameterModel.ValueTemplate">
+      <summary>
+        <para>Specifies the editor template for the parameter.</para>
+      </summary>
+      <value>Template content rendered on the page.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ParametersModel">
+      <summary>
+        <para>Contains a collection of report parameters and implements methods and events that allow you to manage parameters.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ParametersModel.#ctor(DevExpress.Blazor.Reporting.DxReportViewer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ParametersModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ParametersModel.GetVisible">
+      <summary>
+        <para>Indicates whether at least one parameter is visible.</para>
+      </summary>
+      <returns>True if a report has one or more visible parameters; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ParametersModel.OnResetParameters">
+      <summary>
+        <para>Resets parameter values.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ParametersModel.OnSubmitParameters">
+      <summary>
+        <para>Applies parameter values and builds the document.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ParametersModel.VisibleItems">
+      <summary>
+        <para>Gets visible parameters.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.TabContentKind">
+      <summary>
+        <para>A tab content kind.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Models.TabContentKind.Custom">
+      <summary>
+        <para>A custom panel.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Models.TabContentKind.DocumentMap">
+      <summary>
+        <para>The Document Map panel.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Models.TabContentKind.ExportOptions">
+      <summary>
+        <para>The Export Options panel.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Models.TabContentKind.Parameters">
+      <summary>
+        <para>The Parameters panel.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Models.TabContentKind.Search">
+      <summary>
+        <para>The Search panel.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.TabModel">
+      <summary>
+        <para>Describes a tab in the Viewer’s Tab Panel.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.TabModel.#ctor(DevExpress.Blazor.Reporting.Models.ITabContentModel,System.String,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.TabModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.TabPanelModel">
+      <summary>
+        <para>Describes the Viewer’s Tab Panel.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.TabPanelModel.ActivateTab(System.String)">
+      <summary>
+        <para>Activates and expands the specified panel.</para>
+      </summary>
+      <param name="id">The panel ID.</param>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.TabPanelModel.ActiveTab">
+      <summary>
+        <para>Gets the active tab in the Tab Panel.</para>
+      </summary>
+      <value>An object that describes and identifies a tab in the Tab Panel.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.TabPanelModel.ActiveTabIndex">
+      <summary>
+        <para>Specifies the index of the tab that is currently active.</para>
+      </summary>
+      <value>An integer that is the zero-based tab index.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.TabPanelModel.Collapsed">
+      <summary>
+        <para>Specifies whether the tab panel is collapsed.</para>
+      </summary>
+      <value>True if the panel is collapsed; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.TabPanelModel.Item(DevExpress.Blazor.Reporting.Models.TabContentKind)">
+      <summary>
+        <para>Returns the specified tab panel.</para>
+      </summary>
+      <param name="kind">Specifies the tab content kind.</param>
+      <value>The specified tab panel.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.TabPanelModel.Tabs">
+      <summary>
+        <para>Provides access to the collection of tabs that the tab panel contains.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.TabPanelModel.ToggleCollapsed(System.Int32)">
+      <summary>
+        <para>Toggles the state of the specified tab panel.</para>
+      </summary>
+      <param name="tabIndex">An index in the <see cref="P:DevExpress.Blazor.Reporting.Models.TabPanelModel.Tabs">TabPanelModel.Tabs</see> collection.</param>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.TabPanelModel.Visible">
+      <summary>
+        <para>Determines whether the tab panel contains a visible tab.</para>
+      </summary>
+      <value>True if at least one tab is visible in the tab panel; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ToolbarItem">
+      <summary>
+        <para>A toolbar item.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ToolbarItem.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ToolbarItem"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.AdaptivePriority">
+      <summary>
+        <para>Specifies the order in which items are hidden when the browser window is resized.</para>
+      </summary>
+      <value>An <see cref="T:System.Int32"/> value that specifies the item priority.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.AdaptiveText">
+      <summary>
+        <para>Specifies the item’s text that is displayed when the item is hidden in the adaptive drop-down menu.</para>
+      </summary>
+      <value>A <see cref="T:System.String"/> value that specifies the menu item text.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.BeginGroup">
+      <summary>
+        <para>Specifies whether the item is the start of a new item group.</para>
+      </summary>
+      <value>True if an item is the start of a new item group; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.Checked">
+      <summary>
+        <para>Specifies whether the item is checked.</para>
+      </summary>
+      <value>True if the toolbar item is checked; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.ChildContent">
+      <summary>
+        <para>Specifies the segment of the UI to render as a RenderFragment within the toolbar item.</para>
+      </summary>
+      <value>The UI fragment to render.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.Click">
+      <summary>
+        <para>Specifies the Click event handler.</para>
+      </summary>
+      <value>A method delegate that specifies the Click event handler.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.CssClass">
+      <summary>
+        <para>Specifies the CSS class applied to the toolbar item.</para>
+      </summary>
+      <value>The CSS class name.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.GetEnabled">
+      <summary>
+        <para>Specifies a function that determines whether the item is enabled.</para>
+      </summary>
+      <value>A function that returns True if an item is enabled; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.IconCssClass">
+      <summary>
+        <para>Specifies an item icon’s CSS class.</para>
+      </summary>
+      <value>The CSS class name.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.Id">
+      <summary>
+        <para>Gets or sets the item identifier.</para>
+      </summary>
+      <value>A string that identifies an item.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.Items">
+      <summary>
+        <para>Specifies a collection of the current item’s child items.</para>
+      </summary>
+      <value>A <see cref="T:System.Collections.Generic.List`1"/> collection that stores child items.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.Name">
+      <summary>
+        <para>Specifies the item’s name. The property is not in use.</para>
+      </summary>
+      <value>Returns null for built-in toolbar items.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.SplitDropDownButton">
+      <summary>
+        <para>Specifies whether an item’s drop-down button is split into two buttons.</para>
+      </summary>
+      <value>True to split an item’s drop-down button into two buttons; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.Template">
+      <summary>
+        <para>Specifies the template to display an item’s content.</para>
+      </summary>
+      <value>The template content for an object of the <see cref="T:DevExpress.Blazor.Reporting.Models.IToolbarItem"/> type that contains information about an item (the text, state, icon, etc.)</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.TemplateName">
+      <summary>
+        <para>Specifies the name of the template used to display an item’s content.</para>
+      </summary>
+      <value>A string that is the template name.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.Text">
+      <summary>
+        <para>Specifies the item’s text.</para>
+      </summary>
+      <value>The item’s text.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarItem.Visible">
+      <summary>
+        <para>Specifies whether an item is visible.</para>
+      </summary>
+      <value>True if an item is visible; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ToolbarItemId">
+      <summary>
+        <para>Lists the toolbar item identifiers.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Models.ToolbarItemId.CancelDocumentCreation">
+      <summary>
+        <para>Identifies the Cancel Document Creation toolbar item.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ToolbarModel">
+      <summary>
+        <para>Allows you to access toolbar items in the Viewer’s Toolbar.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarModel.AllItems">
+      <summary>
+        <para>Provides access to the collection of the toolbar items.</para>
+      </summary>
+      <value>A collection of toolbar items.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ToolbarModel.VisibleItems">
+      <summary>
+        <para>Provides access to the collection of visible toolbar items.</para>
+      </summary>
+      <value>A collection of toolbar items.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ZoomConstants">
+      <summary>
+        <para>Lists values that specify the zoom level in the <see cref="T:DevExpress.Blazor.Reporting.DxReportViewer">DxReportViewer</see> component.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ZoomConstants.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ZoomConstants"/> class.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Models.ZoomConstants.PageWidth">
+      <summary>
+        <para>Zooms the document to fit the page width.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.Models.ZoomConstants.WholePage">
+      <summary>
+        <para>Zooms the document to fit the entire page.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.Models.ZoomModel">
+      <summary>
+        <para>Allows you to control the zoom level of the document that the Report Viewer displays.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ZoomModel.#ctor(DevExpress.Blazor.Reporting.DxReportViewer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Models.ZoomModel"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.Models.ZoomModel.DisplayValue">
+      <summary>
+        <para>Returns the zoom level as a percentage.</para>
+      </summary>
+      <value>A string that is the zoom perecentage level.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ZoomModel.ZoomInAsync">
+      <summary>
+        <para>Increases the document’s zoom level by 5 percent.</para>
+      </summary>
+      <returns>A task that zooms in 5%.</returns>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Models.ZoomModel.ZoomOutAsync">
+      <summary>
+        <para>Decreases the document’s zoom level by 5 percent.</para>
+      </summary>
+      <returns>A task that zooms out 5%.</returns>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.Services.ErrorNotifier.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.Services.ErrorNotifier"/> class.</para>
+      </summary>
+    </member>
+  </members>
+</doc>

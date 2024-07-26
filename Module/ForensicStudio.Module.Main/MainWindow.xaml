@@ -1,0 +1,43 @@
+﻿<fsc:FsDxRibbonWindow x:Class="ForensicStudio.Module.Main.MainWindow" AllowDrop="True"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+                      xmlns:fsc="ForensicStudioControls"
+                      xmlns:regions="http://prismlibrary.com/"
+                      Title="Forensic Studio" WindowState="Maximized"
+                      MinHeight="379" MinWidth="643">
+    <fsc:FsGrid>
+        <fsc:FsGrid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </fsc:FsGrid.RowDefinitions>
+        <fsc:FsRibbonControl Grid.Row="0"
+                             regions:RegionManager.RegionName="Ribbon">
+            <dxr:RibbonDefaultPageCategory />
+        </fsc:FsRibbonControl>
+        <fsc:FsContentControl Grid.Row="1" regions:RegionManager.RegionName="Content" />
+        <fsc:FsDockLayoutManager Grid.Row="1">
+            <fsc:FsDockVerticalLayoutGroup>
+                <fsc:FsDockHorizontalLayoutGroup regions:RegionManager.RegionName="TopLayoutGroup"
+                                                 ItemHeight="1*" />
+                <fsc:FsDockHorizontalLayoutGroup ItemHeight="3*">
+                    <fsc:FsDockVerticalLayoutGroup regions:RegionManager.RegionName="LeftLayoutGroup"
+                                                   ItemWidth="1*" />
+                    <fsc:FsDocumentGroup regions:RegionManager.RegionName="DocumentLayoutGroup" ItemWidth="3*" />
+                    <fsc:FsDockVerticalLayoutGroup regions:RegionManager.RegionName="RightLayoutGroup"
+                                                   ItemWidth="1*" />
+                </fsc:FsDockHorizontalLayoutGroup>
+                <fsc:FsDockHorizontalLayoutGroup regions:RegionManager.RegionName="BottomLayoutGroup"
+                                                 ItemHeight="1*" />
+            </fsc:FsDockVerticalLayoutGroup>
+            <fsc:FsDockLayoutManager.AutoHideGroups>
+                <fsc:FsAutoHideGroup regions:RegionManager.RegionName="TopAutoHideGroup" DockType="Top" />
+                <fsc:FsAutoHideGroup regions:RegionManager.RegionName="RightAutoHideGroup" DockType="Right" />
+                <fsc:FsAutoHideGroup regions:RegionManager.RegionName="BottomAutoHideGroup" DockType="Bottom" />
+                <fsc:FsAutoHideGroup regions:RegionManager.RegionName="LeftAutoHideGroup" DockType="Left" />
+            </fsc:FsDockLayoutManager.AutoHideGroups>
+        </fsc:FsDockLayoutManager>
+        <fsc:FsContentControl Grid.Row="2" regions:RegionManager.RegionName="StatusBar" />
+    </fsc:FsGrid>
+</fsc:FsDxRibbonWindow>

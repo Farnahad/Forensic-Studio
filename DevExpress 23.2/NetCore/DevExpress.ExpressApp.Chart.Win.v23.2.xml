@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.Chart.Win.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Chart.Win">
+      <summary>
+        <para>Contains classes and interfaces specific to the Windows Forms <see href="https://docs.devexpress.com/eXpressAppFramework/113302/analytics/chart-module">Chart Module</see> functionality.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Chart.Win.ChartListEditor">
+      <summary>
+        <para>Represents the charting <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see> used in the XAF Windows Forms applications.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Chart.Win.ChartListEditor.#ctor(DevExpress.ExpressApp.Model.IModelListView)">
+      <summary>
+        <para>Creates and initializes an instance of the <see cref="T:DevExpress.ExpressApp.Chart.Win.ChartListEditor"/> class.</para>
+      </summary>
+      <param name="model">An <see cref="T:DevExpress.ExpressApp.Model.IModelListView"/> object representing the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s node, which contains information on the View that will use the instantiated <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Chart.Win.ChartListEditor.BorderStyle">
+      <summary>
+        <para>Gets or sets the border style for the target <see href="https://docs.devexpress.com/WindowsForms/8117/controls-and-libraries/chart-control">Chart Control</see>.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraEditors.Controls.BorderStyles"/> enumeration value specifying the border style of the target Chart Control.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Chart.Win.ChartListEditor.BreakLinksToControls">
+      <summary>
+        <para>Removes references to the <see cref="T:DevExpress.ExpressApp.Chart.Win.ChartListEditor"/>‘s control and its event handlers.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Chart.Win.ChartListEditor.ChartControl">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.ExpressApp.Chart.Win.ChartListEditor"/>‘s control.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraCharts.ChartControl"/> object representing the current List Editor’s control.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Chart.Win.ChartListEditor.OnExporting">
+      <summary>
+        <para>Performs the required pre-export actions under the <see cref="T:DevExpress.ExpressApp.Chart.Win.ChartListEditor"/>.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Chart.Win.ChartListEditor.Printable">
+      <summary>
+        <para>Specifies the control to be exported via the <see cref="P:DevExpress.ExpressApp.SystemModule.ExportController.ExportAction">ExportController.ExportAction</see>.</para>
+      </summary>
+      <value>An IPrintable object that is the control used for exporting. The default value is the ChartListEditor’s <see cref="P:DevExpress.ExpressApp.Chart.Win.ChartListEditor.ChartControl">ChartListEditor.ChartControl</see> property value.</value>
+    </member>
+    <member name="E:DevExpress.ExpressApp.Chart.Win.ChartListEditor.PrintableChanged">
+      <summary>
+        <para>Occurs when the ChartListEditor’s controls are created and disposed of.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Chart.Win.ChartListEditor.Setup(DevExpress.ExpressApp.CollectionSourceBase,DevExpress.ExpressApp.XafApplication)">
+      <summary>
+        <para>Performs additional initialization of the <see cref="T:DevExpress.ExpressApp.Chart.Win.ChartListEditor"/>.</para>
+      </summary>
+      <param name="collectionSource">The Collection Source of the List View that the current <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see> represents in a UI.</param>
+      <param name="application">An <see cref="T:DevExpress.ExpressApp.XafApplication"/> object that can be used to manage the current application.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Chart.Win.ChartListEditor.SupportedExportFormats">
+      <summary>
+        <para>Provides access to the list of export formats supported by the current Chart List Editor.</para>
+      </summary>
+      <value>An List&lt;<see cref="T:DevExpress.XtraPrinting.ExportTarget"/>&gt; object that is a list of supported export formats.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Chart.Win.ChartWindowsFormsModule">
+      <summary>
+        <para>The module contained in the DevExpress.ExpressApp.Chart.Win.v23.2.dll assembly.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Chart.Win.ChartWindowsFormsModule.#ctor">
+      <summary>
+        <para>Creates an instance of the <see cref="T:DevExpress.ExpressApp.Chart.Win.ChartWindowsFormsModule"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Chart.Win.ChartWindowsFormsModule.GetModuleUpdaters(DevExpress.ExpressApp.IObjectSpace,System.Version)">
+      <summary>
+        <para>Returns the list of <see cref="T:DevExpress.ExpressApp.Updating.ModuleUpdater"/> updaters that handle database updates for the <see cref="T:DevExpress.ExpressApp.Chart.Win.ChartWindowsFormsModule"/> module.</para>
+      </summary>
+      <param name="objectSpace">An <see cref="T:DevExpress.ExpressApp.IObjectSpace"/> object which represents the Object Space used to update the database.</param>
+      <param name="versionFromDB">A System.Version object which represents the current database version.</param>
+      <returns>An IEnumerable&lt;<see cref="T:DevExpress.ExpressApp.Updating.ModuleUpdater"/>&gt; list of updaters that handle database updates for the <see cref="T:DevExpress.ExpressApp.Chart.Win.ChartWindowsFormsModule"/> module.</returns>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Win.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your WinForms application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Win.ApplicationBuilder.ChartsApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/113302/analytics/chart-module">Charts Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.ChartsApplicationBuilderExtensions.AddCharts(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/113302/analytics/chart-module">Charts Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+  </members>
+</doc>

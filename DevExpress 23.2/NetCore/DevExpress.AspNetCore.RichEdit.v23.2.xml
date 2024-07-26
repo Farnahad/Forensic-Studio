@@ -1,0 +1,2712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.AspNetCore.RichEdit.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.AspNetCore">
+      <summary>
+        <para>Contains classes that implement common functionality for the ASP.NET Core controls.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.BuilderFactoryRichEditExtensions">
+      <summary>
+        <para>Exposes extension methods defined for the <see cref="T:DevExpress.AspNetCore.BuilderFactoryRichEditExtensions">BuilderFactoryRichEditExtensions</see> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryRichEditExtensions.RichEdit(DevExpress.AspNetCore.BuilderFactory,System.String)">
+      <summary>
+        <para>An extension method of the <see cref="T:DevExpress.AspNetCore.BuilderFactoryRichEditExtensions">BuilderFactoryRichEditExtensions</see> class required to create a <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder">Rich Text Editor builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/>‘ instance this method extends.</param>
+      <param name="name">An identifier for the element representing the Rich Text Editor on the page.</param>
+      <returns>An object required to build the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryRichEditExtensions.RichEdit(DevExpress.AspNetCore.BuilderFactory)">
+      <summary>
+        <para>An extension method of the <see cref="T:DevExpress.AspNetCore.BuilderFactoryRichEditExtensions">BuilderFactoryRichEditExtensions</see> class required to create a <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder">Rich Text Editor builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/>‘ instance this method extends.</param>
+      <returns>An object required to build the Rich Text Editor.</returns>
+    </member>
+    <member name="N:DevExpress.AspNetCore.RichEdit">
+      <summary>
+        <para>Contains classes that implement the Rich Text Editor functionality.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.ArrayDataSourceBuilder">
+      <summary>
+        <para>A builder for an array data source.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ArrayDataSourceBuilder.Data(DevExpress.AspNetCore.RichEdit.JS)">
+      <summary>
+        <para>Specifies the array associated with the data source object.</para>
+      </summary>
+      <param name="data">The data source.</param>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ArrayDataSourceBuilder.Data(System.Collections.IDictionary)">
+      <summary>
+        <para>Specifies the array associated with the data source object.</para>
+      </summary>
+      <param name="data">The data source.</param>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ArrayDataSourceBuilder.Data(System.Collections.IEnumerable)">
+      <summary>
+        <para>Specifies the array associated with the data source object.</para>
+      </summary>
+      <param name="data">The data source.</param>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ArrayDataSourceBuilder.Data(System.Data.DataTable)">
+      <summary>
+        <para>Specifies the array associated with the data source object.</para>
+      </summary>
+      <param name="data">The data source.</param>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ArrayDataSourceBuilder.Key(System.String[])">
+      <summary>
+        <para>Specifies the key(s) used to access data items.</para>
+      </summary>
+      <param name="key">The key(s) of an array.</param>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.AuthenticationSettingsBuilder">
+      <summary>
+        <para>A builder for credential settings used to identify editable ranges in a protected document.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.AuthenticationSettingsBuilder.Group(System.String)">
+      <summary>
+        <para>Sets the name of the user group with editing permission.</para>
+      </summary>
+      <param name="value">The user group name.</param>
+      <returns>A builder for credential settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.AuthenticationSettingsBuilder.UserName(System.String)">
+      <summary>
+        <para>Specifies the username with editing permission.</para>
+      </summary>
+      <param name="value">The user name.</param>
+      <returns>A builder for credential settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.AutoCorrectSettingsBuilder">
+      <summary>
+        <para>A builder for AutoCorrect settings</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.AutoCorrectSettingsBuilder.CorrectTwoInitialCapitals(System.Boolean)">
+      <summary>
+        <para>Sets whether the control should change the second letter to lowercase when a word starts with two capital letters.</para>
+      </summary>
+      <param name="value">true, to switch this functionality on; otherwise, false.</param>
+      <returns>An object that can be used to further configure the AutoCorrect settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.AutoCorrectSettingsBuilder.DetectUrls(System.Boolean)">
+      <summary>
+        <para>Sets whether the control should detect URL strings and format them as hyperlinks.</para>
+      </summary>
+      <param name="value">true, to switch this functionality on; otherwise, false.</param>
+      <returns>An object that can be used to further configure the AutoCorrect settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.AutoCorrectSettingsBuilder.EnableAutomaticNumbering(System.Boolean)">
+      <summary>
+        <para>Sets whether the control should automatically create numbered or bulleted lists when certain symbols are typed.</para>
+      </summary>
+      <param name="value">true, to switch this functionality on; otherwise, false.</param>
+      <returns>An object that can be used to further configure the AutoCorrect settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.AutoCorrectSettingsBuilder.ReplaceInfoCollectionSettings(System.Action{DevExpress.AspNetCore.RichEdit.ReplaceInfoCollectionSettingsBuilder})">
+      <summary>
+        <para>Provides access to options specific to the collection of ASPxRichEditAutoCorrectReplaceInfo items.</para>
+      </summary>
+      <param name="configure">A method that configures the replacement collection settings.</param>
+      <returns>An object that can be used to further configure the AutoCorrect settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.AutoCorrectSettingsBuilder.ReplaceTextAsYouType(System.Boolean)">
+      <summary>
+        <para>Sets whether the control should replace the typed text if it matches to one of the replacement collection’s items.</para>
+      </summary>
+      <param name="value">true, to switch this functionality on; otherwise, false.</param>
+      <returns>An object that can be used to further configure the AutoCorrect settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.BookmarksSettingsBuilder">
+      <summary>
+        <para>A builder for bookmark settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.BookmarksSettingsBuilder.Color(System.Drawing.Color)">
+      <summary>
+        <para>Sets the document’s bookmark color.</para>
+      </summary>
+      <param name="color">The bookmark color.</param>
+      <returns>An object that can be used to further configure the bookmark settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.BookmarksSettingsBuilder.Visibility(DevExpress.AspNetCore.RichEdit.Visibility)">
+      <summary>
+        <para>Sets whether bookmarks are displayed in the document.</para>
+      </summary>
+      <param name="value">The bookmark visibility.</param>
+      <returns>An object that can be used to further configure the bookmark settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.ContextMenuBuilder">
+      <summary>
+        <para>A builder for context menu settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ContextMenuBuilder.Enabled(System.Boolean)">
+      <summary>
+        <para>Sets whether context menu is enabled in the Rich Text Edit.</para>
+      </summary>
+      <param name="value">true to enable context menu; otherwise, false.</param>
+      <returns>A builder for context menu settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.DataSourceFactory">
+      <summary>
+        <para>Contains methods to create data sources.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.DataSourceFactory.Array">
+      <summary>
+        <para>Creates an array data source.</para>
+      </summary>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.DataSourceFactory.StaticJson">
+      <summary>
+        <para>Creates a static JSON data source.</para>
+      </summary>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.DocumentFormat">
+      <summary>
+        <para>Lists file document formats.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.DocumentFormat.OpenXml">
+      <summary>
+        <para>The OpenXML file format (aka default MS Office 2007 format or .docx)</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.DocumentFormat.PlainText">
+      <summary>
+        <para>The plain text format.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.DocumentFormat.Rtf">
+      <summary>
+        <para>The rich text format.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.FieldsSettingsBuilder">
+      <summary>
+        <para>A builder for <see href="https://docs.devexpress.com/AspNetCore/402244/rich-edit/fields">field</see> settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FieldsSettingsBuilder.DefaultDateFormat(System.String)">
+      <summary>
+        <para>Specifies the format of the DATE field inserted via the UI.</para>
+      </summary>
+      <param name="value">The date format</param>
+      <returns>An object that can be used to further configure the fields settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FieldsSettingsBuilder.DefaultTimeFormat(System.String)">
+      <summary>
+        <para>Specifies the format of the TIME field inserted via the UI.</para>
+      </summary>
+      <param name="value">The time format.</param>
+      <returns>An object that can be used to further configure the fields settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FieldsSettingsBuilder.KeepHyperlinkResultForInvalidReference(System.Boolean)">
+      <summary>
+        <para>Sets whether to delete the result of a hyperlink whose target location is not specified.</para>
+      </summary>
+      <param name="value">true to keep results of all hyperlinks; false to delete the result of a hyperlink whose target location is not specified.</param>
+      <returns>An object that can be used to further configure the fields settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FieldsSettingsBuilder.UpdateFieldsBeforePrint(System.Boolean)">
+      <summary>
+        <para>Sets whether the control updates fields’ values before print.</para>
+      </summary>
+      <param name="value">true, to update the values of fields; otherwise, false.</param>
+      <returns>An object that can be used to further configure the fields settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FieldsSettingsBuilder.UpdateFieldsOnPaste(System.Boolean)">
+      <summary>
+        <para>Sets whether the control updates the value of the field that has been pasted by an end-user.</para>
+      </summary>
+      <param name="value">true, to update the values of fields; otherwise, false.</param>
+      <returns>An object that can be used to further configure the fields settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.FontMappingsSettingsBuilder">
+      <summary>
+        <para>A builder for font mapping settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FontMappingsSettingsBuilder.AddRule(System.String,System.String)">
+      <summary>
+        <para>Adds a new font mapping rule to the RichEdit control.</para>
+      </summary>
+      <param name="sourceFontFamily">A name of a font family that is mapped.</param>
+      <param name="destinationFontName">A font to which a source font family is mapped.</param>
+      <returns>An object that can be used to further configure the RichEdit font mapping settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FontMappingsSettingsBuilder.DefaultFontName(System.String)">
+      <summary>
+        <para>Specifies a font to which font families are mapped by default.</para>
+      </summary>
+      <param name="defaultFontName">The font name.</param>
+      <returns>An object that can be used to further configure the RichEdit font mapping settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.FontsSettingsBuilder">
+      <summary>
+        <para>A builder for font settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FontsSettingsBuilder.AddDefaultFonts">
+      <summary>
+        <para>Add default fonts to the RichEdit control.</para>
+      </summary>
+      <returns>An object used to further configure RichEdit font settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FontsSettingsBuilder.AddFont(System.String,System.String,System.Boolean,System.String,System.String,System.String,System.String)">
+      <summary>
+        <para>Adds a new font to the RichEdit control.</para>
+      </summary>
+      <param name="name">The font name.</param>
+      <param name="fontFamily">The font family.</param>
+      <param name="useGoogleFonts">true, to download the font&#39;s source files from Google Fonts; otherwise, false.</param>
+      <param name="regularFontUri">The URI of a file that contains the font in the regular style.</param>
+      <param name="boldFontUri">The URI of a file that contains the font in bold.</param>
+      <param name="italicFontUri">The URI of a file that contains the font in the italic style.</param>
+      <param name="boldItalicFontUri">The URI of a file that contains the font in the bold and italic style.</param>
+      <returns>An object that can be used to further configure the RichEdit font settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FontsSettingsBuilder.AddFont(System.String,System.String,System.Boolean)">
+      <summary>
+        <para>Adds a new font to the RichEdit control.</para>
+      </summary>
+      <param name="name">The font name.</param>
+      <param name="fontFamily">The font family.</param>
+      <param name="useGoogleFonts">true, to download the font&#39;s source files from Google Fonts; otherwise, false.</param>
+      <returns>An object that can be used to further configure the RichEdit font settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FontsSettingsBuilder.AddFont(System.String,System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+        <para>Adds a new font to the RichEdit control.</para>
+      </summary>
+      <param name="name">The font name.</param>
+      <param name="fontFamily">The font family.</param>
+      <param name="regularFontUri">The URI of a file that contains the font in the regular style.</param>
+      <param name="boldFontUri">The URI of a file that contains the font in bold.</param>
+      <param name="italicFontUri">The URI of a file that contains the font in the italic style.</param>
+      <param name="boldItalicFontUri">The URI of a file that contains the font in the bold and italic style.</param>
+      <returns>An object that can be used to further configure the RichEdit font settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FontsSettingsBuilder.AddFont(System.String,System.String)">
+      <summary>
+        <para>Adds a new font to the RichEdit control.</para>
+      </summary>
+      <param name="name">The font name.</param>
+      <param name="fontFamily">The font family.</param>
+      <returns>An object that can be used to further configure the RichEdit font settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FontsSettingsBuilder.DefaultFolder(System.String)">
+      <summary>
+        <para>Specifies a folder that contains font source files.</para>
+      </summary>
+      <param name="DefaultFolder">The folder URL.</param>
+      <returns>An object that can be used to further configure the RichEdit font settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.FontsSettingsBuilder.Mapping(System.Action{DevExpress.AspNetCore.RichEdit.FontMappingsSettingsBuilder})">
+      <summary>
+        <para>Specifies font mapping settings.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies font mapping settings.</param>
+      <returns>An object that can be used to further configure the RichEdit font settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.JS">
+      <summary>
+        <para>Contains data to bind to the RichEdit control.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.JS.#ctor(System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.RichEdit.JS"/> class.</para>
+      </summary>
+      <param name="value">A string that contains data to fill the JS structure.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.JS.ToString">
+      <summary>
+        <para>For internal use only.</para>
+      </summary>
+      <returns />
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.JS.Undefined">
+      <summary>
+        <para>For internal use only.</para>
+      </summary>
+      <value />
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.JS.Value">
+      <summary>
+        <para>For internal use only.</para>
+      </summary>
+      <value />
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder">
+      <summary>
+        <para>A builder for <see href="https://docs.devexpress.com/AspNetCore/402243/rich-edit/mail-merge">MailMerge</see> settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder.ActiveRecord(System.Int32)">
+      <summary>
+        <para>Sets the index of a data record displayed by fields in a mail-merge document.</para>
+      </summary>
+      <param name="value">The number of a record in a data source.</param>
+      <returns>An object that can be used to further configure the MailMerge settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder.DataSource(DevExpress.AspNetCore.RichEdit.JS)">
+      <summary>
+        <para>Sets a data source for Rich Text Editor’s mail merge functionality.</para>
+      </summary>
+      <param name="js">The MailMerge data source.</param>
+      <returns>An object that can be used to further configure the MailMerge settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder.DataSource(System.Collections.IDictionary)">
+      <summary>
+        <para>Sets a data source for Rich Text Editor’s mail merge functionality.</para>
+      </summary>
+      <param name="data">The MailMerge data source.</param>
+      <returns>An object that can be used to further configure the MailMerge settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder.DataSource(System.Collections.IEnumerable)">
+      <summary>
+        <para>Sets a data source for Rich Text Editor’s mail merge functionality.</para>
+      </summary>
+      <param name="data">The MailMerge data source.</param>
+      <returns>An object that can be used to further configure the MailMerge settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder.DataSource(System.Data.DataTable)">
+      <summary>
+        <para>Sets a data source for Rich Text Editor’s mail merge functionality.</para>
+      </summary>
+      <param name="data">The MailMerge data source.</param>
+      <returns>An object that can be used to further configure the MailMerge settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder.DataSource(System.Func{DevExpress.AspNetCore.RichEdit.DataSourceFactory,DevExpress.AspNetCore.RichEdit.SettingsOwnerBuilder})">
+      <summary>
+        <para>Sets a data source for Rich Text Editor’s mail merge functionality.</para>
+      </summary>
+      <param name="configurator">The data source configurator.</param>
+      <returns>An object that can be used to further configure the MailMerge settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder.DataSource(System.String)">
+      <summary>
+        <para>Sets a data source for Rich Text Editor’s mail merge functionality.</para>
+      </summary>
+      <param name="staticJsonUrl">The URL to json file with data.</param>
+      <returns>An object that can be used to further configure the MailMerge settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder.ViewMergedData(System.Boolean)">
+      <summary>
+        <para>Sets whether to display field results or field codes in a mail-merge document.</para>
+      </summary>
+      <param name="value">true, to display field results; false, to display field codes.</param>
+      <returns>An object that can be used to further configure the MailMerge settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.PdfSettingsBuilder">
+      <summary>
+        <para>A builder for PDF export settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.PdfSettingsBuilder.ExportUrl(System.String)">
+      <summary>
+        <para>Specifies the path where the exported PDF document is sent for further processing.</para>
+      </summary>
+      <param name="exportUrl">The URL.</param>
+      <returns>An object that can be used to further configure PDF export settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.PrintingSettingsBuilder">
+      <summary>
+        <para>A builder for printing settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.PrintingSettingsBuilder.ClosePrintDialogWithHtmlPreview(System.Boolean)">
+      <summary>
+        <para>Sets whether the print preview window should be closed when the print dialog is closed in <see href="https://docs.devexpress.com/AspNetCore/402118/rich-edit/printing#print-modes">HTML print mode</see>.</para>
+      </summary>
+      <param name="value">true to close HTML preview window when the print dialog is closed; false to close the print dialog without an HTML preview window.</param>
+      <returns>The builder for printing settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.PrintingSettingsBuilder.Mode(DevExpress.AspNetCore.RichEdit.PrintMode)">
+      <summary>
+        <para>Specifies the print mode.</para>
+      </summary>
+      <param name="mode">The print mode.</param>
+      <returns>A builder that can be used to further configure the printing settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.PrintLayoutViewSettingsBuilder">
+      <summary>
+        <para>A builder for the Print Layout view mode’s settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.PrintLayoutViewSettingsBuilder.ShowHorizontalRuler(System.Boolean)">
+      <summary>
+        <para>Specifies whether the horizontal ruler is shown.</para>
+      </summary>
+      <param name="value">true to show the ruler; otherwise, false.</param>
+      <returns>A builder for the Print Layout view mode’s settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.PrintMode">
+      <summary>
+        <para>Lists RichEdit print modes.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.PrintMode.Html">
+      <summary>
+        <para>The control renders the current document’s markup into a blank browser tab and invokes the browser’s Print dialog.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.PrintMode.Pdf">
+      <summary>
+        <para>The control exports the current document to PDF and invokes the Print dialog for the PDF file.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.RangePermissionsSettingsBuilder">
+      <summary>
+        <para>A builder for range permission settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RangePermissionsSettingsBuilder.BracketsColor(System.Drawing.Color)">
+      <summary>
+        <para>Sets the color of brackets that limit a permitted range.</para>
+      </summary>
+      <param name="color">The bracket color.</param>
+      <returns>A builder for range permission settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RangePermissionsSettingsBuilder.HighlightColor(System.Drawing.Color)">
+      <summary>
+        <para>Specifies the range permission highlight color.</para>
+      </summary>
+      <param name="color">The highlight color.</param>
+      <returns>A builder for range permission settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RangePermissionsSettingsBuilder.HighlightRanges(System.Boolean)">
+      <summary>
+        <para>Sets whether permitted ranges are highlighted.</para>
+      </summary>
+      <param name="value">true to highlight permitted ranges; otherwise, false.</param>
+      <returns>A builder for range permission settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RangePermissionsSettingsBuilder.ShowBrackets(System.Boolean)">
+      <summary>
+        <para>Sets the visibility of square brackets that limit a permitted range.</para>
+      </summary>
+      <param name="value">true to display the brackets; otherwise, false.</param>
+      <returns>A builder for range permission settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.ReplaceInfoBuilder">
+      <summary>
+        <para>A builder for the replace information object.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ReplaceInfoBuilder.What(System.String)">
+      <summary>
+        <para>Sets the text to be replaced.</para>
+      </summary>
+      <param name="value">The text that should be replaced.</param>
+      <returns>An object that can be used to further configure the replace information object.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ReplaceInfoBuilder.With(System.String)">
+      <summary>
+        <para>Sets the replacement text.</para>
+      </summary>
+      <param name="value">The text that substitutes the <see cref="M:DevExpress.AspNetCore.RichEdit.ReplaceInfoBuilder.What(System.String)"/> text.</param>
+      <returns>An object that can be used to further configure the replace information object.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.ReplaceInfoCollectionBuilder">
+      <summary>
+        <para>A builder for a replacement collection.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ReplaceInfoCollectionBuilder.Add">
+      <summary>
+        <para>Adds a new item to the replacement collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ReplaceInfoCollectionBuilder.Add(System.String,System.String)">
+      <summary>
+        <para>Adds a new item with the specified settings to the replacement collection.</para>
+      </summary>
+      <param name="what">The text that should be replaced.</param>
+      <param name="with">The text that substitutes the What text.</param>
+      <returns>An object that can be used to further configure the replacement collection.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.ReplaceInfoCollectionSettingsBuilder">
+      <summary>
+        <para>A builder for replacement information settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ReplaceInfoCollectionSettingsBuilder.CaseSensitive(System.Boolean)">
+      <summary>
+        <para>Sets whether to perform a case-sensitive string comparison when searching through the replacement collection’s items.</para>
+      </summary>
+      <param name="value">true, for case-sensitive comparison; otherwise, false.</param>
+      <returns>An object that can be used to further configure the replacement information settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ReplaceInfoCollectionSettingsBuilder.ReplaceInfoCollection(System.Action{DevExpress.AspNetCore.RichEdit.ReplaceInfoCollectionBuilder})">
+      <summary>
+        <para>Sets a collection of replace information objects.</para>
+      </summary>
+      <param name="configure">A method that configures the collection of replace information objects.</param>
+      <returns>An object that can be used to further configure the replacement information settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder">
+      <summary>
+        <para>A builder for the Rich Text Editor.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper,System.String)">
+      <summary>
+        <para>Creates an object of the <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> class.</para>
+      </summary>
+      <param name="htmlHelper">A helper object for rendering ASP.NET Core controls.</param>
+      <param name="name">A string specifying the name of the Rich Text Editor’s element on the page.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> class.</para>
+      </summary>
+      <param name="htmlHelper">A helper object for rendering ASP.NET Core controls.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Authentication(System.Action{DevExpress.AspNetCore.RichEdit.AuthenticationSettingsBuilder})">
+      <summary>
+        <para>Specifies authentication settings.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies authentication settings.</param>
+      <returns>A builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.AutoCorrect(System.Action{DevExpress.AspNetCore.RichEdit.AutoCorrectSettingsBuilder})">
+      <summary>
+        <para>Specifies what autocorrect features are enabled.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies autocorrect settings.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Bookmarks(System.Action{DevExpress.AspNetCore.RichEdit.BookmarksSettingsBuilder})">
+      <summary>
+        <para>Specifies the bookmarks’ appearance.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies the bookmarks settings.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.ConfirmOnLosingChanges(System.Action{DevExpress.AspNetCore.Office.ConfirmOnLosingChangesBuilder})">
+      <summary>
+        <para>Allows you to customize settings of a confirmation message that can be displayed when any unsaved data changes are going to be lost.</para>
+      </summary>
+      <param name="configure">A method that configures the confirmation message settings.</param>
+      <returns>An object that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.ContextMenu(System.Action{DevExpress.AspNetCore.RichEdit.ContextMenuBuilder})">
+      <summary>
+        <para>Allows you to configure context menu settings.</para>
+      </summary>
+      <param name="configure">A method that configures the context menu settings.</param>
+      <returns>The Rich Text Editor builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.CssClassName(System.String)">
+      <summary>
+        <para>Sets a specified CSS class to be applied to the Rich Text Editor.</para>
+      </summary>
+      <param name="cssClassName">The CSS class’s name applied to be applied.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.ExportUrl(System.String)">
+      <summary>
+        <para>Specifies the path where the exported document is sent for saving.</para>
+      </summary>
+      <param name="url">The URL.</param>
+      <returns>An object that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Fields(System.Action{DevExpress.AspNetCore.RichEdit.FieldsSettingsBuilder})">
+      <summary>
+        <para>Specifies the <see href="https://docs.devexpress.com/AspNetCore/402244/rich-edit/fields">fields</see>‘ settings.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies the fields’ settings.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Fonts(System.Action{DevExpress.AspNetCore.RichEdit.FontsSettingsBuilder})">
+      <summary>
+        <para>Specifies font settings.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies font settings.</param>
+      <returns>An object that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Height(System.Int32)">
+      <summary>
+        <para>Specifies the Rich Text Editor’s height on the page.</para>
+      </summary>
+      <param name="height">A value specifying the Rich Text Editor’s height.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Height(System.String)">
+      <summary>
+        <para>Specifies the Rich Text Editor’s height on the page.</para>
+      </summary>
+      <param name="height">A value specifying the Rich Text Editor’s height.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.MailMerge(System.Action{DevExpress.AspNetCore.RichEdit.MailMergeSettingsBuilder})">
+      <summary>
+        <para>Allows you to configure <see href="https://docs.devexpress.com/AspNetCore/402243/rich-edit/mail-merge">MailMerge</see> settings.</para>
+      </summary>
+      <param name="configure">A method that configures the MailMerge settings.</param>
+      <returns>An object that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Name(System.String)">
+      <summary>
+        <para>Specifies an identifier for the element representing the Rich Text Editor on the page.</para>
+      </summary>
+      <param name="name">A string specifying the name of the Rich Text Editor’s element on the page.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Nonce(System.String)">
+      <summary>
+        <para>Specifies the nonce attribute for the HTML markup the Rich Text Editor generates.</para>
+      </summary>
+      <param name="nonce">A cryptographic nonce (“number used once”).</param>
+      <returns>An object that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnActiveSubDocumentChanged(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>ActiveSubDocumentChanged</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnAutoCorrect(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>AutoCorrect</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnCalculateDocumentVariable(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>CalculateDocumentVariable</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnCalculateDocumentVariableAsync(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>CalculateDocumentVariableAsync</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnCharacterPropertiesChanged(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>CharacterPropertiesChanged</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnCommandStateChanged(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>CommandStateChanged</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnContentInserted(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>ContentInserted</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnContentRemoved(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>ContentRemoved</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnContextMenuShowing(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>ContextMenuShowing</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnCustomCommandExecuted(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>CustomCommandExecuted</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnDocumentChanged(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>DocumentChanged</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnDocumentFormatted(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>DocumentFormatted</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnDocumentLoaded(System.String)">
+      <summary>
+        <para>Assigns an event handler to a client event that occurs when a document model is loaded into the control.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnGotFocus(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>GotFocus</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnHyperlinkClick(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>HyperlinkClick</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnInit(System.String)">
+      <summary>
+        <para>Assigns an event handler to a client event that occurs when the Rich Text Editor is initialized.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnKeyDown(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>KeyDown</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnKeyUp(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>KeyUp</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnLostFocus(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>LostFocus</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnParagraphPropertiesChanged(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>ParagraphPropertiesChanged</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnPdfExported(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>PdfExported</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnPdfExporting(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>PdfExporting</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnPointerDown(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>PointerDown</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnPointerUp(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>PointerUp</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnSaved(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>Saved</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnSaving(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>Saving</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.OnSelectionChanged(System.String)">
+      <summary>
+        <para>Assigns an event handler to the <b>SelectionChanged</b> event.</para>
+      </summary>
+      <param name="callback">The name of the JavaScript function or the JavaScript function code used to handle the event.</param>
+      <returns>The builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Open(System.Func{System.Byte[]},DevExpress.AspNetCore.RichEdit.DocumentFormat,System.String)">
+      <summary>
+        <para>Opens a document specified by an array of bytes.</para>
+      </summary>
+      <param name="contentAccessorByBytes">A method delegate that gets a byte array from which to open the document.</param>
+      <param name="format">An object that specifies the document format.</param>
+      <param name="documentName">The name of the file to open. Also serves as an exported file name.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that allows you to configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Open(System.Func{System.IO.Stream},DevExpress.AspNetCore.RichEdit.DocumentFormat,System.String)">
+      <summary>
+        <para>Opens a document specified by a stream.</para>
+      </summary>
+      <param name="contentAccessorByStream">A method delegate that gets a stream from which to open the document.</param>
+      <param name="format">An object that specifies the document format.</param>
+      <param name="documentName">The name of the file to open. Also serves as an exported file name.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that allows you to configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Open(System.String,DevExpress.AspNetCore.RichEdit.DocumentFormat)">
+      <summary>
+        <para>Opens a document by the specified path.</para>
+      </summary>
+      <param name="filePath">A string value specifying the path to the document to open.</param>
+      <param name="format">An object specifying the document format.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Open(System.String)">
+      <summary>
+        <para>Opens a document by the specified path.</para>
+      </summary>
+      <param name="filePath">A string value specifying the path to the document to open.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Pdf(System.Action{DevExpress.AspNetCore.RichEdit.PdfSettingsBuilder})">
+      <summary>
+        <para>Specifies PDF export settings.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies PDF export settings.</param>
+      <returns>An object that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Printing(System.Action{DevExpress.AspNetCore.RichEdit.PrintingSettingsBuilder})">
+      <summary>
+        <para>Specifies the printing settings.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies the printing settings.</param>
+      <returns>A builder that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.RangePermissions(System.Action{DevExpress.AspNetCore.RichEdit.RangePermissionsSettingsBuilder})">
+      <summary>
+        <para>Specifies range permission settings.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies range permission settings.</param>
+      <returns>A builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.ReadOnly(System.Boolean)">
+      <summary>
+        <para>Specifies whether an end-user can change the Rich Text Editor contents at runtime.</para>
+      </summary>
+      <param name="value">true, if an end-user cannot change the Rich Text Editor contents; otherwise, false.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Ribbon(System.Action{DevExpress.AspNetCore.RichEdit.RichEditRibbonSettingsBuilder})">
+      <summary>
+        <para>Allows you to customize the ribbon element.</para>
+      </summary>
+      <param name="configure">A delegate method that configures the ribbon.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Search(System.Action{DevExpress.AspNetCore.RichEdit.SearchSettingsBuilder})">
+      <summary>
+        <para>Specifies search settings.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies search settings.</param>
+      <returns>A builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.SpellCheck(System.Action{DevExpress.AspNetCore.RichEdit.SpellCheckBuilder})">
+      <summary>
+        <para>Specifies <see href="https://docs.devexpress.com/AspNetCore/401928/rich-edit/spell-check">spell check</see> settings.</para>
+      </summary>
+      <param name="configure">A delegate method that specifies spell check settings.</param>
+      <returns>A builder for the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Unit(DevExpress.AspNetCore.RichEdit.Unit)">
+      <summary>
+        <para>Sets the unit for dimensions in dialogs.</para>
+      </summary>
+      <param name="unit">The unit.</param>
+      <returns>An object that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Views(System.Action{DevExpress.AspNetCore.RichEdit.ViewsSettingsBuilder})">
+      <summary>
+        <para>Specifies the Rich Text Editor’s view mode.</para>
+      </summary>
+      <param name="configure">A method delegate specifying the view mode.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Width(System.Int32)">
+      <summary>
+        <para>Specifies the Rich Text Editor’s width on the page.</para>
+      </summary>
+      <param name="width">A value specifying the Rich Text Editor’s height.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.RichEdit.RichEditBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.Width(System.String)">
+      <summary>
+        <para>Specifies the Rich Text Editor’s width on the page.</para>
+      </summary>
+      <param name="width">A value specifying the Rich Text Editor’s height.</param>
+      <returns>An object that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditBuilder.WriteTo(System.IO.TextWriter,System.Text.Encodings.Web.HtmlEncoder)">
+      <summary>
+        <para>Writes this Rich Text Editor to the writer.</para>
+      </summary>
+      <param name="writer">The writer to write this Rich Text Editor.</param>
+      <param name="encoder">An HTML character encoder.</param>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.RichEditRibbonContextTabCategoriesBuilder">
+      <summary>
+        <para>A builder for a ribbon context tab category collection in Rich Text Editor.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonContextTabCategoriesBuilder.AddHeaderAndFooterContextTabCategory">
+      <summary>
+        <para>Adds the Header And Footer context tab category to the context tab category collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added category.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonContextTabCategoriesBuilder.AddShapeContextTabCategory">
+      <summary>
+        <para>Adds the Shape context tab category to the context tab category collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added category.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonContextTabCategoriesBuilder.AddTableContextTabCategory">
+      <summary>
+        <para>Adds the Table context tab category to the context tab category collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added category.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.RichEditRibbonContextTabCategoryInfoBuilder">
+      <summary>
+        <para>A builder that configures a context tab category.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder">
+      <summary>
+        <para>A builder for the Rich Text Editor ribbon item collection.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddAddParagraphToTableOfContentsItem">
+      <summary>
+        <para>Adds the Add Paragraph To Table Of Contents item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddApplyTableStyleItem">
+      <summary>
+        <para>Adds the Apply Table Style item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddBoldItem">
+      <summary>
+        <para>Adds the Bold item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddBookmarkItem">
+      <summary>
+        <para>Adds the Bookmark item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddBulletedListItem">
+      <summary>
+        <para>Adds the Bulleted List item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddChangeStyleItem">
+      <summary>
+        <para>Adds the Change Style item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddChangeTableBorderItem">
+      <summary>
+        <para>Adds the Change Table Border item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddClearFormattingItem">
+      <summary>
+        <para>Adds the Clear Formatting item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddCloseHeaderFooterItem">
+      <summary>
+        <para>Adds the Close Header and Footer item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddColumnsItem">
+      <summary>
+        <para>Adds the Columns item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddCopyItem">
+      <summary>
+        <para>Adds the Copy item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddCutItem">
+      <summary>
+        <para>Adds the Cut item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddDecreaseFontSizeItem">
+      <summary>
+        <para>Adds the Decrease Font Size item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddDeleteTableItem">
+      <summary>
+        <para>Adds the Delete Table item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddDifferentFirstPageItem">
+      <summary>
+        <para>Adds the Different First Page item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddDifferentOddAndEvenPagesItem">
+      <summary>
+        <para>Adds the Different Odd And Even Pages item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddDownloadDocumentItem">
+      <summary>
+        <para>Adds the Download Document item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddFindItem">
+      <summary>
+        <para>Adds the Find item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddFirstRecordItem">
+      <summary>
+        <para>Adds the First Record item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddFontForeColorItem">
+      <summary>
+        <para>Adds the Font Color item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddFontNameItem">
+      <summary>
+        <para>Adds the Font Name item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddFontSizeItem">
+      <summary>
+        <para>Adds the Font Size item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddFontStyleItem">
+      <summary>
+        <para>Adds the Font Style item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddFooterItem">
+      <summary>
+        <para>Adds the Footer item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddFooterOffsetItem">
+      <summary>
+        <para>Adds the Footer Offset item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddFullScreenItem">
+      <summary>
+        <para>Adds the Full Screen item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddGoToFooterItem">
+      <summary>
+        <para>Adds the Go To Footer item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddGoToHeaderItem">
+      <summary>
+        <para>Adds the Go To Header item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddHeaderItem">
+      <summary>
+        <para>Adds the Header item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddHeaderOffsetItem">
+      <summary>
+        <para>Adds the Header Offset item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddHorizontalRulerItem">
+      <summary>
+        <para>Adds the Horizontal Ruler item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddHyperLinkItem">
+      <summary>
+        <para>Adds the Hyper Link item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddIncreaseFontSizeItem">
+      <summary>
+        <para>Adds the Increase Font Size item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertCaptionItem">
+      <summary>
+        <para>Adds the Insert Caption item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertFieldItem">
+      <summary>
+        <para>Adds the Insert Field item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertMergeFieldItem">
+      <summary>
+        <para>Adds the Insert Merge Field item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertPageCountItem">
+      <summary>
+        <para>Adds the Insert Page Count item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertPageNumberItem">
+      <summary>
+        <para>Adds the Insert Page Number item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertPictureItem">
+      <summary>
+        <para>Adds the Insert Picture item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertTableItem">
+      <summary>
+        <para>Adds the Insert Table item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertTableOfCaptionsItem">
+      <summary>
+        <para>Adds the Insert Table Of Captions item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertTableOfContentsItem">
+      <summary>
+        <para>Adds the Insert Table Of Contents item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertTableRowsColumnsItem">
+      <summary>
+        <para>Adds the Insert Table Rows Columns item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddInsertTextBoxItem">
+      <summary>
+        <para>Adds the Insert Text Box item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddItalicItem">
+      <summary>
+        <para>Adds the Italic item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddLastRecordItem">
+      <summary>
+        <para>Adds the Last Record item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddLineSpacingItem">
+      <summary>
+        <para>Adds the Line Spacing item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddLinkToPreviousSectionItem">
+      <summary>
+        <para>Adds the Link To Previous Section item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddMailMergeItem">
+      <summary>
+        <para>Adds the Mail Merge item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddMergeTableCellsItem">
+      <summary>
+        <para>Adds the Merge Table Cells item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddMultilevelListItem">
+      <summary>
+        <para>Adds the Multilevel List item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddNewDocumentItem">
+      <summary>
+        <para>Adds the New Document item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddNextHeaderFooterItem">
+      <summary>
+        <para>Adds the Next Header Footer item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddNextRecordItem">
+      <summary>
+        <para>Adds the Next Record item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddNumberingListItem">
+      <summary>
+        <para>Adds the Numbering List item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddOpenDocumentItem">
+      <summary>
+        <para>Adds the Open Document item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPageBreakItem">
+      <summary>
+        <para>Adds the Page Break item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPageColorItem">
+      <summary>
+        <para>Adds the Page Color item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPageMarginsItem">
+      <summary>
+        <para>Adds the Page Margins item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPageOrientationItem">
+      <summary>
+        <para>Adds the Page Orientation item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPaperSizeItem">
+      <summary>
+        <para>Adds the Paper Size item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddParagraphAlignmentItem">
+      <summary>
+        <para>Adds the Paragraph Alignment item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddParagraphBackColorItem">
+      <summary>
+        <para>Adds the Paragraph Back Color item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPasteItem">
+      <summary>
+        <para>Adds the Paste item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPreviousHeaderFooterItem">
+      <summary>
+        <para>Adds the Previous Header Footer item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPreviousRecordItem">
+      <summary>
+        <para>Adds the Previous Record item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPrintDocumentItem">
+      <summary>
+        <para>Adds the Print Document item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddPrintLayoutViewItem">
+      <summary>
+        <para>Adds the Print Layout View item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddRedoItem">
+      <summary>
+        <para>Adds the Redo item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddReplaceItem">
+      <summary>
+        <para>Adds the Replace item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddSaveDocumentItem">
+      <summary>
+        <para>Adds the Save Document item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddSelectTableItem">
+      <summary>
+        <para>Adds the Select Table item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShapeAlignmentItem">
+      <summary>
+        <para>Adds the Shape Alignment item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShapeBringForwardItem">
+      <summary>
+        <para>Adds the Shape Bring Forward item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShapeFillColorItem">
+      <summary>
+        <para>Adds the Shape Fill Color item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShapeOutlineColorItem">
+      <summary>
+        <para>Adds the Shape Outline Color item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShapeOutlineWidthItem">
+      <summary>
+        <para>Adds the Shape Outline Width item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShapeSendBackwardItem">
+      <summary>
+        <para>Adds the Shape Send Backward item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShapeTextWrapItem">
+      <summary>
+        <para>Adds the Shape Text Wrap item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShowAllFieldCodesItem">
+      <summary>
+        <para>Adds the Show All Field Codes item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShowAllFieldResultsItem">
+      <summary>
+        <para>Adds the Show All Field Results item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddShowHiddenSymbolsItem">
+      <summary>
+        <para>Adds the Show Hidden Symbols item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddSimpleViewItem">
+      <summary>
+        <para>Adds the Simple View item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddSplitTableCellsItem">
+      <summary>
+        <para>Adds the Split Table Cells item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddStrikeoutItem">
+      <summary>
+        <para>Adds the Strikeout item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddSubscriptItem">
+      <summary>
+        <para>Adds the Subscript item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddSuperscriptItem">
+      <summary>
+        <para>Adds the Superscript item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddTableAutoFitItem">
+      <summary>
+        <para>Adds the Table Auto Fit item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddTableBorderColorItem">
+      <summary>
+        <para>Adds the Table Border Color item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddTableBorderStyleItem">
+      <summary>
+        <para>Adds the Table Border Style item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddTableBorderWidthItem">
+      <summary>
+        <para>Adds the Table Border Width item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddTableCellAlignItem">
+      <summary>
+        <para>Adds the Table Cell Align item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddTableCellShadingItem">
+      <summary>
+        <para>Adds the Table Cell Shading item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddTableStyleOptionsItem">
+      <summary>
+        <para>Adds the Table Style Options item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddTextCaseItem">
+      <summary>
+        <para>Adds the Text Case item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddUnderlineItem">
+      <summary>
+        <para>Adds the Underline item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddUndoItem">
+      <summary>
+        <para>Adds the Undo item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddUpdateAllFieldsItem">
+      <summary>
+        <para>Adds the Update All Fields item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddUpdateTableOfContentsItem">
+      <summary>
+        <para>Adds the Update Table Of Contents item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddViewMergedDataItem">
+      <summary>
+        <para>Adds the View Merged Data item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.AddViewTableGridlinesItem">
+      <summary>
+        <para>Adds the View Table Gridlines item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertAddParagraphToTableOfContentsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Add Paragraph To Table Of Contents item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertApplyTableStyleItem(System.Int32)">
+      <summary>
+        <para>Inserts the Apply Table Style item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertBoldItem(System.Int32)">
+      <summary>
+        <para>Inserts the Bold item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertBookmarkItem(System.Int32)">
+      <summary>
+        <para>Inserts the Bookmark item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertBulletedListItem(System.Int32)">
+      <summary>
+        <para>Inserts the Bulleted List item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertChangeStyleItem(System.Int32)">
+      <summary>
+        <para>Inserts the Change Style item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertChangeTableBorderItem(System.Int32)">
+      <summary>
+        <para>Inserts the Change Table Border item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertClearFormattingItem(System.Int32)">
+      <summary>
+        <para>Inserts the Clear Formatting item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertCloseHeaderFooterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Close Header and Footer item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertColumnsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Columns item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertCopyItem(System.Int32)">
+      <summary>
+        <para>Inserts the Copy item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertCutItem(System.Int32)">
+      <summary>
+        <para>Inserts the Cut item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertDecreaseFontSizeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Decrease Font Size item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertDeleteTableItem(System.Int32)">
+      <summary>
+        <para>Inserts the Delete Table item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertDifferentFirstPageItem(System.Int32)">
+      <summary>
+        <para>Inserts the Different First Page item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertDifferentOddAndEvenPagesItem(System.Int32)">
+      <summary>
+        <para>Inserts the Different Odd And Even Pages item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertDownloadDocumentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Download Document item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertFindItem(System.Int32)">
+      <summary>
+        <para>Inserts the Find item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertFirstRecordItem(System.Int32)">
+      <summary>
+        <para>Inserts the First Record item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertFontForeColorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Color item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertFontNameItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Name item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertFontSizeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Size item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertFontStyleItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Style item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertFooterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Footer item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertFooterOffsetItem(System.Int32)">
+      <summary>
+        <para>Inserts the Footer Offset item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertFullScreenItem(System.Int32)">
+      <summary>
+        <para>Inserts the Full Screen item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertGoToFooterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Go To Footer item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertGoToHeaderItem(System.Int32)">
+      <summary>
+        <para>Inserts the Go To Header item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertHeaderItem(System.Int32)">
+      <summary>
+        <para>Inserts the Header item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertHeaderOffsetItem(System.Int32)">
+      <summary>
+        <para>Inserts the Header Offset item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertHorizontalRulerItem(System.Int32)">
+      <summary>
+        <para>Inserts the Horizontal Ruler item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertHyperLinkItem(System.Int32)">
+      <summary>
+        <para>Inserts the Hyper Link item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertIncreaseFontSizeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Increase Font Size item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertCaptionItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Caption item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertFieldItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Field item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertMergeFieldItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Merge Field item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertPageCountItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Page Count item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertPageNumberItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Page Number item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertPictureItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Picture item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertTableItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Table item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertTableOfCaptionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Table Of Captions item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertTableOfContentsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Table Of Contents item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertTableRowsColumnsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Table Rows Columns item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertInsertTextBoxItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Text Box item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertItalicItem(System.Int32)">
+      <summary>
+        <para>Inserts the Italic item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertLastRecordItem(System.Int32)">
+      <summary>
+        <para>Inserts the Last Record item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertLineSpacingItem(System.Int32)">
+      <summary>
+        <para>Inserts the Line Spacing item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertLinkToPreviousSectionItem(System.Int32)">
+      <summary>
+        <para>Inserts the Link To Previous Section item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertMailMergeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Mail Merge item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertMergeTableCellsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Merge Table Cells item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertMultilevelListItem(System.Int32)">
+      <summary>
+        <para>Inserts the Multilevel List item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertNewDocumentItem(System.Int32)">
+      <summary>
+        <para>Inserts the New Document item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertNextHeaderFooterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Next Header Footer item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertNextRecordItem(System.Int32)">
+      <summary>
+        <para>Inserts the Next Record item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertNumberingListItem(System.Int32)">
+      <summary>
+        <para>Inserts the Numbering List item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertOpenDocumentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Open Document item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPageBreakItem(System.Int32)">
+      <summary>
+        <para>Inserts the Page Break item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPageColorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Page Color item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPageMarginsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Page Margins item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPageOrientationItem(System.Int32)">
+      <summary>
+        <para>Inserts the Page Orientation item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPaperSizeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Paper Size item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertParagraphAlignmentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Paragraph Alignment item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertParagraphBackColorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Paragraph Back Color item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPasteItem(System.Int32)">
+      <summary>
+        <para>Inserts the Paste item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPreviousHeaderFooterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Previous Header Footer item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPreviousRecordItem(System.Int32)">
+      <summary>
+        <para>Inserts the Previous Record item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPrintDocumentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Print Document item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertPrintLayoutViewItem(System.Int32)">
+      <summary>
+        <para>Inserts the Print Layout View item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertRedoItem(System.Int32)">
+      <summary>
+        <para>Inserts the Redo item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertReplaceItem(System.Int32)">
+      <summary>
+        <para>Inserts the Replace item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertSaveDocumentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Save Document item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertSelectTableItem(System.Int32)">
+      <summary>
+        <para>Inserts the Select Table item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShapeAlignmentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Shape Alignment item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShapeBringForwardItem(System.Int32)">
+      <summary>
+        <para>Inserts the Shape Bring Forward item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShapeFillColorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Shape Fill Color item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShapeOutlineColorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Shape Outline Color item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShapeOutlineWidthItem(System.Int32)">
+      <summary>
+        <para>Inserts the Shape Outline Width item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShapeSendBackwardItem(System.Int32)">
+      <summary>
+        <para>Inserts the Shape Send Backward item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShapeTextWrapItem(System.Int32)">
+      <summary>
+        <para>Inserts the Shape Text Wrap item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShowAllFieldCodesItem(System.Int32)">
+      <summary>
+        <para>Inserts the Show All Field Codes item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShowAllFieldResultsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Show All Field Results item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertShowHiddenSymbolsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Show Hidden Symbols item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertSimpleViewItem(System.Int32)">
+      <summary>
+        <para>Inserts the Simple View item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertSplitTableCellsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Split Table Cells item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertStrikeoutItem(System.Int32)">
+      <summary>
+        <para>Inserts the Strikeout item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertSubscriptItem(System.Int32)">
+      <summary>
+        <para>Inserts the Subscript item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertSuperscriptItem(System.Int32)">
+      <summary>
+        <para>Inserts the Superscript item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertTableAutoFitItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Auto Fit item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertTableBorderColorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Border Color item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertTableBorderStyleItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Border Style item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertTableBorderWidthItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Border Width item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertTableCellAlignItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Cell Align item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertTableCellShadingItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Cell Shading item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertTableStyleOptionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Style Options item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertTextCaseItem(System.Int32)">
+      <summary>
+        <para>Inserts the Text Case item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertUnderlineItem(System.Int32)">
+      <summary>
+        <para>Inserts the Underline item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertUndoItem(System.Int32)">
+      <summary>
+        <para>Inserts the Undo item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertUpdateAllFieldsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Update All Fields item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertUpdateTableOfContentsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Update Table Of Contents item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertViewMergedDataItem(System.Int32)">
+      <summary>
+        <para>Inserts the View Merged Data item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonItemCollectionBuilder.InsertViewTableGridlinesItem(System.Int32)">
+      <summary>
+        <para>Inserts the View Table Gridlines item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.RichEditRibbonSettingsBuilder">
+      <summary>
+        <para>A builder for a Rich Text Editor’s ribbon settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder">
+      <summary>
+        <para>A builder for the Rich Text Edit ribbon tab collection.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddFileTab">
+      <summary>
+        <para>Adds the File tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddFloatingObjectsContextTab">
+      <summary>
+        <para>Adds the Floating Objects tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddHeaderAndFooterContextTab">
+      <summary>
+        <para>Adds the Header And Footer tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddHomeTab">
+      <summary>
+        <para>Adds the Home tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddInsertTab">
+      <summary>
+        <para>Adds the Insert tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddMailMergeTab">
+      <summary>
+        <para>Adds the Mail Merge tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddPageLayoutTab">
+      <summary>
+        <para>Adds the Page Layout tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddReferencesTab">
+      <summary>
+        <para>Adds the References tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddTableDesignContextTab">
+      <summary>
+        <para>Adds the Table Design tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddTableLayoutContextTab">
+      <summary>
+        <para>Adds the Table Layout tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.AddViewTab">
+      <summary>
+        <para>Adds the View tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertFileTab(System.Int32)">
+      <summary>
+        <para>Inserts the File tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertFloatingObjectsContextTab(System.Int32)">
+      <summary>
+        <para>Inserts the Floating Objects context tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertHeaderAndFooterContextTab(System.Int32)">
+      <summary>
+        <para>Inserts the Header And Footer context tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertHomeTab(System.Int32)">
+      <summary>
+        <para>Inserts the Home tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertInsertTab(System.Int32)">
+      <summary>
+        <para>Inserts the Insert tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertMailMergeTab(System.Int32)">
+      <summary>
+        <para>Inserts the Mail Merge tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertPageLayoutTab(System.Int32)">
+      <summary>
+        <para>Inserts the Page Layout tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertReferencesTab(System.Int32)">
+      <summary>
+        <para>Inserts the References tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertTableDesignContextTab(System.Int32)">
+      <summary>
+        <para>Inserts the Table Design tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertTableLayoutContextTab(System.Int32)">
+      <summary>
+        <para>Inserts the Table Layout context tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabCollectionBuilder.InsertViewTab(System.Int32)">
+      <summary>
+        <para>Inserts the View tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.RichEditRibbonTabInfoBuilder">
+      <summary>
+        <para>A builder that configures a ribbon tab.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.SearchSettingsBuilder">
+      <summary>
+        <para>A builder for search settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SearchSettingsBuilder.FilterInterval(System.String)">
+      <summary>
+        <para>Specifies the function that filters search results.</para>
+      </summary>
+      <param name="filterInterval">The name of the JavaScript function or the JavaScript function code that filters search results.</param>
+      <returns>An object that can be used to further configure search settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.SettingsOwnerBuilder">
+      <summary>
+        <para>The base class for settings owner builders.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.SimpleViewPaddingsBuilder">
+      <summary>
+        <para>A builder that allows you to specify settings of paddings in the Simple view mode.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SimpleViewPaddingsBuilder.All(System.Int32)">
+      <summary>
+        <para>Sets all paddings.</para>
+      </summary>
+      <param name="value">The padding value, in twips.</param>
+      <returns>An object that can be used to further configure the paddings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SimpleViewPaddingsBuilder.Bottom(System.Int32)">
+      <summary>
+        <para>Sets the bottom padding.</para>
+      </summary>
+      <param name="value">The padding value, in twips.</param>
+      <returns>An object that can be used to further configure the paddings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SimpleViewPaddingsBuilder.Left(System.Int32)">
+      <summary>
+        <para>Sets the left padding.</para>
+      </summary>
+      <param name="value">The padding value, in twips.</param>
+      <returns>An object that can be used to further configure the paddings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SimpleViewPaddingsBuilder.Right(System.Int32)">
+      <summary>
+        <para>Sets the right padding.</para>
+      </summary>
+      <param name="value">The padding value, in twips.</param>
+      <returns>An object that can be used to further configure the paddings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SimpleViewPaddingsBuilder.Top(System.Int32)">
+      <summary>
+        <para>Sets the top padding.</para>
+      </summary>
+      <param name="value">The padding value, in twips.</param>
+      <returns>An object that can be used to further configure the paddings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.SimpleViewSettingsBuilder">
+      <summary>
+        <para>A builder for the Simple view mode’s settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SimpleViewSettingsBuilder.FixedWidth(System.Nullable{System.Int32})">
+      <summary>
+        <para>Specifies the width of the Rich Edit content in the Simple view mode.</para>
+      </summary>
+      <param name="value">The width, in pixels.</param>
+      <returns>An object that can be used to further configure settings of the Simple view mode.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SimpleViewSettingsBuilder.Paddings(System.Action{DevExpress.AspNetCore.RichEdit.SimpleViewPaddingsBuilder})">
+      <summary>
+        <para>Sets settings of paddings in the Simple view mode.</para>
+      </summary>
+      <param name="configure">A method that specifies paddings settings.</param>
+      <returns>An object that can be used to further configure settings of the Simple view mode.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.SpellCheckBuilder">
+      <summary>
+        <para>A builder for <see href="https://docs.devexpress.com/AspNetCore/401928/rich-edit/spell-check">spell check</see> settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SpellCheckBuilder.AddWordToDictionary(System.String)">
+      <summary>
+        <para>Sets a function called when a user clicks the Add to Dictionary context menu command.</para>
+      </summary>
+      <param name="value">A function that gets the word to be added to the dictionary.</param>
+      <returns>A builder for spell check settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SpellCheckBuilder.CheckWordSpelling(System.String)">
+      <summary>
+        <para>Sets the function that checks the spelling of a word.</para>
+      </summary>
+      <param name="value">The name of the JavaScript function or the entire JavaScript function code that implements spell check.</param>
+      <returns>A builder for spell check settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SpellCheckBuilder.Enabled(System.Boolean)">
+      <summary>
+        <para>Sets whether spell check is activated in the RichEdit control.</para>
+      </summary>
+      <param name="value">true to enable spell check; otherwise, false.</param>
+      <returns>A builder for spell check settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.SpellCheckBuilder.SuggestionCount(System.Int32)">
+      <summary>
+        <para>Sets the maximum number of suggested words that can be displayed in the context menu.</para>
+      </summary>
+      <param name="value">The number of words.</param>
+      <returns>A builder for spell check settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.StaticJsonDataSourceBuilder">
+      <summary>
+        <para>A builder for a static JSON data source.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.StaticJsonDataSourceBuilder.CacheAllData(System.Boolean)">
+      <summary>
+        <para>Specifies whether to cache loaded JSON data.</para>
+      </summary>
+      <param name="enabled">true, to cache the data; otherwise, false.</param>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.StaticJsonDataSourceBuilder.Key(System.String[])">
+      <summary>
+        <para>Specifies the JSON data key(s).</para>
+      </summary>
+      <param name="key">The key(s).</param>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.StaticJsonDataSourceBuilder.Url(System.String)">
+      <summary>
+        <para>Specifies the URL used to load JSON data.</para>
+      </summary>
+      <param name="url">The URL to JSON data.</param>
+      <returns>An object that can be used to further configure the data source.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.StoreDataSourceBuilder">
+      <summary>
+        <para>The base class for data source builders.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.Unit">
+      <summary>
+        <para>Lists values that specify unit for dimensions in Rich Text Editor dialogs.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.Unit.Centimeter">
+      <summary>
+        <para>Dimensions are specified in centimeters.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.Unit.Inch">
+      <summary>
+        <para>Dimensions are specified in inches.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.ViewsSettingsBuilder">
+      <summary>
+        <para>A builder for Rich Text Editor’s view settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ViewsSettingsBuilder.PrintLayoutView(System.Action{DevExpress.AspNetCore.RichEdit.PrintLayoutViewSettingsBuilder})">
+      <summary>
+        <para>Specifies the Print Layout view mode’s settings.</para>
+      </summary>
+      <param name="configure">A method that configures the Print Layout view mode settings.</param>
+      <returns>A builder for Rich Text Editor’s view settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ViewsSettingsBuilder.SimpleView(System.Action{DevExpress.AspNetCore.RichEdit.SimpleViewSettingsBuilder})">
+      <summary>
+        <para>Specifies the Simple view mode’s settings.</para>
+      </summary>
+      <param name="configure">A method that configure the Simple view mode settings.</param>
+      <returns>An object that can be used to further configure view settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.RichEdit.ViewsSettingsBuilder.ViewType(DevExpress.AspNetCore.RichEdit.ViewType)">
+      <summary>
+        <para>Sets the Rich Text Editor view type.</para>
+      </summary>
+      <param name="viewType">The view type.</param>
+      <returns>An object that can be used to further configure the view settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.ViewType">
+      <summary>
+        <para>Lists values that specify the Rich Edit’s document view type.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.ViewType.PrintLayout">
+      <summary>
+        <para>The print layout mode. The control displays pages with applied format settings.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.ViewType.Simple">
+      <summary>
+        <para>The simple layout mode. The control displays document as a website ignoring page layout.In this mode, the control does not split a document into pages and ignores headers, footers, and page layout settings: margins, orientation, size, columns, and breaks.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.RichEdit.Visibility">
+      <summary>
+        <para>Lists values that specify the visibility of bookmarks.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.Visibility.Auto">
+      <summary>
+        <para>Bookmark visibility is determined by the current view.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.Visibility.Hidden">
+      <summary>
+        <para>Bookmarks are hidden.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.RichEdit.Visibility.Visible">
+      <summary>
+        <para>Bookmarks are visible.</para>
+      </summary>
+    </member>
+  </members>
+</doc>

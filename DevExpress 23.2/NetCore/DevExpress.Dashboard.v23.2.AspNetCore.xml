@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.Dashboard.v23.2.AspNetCore</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.AspNetCore">
+      <summary>
+        <para>Contains base classes that implement functionality specific to ASP.NET Core applications.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.BuilderFactoryExtension">
+      <summary>
+        <para>Exposes extension methods defined for the <see cref="T:DevExpress.AspNetCore.BuilderFactoryExtension"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryExtension.Dashboard(DevExpress.AspNetCore.BuilderFactory,System.String)">
+      <summary>
+        <para>The <see cref="T:DevExpress.AspNetCore.BuilderFactoryExtension"/> class’ extension method required to create a <see cref="T:DevExpress.DashboardAspNetCore.DashboardBuilder">Dashboard Control Builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/> instance that this method extends.</param>
+      <param name="name">An identifier for the element representing the <see href="https://docs.devexpress.com/Dashboard/115163/web-dashboard/integrate-dashboard-component/aspnet-core-dashboard-control">Web Dashboard</see> on the page.</param>
+      <returns>The object required to build the <see href="https://docs.devexpress.com/Dashboard/115163/web-dashboard/integrate-dashboard-component/aspnet-core-dashboard-control">Web Dashboard</see>.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryExtension.Dashboard(DevExpress.AspNetCore.BuilderFactory)">
+      <summary>
+        <para>The <see cref="T:DevExpress.AspNetCore.BuilderFactoryExtension"/> class’ extension method required to create a <see cref="T:DevExpress.DashboardAspNetCore.DashboardBuilder">Dashboard Control Builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/> instance that this method extends.</param>
+      <returns>The object required to build the <see href="https://docs.devexpress.com/Dashboard/115163/web-dashboard/integrate-dashboard-component/aspnet-core-dashboard-control">Web Dashboard</see>.</returns>
+    </member>
+    <member name="N:DevExpress.DashboardAspNetCore">
+      <summary>
+        <para>Contains classes that implement the ASP.NET Core Dashboard functionality.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.AspNetCoreDashboardExporter">
+      <summary>
+        <para>Performs server-side <see href="https://docs.devexpress.com/Dashboard/15181/common-features/printing-and-exporting">export</see> of a dashboard/dashboard item displayed in the <see href="https://docs.devexpress.com/Dashboard/115955/web-dashboard">ASP.NET Core Dashboard</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.AspNetCoreDashboardExporter.#ctor(DevExpress.DashboardWeb.DashboardConfigurator,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardAspNetCore.AspNetCoreDashboardExporter"/> class with specified settings.</para>
+      </summary>
+      <param name="dashboardConfigurator">A <see cref="T:DevExpress.DashboardWeb.DashboardConfigurator"/> instance that provides server settings for the <see href="https://docs.devexpress.com/Dashboard/115955/web-dashboard">Web Dashboard</see>.</param>
+      <param name="hostingEnvironment">A <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostEnvironment"/> object used to set the path to the directory that contains the application content files.</param>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardBackendOptionsBuilder">
+      <summary>
+        <para>Contains methods that allow you to configure the Web Dashboard’s back-end.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBackendOptionsBuilder.RequestHttpHeaders(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})">
+      <summary>
+        <para>Specifies HTTP-headers that are sent to the server.</para>
+      </summary>
+      <param name="config">A delegate that provides access to the object that is a collection of headers and values.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBackendOptionsBuilder.Uri(System.String)">
+      <summary>
+        <para>Specifies the URL used by the <b>DevExpress.Dashboard.DashboardControl</b> to send data requests to a server.</para>
+      </summary>
+      <param name="uri">A <see cref="T:System.String"/> object that specifies the endpoint URL prefix used to send data requests to a server.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardBuilder">
+      <summary>
+        <para>Contains methods that allow you to customize the <see href="https://docs.devexpress.com/Dashboard/115163/web-dashboard/integrate-dashboard-component/aspnet-core-dashboard-control">Web Dashboard</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardAspNetCore.DashboardBuilder"/> class with the specified control’s name.</para>
+      </summary>
+      <param name="htmlHelper">An <see cref="T:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper"/> object that is an HTML helper.</param>
+      <param name="name">A <see cref="T:System.String"/> object that is the dashboard control’s name.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardAspNetCore.DashboardBuilder"/> class with a default control’s name.</para>
+      </summary>
+      <param name="htmlHelper">A <see cref="T:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper"/> object that is an html helper.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.AllowMaximizeItems(System.Boolean)">
+      <summary>
+        <para>Specifies whether end users can maximize dashboard items.</para>
+      </summary>
+      <param name="allowMaximizeItems">true, to allow maximizing dashboard items; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.BackendOptions(System.Action{DevExpress.DashboardAspNetCore.DashboardBackendOptionsBuilder})">
+      <summary>
+        <para>Specifies options that allow you to configure the Web Dashboard’s back-end.</para>
+      </summary>
+      <param name="config">A delegate that provides access to the Web Dashboard’s back-end options.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.ControllerName(System.String)">
+      <summary>
+        <para>Specifies a Web Dashboard’s controller name.</para>
+      </summary>
+      <param name="controllerName">A <see cref="T:System.String"/> that is a Web Dashboard’s controller name.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.DataRequestOptions(System.Action{DevExpress.DashboardAspNetCore.DataRequestOptionsBuilder})">
+      <summary>
+        <para>Specifies options that allow you to configure a data request mode.</para>
+      </summary>
+      <param name="config">A delegate that provides access to options used to configure a data request mode.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.EncodeHtml(System.Boolean)">
+      <summary>
+        <para>Specifies whether the web control’s value and element content are rendered as pure HTML, or HTML markers are stripped out.</para>
+      </summary>
+      <param name="encodeHtml">true if the HTML code contained within the web control’s value and element content are not executed and are converted into the corresponding text for display purposes; false if the web control’s value and element content can contain pure HTML code.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.Extensions(System.Action{DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder})">
+      <summary>
+        <para>Provides access to the registered extensions’ settings.</para>
+      </summary>
+      <param name="extensionOption">An action that provides an access to the registered extensions’ settings.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.Height(System.Int32)">
+      <summary>
+        <para>Gets or sets the Web Dashboard control’s height.</para>
+      </summary>
+      <param name="height">The Web Dashboard control’s height in pixels.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.Height(System.String)">
+      <summary>
+        <para>Gets or sets the Web Dashboard control’s height.</para>
+      </summary>
+      <param name="height">A <see cref="T:System.String"/> object specifying the Web Dashboard control’s height.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.InitialDashboardId(System.String)">
+      <summary>
+        <para>Specifies the identifier of the dashboard to be loaded to the Web Dashboard.</para>
+      </summary>
+      <param name="initialDashboardId">A <see cref="T:System.String"/> value that specifies the dashboard identifier.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.InitialDashboardState(System.String)">
+      <summary>
+        <para>Specifies the initial state of the loaded dashboard.</para>
+      </summary>
+      <param name="initialDashboardState">A string that defines the initial dashboard state.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.LimitVisibleDataMode(DevExpress.DashboardWeb.LimitVisibleDataMode)">
+      <summary>
+        <para>Specifies a data limitation mode that allows you to display a reduced form of the visible data.</para>
+      </summary>
+      <param name="limitVisibleDataMode">The <see cref="T:DevExpress.DashboardWeb.LimitVisibleDataMode"/> enumeration value that is the data limitation mode.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.LoadDefaultDashboard(System.Boolean)">
+      <summary>
+        <para>Specifies whether the default dashboard should be loaded from the <see href="https://docs.devexpress.com/Dashboard/16979/web-dashboard/integrate-dashboard-component/dashboard-backend/prepare-dashboard-storage">dashboard storage</see>.</para>
+      </summary>
+      <param name="loadDefaultDashboard">true, to load the default dashboard from the dashboard storage; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.Name(System.String)">
+      <summary>
+        <para>Specifies the dashboard control’s name.</para>
+      </summary>
+      <param name="name">A <see cref="T:System.String"/> object that is the dashboard control’s name.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.Nonce(System.String)">
+      <summary>
+        <para>Specifies the nonce value.</para>
+      </summary>
+      <param name="nonce">A <see cref="T:System.String"/> that specifies the nonce value.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.OnBeforeRender(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the BeforeRender event is raised.</para>
+      </summary>
+      <param name="onBeforeRender">A <see cref="T:System.String"/> object containing the JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.OnDashboardBeginUpdate(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the DashboardBeginUpdate event is raised.</para>
+      </summary>
+      <param name="onDashboardBeginUpdate">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.OnDashboardEndUpdate(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the DashboardEndUpdate event is raised.</para>
+      </summary>
+      <param name="onDashboardEndUpdate">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.OnDashboardInitialized(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the DashboardInitialized event is raised.</para>
+      </summary>
+      <param name="onDashboardInitialized">A <see cref="T:System.String"/> object containing the JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.OnDashboardInitializing(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the DashboardInitializing event is raised.</para>
+      </summary>
+      <param name="onDashboardInitializing">A <see cref="T:System.String"/> object containing the JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.OnDashboardStateChanged(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the DashboardStateChanged event is raised.</para>
+      </summary>
+      <param name="onDashboardStateChanged">A <see cref="T:System.String"/> object containing the JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.OnInitializing(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the Initializing event is raised.</para>
+      </summary>
+      <param name="onInitializing">A <see cref="T:System.String"/> object containing the JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.OnItemBeginUpdate(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the ItemBeginUpdate event is raised.</para>
+      </summary>
+      <param name="onItemBeginUpdate">A <see cref="T:System.String"/> object containing the JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.OnItemEndUpdate(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the ItemEndUpdate event is raised.</para>
+      </summary>
+      <param name="onItemEndUpdate">A <see cref="T:System.String"/> object containing the JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.ResizeByTimer(System.Boolean)">
+      <summary>
+        <para>Specifies whether to redraw the Web Dashboard control when the size of a container is changed.</para>
+      </summary>
+      <param name="resizeByTimer">true, to redraw the Web Dashboard when the size of the a container is changed; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.ShowConfirmationOnBrowserClosing(System.Boolean)">
+      <summary>
+        <para>Specifies whether to show a browser warning if an end-user attempts to leave the page with unsaved data.</para>
+      </summary>
+      <param name="showConfirmationOnBrowserClosing">true, to show dialog; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.UseCardLegacyLayout(System.Boolean)">
+      <summary>
+        <para>Specifies whether to enable the legacy card layout used prior to v17.1.</para>
+      </summary>
+      <param name="useCardLegacyLayout">true, to enable the legacy card layout used prior to v17.1; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.UseNeutralFilterMode(System.Boolean)">
+      <summary>
+        <para>Specifies whether to show all items in the <see href="https://docs.devexpress.com/Dashboard/117367/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/filter-elements/filter-elements-overview">filter elements</see> deselected by default.</para>
+      </summary>
+      <param name="useNeutralFilterMode">true to activate <see href="https://docs.devexpress.com/Dashboard/400262/common-features/interactivity/neutral-filter-mode">Neutral Filter Mode</see>; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.Width(System.Int32)">
+      <summary>
+        <para>Gets or sets the Web Dashboard control’s width.</para>
+      </summary>
+      <param name="width">The Web Dashboard control’s width in pixels.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.Width(System.String)">
+      <summary>
+        <para>Gets or sets the Web Dashboard control’s width.</para>
+      </summary>
+      <param name="width">A <see cref="T:System.String"/> object specifying the Web Dashboard control’s width.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardBuilder.WorkingMode(DevExpress.DashboardWeb.WorkingMode)">
+      <summary>
+        <para>Specifies the working mode of the Web Dashboard.</para>
+      </summary>
+      <param name="workingMode">A <see cref="T:DevExpress.DashboardWeb.WorkingMode"/> enumeration value that specifies a working mode of the Web Dashboard control.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardConnectionStringsProvider">
+      <summary>
+        <para>A data connection string provider for ASP.NET Core. This provider allows users to create new data sources based on predefined connection strings from the configuration file.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardConnectionStringsProvider.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardAspNetCore.DashboardConnectionStringsProvider"/> class with the specified section name from the appsettings.json file.</para>
+      </summary>
+      <param name="configuration">An <see cref="T:Microsoft.Extensions.Configuration.IConfiguration">IConfiguration</see> object that represents a set of key/value application configuration properties.</param>
+      <param name="sectionName">A <see cref="T:System.String"/> object that is a section name from the appsettings.json file.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardConnectionStringsProvider.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardAspNetCore.DashboardConnectionStringsProvider"/> class with a default section name from the appsettings.json file.</para>
+      </summary>
+      <param name="configuration">An <see cref="T:Microsoft.Extensions.Configuration.IConfiguration">IConfiguration</see> object that represents a set of key/value application configuration properties.</param>
+    </member>
+    <member name="F:DevExpress.DashboardAspNetCore.DashboardConnectionStringsProvider.DefaultConnectionStringsSectionName">
+      <summary>
+        <para>Specifies the section name in the appsettings.json file where connection strings are contained.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardController">
+      <summary>
+        <para>A dashboard controller that handles interactions between client and server sides.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardController.#ctor(DevExpress.DashboardWeb.DashboardConfigurator,Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardAspNetCore.DashboardController">DashboardController</see> class.</para>
+      </summary>
+      <param name="configurator">A <see cref="T:DevExpress.DashboardWeb.DashboardConfigurator"/> object that provides server settings for the <see href="https://docs.devexpress.com/Dashboard/115955/web-dashboard">Web Dashboard</see>.</param>
+      <param name="dataProtectionProvider">Provides data protection services.</param>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder">
+      <summary>
+        <para>A wrapper that provides access to <b>DevExpress.Dashboard.DashboardExportExtensionOptions</b>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder.AllowExportDashboard(System.Nullable{System.Boolean})">
+      <summary>
+        <para>Specifies whether end-users can export a dashboard.</para>
+      </summary>
+      <param name="allowExportDashboard">true, if end-users can export a dashboard; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder.AllowExportDashboardItems(System.Nullable{System.Boolean})">
+      <summary>
+        <para>Specifies whether the dashboard items can be exported by end-users.</para>
+      </summary>
+      <param name="allowExportDashboardItems">true, if end-users can export the dashboard items; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder.ExcelExportOptions(System.Action{DevExpress.DashboardCommon.DashboardExcelExportOptions})">
+      <summary>
+        <para>Contains options which define how the dashboard item is <see href="https://docs.devexpress.com/Dashboard/116694/web-dashboard/create-dashboards-on-the-web/exporting">exported</see> to the Excel format.</para>
+      </summary>
+      <param name="config">A delegate used to customize the <see cref="T:DevExpress.DashboardCommon.DashboardExcelExportOptions"/> object.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder.ImageExportOptions(System.Action{DevExpress.DashboardCommon.DashboardImageExportOptions})">
+      <summary>
+        <para>Contains options which define how the dashboard item is <see href="https://docs.devexpress.com/Dashboard/116694/web-dashboard/create-dashboards-on-the-web/exporting">exported</see> to the Image format.</para>
+      </summary>
+      <param name="config">A delegate used to customize the <see cref="T:DevExpress.DashboardCommon.DashboardImageExportOptions"/> object.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder.OnExportDialogHidden(System.String)">
+      <summary>
+        <para>A handler for the event that occurs when the export dialog is hidden.</para>
+      </summary>
+      <param name="onExportDialogHidden">A function that is executed when the export dialog is hidden.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder.OnExportDialogShowing(System.String)">
+      <summary>
+        <para>A handler for the event that occurs before the export dialog is shown.</para>
+      </summary>
+      <param name="onExportDialogShowing">A function that is executed before the export dialog is shown.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder.OnExportDialogShown(System.String)">
+      <summary>
+        <para>A handler for the event that occurs after the export dialog is shown.</para>
+      </summary>
+      <param name="onExportDialogShown">A function that is executed after the export dialog is shown.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder.PdfExportOptions(System.Action{DevExpress.DashboardCommon.DashboardPdfExportOptions})">
+      <summary>
+        <para>Contains options which define how the dashboard item is <see href="https://docs.devexpress.com/Dashboard/116694/web-dashboard/create-dashboards-on-the-web/exporting">exported</see> to the PDF format.</para>
+      </summary>
+      <param name="config">A delegate used to customize the <see cref="T:DevExpress.DashboardCommon.DashboardPdfExportOptions"/> object.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder">
+      <summary>
+        <para>A wrapper that provides access to the <b>DevExpress.Dashboard.DashboardControlOptions.extensions</b> collection.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder.DashboardExport(System.Action{DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder})">
+      <summary>
+        <para>Allows you to use the DashboardExport extension.</para>
+      </summary>
+      <param name="config">A delegate used to configure the <see cref="T:DevExpress.DashboardAspNetCore.DashboardExportOptionBuilder"/>.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder.DataInspector(System.Action{DevExpress.DashboardAspNetCore.DataInspectorOptionBuilder})">
+      <summary>
+        <para>Allows you to use the DataInspector extension.</para>
+      </summary>
+      <param name="config">A delegate used to configure the <see cref="T:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder"/>.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder.DataSourceWizard(System.Action{DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder})">
+      <summary>
+        <para>Allows you to use the DataSourceWizard extension.</para>
+      </summary>
+      <param name="config">A delegate used to configure the <see cref="T:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder"/>.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder.DesignerToolbar(System.Action{DevExpress.DashboardAspNetCore.DesignerToolbarOptionBuilder})">
+      <summary>
+        <para>Allows you to use the <b>DevExpress.Dashboard.Designer.DesignerToolbarExtension</b>.</para>
+      </summary>
+      <param name="config">A delegate used to configure the <see cref="T:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder"/>.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder.MobileLayout(System.Action{DevExpress.DashboardAspNetCore.DashboardMobileLayoutOptionBuilder})">
+      <summary>
+        <para>Allows you to use the MobileLayout extension.</para>
+      </summary>
+      <param name="config">A delegate used to configure the <see cref="T:DevExpress.DashboardAspNetCore.DashboardMobileLayoutOptionBuilder"/>.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder.ParameterDialog(System.Action{DevExpress.DashboardAspNetCore.DashboardParameterDialogOptionBuilder})">
+      <summary>
+        <para>Allows you to use the ParameterDialog extension.</para>
+      </summary>
+      <param name="config">A delegate used to configure the <see cref="T:DevExpress.DashboardAspNetCore.DashboardParameterDialogOptionBuilder"/>.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder.ParameterDialogApi(System.Action{DevExpress.DashboardAspNetCore.DashboardParameterDialogOptionBuilder})">
+      <summary>
+        <para>This method is obsolete (use the ParameterDialog method instead).</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder.UrlState(System.Action{DevExpress.DashboardAspNetCore.DashboardUrlStateOptionBuilder})">
+      <summary>
+        <para>Allows you to use the UrlState extension.</para>
+      </summary>
+      <param name="config">A delegate used to configure the <see cref="T:DevExpress.DashboardAspNetCore.DashboardUrlStateOptionBuilder"/>.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardExtensionsOptionBuilder.ViewerApi(System.Action{DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder})">
+      <summary>
+        <para>Allows you to use the ViewerApi extension.</para>
+      </summary>
+      <param name="config">A delegate used to configure the <see cref="T:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder"/>.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardJsonConverter">
+      <summary>
+        <para>Provides methods that allow you to convert a dashboard XML definition to JSON and vice versa.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardJsonConverter.JsonToXml(System.String,Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)">
+      <summary>
+        <para>Converts a dashboard XML definition to the JSON string with specified data protection services.</para>
+      </summary>
+      <param name="json">A System.String value that specifies the JSON dashboard model.</param>
+      <param name="protectionProvider">A <see cref="T:Microsoft.AspNetCore.DataProtection.IDataProtectionProvider"/> object that provides data protection services.</param>
+      <returns>A <see cref="T:System.Xml.Linq.XDocument"/> that is the dashboard XML definition.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardJsonConverter.JsonToXml(System.String)">
+      <summary>
+        <para>Converts a dashboard XML definition to the JSON string.</para>
+      </summary>
+      <param name="json">A System.String value that specifies the JSON dashboard model.</param>
+      <returns>A <see cref="T:System.Xml.Linq.XDocument"/> that is the dashboard XML definition.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardJsonConverter.XmlToJson(System.Xml.Linq.XDocument,Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)">
+      <summary>
+        <para>Converts a dashboard XML definition to the JSON string with specified data protection services.</para>
+      </summary>
+      <param name="dashboardDocument">A <see cref="T:System.Xml.Linq.XDocument"/> that specifies the dashboard XML definition.</param>
+      <param name="protectionProvider">A <see cref="T:Microsoft.AspNetCore.DataProtection.IDataProtectionProvider"/> object that provides data protection services.</param>
+      <returns>A <see cref="T:System.String"/> value that is the JSON dashboard model.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardJsonConverter.XmlToJson(System.Xml.Linq.XDocument)">
+      <summary>
+        <para>Converts a dashboard XML definition to the JSON string.</para>
+      </summary>
+      <param name="dashboardDocument">A <see cref="T:System.Xml.Linq.XDocument"/> that specifies the dashboard XML definition.</param>
+      <returns>A <see cref="T:System.String"/> value that is the JSON dashboard model.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardLocalizationProvider">
+      <summary>
+        <para>A service required for Web Dashboard localization.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardLocalizationProvider.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardAspNetCore.DashboardLocalizationProvider"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardMobileLayoutOptionBuilder">
+      <summary>
+        <para>A wrapper that provides access to <b>DevExpress.Dashboard.MobileLayoutExtensionOptions</b>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardMobileLayoutOptionBuilder.MobileLayoutEnabled(System.Nullable{DevExpress.DashboardWeb.MobileLayoutMode})">
+      <summary>
+        <para>specifies the mobile layout mode for the Web Dashboard.</para>
+      </summary>
+      <param name="mode">A <see cref="T:DevExpress.DashboardWeb.MobileLayoutMode"/> object that specifies the mobile layout mode.</param>
+      <returns>A reference to this instance after the operation is completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardParameterDialogOptionBuilder">
+      <summary>
+        <para>A wrapper that provides access to <b>DevExpress.Dashboard.DashboardParameterDialogExtensionOptions</b>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardParameterDialogOptionBuilder.OnDynamicLookUpValuesLoaded(System.String)">
+      <summary>
+        <para>A handler for the event that occurs after parameter values provided using a Dynamic List are loaded.</para>
+      </summary>
+      <param name="onDynamicLookUpValuesLoaded">A function that is executed after parameter values provided using a <see href="https://docs.devexpress.com/Dashboard/117547/web-dashboard/create-dashboards-on-the-web/data-analysis/dashboard-parameters/create-a-dashboard-parameter">Dynamic List</see> are loaded.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardParameterDialogOptionBuilder.OnHidden(System.String)">
+      <summary>
+        <para>A handler for the event that occurs after the Dashboard Parameters dialog is hidden.</para>
+      </summary>
+      <param name="onHidden">A function that is executed after the Dashboard Parameters dialog is hidden.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardParameterDialogOptionBuilder.OnShowing(System.String)">
+      <summary>
+        <para>A handler for the event that occurs before the Dashboard Parameters dialog is shown.</para>
+      </summary>
+      <param name="onShowing">A function that is executed before the Dashboard Parameters dialog is shown.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardParameterDialogOptionBuilder.OnShown(System.String)">
+      <summary>
+        <para>A handler for the event that occurs after the Dashboard Parameters dialog is shown.</para>
+      </summary>
+      <param name="onShown">A function that is executed after the Dashboard Parameters dialog is shown.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardStateExtensions">
+      <summary>
+        <para>Contains methods that allow you to configure the dashboard state.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardStateExtensions.LoadFromJson(DevExpress.DashboardCommon.DashboardState,System.String)">
+      <summary>
+        <para>Initializes a <see cref="T:DevExpress.DashboardCommon.DashboardState"/> object using the specified JSON object.</para>
+      </summary>
+      <param name="dashboardState">A <see cref="T:DevExpress.DashboardCommon.DashboardState"/> object to be initialized.</param>
+      <param name="json">A <see cref="T:System.String"/> value that specifies the JSON object containing a dashboard state.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardStateExtensions.SaveToJson(DevExpress.DashboardCommon.DashboardState)">
+      <summary>
+        <para>Saves a specified <see cref="T:DevExpress.DashboardCommon.DashboardState"/> object to a JSON object.</para>
+      </summary>
+      <param name="dashboardState">A <see cref="T:DevExpress.DashboardCommon.DashboardState"/> object.</param>
+      <returns>A <see cref="T:System.String"/> value that is the resulting JSON object.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardStyleSheetsSettings">
+      <summary>
+        <para>Contains methods that allow you to manage the control’s color scheme.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardStyleSheetsSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardAspNetCore.DashboardStyleSheetsSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.DashboardAspNetCore.DashboardStyleSheetsSettings.ColorScheme">
+      <summary>
+        <para>Gets or sets the name of the color theme to be applied to the control.</para>
+      </summary>
+      <value>A <see cref="T:System.String"/> object that defines a color scheme.</value>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardStyleSheetsSettingsBuilder">
+      <summary>
+        <para>Contains methods that allow you to manage the control’s color scheme.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardStyleSheetsSettingsBuilder.ColorScheme(System.String)">
+      <summary>
+        <para>Sets the name of the color theme to be applied to the control.</para>
+      </summary>
+      <param name="colorScheme">A <see cref="T:System.String"/> object that defines a color scheme.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardUrlStateOptionBuilder">
+      <summary>
+        <para>A wrapper that provides access to <b>DevExpress.Dashboard.UrlStateExtensionOptions</b>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardUrlStateOptionBuilder.IncludeDashboardIdToUrl(System.Boolean)">
+      <summary>
+        <para>Specifies whether the <see cref="M:DevExpress.DashboardAspNetCore.DashboardBuilder.InitialDashboardId(System.String)">dashboard id</see> is included in the Web Dashboard’s URL.</para>
+      </summary>
+      <param name="includeDashboardIdToUrl">true to include the dashboard id in the Web Dashboard’s URL; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardUrlStateOptionBuilder.IncludeDashboardStateToUrl(System.Boolean)">
+      <summary>
+        <para>Specifies whether the dashboard state (such as the master filtering state) is included in the Web Dashboard’s URL.</para>
+      </summary>
+      <param name="includeDashboardStateToUrl">true to include the dashboard state in the Web Dashboard’s URL; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder">
+      <summary>
+        <para>A wrapper that provides access to <b>DevExpress.Dashboard.ViewerApiExtensionOptions</b>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnDashboardTitleToolbarUpdated(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed before the dashboard title toolbar is updated.</para>
+      </summary>
+      <param name="onDashboardTitleToolbarUpdated">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemActionAvailabilityChanged(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed after the available interactivity actions have changed for the specific dashboard item.</para>
+      </summary>
+      <param name="onItemActionAvailabilityChanged">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemCaptionToolbarUpdated(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed before the dashboard item caption toolbar is updated.</para>
+      </summary>
+      <param name="onItemCaptionToolbarUpdated">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemClick(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when an end-user clicks a dashboard item.</para>
+      </summary>
+      <param name="onItemClick">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemDrillDownStateChanged(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when a drill-down is performed.</para>
+      </summary>
+      <param name="onItemDrillDownStateChanged">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemElementCustomColor(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when coloring the required dashboard item elements.</para>
+      </summary>
+      <param name="onItemElementCustomColor">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemMasterFilterStateChanged(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the master filter state is changed.</para>
+      </summary>
+      <param name="onItemMasterFilterStateChanged">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemSelectionChanged(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed after the selection within the dashboard item is changed.</para>
+      </summary>
+      <param name="onItemSelectionChanged">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemVisualInteractivity(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when you provide custom visual interactivity for data-bound dashboard items that support element selection and highlighting.</para>
+      </summary>
+      <param name="onItemVisualInteractivity">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemWidgetCreated(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the client widget is created.</para>
+      </summary>
+      <param name="onItemWidgetCreated">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemWidgetOptionsPrepared(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) that allows you to access underlying UI/Data Visualization widgets and configure their options.</para>
+      </summary>
+      <param name="onItemWidgetOptionsPrepared">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemWidgetUpdated(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the client widget is redrawn after the data used in this widget is changed.</para>
+      </summary>
+      <param name="onItemWidgetUpdated">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnItemWidgetUpdating(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the client widget is about to be updated.</para>
+      </summary>
+      <param name="onItemWidgetUpdating">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DashboardViewerApiOptionBuilder.OnSelectedTabPageChanged(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function (or its name) executed when the selected tab page is changed.</para>
+      </summary>
+      <param name="onSelectedTabPageChanged">The JavaScript function (or its name) executed when the event is raised.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DataInspectorOptionBuilder">
+      <summary>
+        <para>A wrapper that provides access to <b>DevExpress.Dashboard.DataInspectorExtensionOptions</b>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataInspectorOptionBuilder.AllowInspectAggregatedData(System.Boolean)">
+      <summary>
+        <para>Specifies whether to display aggregated data in the <see href="https://docs.devexpress.com/Dashboard/401194/common-features/underlying-and-displayed-data/data-inspector">Data Inspector</see>.</para>
+      </summary>
+      <param name="allowInspectAggregatedData">true, to display aggregated data in the <see href="https://docs.devexpress.com/Dashboard/401194/common-features/underlying-and-displayed-data/data-inspector">Data Inspector</see>; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataInspectorOptionBuilder.AllowInspectRawData(System.Boolean)">
+      <summary>
+        <para>Specifies whether to display raw data in the <see href="https://docs.devexpress.com/Dashboard/401194/common-features/underlying-and-displayed-data/data-inspector">Data Inspector</see>.</para>
+      </summary>
+      <param name="allowInspectRawData">true, to display raw data in the <see href="https://docs.devexpress.com/Dashboard/401194/common-features/underlying-and-displayed-data/data-inspector">Data Inspector</see>; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataInspectorOptionBuilder.OnDialogHidden(System.String)">
+      <summary>
+        <para>A handler for the event that occurs when the Data Inspector dialog is hidden.</para>
+      </summary>
+      <param name="onDialogHidden">A function that is executed when the export dialog is hidden.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataInspectorOptionBuilder.OnDialogShowing(System.String)">
+      <summary>
+        <para>A handler for the event that occurs before the Data Inspector dialog is shown.</para>
+      </summary>
+      <param name="onDialogShowing">A function that is executed before the Data Inspector dialog is shown.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataInspectorOptionBuilder.OnDialogShown(System.String)">
+      <summary>
+        <para>A handler for the event that occurs after the Data Inspector dialog is shown.</para>
+      </summary>
+      <param name="onDialogShown">A function that is executed after the Data Inspector dialog is shown.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataInspectorOptionBuilder.OnGridContentReady(System.String)">
+      <summary>
+        <para>A handler for the event that occurs when the widget’s content is ready and each time the content is changed.</para>
+      </summary>
+      <param name="onGridContentReady">A function that is executed when the widget’s content is ready and each time the content is changed.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataInspectorOptionBuilder.OnGridInitialized(System.String)">
+      <summary>
+        <para>A handler for the event that occurs before the Grid widget’s content is loaded.</para>
+      </summary>
+      <param name="onGridInitialized">A function used in JavaScript frameworks to save the widget instance.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DataRequestOptionsBuilder">
+      <summary>
+        <para>Contains methods that allow you to configure data request parameters.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataRequestOptionsBuilder.ItemDataLoadingMode(DevExpress.DashboardWeb.ItemDataLoadingMode)">
+      <summary>
+        <para>Specifies whether to load data for items that are not displayed.</para>
+      </summary>
+      <param name="mode">A <see cref="T:DevExpress.DashboardWeb.ItemDataLoadingMode"/> enumeration value that specifies whether to load data for items that are not displayed.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataRequestOptionsBuilder.ItemDataRequestMode(DevExpress.DashboardWeb.ItemDataRequestMode)">
+      <summary>
+        <para>Specifies whether a dashboard control uses batch requests or separate requests to load dashboard items’ data.</para>
+      </summary>
+      <param name="mode">A <see cref="T:DevExpress.DashboardWeb.ItemDataRequestMode"/> enumeration value that specifies a data request mode.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder">
+      <summary>
+        <para>A wrapper that provides access to <b>DevExpress.Dashboard.Designer.DataSourceWizardExtensionOptions</b>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder.AllowCreateNewJsonConnection(System.Boolean)">
+      <summary>
+        <para>Specifies whether an end user can create a JSON data source with a new data connection.</para>
+      </summary>
+      <param name="allowCreateNewJsonConnection">true, to allow end users to create a JSON data source with a new data connection; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder.CanCreateNewJsonDataSource(System.Boolean)">
+      <summary>
+        <para>This property is no longer used. Use <see cref="M:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder.AllowCreateNewJsonConnection(System.Boolean)">AllowCreateNewJsonConnection</see> instead.</para>
+      </summary>
+      <param name="canCreateNewJsonDataSource">true, to allow end users to create a JSON data source with a new data connection; otherwise, false.</param>
+      <returns>A wrapper that provides access to <b>DevExpress.Dashboard.Designer.DataSourceWizardExtensionOptions</b>.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder.EnableCustomSql(System.Boolean)">
+      <summary>
+        <para>Enables a user to specify a custom SQL string in the <see href="https://docs.devexpress.com/Dashboard/116414/web-dashboard/integrate-dashboard-component/aspnet-web-forms-dashboard-control/register-default-data-connections">Data Source</see> wizard.</para>
+      </summary>
+      <param name="enableCustomSql">true, to allow a user to specify a custom SQL string in the Data Source wizard; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder.OnCustomizeDataSourceWizard(System.String)">
+      <summary>
+        <para>A handler for the event allowing you to customize the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see>.</para>
+      </summary>
+      <param name="onCustomizeDataSourceWizard">A function that is executed before the Dashboard Data Source Wizard is shown.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataSourceWizardOptionBuilder.WizardSettings(System.Action{DevExpress.DashboardAspNetCore.DataSourceWizardSettingsBuilder})">
+      <summary>
+        <para>Provides access to the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see> options.</para>
+      </summary>
+      <param name="config">A delegate that provides access to the Dashboard Data Source Wizard options.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DataSourceWizardSettingsBuilder">
+      <summary>
+        <para>A wrapper that provides access to <b>DevExpress.Dashboard.Designer.IDashboardDataSourceWizardSettings</b>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataSourceWizardSettingsBuilder.EnableFederationDataSource(System.Boolean)">
+      <summary>
+        <para>Specifies whether to allow users to create the federated data source in the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see>.</para>
+      </summary>
+      <param name="enableFederationDataSource">true to enable the federated data source creation; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataSourceWizardSettingsBuilder.EnableJsonDataSource(System.Boolean)">
+      <summary>
+        <para>Specifies whether to allow users to create the JSON data source in the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see>.</para>
+      </summary>
+      <param name="enableJsonDataSource">true, to enable the JSON data source creation; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataSourceWizardSettingsBuilder.EnableOlapDataSource(System.Boolean)">
+      <summary>
+        <para>Specifies whether to allow users to create the OLAP data source in the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see>.</para>
+      </summary>
+      <param name="enableOlapDataSource">true, to enable the OLAP data source creation; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DataSourceWizardSettingsBuilder.EnableSqlDataSource(System.Boolean)">
+      <summary>
+        <para>Specifies whether to allow users to create the SQL data source in the <see href="https://docs.devexpress.com/Dashboard/117680/web-dashboard/ui-elements-and-customization/dialogs-and-wizards/dashboard-data-source-wizard">Dashboard Data Source Wizard</see>.</para>
+      </summary>
+      <param name="enableSqlDataSource">true, to enable the SQL data source creation; otherwise, false.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.DesignerToolbarOptionBuilder">
+      <summary>
+        <para>A wrapper that provides access to <b>DevExpress.Dashboard.Designer.DesignerToolbarExtension</b>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.DesignerToolbarOptionBuilder.OnPreparing(System.String)">
+      <summary>
+        <para>A handler for the event that occurs before the Designer Toolbar is created.</para>
+      </summary>
+      <param name="onPreparing">A function that is executed before the Designer Toolbar is created.</param>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.EndpointRouteBuilderExtension">
+      <summary>
+        <para>This class is obsolete. Use <see cref="T:DevExpress.DashboardAspNetCore.RouteBuilderExtension"/> and its extension methods instead.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.EndpointRouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.String,System.String)">
+      <summary>
+        <para>Maps the specified URL route and sets a prefix, controller and area names.</para>
+      </summary>
+      <param name="endpointRouteBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder"/> to add the route to.</param>
+      <param name="routePrefix">A <see cref="T:System.String"/> value that specifies a route prefix.</param>
+      <param name="controllerName">A <see cref="T:System.String"/> value that specifies the controller name.</param>
+      <param name="areaName">A <see cref="T:System.String"/> value that specifies the name of the area to register.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.EndpointRouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.String)">
+      <summary>
+        <para>Maps the specified URL route and sets a prefix and a controller name.</para>
+      </summary>
+      <param name="endpointRouteBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder"/> to add the route to.</param>
+      <param name="routePrefix">A <see cref="T:System.String"/> value that specifies a route prefix.</param>
+      <param name="controllerName">A <see cref="T:System.String"/> value that specifies the controller name.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.EndpointRouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String)">
+      <summary>
+        <para>Maps the specified URL route and sets a prefix.</para>
+      </summary>
+      <param name="endpointRouteBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder"/> to add the route to.</param>
+      <param name="routePrefix">A <see cref="T:System.String"/> value that specifies a route prefix.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.EndpointRouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)">
+      <summary>
+        <para>Maps the specified URL route.</para>
+      </summary>
+      <param name="endpointRouteBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder"/> to add the route to.</param>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.MvcBuilderExtension">
+      <summary>
+        <para>An MVC builder that adds the dashboard controller and provides access to the <see cref="T:DevExpress.DashboardWeb.DashboardConfigurator">DashboardConfigurator</see> settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.MvcBuilderExtension.AddDefaultDashboardController(Microsoft.Extensions.DependencyInjection.IMvcBuilder,System.Action{DevExpress.DashboardWeb.DashboardConfigurator,System.IServiceProvider})">
+      <summary>
+        <para>Adds the dashboard controller and provides access to the <see cref="T:DevExpress.DashboardWeb.DashboardConfigurator">DashboardConfigurator</see> settings.</para>
+      </summary>
+      <param name="mvcBuilder">An interface for configuring MVC services.</param>
+      <param name="configure">A delegate that provides access to the <see cref="T:DevExpress.DashboardWeb.DashboardConfigurator">DashboardConfigurator</see> settings.</param>
+      <returns>An interface for configuring MVC services.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.MvcBuilderExtension.AddDefaultDashboardController(Microsoft.Extensions.DependencyInjection.IMvcBuilder,System.Action{DevExpress.DashboardWeb.DashboardConfigurator})">
+      <summary>
+        <para>Adds the dashboard controller and provides access to the <see cref="T:DevExpress.DashboardWeb.DashboardConfigurator">DashboardConfigurator</see> settings.</para>
+      </summary>
+      <param name="mvcBuilder">An interface for configuring MVC services.</param>
+      <param name="configure">A delegate that provides access to the <see cref="T:DevExpress.DashboardWeb.DashboardConfigurator">DashboardConfigurator</see> settings.</param>
+      <returns>An interface for configuring MVC services.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.RestrictedDashboardController">
+      <summary>
+        <para>A dashboard controller that handles interactions between client and server sides in Restricted mode.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.RestrictedDashboardController.#ctor(DevExpress.DashboardWeb.DashboardConfigurator,Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardAspNetCore.RestrictedDashboardController"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.RouteBuilderExtension">
+      <summary>
+        <para>Provides extension methods to configure routing for the <see href="https://docs.devexpress.com/Dashboard/115163/web-dashboard/integrate-dashboard-component/aspnet-core-dashboard-control">Web Dashboard</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.RouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.String,System.String)">
+      <summary>
+        <para>Maps the specified URL route and sets a prefix, controller and area names.</para>
+      </summary>
+      <param name="endpointRouteBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder"/> to add the route to.</param>
+      <param name="routePrefix">A <see cref="T:System.String"/> value that specifies a route prefix.</param>
+      <param name="controllerName">A <see cref="T:System.String"/> value that specifies the controller name.</param>
+      <param name="areaName">A <see cref="T:System.String"/> value that specifies the name of the area to register.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.RouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.String)">
+      <summary>
+        <para>Maps the specified URL route and sets a prefix and a controller name.</para>
+      </summary>
+      <param name="endpointRouteBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder"/> to add the route to.</param>
+      <param name="routePrefix">A <see cref="T:System.String"/> value that specifies a route prefix.</param>
+      <param name="controllerName">A <see cref="T:System.String"/> value that specifies the controller name.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.RouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IRouteBuilder,System.String,System.String,System.String[],System.String)">
+      <summary>
+        <para>Maps the specified URL route and sets a prefix, controller and area names, and namespaces.</para>
+      </summary>
+      <param name="routeBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IRouteBuilder"/> collection to add the route to.</param>
+      <param name="routePrefix">A <see cref="T:System.String"/> value that specifies a route prefix.</param>
+      <param name="controllerName">A <see cref="T:System.String"/> value that specifies the controller name.</param>
+      <param name="namespaces">A set of namespaces for the application.</param>
+      <param name="areaName">A <see cref="T:System.String"/> value that specifies the name of the area to register.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.RouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IRouteBuilder,System.String,System.String,System.String[])">
+      <summary>
+        <para>Maps the specified URL route and sets a prefix, controller name and namespaces.</para>
+      </summary>
+      <param name="routeBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IRouteBuilder"/> collection to add the route to.</param>
+      <param name="routePrefix">A <see cref="T:System.String"/> value that specifies a route prefix.</param>
+      <param name="controllerName">A <see cref="T:System.String"/> value that specifies the controller name.</param>
+      <param name="namespaces">A set of namespaces for the application.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.RouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IRouteBuilder,System.String,System.String)">
+      <summary>
+        <para>Maps the specified URL route and sets a prefix and a controller name.</para>
+      </summary>
+      <param name="routeBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IRouteBuilder"/> collection to add the route to.</param>
+      <param name="routePrefix">A <see cref="T:System.String"/> value that specifies a route prefix.</param>
+      <param name="controllerName">A <see cref="T:System.String"/> value that specifies the controller name.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.RouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IRouteBuilder,System.String)">
+      <summary>
+        <para>Maps the specified URL route and sets a prefix.</para>
+      </summary>
+      <param name="routeBuilder">The <see cref="T:Microsoft.AspNetCore.Routing.IRouteBuilder"/> collection to add the route to.</param>
+      <param name="routePrefix">A <see cref="T:System.String"/> value that specifies a route prefix.</param>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.RouteBuilderExtension.MapDashboardRoute(Microsoft.AspNetCore.Routing.IRouteBuilder)">
+      <summary>
+        <para>Maps the specified URL route.</para>
+      </summary>
+      <param name="routes">The <see cref="T:Microsoft.AspNetCore.Routing.IRouteBuilder"/> collection to add the route to.</param>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.ScriptResourceBlockExtension">
+      <summary>
+        <para>Contains methods that register the scripts required for the ASP.NET Core Dashboard.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.ScriptResourceBlockExtension.AddDashboard(DevExpress.AspNetCore.ScriptSettings)">
+      <summary>
+        <para>Adds the scripts required for the ASP.NET Core Dashboard.</para>
+      </summary>
+      <param name="settings">A <see cref="T:DevExpress.AspNetCore.ScriptSettings"/> object that is a script required for the ASP.NET Core Dashboard.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.ScriptSettings"/> object that is a script required for the ASP.NET Core Dashboard.</returns>
+    </member>
+    <member name="T:DevExpress.DashboardAspNetCore.StyleSheetResourceBlockExtension">
+      <summary>
+        <para>Contains methods that register the stylesheets required for the ASP.NET Core Dashboard.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.StyleSheetResourceBlockExtension.AddDashboard(DevExpress.AspNetCore.StyleSheetSettings,System.Action{DevExpress.DashboardAspNetCore.DashboardStyleSheetsSettingsBuilder})">
+      <summary>
+        <para>Adds the stylesheets required for the ASP.NET Core Dashboard.</para>
+      </summary>
+      <param name="settings">A <see cref="T:DevExpress.AspNetCore.StyleSheetSettings"/> object that is a stylesheet required for the ASP.NET Core Dashboard.</param>
+      <param name="config">A delegate used to configure the <see cref="T:DevExpress.DashboardAspNetCore.DashboardStyleSheetsSettingsBuilder"/>.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.StyleSheetSettings"/> object that is a stylesheet required for the ASP.NET Core Dashboard.</returns>
+    </member>
+    <member name="M:DevExpress.DashboardAspNetCore.StyleSheetResourceBlockExtension.AddDashboard(DevExpress.AspNetCore.StyleSheetSettings)">
+      <summary>
+        <para>Adds the stylesheets required for the ASP.NET Core Dashboard.</para>
+      </summary>
+      <param name="settings">A <see cref="T:DevExpress.AspNetCore.StyleSheetSettings"/> object that is a stylesheet required for the ASP.NET Core Dashboard.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.StyleSheetSettings"/> object that is a stylesheet required for the ASP.NET Core Dashboard.</returns>
+    </member>
+  </members>
+</doc>

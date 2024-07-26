@@ -1,0 +1,1321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.AspNetCore.Reporting.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.AspNetCore">
+      <summary>
+        <para>Contains base classes that implement functionality specific to ASP.NET Core applications.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.BuilderFactoryExtensions">
+      <summary>
+        <para>Exposes extension methods defined for the <see cref="T:DevExpress.AspNetCore.BuilderFactory">BuilderFactory</see> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryExtensions.QueryBuilder(DevExpress.AspNetCore.BuilderFactory,System.String)">
+      <summary>
+        <para>The <see cref="T:DevExpress.AspNetCore.BuilderFactory">BuilderFactory</see> extension method that creates the HTML content builder for the <see href="https://docs.devexpress.com/AspNetCore/402216/query-builder">Web Query Builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/> instance that this method extends.</param>
+      <param name="name">A string that identifies the element on a page.</param>
+      <returns>The object that builds the <see href="https://docs.devexpress.com/AspNetCore/402216/query-builder">Web Query Builder</see>.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryExtensions.QueryBuilder(DevExpress.AspNetCore.BuilderFactory)">
+      <summary>
+        <para>The <see cref="T:DevExpress.AspNetCore.BuilderFactory">BuilderFactory</see> extension method that creates the HTML content builder for the <see href="https://docs.devexpress.com/AspNetCore/402216/query-builder">Web Query Builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/> instance that this method extends.</param>
+      <returns>The object that builds the <see href="https://docs.devexpress.com/AspNetCore/402216/query-builder">Web Query Builder</see>.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryExtensions.ReportDesigner(DevExpress.AspNetCore.BuilderFactory,System.String)">
+      <summary>
+        <para>The <see cref="T:DevExpress.AspNetCore.BuilderFactory">BuilderFactory</see> class’ extension method required to create a <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder">Report Designer Builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/> instance that this method extends.</param>
+      <param name="name">An identifier for the element representing a <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Report Designer</see> on the page.</param>
+      <returns>The object required to build a Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryExtensions.ReportDesigner(DevExpress.AspNetCore.BuilderFactory)">
+      <summary>
+        <para>The <see cref="T:DevExpress.AspNetCore.BuilderFactory">BuilderFactory</see> class’ extension method required to create a <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder">Report Designer Builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/> instance that this method extends.</param>
+      <returns>The object required to build a <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryExtensions.WebDocumentViewer(DevExpress.AspNetCore.BuilderFactory,System.String)">
+      <summary>
+        <para>The <see cref="T:DevExpress.AspNetCore.BuilderFactory">BuilderFactory</see> class’ extension method required to create a <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder">Document Viewer Builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/> instance that this method extends.</param>
+      <param name="name">An identifier for the element representing a <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Document Viewer</see> on the page.</param>
+      <returns>The object required to build a Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactoryExtensions.WebDocumentViewer(DevExpress.AspNetCore.BuilderFactory)">
+      <summary>
+        <para>The <see cref="T:DevExpress.AspNetCore.BuilderFactory">BuilderFactory</see> class’ extension method required to create a <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder">Document Viewer Builder</see>.</para>
+      </summary>
+      <param name="factory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/> instance that this method extends.</param>
+      <returns>The object required to build a <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Document Viewer</see>.</returns>
+    </member>
+    <member name="N:DevExpress.AspNetCore.Reporting">
+      <summary>
+        <para>Contains classes that help you inject reporting functionality to ASP.NET Core applications.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions">
+      <summary>
+        <para>Options to configure the built-in ASP.NET Core Reporting logger output.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions.LogMachineName">
+      <summary>
+        <para>Includes the host name in the log.</para>
+      </summary>
+      <value>True to include the name of the machine on which the server-side application is run; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions.LogProcessId">
+      <summary>
+        <para>Includes the PID in the log.</para>
+      </summary>
+      <value>True to include the PID; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions.LogRequestId">
+      <summary>
+        <para>Includes the RequestId in the log.</para>
+      </summary>
+      <value>True to include the RequestId; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions.LogThreadId">
+      <summary>
+        <para>Includes the ThreadId in the log.</para>
+      </summary>
+      <value>True to include the ThreadId; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions.LogTimeStamp">
+      <summary>
+        <para>Includes the time stamp in the log.</para>
+      </summary>
+      <value>True to include the current time on the machine on which the server-side application is run; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions.Prefix">
+      <summary>
+        <para>Specifies the string that starts a log record.</para>
+      </summary>
+      <value>A string that precedes the logged information in a single record.</value>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Reporting.Logging.LoggerOptions.Suffix">
+      <summary>
+        <para>Specifies the string that finalizes a log record.</para>
+      </summary>
+      <value>A string that follows the logged information in a single record.</value>
+    </member>
+    <member name="N:DevExpress.AspNetCore.Reporting.QueryBuilder">
+      <summary>
+        <para>Contains classes that implement functionality specific to the ASP.NET Core <see href="https://docs.devexpress.com/XtraReports/117591/web-reporting/end-user-report-designer-for-web/interface-elements/query-builder">Query Builder</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder">
+      <summary>
+        <para>Use the class methods to specify handlers for the <see href="https://docs.devexpress.com/AspNetCore/402216/query-builder">Web Query Builder</see>‘s client-side events.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder.BeforeRender(System.String)">
+      <summary>
+        <para>Specifies the JavaScript handler function for the client-side BeforeRender event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code that handles the BeforeRender event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder"/> that can be used in method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder.CustomizeLocalization(System.String)">
+      <summary>
+        <para>Specifies the JavaScript handler function for the client-side CustomizeLocalization event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code that handles the CustomizeLocalization event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder"/> that can be used in method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder.CustomizeMenuActions(System.String)">
+      <summary>
+        <para>Specifies the JavaScript handler function for the CustomizeMenuActions client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code that handles the CustomizeMenuActions event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder"/> that can be used to further configure the Query Builder client-side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder.OnServerError(System.String)">
+      <summary>
+        <para>Specifies the JavaScript handler function for the OnServerError client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code that handles the OnServerError event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder"/> that can be used to further configure the Query Builder client-side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder.SaveQueryRequested(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/AspNetCore/402216/query-builder">Web Query Builder</see>‘s SaveQueryRequested client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function used to handle the SaveQueryRequested event.</param>
+      <returns>A reference to the QueryBuilderClientSideEventsBuilder instance after the event handler is specified.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderController">
+      <summary>
+        <para>A base class for the controller that processes HTTP requests from the <see href="https://docs.devexpress.com/XtraReports/117591/web-reporting/end-user-report-designer-for-web/interface-elements/query-builder">Web Query Builder</see> and Data Source Wizard for Web.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderController.DefaultUri">
+      <summary>
+        <para>The URI of the built-in controller to which requests are sent from a <see href="https://docs.devexpress.com/XtraReports/117591/web-reporting/end-user-report-designer-for-web/interface-elements/query-builder">Query Builder</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder">
+      <summary>
+        <para>A builder for the <see href="https://docs.devexpress.com/AspNetCore/402216/query-builder">Web Query Builder</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder"/> class with specified settings.</para>
+      </summary>
+      <param name="htmlHelper">A helper object.</param>
+      <param name="name">A string that identifies the element on a page.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder"/> class with specified settings.</para>
+      </summary>
+      <param name="htmlHelper">A helper object.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.Bind(DevExpress.XtraReports.Web.QueryBuilder.QueryBuilderModel)">
+      <summary>
+        <para>Passes the specified model to the <see href="https://docs.devexpress.com/AspNetCore/402216/query-builder">Web Query Builder</see>.</para>
+      </summary>
+      <param name="model">The model to be passed to the Query Builder.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder"/> instance for use in method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.ClientSideEvents(System.Action{DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder})">
+      <summary>
+        <para>Returns the <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder"/> object that allows you to handle the client-side events specific to the <see href="https://docs.devexpress.com/AspNetCore/402216/query-builder">Web Query Builder</see>.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to assign handlers to the client-side events. The delegate parameter is the <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder"/> object, whose methods specify event handlers.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderClientSideEventsBuilder"/> that can be used to further configure the Query Builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.ClientSideModelSettings(System.Action{DevExpress.XtraReports.Web.ClientControls.ClientSideModelSettings})">
+      <summary>
+        <para>Specifies settings for the Web Query Builder’s View model.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to specify settings for the Web Query Builder’s  View Model.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder"/> that can be used in method chaining to configure the Query Builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.CssClassName(System.String)">
+      <summary>
+        <para>Specifies a CSS class used to render the Web Query Builder.</para>
+      </summary>
+      <param name="cssClassName">The CSS class name.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder"/> that can be used in method chaining to further configure the Query Builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.Height(System.String)">
+      <summary>
+        <para>Specifies the height of the Query Builder element on the page.</para>
+      </summary>
+      <param name="height">The element’s height</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder"/> that can be used in method chaining to further configure the Query Builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.Name(System.String)">
+      <summary>
+        <para>Specifies a name to identify the Query Builder element on the page.</para>
+      </summary>
+      <param name="name">A string that is the element’s identifier.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder"/> that can be used in method chaining to further configure the Query Builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.Nonce(System.String)">
+      <summary>
+        <para>Specifies the nonce value.</para>
+      </summary>
+      <param name="nonce">A <see cref="T:System.String"/> that specifies the nonce value.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder"/> that can be used in method chaining to further configure the Query Builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder.Width(System.String)">
+      <summary>
+        <para>Specifies the width of the Query Builder element on the page.</para>
+      </summary>
+      <param name="width">The element’s width</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilder.QueryBuilderHtmlContentBuilder"/> that can be used in method chaining to further configure the Query Builder.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder">
+      <summary>
+        <para>Exposes methods to register custom services for the <see href="https://docs.devexpress.com/XtraReports/117591/web-reporting/end-user-report-designer-for-web/interface-elements/query-builder">Web Query Builder</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+      <summary>
+        <para>Creates the <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder"/> class’ instance.</para>
+      </summary>
+      <param name="serviceCollection">The application’s service collection to be populated using the QueryBuilderConfigurationBuilder‘s methods.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder.RegisterDataSourceWizardDBSchemaProviderExFactory``1">
+      <summary>
+        <para>Registers a custom database schema provider factory.</para>
+      </summary>
+      <typeparam name="T">A custom database schema provider factory that implements the <see cref="T:DevExpress.DataAccess.Web.ISqlDataSourceWizardCustomizationService">IDataSourceWizardConnectionStringsProvider</see> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder"/> that can be used to further configure the Query Builder services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder.RegisterDataSourceWizardDBSchemaProviderFactory``1">
+      <summary>
+        <para>Deprecated.</para>
+      </summary>
+      <typeparam name="T">A custom database schema provider factory that implements the <see cref="T:DevExpress.DataAccess.Web.ISqlDataSourceWizardCustomizationService">IDataSourceWizardConnectionStringsProvider</see> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder"/> that can be used to further configure the Query Builder services.</returns>
+    </member>
+    <member name="N:DevExpress.AspNetCore.Reporting.ReportDesigner">
+      <summary>
+        <para>Contains classes that implement functionality specific to the ASP.NET Core <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Report Designer</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder">
+      <summary>
+        <para>A builder for the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper,System.String)">
+      <summary>
+        <para>Creates an object of the ReportDesignerBuilder class.</para>
+      </summary>
+      <param name="htmlHelper">A helper object for creating the Report Designer.</param>
+      <param name="name">An identifier for the element representing the Report Designer on a page.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+      <summary>
+        <para>Creates the ReportDesignerBuilder class’ instance.</para>
+      </summary>
+      <param name="htmlHelper">A helper object for creating the Report Designer.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.AllowMDI(System.Boolean)">
+      <summary>
+        <para>Specifies whether an end user can close all the multiple reports currently designed in the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see> or a single report should remain associated with it.</para>
+      </summary>
+      <param name="allowMdi">true if the Report Designer is not associated with a certain report and all the reports designed in it can be closed; false if the Report Designer remains associated with a single report.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.AutoBind(System.Boolean)">
+      <summary>
+        <para>Specifies whether to bind the Web Report Designer to an autogenerated View Model automatically.</para>
+      </summary>
+      <param name="autoBind">Indicates whether to bind the Report Designer to an autogenerated View Model automatically.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.Bind(DevExpress.XtraReports.UI.XtraReport)">
+      <summary>
+        <para>Binds the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see> to a specified report.</para>
+      </summary>
+      <param name="report">The report to be bound to the Report Designer.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.Bind(System.String)">
+      <summary>
+        <para>Retrieves a specified report from the report storage and binds it to the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</para>
+      </summary>
+      <param name="reportName">The URL of the report to bind to the Report Designer.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.ClientSideEvents(System.Action{DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder})">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> object that allows you to handle the client-side events specific to the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to assign handlers to the client-side events using the methods exposed by the <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.ClientSideModelSettings(System.Action{DevExpress.XtraReports.Web.ClientControls.ClientSideModelSettings})">
+      <summary>
+        <para>Provides settings for the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s View Model.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to specify settings for the Web Report Designer’s View Model.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.CssClassName(System.String)">
+      <summary>
+        <para>Sets a specified CSS class to be applied to the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</para>
+      </summary>
+      <param name="cssClassName">The name of the CSS class to be applied.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.DataSources(System.Action{System.Collections.Generic.IDictionary{System.String,System.Object}})">
+      <summary>
+        <para>Adds data sources that become available in the Report Designer.</para>
+      </summary>
+      <param name="configure">A dictionary of available data sources.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.DataSourceSettings(System.Action{DevExpress.XtraReports.Configuration.DataSourceSettings})">
+      <summary>
+        <para>Specifies settings that configure the user interface related to the data sources in the Report Designer.</para>
+      </summary>
+      <param name="configure">An <see cref="T:System.Action`1"/> delegate method that allows you to specify settings for the Web Report Designer View Model.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.Height(System.String)">
+      <summary>
+        <para>Sets a specified height for the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s element on the page.</para>
+      </summary>
+      <param name="height">A height for the Report Designer element.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.Name(System.String)">
+      <summary>
+        <para>Sets a specified identifier for the element representing the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see> on the page.</para>
+      </summary>
+      <param name="name">A string specifying the name of the Report Designer’s element on the page.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.Nonce(System.String)">
+      <summary>
+        <para>Specifies the nonce value.</para>
+      </summary>
+      <param name="nonce">A <see cref="T:System.String"/> that specifies the nonce value.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.OpenReportXmlLayout(System.Byte[])">
+      <summary>
+        <para>Creates a report from the specified <see href="https://docs.devexpress.com/XtraReports/10011/detailed-guide-to-devexpress-reporting/store-and-distribute-reports/store-report-layouts-and-documents/xml-serialization">XML bytes</see> and then binds this report to the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</para>
+      </summary>
+      <param name="reportLayout">An array containing the report layout in the XML format.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.QueryBuilderHandlerUri(System.String)">
+      <summary>
+        <para>Sets the custom MVC controller to which requests are sent from a <see href="https://docs.devexpress.com/XtraReports/117591/web-reporting/end-user-report-designer-for-web/interface-elements/query-builder">Query Builder</see>.</para>
+      </summary>
+      <param name="queryBuilderHandlerUri">A string specifying a custom handler URI.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.ReportDesignerHandlerUri(System.String)">
+      <summary>
+        <para>Sets the custom MVC controller to which requests are sent from a <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</para>
+      </summary>
+      <param name="designerHandlerUri">A string specifying a custom handler URI.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.ReportPreviewHandlerUri(System.String)">
+      <summary>
+        <para>Sets the custom MVC controller to which requests are sent from a <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see> invoked from the Report Designer.</para>
+      </summary>
+      <param name="previewHandlerUri">A string specifying a custom handler URI.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.RightToLeft(System.Boolean)">
+      <summary>
+        <para>Enables or disables a right-to-left layout in the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see> user interface.</para>
+      </summary>
+      <param name="rightToLeft">Indicates whether to enable a right-to-left layout in the Report Designer UI.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.Width(System.String)">
+      <summary>
+        <para>Sets a specified width for the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s element on the page.</para>
+      </summary>
+      <param name="width">A width for the Report Designer element, in pixels.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder.WizardSettings(System.Action{DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings})">
+      <summary>
+        <para>Provides access to the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Report Designer</see>‘s wizard settings.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to specify settings for the Web Report Wizard.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerBuilder"/> that can be used to further configure the Report Designer.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder">
+      <summary>
+        <para>Enables you to specify handlers for the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s client-side events.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.BeforeRender(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side BeforeRender event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the BeforeRender event occurs.</param>
+      <returns><see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.ComponentAdded(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s ComponentAdded client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ComponentAdded event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeElements(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeElements client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeElements event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeFieldListActions(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeFieldListActions client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeFieldListActions event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer’s client-side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeLocalization(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeLocalization client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeLocalization event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeMenuActions(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeMenuActions client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeMenuActions event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeOpenDialog(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeOpenDialog client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeOpenDialog event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeParameterEditors(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeParameterEditors client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeParameterEditors event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeParameterLookUpSource(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeParameterLookUpSource client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeParameterLookUpSource event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeSaveAsDialog(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeSaveAsDialog client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeSaveAsDialog event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeSaveDialog(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeSaveDialog client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeSaveDialog event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeToolbox(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeToolbox client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the JavaScript function code used to handle the CustomizeToolbox event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.CustomizeWizard(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s CustomizeWizard client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeWizard event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.ExitDesigner(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s ExitDesigner client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ExitDesigner event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.OnServerError(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s OnServerError client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the OnServerError event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.Preview(System.Action{DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder})">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> object that allows you to handle the client-side events specific to the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to assign handlers to the client-side events using the methods exposed by the <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.ReportOpened(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s ReportOpened client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ReportOpened event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.ReportOpening(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s client ReportOpening event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ReportOpening client-side event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.ReportSaved(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s ReportSaved client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ReportSaved event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.ReportSaving(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s ReportSaving client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ReportSaving event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.ReportTabClosed(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s ReportTabClosed client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ReportTabClosed event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.ReportTabClosing(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s ReportTabClosing client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ReportTabClosing event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder.TabChanged(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the Web Report Designer’s TabChanged client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the TabChanged event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerClientSideEventsBuilder"/> that can be used to further configure the Report Designer’s client-side events.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerController">
+      <summary>
+        <para>A base class for the controller that processes HTTP requests from the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerController.DefaultUri">
+      <summary>
+        <para>The URI of the built-in controller to which requests are sent from a <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</para>
+      </summary>
+      <value>The “DXXRD” value.</value>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder">
+      <summary>
+        <para>Enables you to specify handlers for the client-side events of the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.CustomizeElements(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the CustomizeElements client-side event of the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeElements event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> that can be used to further configure the Report Designer Preview Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.CustomizeExportOptions(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the CustomizeExportOptions client-side event of the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeExportOptions event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> that can be used to further configure the Report Designer Preview’s client-side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.CustomizeMenuActions(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the CustomizeMenuActions client-side event of the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeMenuActions event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> that can be used to further configure the Report Designer Preview Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.DocumentReady(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the DocumentReady client-side event of the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the DocumentReady event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> that can be used to further configure the Report Designer Preview Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.EditingFieldChanged(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the EditingFieldChanged client-side event of the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the EditingFieldChanged event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> that can be used to further configure the Report Designer Preview Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.OnExport(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the OnExport event, which occurs before a request for document export is sent.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the OnExport event occurs.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> object instance that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.ParametersInitialized(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side  ParametersInitialized event and allows you to get the client-side parameter values when they are initialized and modify them.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the ParametersInitialized event occurs.</param>
+      <returns>The <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> object that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.ParametersReset(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the ParametersReset client-side event of the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ParametersReset event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> that can be used to further configure the Report Designer Preview Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.ParametersSubmitted(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the ParametersSubmitted client-side event of the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the ParametersSubmitted event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> that can be used to further configure the Report Designer Preview Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder.PreviewClick(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the PreviewClick client-side event of the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>‘s Preview.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the PreviewClick event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportDesignerPreviewClientSideEventsBuilder"/> that can be used to further configure the Report Designer Preview Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportPreviewSettingsBuilder.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesigner.ReportPreviewSettingsBuilder"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder">
+      <summary>
+        <para>Exposes methods to register custom services for the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+      <summary>
+        <para>Creates the <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> class’ instance.</para>
+      </summary>
+      <param name="serviceCollection">The application’s service collection to be populated using the ReportDesignerConfigurationBuilder‘s methods.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.EnableCustomSql">
+      <summary>
+        <para>Enables editing custom SQL strings in the <see href="https://docs.devexpress.com/XtraReports/400947/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen">Data Source Wizard</see>.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> that can be used to further configure the Report Designer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterDataSourceWizardConfigFileConnectionStringsProvider">
+      <summary>
+        <para>Registers the predefined connection string provider that enables the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see> to use connection strings specified in the project’s appsettings.json file.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> that can be used to further configure the Report Designer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterDataSourceWizardConfigFileJsonConnectionStringsProvider">
+      <summary>
+        <para>Enables the Web Report Designer to use the JSON data source connections specified in the application configuration file.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> that can be used to further configure the Report Designer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterDataSourceWizardConfigurationConnectionStringsProvider(Microsoft.Extensions.Configuration.IConfigurationSection)">
+      <summary>
+        <para>Registers connection strings to display in the <see href="https://docs.devexpress.com/XtraReports/400947/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen">Data Source Wizard</see> based on a custom configuration.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> that can be used to further configure the Report Designer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterDataSourceWizardConnectionStringsProvider``1">
+      <summary>
+        <para>Registers a custom connection string provider that specifies data connections available to the user in the <see href="https://docs.devexpress.com/XtraReports/400947/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen">Data Source Wizard</see>.</para>
+      </summary>
+      <typeparam name="T">A custom connection string provider that implements the <see cref="T:DevExpress.DataAccess.Web.ISqlDataSourceWizardCustomizationService">IDataSourceWizardConnectionStringsProvider</see> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> that can be used to further configure Report Designer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterDataSourceWizardConnectionStringsProvider``1(System.Boolean)">
+      <summary>
+        <para>Registers a custom connection string provider that supplies data connections for the  <see href="https://docs.devexpress.com/XtraReports/400947/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen">Data Source Wizard</see>.</para>
+      </summary>
+      <param name="overrideWebConfigConnections">If true, only the connection name is serialized with report definition. If false, data connection parameters are serialized with the report data source when the report is passed to the client.</param>
+      <typeparam name="T">A custom connection string provider that implements the <see cref="T:DevExpress.DataAccess.Web.IDataSourceWizardConnectionStringsProvider">IDataSourceWizardConnectionStringsProvider</see> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> that can be used to further configure the Report Designer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterDataSourceWizardJsonConnectionStorage``1">
+      <summary>
+        <para>Registers a custom service that stores and provides JSON connections.</para>
+      </summary>
+      <typeparam name="T">The type of the class that implements the <see cref="T:DevExpress.DataAccess.Web.IDataSourceWizardJsonConnectionStorage">DevExpress.DataAccess.Web.IDataSourceWizardJsonConnectionStorage</see>  interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> class instance.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterDataSourceWizardJsonConnectionStorage``1(System.Boolean)">
+      <summary>
+        <para>Registers a custom service that stores and provides JSON connections.</para>
+      </summary>
+      <param name="overrideWebConfigConnections">True to use the <see cref="T:DevExpress.DataAccess.Web.IJsonDataConnectionProviderFactory">DevExpress.DataAccess.Web.IJsonDataConnectionProviderFactory</see> interface implemented in the storage; otherwise, use the <see cref="T:DevExpress.DataAccess.Web.IJsonDataConnectionProviderFactory">DevExpress.DataAccess.Web.IJsonDataConnectionProviderFactory</see> interface implemented in the viewer.</param>
+      <typeparam name="T">The type of the class that implements the <see cref="T:DevExpress.DataAccess.Web.IDataSourceWizardJsonConnectionStorage">DevExpress.DataAccess.Web.IDataSourceWizardJsonConnectionStorage</see>  interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> class instance.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterObjectDataSourceConstructorFilterService``1">
+      <summary>
+        <para>Registers a class that implements the <see cref="T:DevExpress.DataAccess.Web.IObjectDataSourceConstructorFilterService"/> interface to filter type constructors in the <see href="https://docs.devexpress.com/XtraReports/401222/web-reporting/end-user-report-designer-for-web/wizards/report-wizard-fullscreen/table-and-vertical-report/specify-data-source-settings-object">Report Wizard</see> and <see href="https://docs.devexpress.com/XtraReports/401220/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen/specify-data-source-settings-object">Data Source Wizard</see>.</para>
+      </summary>
+      <typeparam name="T">The type of the class that implements the <see cref="T:DevExpress.DataAccess.Web.IObjectDataSourceConstructorFilterService"/> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> class instance.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterObjectDataSourceMemberFilterService``1">
+      <summary>
+        <para>Registers a class that implements the <see cref="T:DevExpress.DataAccess.Web.IObjectDataSourceMemberFilterService"/> interface to filter type members in the <see href="https://docs.devexpress.com/XtraReports/401222/web-reporting/end-user-report-designer-for-web/wizards/report-wizard-fullscreen/table-and-vertical-report/specify-data-source-settings-object">Report Wizard</see> and <see href="https://docs.devexpress.com/XtraReports/401220/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen/specify-data-source-settings-object">Data Source Wizard</see>.</para>
+      </summary>
+      <typeparam name="T">The type of the class that implements the <see cref="T:DevExpress.DataAccess.Web.IObjectDataSourceMemberFilterService"/> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> class instance.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterObjectDataSourceWizardTypeProvider``1">
+      <summary>
+        <para>Registers a class that implements the <see cref="T:DevExpress.DataAccess.Web.IObjectDataSourceWizardTypeProvider"/> interface to list types in the <see href="https://docs.devexpress.com/XtraReports/401222/web-reporting/end-user-report-designer-for-web/wizards/report-wizard-fullscreen/table-and-vertical-report/specify-data-source-settings-object">Report Wizard</see> and <see href="https://docs.devexpress.com/XtraReports/401220/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen/specify-data-source-settings-object">Data Source Wizard</see>.</para>
+      </summary>
+      <typeparam name="T">The type of the class that implements the <see cref="T:DevExpress.DataAccess.Web.IObjectDataSourceWizardTypeProvider"/> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> class instance.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder.RegisterSqlDataSourceWizardCustomizationService``1">
+      <summary>
+        <para>Registers a service for validating custom SQL queries specified in the <see href="https://docs.devexpress.com/XtraReports/400947/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen">Data Source Wizard</see>.</para>
+      </summary>
+      <typeparam name="T">Custom SQL queries validation service that implements the <see cref="T:DevExpress.DataAccess.Web.ISqlDataSourceWizardCustomizationService">ISqlDataSourceWizardCustomizationService</see> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> that can be used to further configure the Report Designer services.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder">
+      <summary>
+        <para>Exposes methods for registering additional services specific for the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>, <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see> and <see href="https://docs.devexpress.com/XtraReports/117591/web-reporting/end-user-report-designer-for-web/interface-elements/query-builder">Web Query Builder</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+      <summary>
+        <para>Creates the ReportDesignerBuilder class’ instance.</para>
+      </summary>
+      <param name="serviceCollection">The application’s service collection to be populated using the ReportingConfigurationBuilder‘s methods.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder.ConfigureQueryBuilder(System.Action{DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder})">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder"/> object that exposes methods for registering custom or predefined services extending the <see href="https://docs.devexpress.com/XtraReports/117591/web-reporting/end-user-report-designer-for-web/interface-elements/query-builder">Web Query Builder</see> functionality.</para>
+      </summary>
+      <param name="configure">An <see cref="T:System.Action`1"/> delegate method that allows you to configure Web Query Builder custom services using the methods of the <see cref="T:DevExpress.AspNetCore.Reporting.QueryBuilderConfigurationBuilder"/> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder"/> that can be used to further configure the reporting services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder.ConfigureReportDesigner(System.Action{DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder})">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> object that exposes methods for registering custom or predefined services extending the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see> functionality.</para>
+      </summary>
+      <param name="configure">An <see cref="T:System.Action`1"/> delegate method that allows you to configure Web Report Designer custom services using the methods of the <see cref="T:DevExpress.AspNetCore.Reporting.ReportDesignerConfigurationBuilder"/> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder"/> that can be used to further configure the reporting services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder.ConfigureWebDocumentViewer(System.Action{DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder})">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> object that exposes methods for registering custom or predefined services extending the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see> functionality.</para>
+      </summary>
+      <param name="configure">An <see cref="T:System.Action`1"/> delegate method that allows you to configure Web Document Viewer custom services using the methods of the <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder"/> that can be used to further configure the reporting services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder.UseAsyncEngine">
+      <summary>
+        <para>Allows you to use asynchronous interfaces and methods.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder"/> that can be used to further configure reporting services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportingConfigurationException.#ctor(System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Reporting.ReportingConfigurationException"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.ReportingSettings">
+      <summary>
+        <para>Stores Web Reporting application default settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.ReportingSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Reporting.ReportingSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Reporting.ReportingSettings.DesignAnalyzerOptions">
+      <summary>
+        <para>Contains <see cref="T:DevExpress.XtraReports.Configuration.DesignAnalyzerOptions">Report Design Analyzer options</see>.</para>
+      </summary>
+      <value>Report Design Analyzer options.</value>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Reporting.ReportingSettings.UserDesignerOptions">
+      <summary>
+        <para>Contains Web Report Designer options.</para>
+      </summary>
+      <value>Web Report Designer options.</value>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.StartupExtensions">
+      <summary>
+        <para>Exposes extension methods for configuring reporting services within the application’s Startup class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.StartupExtensions.AddDefaultReportingControllers(Microsoft.Extensions.DependencyInjection.IMvcBuilder)">
+      <summary>
+        <para>The method is obsolete and should not be used in your code.</para>
+      </summary>
+      <param name="builder">The IMvcBuilder instance this method extends.</param>
+      <returns>A <see cref="T:Microsoft.Extensions.DependencyInjection.IMvcBuilder"/> that can be used to further configure the MVC services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.StartupExtensions.ConfigureReportingServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder})">
+      <summary>
+        <para>Allows you to register custom or predefined services to provide specific functionality to the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer</see>, <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see> and <see href="https://docs.devexpress.com/XtraReports/117591/web-reporting/end-user-report-designer-for-web/interface-elements/query-builder">Web Query Builder</see>.</para>
+      </summary>
+      <param name="services">The service collection this methods extends.</param>
+      <param name="configure">An <see cref="T:System.Action`1"/> delegate method that allows you to configure Web Report Designer, Web Document Viewer and Web Query Builder custom services using the corresponding methods of the <see cref="T:DevExpress.AspNetCore.Reporting.ReportingConfigurationBuilder"/> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> that can be used to further configure application services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.StartupExtensions.RemoveDefaultReportingControllers(Microsoft.Extensions.DependencyInjection.IMvcBuilder)">
+      <summary>
+        <para>The method is obsolete and should not be used in your code.</para>
+      </summary>
+      <param name="builder">The IMvcBuilder instance this method extends.</param>
+      <returns>A <see cref="T:Microsoft.Extensions.DependencyInjection.IMvcBuilder"/> that can be used to further configure the MVC services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.StartupExtensions.UseReporting(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{DevExpress.AspNetCore.Reporting.ReportingSettings})">
+      <summary>
+        <para>Allows you to configure Web Reporting application settings.</para>
+      </summary>
+      <param name="builder">An application to which a configuration action is applied.</param>
+      <param name="configure">A configuration action.</param>
+      <returns>A configured application.</returns>
+    </member>
+    <member name="N:DevExpress.AspNetCore.Reporting.WebDocumentViewer">
+      <summary>
+        <para>Contains classes that implement functionality specific to the ASP.NET Core <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Document Viewer</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder">
+      <summary>
+        <para>A builder for the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper,System.String)">
+      <summary>
+        <para>Creates an object of the WebDocumentViewerBuilder class.</para>
+      </summary>
+      <param name="htmlHelper">A helper object for creating the Web Document Viewer.</param>
+      <param name="name">An identifier for the element representing the Web Document Viewer on a page.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+      <summary>
+        <para>Creates an object of the WebDocumentViewerBuilder class.</para>
+      </summary>
+      <param name="htmlHelper">A helper object for creating the Report Designer.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.AccessibilityCompliant(System.Boolean)">
+      <summary>
+        <para>Enables accessibility mode.</para>
+      </summary>
+      <param name="value">True to enable accessibility mode; otherwise, false.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used in method chaining to configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.AllowUrlWithJsContent(System.Boolean)">
+      <summary>
+        <para>Sets whether or not the execution of the JavaScript code placed in URLs is allowed.</para>
+      </summary>
+      <param name="allowUrlWithJsContent">true, if the JavaScript code can be inserted in URLs; otherwise, false.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.AutoBind(System.Boolean)">
+      <summary>
+        <para>Specifies whether to bind the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see> to an autogenerated View Model automatically.</para>
+      </summary>
+      <param name="autoBind">Indicates whether to bind the Web Document Viewer to an autogenerated View Model automatically.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.Bind(DevExpress.XtraReports.UI.XtraReport)">
+      <summary>
+        <para>Passes the specified report to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <param name="report">The report to be bound to the Document Viewer.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> object for use in method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.Bind(DevExpress.XtraReports.Web.CachedReportSourceWeb)">
+      <summary>
+        <para>Passes the report contained in the specified <see cref="T:DevExpress.XtraReports.Web.CachedReportSourceWeb"/> object to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <param name="cachedReportSource">A <see cref="T:DevExpress.XtraReports.Web.CachedReportSourceWeb"/> object that is the object that contains a report and the cached document pages. Allows you to reduce the number of document creation method calls.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> object for use in method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.Bind(DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerModel)">
+      <param name="model">A View Model.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> object for use in method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.Bind(System.String)">
+      <summary>
+        <para>Retrieves a report and passes it to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <param name="reportUrl">A string that specifies the report to display in the Document Viewer.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> object for use in method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.ClientSideEvents(System.Action{DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder})">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> object that allows you to handle the client-side events specific to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to assign handlers to the client-side events using the methods exposed by the <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.ClientSideModelSettings(System.Action{DevExpress.XtraReports.Web.ClientControls.ClientSideModelSettings})">
+      <summary>
+        <para>Provides settings for the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>‘s View Model.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to specify settings for the Web Document Viewer’s View Model.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.CssClassName(System.String)">
+      <summary>
+        <para>Sets a specified CSS class to be applied to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <param name="cssClassName">The name of the CSS class to be applied.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.ExportSettings(System.Action{DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings})">
+      <summary>
+        <para>Allows you to specify settings that apply to print and export operations.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to specify settings for the Web Document Viewer’s View Model.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.HandlerUri(System.String)">
+      <summary>
+        <para>Sets the custom MVC controller to which requests are sent from a <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <param name="handlerUri">A string specifying a custom handler URI.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.Height(System.String)">
+      <summary>
+        <para>Sets a specified height for the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>‘s element on the page.</para>
+      </summary>
+      <param name="height">A height for the Document Viewer element.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.MobileMode(System.Boolean)">
+      <summary>
+        <para>Sets whether or not the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see> should be configured for use on mobile devices.</para>
+      </summary>
+      <param name="mobileMode">Indicates whether to configure the Web Document Viewer for mobile devices.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.MobileSettings(System.Action{DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.MobileViewerSettings})">
+      <summary>
+        <para>Provides access to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see> settings that are specific for mobile mode.</para>
+      </summary>
+      <param name="configure">A <see cref="T:System.Action`1"/> delegate method that allows you to specify mobile mode settings that are exposed by the <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.MobileViewerSettings">MobileViewerSettings</see> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.Name(System.String)">
+      <summary>
+        <para>Sets a specified identifier for the element representing the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see> on the page.</para>
+      </summary>
+      <param name="name">A string specifying the name of the Document Viewer’s element on the page.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.Nonce(System.String)">
+      <summary>
+        <para>Specifies the nonce value.</para>
+      </summary>
+      <param name="nonce">A <see cref="T:System.String"/> that specifies the nonce value.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.OpenReportXmlLayout(System.Byte[])">
+      <summary>
+        <para>Creates a report from the specified <see href="https://docs.devexpress.com/XtraReports/10011/detailed-guide-to-devexpress-reporting/store-and-distribute-reports/store-report-layouts-and-documents/xml-serialization">XML bytes</see> and then binds this report to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <param name="reportLayout">An array containing the report layout in the XML format.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.ProgressBarSettings(System.Action{DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ProgressBarSettings})">
+      <summary>
+        <para>Provides access to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>‘s progress bar settings.</para>
+      </summary>
+      <param name="configure">A delegate method that includes progress bar settings.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.RemoteSourceSettings(System.Action{DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.RemoteSourceSettings})">
+      <summary>
+        <para>Provides access to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>‘s remote document source settings.</para>
+      </summary>
+      <param name="configure">A delegate method that allows you to specify remote document source settings that are exposed by the <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.RemoteSourceSettings">RemoteSourceSettings</see> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.RightToLeft(System.Boolean)">
+      <summary>
+        <para>Enables or disables a right-to-left layout in the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see> user interface.</para>
+      </summary>
+      <param name="rightToLeft">Indicates whether to enable a right-to-left layout in the Document Viewer UI.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.SearchSettings(System.Action{DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.SearchSettings})">
+      <summary>
+        <para>Allows you to specify the <see href="https://docs.devexpress.com/XtraReports/17738/web-reporting/asp-net-webforms-reporting/document-viewer-in-asp-net-web-forms-reporting">Web Document Viewer</see>‘s search settings.</para>
+      </summary>
+      <param name="configure">A delegate method that includes search settings.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> object that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.TabPanelSettings(System.Action{DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.TabPanelSettings})">
+      <summary>
+        <para>Provides access to the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>‘s tab panel settings.</para>
+      </summary>
+      <param name="configure">A delegate method that allows you to specify tab panel settings that are exposed by the <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.TabPanelSettings">TabPanelSettings</see> object, which is passed as the delegate parameter.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder.Width(System.String)">
+      <summary>
+        <para>Sets a specified width for the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>‘s element on the page.</para>
+      </summary>
+      <param name="width">A width for the Document Viewer element.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerBuilder"/> that can be used to further configure the Document Viewer.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder">
+      <summary>
+        <para>Enables you to specify handlers for the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>‘s client-side events.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.#ctor">
+      <summary>
+        <para>Creates an object of the WebDocumentViewerClientSideEventsBuilder class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.BeforeRender(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side  BeforeRender event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the BeforeRender event occurs.</param>
+      <returns><see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeElements(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side CustomizeElements event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the CustomizeElements event occurs.</param>
+      <returns><see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeExportOptions(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>‘s CustomizeExportOptions client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the  JavaScript function code used to handle the CustomizeExportOptions event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> that can be used to configure the Document Viewer’s client-side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeLocalization(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side  CustomizeLocalization event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the CustomizeLocalization event occurs.</param>
+      <returns>The <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> object that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeMenuActions(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side CustomizeMenuActions event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the CustomizeMenuActions event occurs.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeParameterEditors(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side CustomizeParameterEditors event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the CustomizeParameterEditors event occurs.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeParameterLookUpSource(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>‘s CustomizeParameterLookUpSource client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the CustomizeParameterLookUpSource event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> object that can be used to further configure the Document Viewer client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.DocumentReady(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer’s</see> DocumentReady client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the DocumentReady event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> object that can be used to further configure Document Viewer client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.EditingFieldChanged(System.String)">
+      <summary>
+        <para>Sets the name of the JavaScript function or the entire code that will handle the EditingFieldChanged client-side event of the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle the EditingFieldChanged event.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> that can be used to further configure the Document Viewer Client Side Events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.OnExport(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the OnExport event, which occurs before a request for document export is sent.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the OnExport event occurs.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> object instance that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.OnServerError(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side OnServerError event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the OnServerError event occurs.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.ParametersInitialized(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side  ParametersInitialized event and allows you to get the client-side parameter values when they are initialized and modify them.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the ParametersInitialized event occurs.</param>
+      <returns>The <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> object that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.ParametersReset(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side ParametersReset event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the ParametersReset event is fired.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.ParametersSubmitted(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side ParametersSubmitted event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or entire JavaScript function code that runs when the ParametersReset event is fired.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> object that can be used for method chaining.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.PreviewClick(System.String)">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer’s</see> PreviewClick client-side event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript handler function or the entire JavaScript function code.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder"/> object that can be used to configure the Document Viewer client side events.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerController">
+      <summary>
+        <para>A base class for the controller that processes HTTP requests from a <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerController.DefaultUri">
+      <summary>
+        <para>The URI of the built-in controller to which requests are sent from a <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <value>The “DXXRDV” value.</value>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerController.Invoke">
+      <summary>
+        <para>Processes requests from the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+      <returns>An object that is the result of an action method.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder">
+      <summary>
+        <para>Exposes methods for registering additional services specific for the <see href="https://docs.devexpress.com/XtraReports/400248/web-reporting/asp-net-core-reporting/document-viewer-in-asp-net-core-applications">Web Document Viewer</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+      <summary>
+        <para>Creates the <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> class’ instance.</para>
+      </summary>
+      <param name="serviceCollection">The application’s service collection to be populated using the WebDocumentViewerConfigurationBuilder‘s methods.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.DisableCachedDocumentSource">
+      <summary>
+        <para>Disables the CachedDocumentSource component usage in the Web Document Viewer.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.EnablePassingExportOptionsPasswordsToClient">
+      <summary>
+        <para>Allows you to pass PDF/Excel passwords specified in the Report Designer to the Web Document Viewer.</para>
+        <para />
+        <para><strong>Security note: </strong>For security reasons, PDF/Excel passwords specified in the Report Designer are not exposed in the Web Document Viewer. Read the following topic for details: <see href="https://docs.devexpress.com/XtraReports/115118/web-reporting/common-features/application-security/general-security-considerations#protect-sensitive-information">Protect Sensitive Information</see>.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.RegisterConnectionProviderFactory``1">
+      <summary>
+        <para>Registers a custom connection provider factory that creates a provider restoring a data connection on a report deserialization.</para>
+      </summary>
+      <typeparam name="T">A custom connection provider factory that implements the <see cref="T:DevExpress.DataAccess.Web.IConnectionProviderFactory">IConnectionProviderFactory</see> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.RegisterEFContextProviderFactory``1">
+      <summary>
+        <para>Registers a custom factory that allows you to obtain the EF Core context from the dependency injection container.</para>
+      </summary>
+      <typeparam name="T">A custom factory that implements the <see cref="T:DevExpress.DataAccess.Web.IEFContextProviderFactory">IEFContextProviderFactory</see> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.RegisterJsonDataConnectionProviderFactory``1">
+      <summary>
+        <para>Registers a factory that returns a service that provides a JSON connection string by name.</para>
+      </summary>
+      <typeparam name="T">A type that implements the <see cref="T:DevExpress.DataAccess.Web.IJsonDataConnectionProviderFactory">DevExpress.DataAccess.Web.IJsonDataConnectionProviderFactory</see> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.RegisterWebDocumentViewerDrillThroughProcessor``1">
+      <summary>
+        <para>Registers a custom drill-through processor in a web application.</para>
+      </summary>
+      <typeparam name="T">A custom SQL queries validation service that implements the <see cref="T:DevExpress.DataAccess.Web.ISqlDataSourceWizardCustomizationService">ISqlDataSourceWizardCustomizationService</see> interface.</typeparam>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseCachedReportSourceBuilder">
+      <summary>
+        <para>Forces reporting components to use the CachedReportSourceWeb instance as the report source.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseDbStorage(System.String)">
+      <summary>
+        <para>Enables the database storage for documents and reports.</para>
+      </summary>
+      <param name="connectionString">Specifies a connection string for the database where documents and reports are stored.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseDistributedCache">
+      <summary>
+        <para>Enables distributed caching for Reporting components in ASP.NET Core applications.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseEmptyStoragesCleaner">
+      <summary>
+        <para>Replaces the service used to clean the document storage with an empty service, to avoid automatic cleaning of this storage.</para>
+      </summary>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseFileDocumentStorage(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode)">
+      <summary>
+        <para>Enables document file storage, and specifies a storage path and synchronization mode.</para>
+      </summary>
+      <param name="workingDirectory">Specifies a path to store the documents.</param>
+      <param name="storageSynchronizationMode">Specifies a synchronization mode for the file storage.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to further configure adjust the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseFileDocumentStorage(System.String)">
+      <summary>
+        <para>Enables document file storage and specifies a storage path.</para>
+      </summary>
+      <param name="workingDirectory">Specifies a path to store documents.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to adjust the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseFileExportedDocumentStorage(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode)">
+      <summary>
+        <para>Enables exported document file storage, and specifies a storage path and synchronization mode.</para>
+      </summary>
+      <param name="workingDirectory">Specifies a path to store the exported documents.</param>
+      <param name="storageSynchronizationMode">Specifies a synchronization mode for the file storage.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to adjust the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseFileExportedDocumentStorage(System.String)">
+      <summary>
+        <para>Enables exported document file storage and specifies a storage path.</para>
+      </summary>
+      <param name="workingDirectory">Specifies a path to store the exported documents.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to adjust the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseFileReportStorage(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode)">
+      <summary>
+        <para>Enables report file storage, and specifies a storage path and synchronization mode.</para>
+      </summary>
+      <param name="workingDirectory">Specifies a path to store the serialized report (REPX file).</param>
+      <param name="storageSynchronizationMode">Specifies a synchronization mode for the file storage.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to adjust the Web Document Viewer services.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder.UseFileReportStorage(System.String)">
+      <summary>
+        <para>Enables report file storage and specifies a storage path.</para>
+      </summary>
+      <param name="workingDirectory">Specifies a path to store a report (REPX file).</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Reporting.WebDocumentViewerConfigurationBuilder"/> that can be used to adjust the Web Document Viewer services.</returns>
+    </member>
+  </members>
+</doc>

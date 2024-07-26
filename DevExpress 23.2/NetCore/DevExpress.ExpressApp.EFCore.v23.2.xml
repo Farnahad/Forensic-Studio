@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.EFCore.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.ApplicationBuilder">
+      <summary>
+        <para>Contains platform-agnostic classes and interfaces that allow you to configure your application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.ApplicationBuilder.DbContextBuilder`1">
+      <summary>
+        <para>Allows you to configure DbContext in your WinForms application.</para>
+      </summary>
+      <typeparam name="TContext">The <see cref="T:DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder"/> type.</typeparam>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.DbContextBuilder`1.#ctor(DevExpress.ExpressApp.ApplicationBuilder.IObjectSpaceProviderBuilder{`0})">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.DbContextBuilder`1.Builder">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.DbContextBuilder`1.GetDbContextFactory">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.DbContextBuilder`1.IsSecured">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.DbContextBuilder`1.SpecialConfigureOptions">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.ApplicationBuilder.DbContextServiceBasedBuilder`1">
+      <summary>
+        <para>Allows you to configure DbContext in your ASP.NET Core Blazor application.</para>
+      </summary>
+      <typeparam name="TContext">The <see cref="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder"/> type.</typeparam>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.DbContextServiceBasedBuilder`1.#ctor(DevExpress.ExpressApp.ApplicationBuilder.IObjectSpaceProviderServiceBasedBuilder{`0})">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.DbContextServiceBasedBuilder`1.Builder">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.DbContextServiceBasedBuilder`1.GetDbContextFactory">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.DbContextServiceBasedBuilder`1.IsSecured">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.DbContextServiceBasedBuilder`1.SpecialConfigureOptions">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.DbContextServiceBasedBuilder`1.WithDbContext``1(System.Action{System.IServiceProvider,Microsoft.EntityFrameworkCore.DbContextOptionsBuilder})">
+      <summary>
+        <para>Allows you to configure the specified DbContext.</para>
+      </summary>
+      <param name="configureOptions">A delegate that configures DbContext.</param>
+      <typeparam name="TDbContext">The DbContext object that you want to configure.</typeparam>
+      <returns>Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</returns>
+    </member>
+    <member name="T:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IObjectSpaceProviderServiceBasedBuilder`1"/> interface with a method to add the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderBuilderExtensions.AddEFCore``1(DevExpress.ExpressApp.ApplicationBuilder.IObjectSpaceProviderBuilder{``0},System.Action{DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder})">
+      <summary>
+        <para>Adds the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> to your WinForms application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</param>
+      <param name="configureObjectSpaceProviderOptions">Options that allow you to configure the Object Space Provider.</param>
+      <typeparam name="TContext">The <see cref="T:DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder"/> type.</typeparam>
+      <returns>Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderBuilderExtensions.AddEFCore``1(DevExpress.ExpressApp.ApplicationBuilder.IObjectSpaceProviderBuilder{``0},System.Action{System.IServiceProvider,DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder})">
+      <summary>
+        <para>Adds the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> to your WinForms application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</param>
+      <param name="configureObjectSpaceProviderOptions">Options that allow you to configure the Object Space Provider.</param>
+      <typeparam name="TContext">The <see cref="T:DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder"/> type.</typeparam>
+      <returns>Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderBuilderExtensions.AddEFCore``1(DevExpress.ExpressApp.ApplicationBuilder.IObjectSpaceProviderServiceBasedBuilder{``0},System.Action{DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder})">
+      <summary>
+        <para>Adds the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> to your ASP.NET Core Blazor application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</param>
+      <param name="configureObjectSpaceProviderOptions">Options that allow you to configure the Object Space Provider.</param>
+      <typeparam name="TContext">The <see cref="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder"/> type.</typeparam>
+      <returns>Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderBuilderExtensions.AddEFCore``1(DevExpress.ExpressApp.ApplicationBuilder.IObjectSpaceProviderServiceBasedBuilder{``0},System.Action{System.IServiceProvider,DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder})">
+      <summary>
+        <para>Adds the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> to your ASP.NET Core Blazor application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</param>
+      <param name="configureObjectSpaceProviderOptions">Options that allow you to configure the Object Space Provider.</param>
+      <typeparam name="TContext">The <see cref="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder"/> type.</typeparam>
+      <returns>Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</returns>
+    </member>
+    <member name="T:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder">
+      <summary>
+        <para>Options that you can use to configure <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder.ConfigureObjectSpaceProvider">
+      <summary>
+        <para>Allows you to customize <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/>.</para>
+      </summary>
+      <value>The delegate that allows you to customize the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/>.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder.PreFetchReferenceProperties(System.Boolean)">
+      <summary>
+        <para>Specifies whether to automatically load reference property data for persistent objects when these objects are fetched from a database.</para>
+      </summary>
+      <param name="enabled">true to pre-fetch reference property data; otherwise false.</param>
+      <returns>The <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder"/> object.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ApplicationBuilder.EFCoreObjectSpaceProviderOptionsBuilder.SchemaUpdateMode">
+      <summary>
+        <para>Specifies how to handle compatibility checks for the database associated with the current <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/>.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.ExpressApp.SchemaUpdateMode"/> enumeration value that specifies how to handle database compatibility checks.</value>
+    </member>
+    <member name="N:DevExpress.ExpressApp.EFCore">
+      <summary>
+        <para>Contains classes that provide the Entity Framework Core support.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace">
+      <summary>
+        <para>An <see href="https://docs.devexpress.com/eXpressAppFramework/113707/data-manipulation-and-business-logic/object-space">Object Space</see> used for data manipulation in EF Core-based applications that do not use the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.#ctor(DevExpress.ExpressApp.DC.ITypesInfo,DevExpress.ExpressApp.DC.IEntityStore,System.Func{Microsoft.EntityFrameworkCore.DbContext})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace"/> class with specified settings.</para>
+      </summary>
+      <param name="typesInfo">An <see cref="T:DevExpress.ExpressApp.DC.ITypesInfo"/> object that provides access to XAF-related information on business classes.</param>
+      <param name="entityStore">A source of EF Core-related information on business classes.</param>
+      <param name="createDbContext">A method that returns <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/>.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.ApplyCriteria(System.Object,DevExpress.Data.Filtering.CriteriaOperator)">
+      <summary>
+        <para>Filters the specified collection according to the specified criteria on the server side.</para>
+      </summary>
+      <param name="collection">The collection to be filtered.</param>
+      <param name="criteria">The criteria used to filter objects on the server side.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.CanApplyCriteria(System.Type)">
+      <summary>
+        <para>Indicates whether collections of a specified type can be filtered on the server side.</para>
+      </summary>
+      <param name="collectionType">The type of collections this method checks.</param>
+      <returns>true, if collections of the specified type can be filtered on the server side; otherwise, false.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.CanFilterByNonPersistentMembers">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.Connection">
+      <summary>
+        <para>Gets an <see cref="T:System.Data.IDbConnection"/> object used to connect to a data source.</para>
+      </summary>
+      <value>An <see cref="T:System.Data.IDbConnection"/> object used to connect to a data source.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.Contains(System.Object)">
+      <summary>
+        <para>Indicates whether a specified object belongs to the current Object Space.</para>
+      </summary>
+      <param name="obj">A persistent object this method checks.</param>
+      <returns>true if the specified persistent object belongs to the current Object Space; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.CreateNestedObjectSpace">
+      <summary>
+        <para>Creates a nested Object Space.</para>
+      </summary>
+      <returns>A new IObjectSpace object.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.CreateObject(System.Type)">
+      <summary>
+        <para>Creates an object of the specified type.</para>
+      </summary>
+      <param name="objectType">The type of the object to be created.</param>
+      <returns>A created object of the specified type.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.CreateParseCriteriaScope">
+      <summary>
+        <para>Used to parse a <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> from a string that contains references to persistent objects.</para>
+      </summary>
+      <returns>An IDisposable object used to restore persistent objects from a serialized string.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.Database">
+      <summary>
+        <para>Returns the name of a database that specified in the Object Space’s <see cref="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.DbContext">EFCoreObjectSpace.DbContext</see> if connection to this database is established.</para>
+      </summary>
+      <value>A name of a database that specified in the Object Space’s <see cref="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.DbContext">EFCoreObjectSpace.DbContext</see>.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.DbContext">
+      <summary>
+        <para>Returns the <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> instance your application uses.</para>
+      </summary>
+      <value>A <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> instance your application uses.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.Dispose">
+      <summary>
+        <para>Releases all resources the current <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace"/> object uses.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.EnableObjectDeletionOnRemove(System.Object,System.Boolean)">
+      <summary>
+        <para>Specifies whether objects should be removed from the specified collection and database simultaneously.</para>
+      </summary>
+      <param name="collection">A collection of persistent objects for which this method determines if its objects should be removed from the data source when removing them from the collection.</param>
+      <param name="value">true if objects should be removed from the specified collection and database simultaneously; otherwise, false.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.FindObject(System.Type,DevExpress.Data.Filtering.CriteriaOperator,System.Boolean)">
+      <summary>
+        <para>Searches for the first object that matches the specified criteria.</para>
+      </summary>
+      <param name="objectType">A type of an object to be returned.</param>
+      <param name="criteria">Criteria to search for an object.</param>
+      <param name="inTransaction">true if the method takes unsaved changes into account; otherwise, false.</param>
+      <returns>The first object that matches the specified criteria. null (Nothing in Visual Basic) if there is no persistent object that matches the criteria.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.FirstOrDefault``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Boolean)">
+      <summary>
+        <para>Searches for the first object that matches the specified criteria.</para>
+      </summary>
+      <param name="criteriaExpression">A lambda expression to search for an object.</param>
+      <param name="inTransaction">true if the method takes unsaved changes into account; otherwise, false.</param>
+      <typeparam name="ObjectType">A type of an object to be returned.</typeparam>
+      <returns>The first object that matches the specified criteria. null (Nothing in Visual Basic) if there is no persistent object that matches the criteria.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetCollectionSorting(System.Object)">
+      <summary>
+        <para>Returns the sort settings for a particular collection.</para>
+      </summary>
+      <param name="collection">An collection whose sort settings this method returns.</param>
+      <returns>A list of SortProperty objects that specify the sort order for the collection.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetCriteria(System.Object)">
+      <summary>
+        <para>Returns the criteria used to filter a specified collection on the server side.</para>
+      </summary>
+      <param name="collection">The collections whose filter criteria this method returns.</param>
+      <returns>The criteria used to filter the specified collection.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetEvaluatorContextDescriptor(System.Type)">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetKeyPropertyName(System.Type)">
+      <summary>
+        <para>Returns the name of a key property of the specified type.</para>
+      </summary>
+      <param name="objectType">A type whose key property name this method returns.</param>
+      <returns>A name of a key property of the specified type.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetObject(System.Object)">
+      <summary>
+        <para>Retrieves an object from another Object Space to the current Object Space.</para>
+      </summary>
+      <param name="obj">An object in another Object Space that should to be retrieved to the current Object Space.</param>
+      <returns>An object retrieved from another Object Space.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetObjectByKey(System.Type,System.Object)">
+      <summary>
+        <para>Returns the persistent object whose key property has the specified value.</para>
+      </summary>
+      <param name="objectType">A type of the object this method returns.</param>
+      <param name="key">A value of the returned object’s key property.</param>
+      <returns>A persistent object with the specified value of its key property.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetObjectsQuery``1(System.Boolean)">
+      <summary>
+        <para>Gets a queryable data structure that provides functionality to evaluate queries against the specified business object type.</para>
+      </summary>
+      <param name="inTransaction">This parameter does not affect the result in <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace"/>. It is added to provide compatibility with <see cref="M:DevExpress.ExpressApp.IObjectSpace.GetObjectsQuery``1(System.Boolean)">IObjectSpace.GetObjectsQuery&lt;T&gt;</see>.</param>
+      <typeparam name="T">A business object type for that this method returns the queryable data structure.</typeparam>
+      <returns>An <see cref="T:System.Linq.IQueryable`1"/> object that provides functionality to evaluate queries against a specific business object type.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetObjectsToDelete(System.Boolean)">
+      <summary>
+        <para>Returns a collection of persistent objects marked as deleted in a transaction that currently is in progress.</para>
+      </summary>
+      <param name="includeParent">This parameter does not affect the result. It is added to provide compatibility with <see cref="M:DevExpress.ExpressApp.IObjectSpace.GetObjectsToDelete(System.Boolean)">IObjectSpace.GetObjectsToDelete(Boolean)</see>.</param>
+      <returns>A collection of persistent objects marked as deleted in a transaction that is currently in progress.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetObjectsToSave(System.Boolean)">
+      <summary>
+        <para>Returns a collection of persistent objects that are added, deleted, or modified in a transaction that is currently in progress.</para>
+      </summary>
+      <param name="includeParent">This parameter does not affect the result. It is added to provide compatibility with <see cref="M:DevExpress.ExpressApp.IObjectSpace.GetObjectsToSave(System.Boolean)">IObjectSpace.GetObjectsToSave(Boolean)</see>.</param>
+      <returns>The collection of persistent objects that are added, deleted, or modified in a transaction that currently is in progress.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.GetTopReturnedObjectsCount(System.Object)">
+      <summary>
+        <para>Returns the maximum number of objects that the specified collection can retrieve from a data store.</para>
+      </summary>
+      <param name="collection">A collection whose maximum number of retrieved objects this method returns.</param>
+      <returns>The maximum number of objects that the specified collection can retrieve from the database. 0 indicates that the collection can retrieve all objects.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsCollectionLoaded(System.Object)">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsConnected">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsDeletedObject(System.Object)">
+      <summary>
+        <para>Indicates whether the specified persistent object is deleted and this is committed to the database.</para>
+      </summary>
+      <param name="obj">The object this method checks.</param>
+      <returns>true the specified persistent object is deleted and this is committed to the database; otherwise, false.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsDeleting">
+      <summary>
+        <para>Indicates whether the current Object Space is about to delete an object(s).</para>
+      </summary>
+      <value>true if the current Object Space is deleting an object(s); otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsDisposedObject(System.Object)">
+      <summary>
+        <para>Indicates whether the specified object is disposed of.</para>
+      </summary>
+      <param name="obj">The object this method checks.</param>
+      <returns>true if the specified object is disposed of; otherwise, false.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsModified">
+      <summary>
+        <para>Specifies whether objects belonging to the current Object Space are modified.</para>
+      </summary>
+      <value>true if at least one persistent object is modified; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsNewObject(System.Object)">
+      <summary>
+        <para>Indicates whether a specified object is created but not saved to the database.</para>
+      </summary>
+      <param name="obj">A object this method checks.</param>
+      <returns>true if a specified object is created but not saved to the database; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsObjectDeletionOnRemoveEnabled(System.Object)">
+      <summary>
+        <para>Specifies whether objects should be removed from the specified collection and database simultaneously.</para>
+      </summary>
+      <param name="collection">A collection of persistent objects for which this method determines if its objects should be removed from the data source when removing them from the collection.</param>
+      <returns>true if objects should be removed from the specified collection and database simultaneously; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsObjectToDelete(System.Object)">
+      <summary>
+        <para>Checks whether or not the specified object is marked as deleted but still exists in the database.</para>
+      </summary>
+      <param name="obj">The persistent object this method checks.</param>
+      <returns>true, if the specified object is marked as deleted but still exists in the database; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.IsObjectToSave(System.Object)">
+      <summary>
+        <para>Checks if the specified object is changed and whether or not it should be saved to a database.</para>
+      </summary>
+      <param name="obj">An object this method checks.</param>
+      <returns>true if the specified object is changed and whether or not it should be saved to a database; false if the object has not been modified since the last commit.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.ModifiedObjects">
+      <summary>
+        <para>Returns a collection of objects that are created, modified, or deleted but not committed to the database.</para>
+      </summary>
+      <value>The collection of persistent objects that are added, deleted, or modified but not committed to the database.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.ReloadCollection(System.Object)">
+      <summary>
+        <para>Clears the specified collection and reloads its contents from a database.</para>
+      </summary>
+      <param name="collection">A collection this method reloads.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.ReloadObject(System.Object)">
+      <summary>
+        <para>Updates the specified object in the current Object Space’s <see cref="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.DbContext">EFCoreObjectSpace.DbContext</see> with data from the data source.</para>
+      </summary>
+      <param name="obj">A persistent object this method reloads from the database.</param>
+      <returns>An object to be reloaded from the database.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.RemoveFromModifiedObjects(System.Object)">
+      <summary>
+        <para>Removes the specified object from the object context, and then attaches it again to remove all uncommitted changes.</para>
+      </summary>
+      <param name="obj">An object this method removes from the list of modified objects.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.ServiceProvider">
+      <summary>
+        <para>Gets the <see cref="T:System.IServiceProvider">IServiceProvider</see> used to access the application’s services.</para>
+      </summary>
+      <value>An object that implements the IServiceProvider interface.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.SetCollectionSorting(System.Object,System.Collections.Generic.IList{DevExpress.Xpo.SortProperty})">
+      <summary>
+        <para>Applies the specified sort settings to the collection.</para>
+      </summary>
+      <param name="collection">A collection to be sorted.</param>
+      <param name="sorting">A list of <see cref="T:DevExpress.Xpo.SortProperty"/> objects. These objects specify sort settings to be applied to a collection.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpace.SetTopReturnedObjectsCount(System.Object,System.Int32)">
+      <summary>
+        <para>Sets the maximum number of objects that the specified collection can retrieve from a data store.</para>
+      </summary>
+      <param name="collection">A collection whose maximum number of retrieved objects this method returns.</param>
+      <param name="topReturnedObjectsCount">The maximum number of objects that the specified collection can retrieve from the database. 0 indicates that the collection can retrieve all objects.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1.#ctor(DevExpress.ExpressApp.DC.ITypesInfo,DevExpress.ExpressApp.EFCore.EFCoreTypeInfoSource,System.String,DevExpress.ExpressApp.EFCore.EFCoreDatabaseProviderHandler{`0})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1.#ctor(DevExpress.ExpressApp.DC.ITypesInfo,System.String,DevExpress.ExpressApp.EFCore.EFCoreDatabaseProviderHandler{`0})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1.#ctor(DevExpress.ExpressApp.EFCore.EFCoreDatabaseProviderHandler{`0})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1.#ctor(Microsoft.EntityFrameworkCore.IDbContextFactory{`0},DevExpress.ExpressApp.DC.ITypesInfo)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1.#ctor(Microsoft.EntityFrameworkCore.IDbContextFactory{`0})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1.#ctor(Microsoft.Extensions.DependencyInjection.ServiceCollection,DevExpress.ExpressApp.DC.ITypesInfo,System.String,DevExpress.ExpressApp.EFCore.EFCoreDatabaseProviderHandler{`0})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1.#ctor(Microsoft.Extensions.DependencyInjection.ServiceCollection,Microsoft.EntityFrameworkCore.DbContextOptions{`0},DevExpress.ExpressApp.DC.ITypesInfo,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1.#ctor(System.String,DevExpress.ExpressApp.EFCore.EFCoreDatabaseProviderHandler{`0})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.EFCore.EFCoreObjectSpaceProvider`1.PreFetchReferenceProperties">
+      <summary>
+        <para>Specifies whether to automatically load reference property data for persistent objects when these objects are fetched from a database.</para>
+      </summary>
+      <value>true to pre-fetch reference property data; otherwise, false.</value>
+    </member>
+  </members>
+</doc>

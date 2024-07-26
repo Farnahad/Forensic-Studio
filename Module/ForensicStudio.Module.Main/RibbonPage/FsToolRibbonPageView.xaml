@@ -1,0 +1,30 @@
+﻿<fsc:FsRibbonPage x:Class="ForensicStudio.Module.Main.RibbonPage.FsToolRibbonPageView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+                  xmlns:fsc="ForensicStudioControls"
+                  xmlns:fsmc="ForensicStudioMainCore"
+                  mc:Ignorable="d" Caption="TOOL"
+                  d:DesignHeight="300" d:DesignWidth="300">
+    <dxr:RibbonPageGroup Caption="TOOL">
+        <fsc:FsLargeRibbonBarButtonItem Content="Tool Panel"
+                                        Command="{fsmc:FsBinding Path=ShowToolPanelViewCommand}" />
+        <fsc:FsLargeRibbonBarButtonItem Content="WinPmem"
+                                        LargeGlyph="/Image/Tool/WinPmem.png"
+                                        Command="{fsmc:FsBinding Path=ShowWinPmemViewCommand}" />
+        <fsc:FsLargeRibbonBarButtonItem Content="Process Hacker"
+                                        LargeGlyph="/Image/Tool/ProcessHacker.png"
+                                        Command="{fsmc:FsBinding Path=ShowProcessHackerViewCommand}" />
+        <fsc:FsLargeRibbonBarButtonItem Content="ESE Database View"
+                                        LargeGlyph="/Image/Tool/EseDatabaseView.png"
+                                        Command="{fsmc:FsBinding Path=ShowEseDatabaseViewCommand}" />
+        <fsc:FsLargeRibbonBarButtonItem Content="Registry Explorer"
+                                        LargeGlyph="/Image/Tool/RegistryExplorer.png"
+                                        Command="{fsmc:FsBinding Path=ShowRegistryExplorerViewCommand}" />
+        <fsc:FsLargeRibbonBarButtonItem Content="FTK Imager"
+                                        LargeGlyph="/Image/Tool/FtkImager.png"
+                                        Command="{fsmc:FsBinding Path=ShowFtkImagerViewCommand}" />
+    </dxr:RibbonPageGroup>
+</fsc:FsRibbonPage>

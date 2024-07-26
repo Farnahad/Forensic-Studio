@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.Blazor.Reporting.v23.2.JSBasedControls.Common</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.Blazor.Reporting">
+      <summary>
+        <para>Contains classes that implement reporting functionality in Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewerBase">
+      <summary>
+        <para>A base class for Document Viewer controls in Blazor Server and WebAssembly applications.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerBase.AccessibilityCompliant">
+      <summary>
+        <para>Enables accessibility mode.</para>
+      </summary>
+      <value>True to enable accessibility mode; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerBase.Height">
+      <summary>
+        <para>Gets or sets the Document Viewer’s height on a page.</para>
+      </summary>
+      <value>A string that specifies the control’s height on a page. The default value is ‘700px’.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerBase.MobileMode">
+      <summary>
+        <para>Gets or sets whether to configure the Document Viewer for mobile devices.</para>
+      </summary>
+      <value>True to configure the Document Viewer for mobile devices; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerBase.OpenReport(System.String)">
+      <summary>
+        <para>Opens the specified report on the Web Document Viewer’s client side. Allows you to refresh a preview for the loaded report.</para>
+      </summary>
+      <param name="reportName">A string that specifies the report’s URL.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that is completed when the report is opened.</returns>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerBase.ResetParameters">
+      <summary>
+        <para>Resets the report parameter values to the default values.</para>
+      </summary>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that is completed when the parameters are reset.</returns>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerBase.RightToLeft">
+      <summary>
+        <para>Gets or sets whether to enable a right-to-left layout in the Document Viewer’s UI.</para>
+      </summary>
+      <value>True to enable the RTL layout; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerBase.StartBuild">
+      <summary>
+        <para>Starts building a report document.</para>
+      </summary>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that is completed when the document is created.</returns>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerBase.Width">
+      <summary>
+        <para>Gets or sets the Document Viewer’s width on a page.</para>
+      </summary>
+      <value>A string that specifies the control’s width on a page. The default value is ‘100%’.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks">
+      <summary>
+        <para>Specifies client-side event handler functions for the Web Document Viewer. See DxDocumentViewerCallbacks Members for the complete list of events.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.BeforeRender">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.BeforeRender(System.String)">BeforeRender</see> client-side event that allows you to perform any action before the Web Document Viewer is rendered.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the BeforeRender event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.CustomizeElements">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeElements(System.String)">CustomizeElements</see> client-side event that allows you to customize the Web Document Viewer UI elements.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeElements event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.CustomizeExportOptions">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeExportOptions(System.String)">CustomizeExportOptions</see> client-side event that allows you hide export formats and specify the default export options.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeExportOptions event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.CustomizeLocalization">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeLocalization(System.String)">CustomizeLocalization</see> client-side event that allows you localize the Web Document Viewer.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeLocalization event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.CustomizeMenuActions">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeMenuActions(System.String)">CustomizeMenuActions</see> client-side event that enables you to customize the Web Document Viewer toolbar and menu.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeMenuActions event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.CustomizeParameterEditors">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeParameterEditors(System.String)">CustomizeParameterEditors</see> client-side event that allows you to specify the parameter editor for the report parameter.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeParameterEditors event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.CustomizeParameterLookUpSource">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.CustomizeParameterLookUpSource(System.String)">CustomizeParameterLookUpSource</see> client-side event that allows you to specify look-up values for the parameter editor.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeParameterLookUpSource event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.DocumentReady">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.DocumentReady(System.String)">DocumentReady</see> client-side event that occurs before the Document Viewer loads a document.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the DocumentReady event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.EditingFieldChanged">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.EditingFieldChanged(System.String)">EditingFieldChanged</see> client-side event that allows you to respond to a field value change.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the EditingFieldChanged event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.OnExport">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.OnExport(System.String)">OnExport</see> client-side event that allows you to pass data to the server before the requests to print the document or to get the exported document are executed.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the OnExport event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.OnServerError">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.OnServerError(System.String)">OnServerError</see> client-side event that allows you to perform actions when a Fetch request completes with an error.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the OnServerError event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.ParametersInitialized">
+      <summary>
+        <para>Specifies the JavaScript function that handles the client-side  ParametersInitialized event and allows you to modify client-side parameter values after initialization before they are displayed.</para>
+      </summary>
+      <value>The name of a JavaScript function or entire JavaScript function code that runs when the ParametersInitialized event occurs.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.ParametersReset">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.ParametersReset(System.String)">ParametersReset</see> client-side event that occurs when the report parameter values are reset.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the ParametersReset event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.ParametersSubmitted">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.ParametersSubmitted(System.String)">ParametersSubmitted</see> client-side event that occurs when the user clicks Submit in the Parameters Panel.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the ParametersSubmitted event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.PreviewClick">
+      <summary>
+        <para>Specifies the handler for the <see cref="M:DevExpress.AspNetCore.Reporting.WebDocumentViewer.WebDocumentViewerClientSideEventsBuilder.PreviewClick(System.String)">PreviewClick</see> client-side event that occurs when the user clicks the document area in the Web Document Viewer.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewClick event.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewerExportSettings">
+      <summary>
+        <para>Contains settings that apply to print and export operations.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerExportSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewerExportSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerExportSettings.ShowPrintNotificationDialog">
+      <summary>
+        <para>Specifies whether to display an additional dialog that allows users to download the PDF file sent to printing.</para>
+      </summary>
+      <value>true, to display an additional dialog; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerExportSettings.UseAsynchronousExport">
+      <summary>
+        <para>Allows you to export documents asynchronously.</para>
+      </summary>
+      <value>True to perform export operations asynchronously; false to export documents in the same UI thread.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerExportSettings.UseSameTab">
+      <summary>
+        <para>Specifies whether to print and export documents in the browser tab that contains the Document Viewer.</para>
+      </summary>
+      <value>true, to print and export documents in the tab that contains the Document Viewer; false to open another browser tab for print and export.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewerMobileModeSettings">
+      <summary>
+        <para>A nested component that provides options for the Web Document Viewer’s mobile mode.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerMobileModeSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewerMobileModeSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerMobileModeSettings.AnimationEnabled">
+      <summary>
+        <para>Gets or sets whether actions are animated.</para>
+      </summary>
+      <value>True if the actions ae animated; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerMobileModeSettings.ReaderMode">
+      <summary>
+        <para>Gets or sets whether to enable the reader mode that displays document pages without page borders.</para>
+      </summary>
+      <value>True to enable the reader mode; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewerProgressBarSettings">
+      <summary>
+        <para>Contains the progress bar’s settings. The progress bar indicates the progress of a document generation.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerProgressBarSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewerProgressBarSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerProgressBarSettings.KeepOnVisibleArea">
+      <summary>
+        <para>Gets or sets whether the progress bar keeps its position in a visible area when a user scrolls a web page.</para>
+      </summary>
+      <value>True if the progress bar keeps its position when a page scrolls; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerProgressBarSettings.Position">
+      <summary>
+        <para>Gets or sets the progress bar’s relative position on a page.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewerRemoteSettings">
+      <summary>
+        <para>A nested component that enables you to configure the Web Document Viewer to display documents that are created remotely with the DevExpress Report and Dashboard Server.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerRemoteSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewerRemoteSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerRemoteSettings.AuthToken">
+      <summary>
+        <para>Gets or sest the Bearer token to access documents on the Report and Dashboard Server.</para>
+      </summary>
+      <value>A string that is the Bearer token.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerRemoteSettings.ServerUri">
+      <summary>
+        <para>Gets or sets the Report and Dashboard Server URI.</para>
+      </summary>
+      <value>A string that is the Report and Dashboard Server URI.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewerSearchSettings">
+      <summary>
+        <para>Contains settings that apply to the Web Document Viewer’s search operations.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerSearchSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewerSearchSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerSearchSettings.SearchEnabled">
+      <summary>
+        <para>Allows you to hide search actions.</para>
+      </summary>
+      <value>true to show search actions; otherwise, false</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerSearchSettings.UseAsyncSearch">
+      <summary>
+        <para>Specifies whether the Web Document Viewer uses asynchronous search.</para>
+      </summary>
+      <value>true to use asynchronous search; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxDocumentViewerTabPanelSettings">
+      <summary>
+        <para>A nested component that allows you to customize the Document Viewer’s tab panel.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxDocumentViewerTabPanelSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxDocumentViewerTabPanelSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerTabPanelSettings.Position">
+      <summary>
+        <para>Gets or sets the tab panel’s position.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.Reporting.TabPanelPosition"/> enumeration memeber that identifies the tab panel position.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxDocumentViewerTabPanelSettings.Width">
+      <summary>
+        <para>Specifies the tab panel’s width.</para>
+      </summary>
+      <value>An integer that is the width in pixels.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxReportDesignerBase">
+      <summary>
+        <para>Base class for Report Designer controls in Blazor Server and WebAssembly applications.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerBase.Height">
+      <summary>
+        <para>Gets or sets the height of the Report Designer on a page.</para>
+      </summary>
+      <value>A string that specifies the height of an element.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesignerBase.OpenReport(System.String)">
+      <summary>
+        <para>Opens the specified report on the client side.</para>
+      </summary>
+      <param name="reportName">A string that specifies the report’s URL.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that is completed when the report is opened.</returns>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesignerBase.SaveReport">
+      <summary>
+        <para>Saves the currently opened report.</para>
+      </summary>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that is completed when the report is saved.</returns>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerBase.Width">
+      <summary>
+        <para>Gets or sets the Document Viewer’s width on a page.</para>
+      </summary>
+      <value>A string that specifies the control’s width on a page. The default value is ‘100%’.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks">
+      <summary>
+        <para>Specifies client-side event handler functions for the Report Designer. See DxReportDesignerCallbacks Members for the complete list of events.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.BeforeRender">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> BeforeRender client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the BeforeRender event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.ComponentAdded">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> ComponentAdded client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the ComponentAdded event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeElements">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> CustomizeElements client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeElements event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeFieldListActions">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> CustomizeFieldListActions client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeFieldListActions event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeLocalization">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> CustomizeLocalization client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeLocalization event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeMenuActions">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> CustomizeMenuActions client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeMenuActions event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeOpenDialog">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> CustomizeOpenDialog client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeOpenDialog event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeParameterEditors">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> CustomizeParameterEditors client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeParameterEditors event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeSaveDialog">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> CustomizeParameterEditors client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeSaveDialog event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeToolbox">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> CustomizeToolbox client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeToolbox event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeWizard">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> CustomizeWizard client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the CustomizeWizard event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.ExitDesigner">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> ExitDesigner client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the ExitDesigner event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.OnServerError">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> OnServerError client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewClick event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewClick">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> PreviewClick client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewClick event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewCustomizeElements">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> PreviewCustomizeElements client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewCustomizeElements event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewCustomizeExportOptions">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> PreviewCustomizeExportOptions client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewCustomizeExportOptions event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewCustomizeMenuActions">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> PreviewCustomizeMenuActions client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewCustomizeMenuActions event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewDocumentReady">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> PreviewDocumentReady client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewParametersSubmitted event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewEditingFieldChanged">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> PreviewEditingFieldChanged client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewEditingFieldChanged event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewOnExport">
+      <summary>
+        <para>Specifies the JavaScript function that handles the PreviewOnExport event, which occurs before a request for document export is sent.</para>
+      </summary>
+      <value>The name of a JavaScript function or entire JavaScript function code that runs when the PreviewOnExport event occurs.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewParametersInitialized">
+      <summary>
+        <para>Specifies the JavaScript function that handles the  PreviewParametersInitialized client-side event and allows you to get the client-side parameter values when they are initialized in the Designer Preview and modify them.</para>
+      </summary>
+      <value>The name of a JavaScript function or entire JavaScript function code that runs when the PreviewParametersInitialized event occurs.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewParametersReset">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> PreviewParametersReset client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewParametersSubmitted event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.PreviewParametersSubmitted">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> PreviewParametersSubmitted client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the PreviewParametersSubmitted event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.ReportOpened">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> ReportOpened client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the ReportOpened event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.ReportOpening">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> ReportOpening client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the ReportOpening event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.ReportSaved">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> ReportSaved client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the ReportSaved event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.ReportSaving">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> ReportSaving client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the ReportSaving event.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.TabChanged">
+      <summary>
+        <para>Specifies the JavaScript function that handles the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Web Report Designer’s</see> TabChanged client-side event.</para>
+      </summary>
+      <value>The name of a JavaScript function used to handle the TabChanged event.</value>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxReportDesignerDataSourceSettings">
+      <summary>
+        <para>Contains settings that configure the user interface related to the data sources in the Report Designer.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesignerDataSourceSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxReportDesignerDataSourceSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerDataSourceSettings.AllowAddDataSource">
+      <summary>
+        <para>Hides the Add Data Source button in the Field List.</para>
+      </summary>
+      <value>true to show the Add Data Source button; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerDataSourceSettings.AllowEditDataSource">
+      <summary>
+        <para>Hides UI elements that allow the user to edit the data source and queries in the Field List.</para>
+      </summary>
+      <value>true to show UI elements that allow the user to edit the data source and queries in the Field List; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerDataSourceSettings.AllowRemoveDataSource">
+      <summary>
+        <para>Hides the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List.</para>
+      </summary>
+      <value>true to show the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesignerModelSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxReportDesignerModelSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesignerReportPreviewSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxReportDesignerReportPreviewSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerReportPreviewSettings.ExportSettings">
+      <summary>
+        <para>Allows you to specify settings that apply to print and export operations.</para>
+      </summary>
+      <value>A class that contains settings that apply to print and export operations.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerReportPreviewSettings.SearchSettings">
+      <summary>
+        <para>Allows you to specify search settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxReportDesignerWizardSettings">
+      <summary>
+        <para>Provides access to the <see href="https://docs.devexpress.com/XtraReports/400249/web-reporting/asp-net-core-reporting/end-user-report-designer-in-asp-net-core-applications">Report Designer</see>‘s wizard settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxReportDesignerWizardSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxReportDesignerWizardSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerWizardSettings.EnableJsonDataSource">
+      <summary>
+        <para>Gets or sets whether the Specify Data Source Settings (JSON) page is enabled in the <see href="https://docs.devexpress.com/XtraReports/400946/web-reporting/end-user-report-designer-for-web/wizards/report-wizard-fullscreen">Report Wizard</see> and <see href="https://docs.devexpress.com/XtraReports/400947/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen">Data Source Wizard</see>.</para>
+      </summary>
+      <value>True, to enable the Specify Data Source Settings (JSON) page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerWizardSettings.EnableObjectDataSource">
+      <summary>
+        <para>Gets or sets whether the Specify Data Source Settings (Object) page is enabled in the <see href="https://docs.devexpress.com/XtraReports/400946/web-reporting/end-user-report-designer-for-web/wizards/report-wizard-fullscreen">Report Wizard</see> and <see href="https://docs.devexpress.com/XtraReports/400947/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen">Data Source Wizard</see>.</para>
+      </summary>
+      <value>True, to enable the Specify Data Source Settings (Object) page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerWizardSettings.EnableSqlDataSource">
+      <summary>
+        <para>Gets or sets whether the Specify Data Source Settings (Database) page is enabled in the <see href="https://docs.devexpress.com/XtraReports/400946/web-reporting/end-user-report-designer-for-web/wizards/report-wizard-fullscreen">Report Wizard</see> and <see href="https://docs.devexpress.com/XtraReports/400947/web-reporting/end-user-report-designer-for-web/wizards/data-source-wizard-fullscreen">Data Source Wizard</see>.</para>
+      </summary>
+      <value>True, to enable the Specify Data Source Settings (Database) page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerWizardSettings.ReportWizardTemplatesSearchBoxVisibility">
+      <summary>
+        <para>Specifies whether to display the search box on the Select Report Type page.</para>
+      </summary>
+      <value>The <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility"/> enumeration member that specifies whether to display the report template search box.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerWizardSettings.UseFullscreenWizard">
+      <summary>
+        <para>Specifies whether to use the Report Wizard version that runs in the <see href="https://docs.devexpress.com/XtraReports/400946/web-reporting/end-user-report-designer-for-web/wizards/report-wizard-fullscreen">fullscreen mode</see>.</para>
+      </summary>
+      <value>True, to use the <see href="https://docs.devexpress.com/XtraReports/400946/web-reporting/end-user-report-designer-for-web/wizards/report-wizard-fullscreen">Report Wizard (Fullscreen)</see> version; false, to use the <see href="https://docs.devexpress.com/XtraReports/117576/web-reporting/end-user-report-designer-for-web/wizards/report-wizard-popup">Report Wizard (Popup)</see> version.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxReportDesignerWizardSettings.UseMasterDetailWizard">
+      <summary>
+        <para>Specifies whether the Report Wizard can create master-detail reports and specify its grouping and summary options.</para>
+      </summary>
+      <value>True, to use the master-detail Report Wizard version; false, to use the standard Report Wizard version.</value>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.ReportDesignerModelSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.ReportDesignerModelSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.TabPanelPosition">
+      <summary>
+        <para>Lists values that specify the tab panel position in the Document Viewer.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.TabPanelPosition.Left">
+      <summary>
+        <para>The tab panel is at the left side of the Document Viewer.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Blazor.Reporting.TabPanelPosition.Right">
+      <summary>
+        <para>The tab panel is at the right side of the Document Viewer.</para>
+      </summary>
+    </member>
+  </members>
+</doc>

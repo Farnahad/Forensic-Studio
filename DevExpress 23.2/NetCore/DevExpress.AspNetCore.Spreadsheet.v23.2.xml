@@ -1,0 +1,1869 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.AspNetCore.Spreadsheet.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.AspNetCore">
+      <summary>
+        <para>Contains classes that implement common functionality for the ASP.NET Core controls.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.ApplicationOptionsSpreadsheetExtensions">
+      <summary>
+        <para>Contains application options related to spreadsheet extension.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.ApplicationOptionsSpreadsheetExtensions.AddSpreadsheet(DevExpress.AspNetCore.ApplicationOptions,System.Action{DevExpress.AspNetCore.SpreadsheetOptions})">
+      <summary>
+        <para>Allows you to configure a Spreadsheet.</para>
+      </summary>
+      <param name="applicationOptions">The application options.</param>
+      <param name="spreadsheetOptions">A method that configures the Spreadsheet options.</param>
+      <returns>An object that can be used to further configure the application options.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.BuilderFactorySpreadsheetExtensions">
+      <summary>
+        <para>Exposes extension methods defined for the <see cref="T:DevExpress.AspNetCore.BuilderFactorySpreadsheetExtensions">BuilderFactorySpreadsheetExtensions</see> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactorySpreadsheetExtensions.Spreadsheet(DevExpress.AspNetCore.BuilderFactory,System.String)">
+      <summary>
+        <para>An extension method of the <see cref="T:DevExpress.AspNetCore.BuilderFactorySpreadsheetExtensions">BuilderFactorySpreadsheetExtensions</see> class required to create a <see cref="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder">Spreadsheet builder</see>.</para>
+      </summary>
+      <param name="builderFactory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/>‘ instance this method extends.</param>
+      <param name="name">An identifier for the element representing the Spreadsheet on the page.</param>
+      <returns>An object required to build the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactorySpreadsheetExtensions.Spreadsheet(DevExpress.AspNetCore.BuilderFactory)">
+      <summary>
+        <para>An extension method of the <see cref="T:DevExpress.AspNetCore.BuilderFactorySpreadsheetExtensions">BuilderFactorySpreadsheetExtensions</see> class required to create a <see cref="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder">Spreadsheet builder</see>.</para>
+      </summary>
+      <param name="builderFactory">The <see cref="T:DevExpress.AspNetCore.BuilderFactory"/>‘ instance this method extends.</param>
+      <returns>An object required to build the Spreadsheet.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.OfficeWorkSessionProcessing">
+      <summary>
+        <para>Process work sessions in an application in stateless mode.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.OfficeWorkSessionProcessing.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.OfficeWorkSessionProcessing"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.OfficeWorkSessionProcessing.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+      <summary>
+        <para>Called after the action method is executed.</para>
+      </summary>
+      <param name="context">An object that contains the information about the current request and action.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.OfficeWorkSessionProcessing.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+      <summary>
+        <para>Called before the action method is executed.</para>
+      </summary>
+      <param name="context">An object that contains the information about the current request and action.</param>
+    </member>
+    <member name="N:DevExpress.AspNetCore.Spreadsheet">
+      <summary>
+        <para>Contains classes that implement the Spreadsheet functionality.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder">
+      <summary>
+        <para>A builder for the Spreadsheet.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+      <summary>
+        <para>Creates an object of the Spreadsheet class.</para>
+      </summary>
+      <param name="htmlHelper">A helper object for creating the Spreadsheet.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.AutoSaveMode(DevExpress.Web.Office.AutoSaveMode)">
+      <summary>
+        <para>Specifies the auto-saving mode.</para>
+      </summary>
+      <param name="mode">The auto-save mode.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.AutoSaveTimeout(System.TimeSpan)">
+      <summary>
+        <para>Gets or sets the auto-save timeout.</para>
+      </summary>
+      <param name="timeout">The timeout in milliseconds.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.ClientSideEvents(System.Action{DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder})">
+      <summary>
+        <para>Allows you to assign event handlers to client-side events available for the Spreadsheet.</para>
+      </summary>
+      <param name="configure">A method that assigns event handlers.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.ConfirmOnLosingChanges(System.Action{DevExpress.AspNetCore.Office.ConfirmOnLosingChangesBuilder})">
+      <summary>
+        <para>Allows you to customize settings of a confirmation message that can be displayed when any unsaved data changes are going to be lost.</para>
+      </summary>
+      <param name="configure">A method that configures the confirmation message settings.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.CssClassName(System.String)">
+      <summary>
+        <para>Specifies a CSS class to be applied to the Spreadsheet.</para>
+      </summary>
+      <param name="cssClassName">The name of the CSS class.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.DocumentRequestHandlerUrl(System.String)">
+      <summary>
+        <para>Specifies a URL to an action the handles document request operation.</para>
+      </summary>
+      <param name="url">The URL to the handler.</param>
+      <returns>A builder that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.FullscreenMode(System.Boolean)">
+      <summary>
+        <para>Specifies whether the spreadsheet is used in full-screen mode.</para>
+      </summary>
+      <param name="fullscreenMode">true, to enable full-screen mode; otherwise, false.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder">SpreadsheetBuilder</see> that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Height(System.Int32)">
+      <summary>
+        <para>Specifies the Spreadsheet’s height.</para>
+      </summary>
+      <param name="height">The Spreadsheet’s height.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Height(System.String)">
+      <summary>
+        <para>Sets a specified height for the Spreadsheet’s element on the page.</para>
+      </summary>
+      <param name="height">The Spreadsheet’s height.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder">SpreadsheetBuilder</see> that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Name(System.String)">
+      <summary>
+        <para>Sets a specified identifier for the element representing the Spreadsheet on the page.</para>
+      </summary>
+      <param name="name">The name of the Spreadsheet’s element on the page.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder">SpreadsheetBuilder</see> that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Open(System.String,DevExpress.Spreadsheet.DocumentFormat,System.Func{System.Byte[]})">
+      <summary>
+        <para>Opens a document in the specified format from a byte array.</para>
+      </summary>
+      <param name="documentId">A <see href="https://docs.devexpress.com/AspNetCore/404049/spreadsheet/document-management">document identifier</see>.</param>
+      <param name="documentFormat">A document format.</param>
+      <param name="contentAccessorByBytes">A method delegate that obtains a byte array.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Open(System.String,DevExpress.Spreadsheet.DocumentFormat,System.Func{System.IO.Stream})">
+      <summary>
+        <para>Opens a document in the specified format from a stream.</para>
+      </summary>
+      <param name="documentId">A <see href="https://docs.devexpress.com/AspNetCore/404049/spreadsheet/document-management">document identifier</see>.</param>
+      <param name="documentFormat">A document format.</param>
+      <param name="contentAccessorByStream">A method delegate that obtains a stream.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Open(System.String,DevExpress.Spreadsheet.DocumentFormat)">
+      <summary>
+        <para>Opens a document in the specified format from a file system.</para>
+      </summary>
+      <param name="path">A document path.</param>
+      <param name="documentFormat">A document format.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Open(System.String,System.Func{System.Byte[]})">
+      <summary>
+        <para>Opens a document from an array of bytes.</para>
+      </summary>
+      <param name="documentId">A <see href="https://docs.devexpress.com/AspNetCore/404049/spreadsheet/document-management">document identifier</see>.</param>
+      <param name="contentAccessorByBytes">A method delegate that obtains the byte array.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Open(System.String,System.Func{System.IO.Stream})">
+      <summary>
+        <para>Opens a document from a stream.</para>
+      </summary>
+      <param name="documentId">A <see href="https://docs.devexpress.com/AspNetCore/404049/spreadsheet/document-management">document identifier</see>.</param>
+      <param name="contentAccessorByStream">A method delegate that obtains a stream.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Open(System.String)">
+      <summary>
+        <para>Opens a document from a file system.</para>
+      </summary>
+      <param name="path">A document path.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.ReadOnly(System.Boolean)">
+      <summary>
+        <para>Indicates whether an end-user can change the Spreadsheet contents at runtime.</para>
+      </summary>
+      <param name="readOnly">true, if an end-user cannot change the Spreadsheet contents; otherwise, false.</param>
+      <returns>A <see cref="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder"/> that can be used to further configure the Rich Text Editor.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Ribbon(System.Action{DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonSettingsBuilder})">
+      <summary>
+        <para>Allows you to customize the ribbon element.</para>
+      </summary>
+      <param name="configure">A delegate method that configures the ribbon.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.ShowSheetTabs(System.Boolean)">
+      <summary>
+        <para>Specifies the sheet tab selector’s visibility.</para>
+      </summary>
+      <param name="showSheetTabs">true, if the sheet tab selector is visible; otherwise, false.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Width(System.Int32)">
+      <summary>
+        <para>Specifies the Spreadsheet’s width.</para>
+      </summary>
+      <param name="width">The Spreadsheet’s width.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.Width(System.String)">
+      <summary>
+        <para>Specifies the Spreadsheet’s width.</para>
+      </summary>
+      <param name="width">The Spreadsheet’s width.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.WorkDirectory(System.String)">
+      <summary>
+        <para>Gets or sets the working directory path.</para>
+      </summary>
+      <param name="workDirectory">The working directory path.</param>
+      <returns>An object that can be used to further configure the Spreadsheet.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetBuilder.WriteTo(System.IO.TextWriter,System.Text.Encodings.Web.HtmlEncoder)">
+      <summary>
+        <para>Writes this Spreadsheet to the writer.</para>
+      </summary>
+      <param name="writer">The writer to write this Spreadsheet.</param>
+      <param name="encoder">An HTML character encoder.</param>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder">
+      <summary>
+        <para>A builder that allows you to assign event handlers to client-side events available for the Spreadsheet.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnBeginSynchronization(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.beginSynchronization</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnCellBeginEdit(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.cellBeginEdit</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnCellCancelEdit(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.cellCancelEdit</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnCellEndEdit(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.cellEndEdit</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnCustomCommandExecuted(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.customCommandExecuted</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnDocumentChanged(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.documentChanged</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnEndSynchronization(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.endSynchronization</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnHyperlinkClick(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.hyperlinkClick</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnInit(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.init</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnPopupMenuShowing(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.popupMenuShowing</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnProtectionWarning(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.protectionWarning</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientSideEventsBuilder.OnSelectionChanged(System.String)">
+      <summary>
+        <para>Assign the name of the JavaScript function or the entire event handler’s code to the client <b>DevExpress.AspNetCore.Spreadsheet.Spreadsheet.selectionChanged</b> event.</para>
+      </summary>
+      <param name="callback">The name of a JavaScript function or the entire JavaScript function code used to handle an event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet’s client side events.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientState">
+      <summary>
+        <para>Contains information about the Spreadsheet’s client state.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientState.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientState"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientState.SpreadsheetWorkSessionId">
+      <summary>
+        <para>Specifies the Spreadsheet’s work session ID.</para>
+      </summary>
+      <value>The work session ID.</value>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRequestProcessor">
+      <summary>
+        <para>Contains methods that process Spreadsheet requests.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRequestProcessor.GetDocumentIdFromRequest(Microsoft.AspNetCore.Http.HttpContext)">
+      <summary>
+        <para>Gets a document ID from a request.</para>
+      </summary>
+      <param name="httpContext">An object that contains HTTP-specific information about an HTTP request.</param>
+      <returns>The document ID.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRequestProcessor.GetDocumentIdFromState(DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientState)">
+      <summary>
+        <para>Gets a document ID from a Spreadsheet client state.</para>
+      </summary>
+      <param name="spreadsheetState">An object that contains information about the Spreadsheet’s client state.</param>
+      <returns>The document ID.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRequestProcessor.GetResponse(Microsoft.AspNetCore.Http.HttpContext)">
+      <summary>
+        <para>Returns a response to a request.</para>
+      </summary>
+      <param name="httpContext">An object that contains HTTP-specific information about an HTTP request.</param>
+      <returns>The result of an action method.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRequestProcessor.GetSpreadsheetFromRequest(Microsoft.AspNetCore.Http.HttpContext)">
+      <summary>
+        <para>Gets a Spreadsheet object from a request.</para>
+      </summary>
+      <param name="httpContext">An object that contains HTTP-specific information about an HTTP request.</param>
+      <returns>A Spreadsheet object.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRequestProcessor.GetSpreadsheetFromState(DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientState)">
+      <summary>
+        <para>Gets a Spreadsheet object from a client state.</para>
+      </summary>
+      <param name="spreadsheetState">An object that contains information about the Spreadsheet’s client state.</param>
+      <returns>A Spreadsheet object.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRequestProcessor.GetWorkSessionIdFromRequest(Microsoft.AspNetCore.Http.HttpContext)">
+      <summary>
+        <para>Gets the work session’s ID from a request.</para>
+      </summary>
+      <param name="httpContext">An object that contains HTTP-specific information about an HTTP request.</param>
+      <returns>The work session’s globally unique identifier (GUID).</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRequestProcessor.GetWorkSessionIdFromState(DevExpress.AspNetCore.Spreadsheet.SpreadsheetClientState)">
+      <summary>
+        <para>Gets the work session’s ID from a Spreadsheet client state.</para>
+      </summary>
+      <param name="spreadsheetState">An object that contains information about the Spreadsheet’s client state.</param>
+      <returns>The work session’s globally unique identifier (GUID).</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonContextTabCategoriesBuilder">
+      <summary>
+        <para>A builder for a ribbon context tab category collection in Spreadsheet.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonContextTabCategoryInfoBuilder">
+      <summary>
+        <para>A builder that configures a context tab category.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder">
+      <summary>
+        <para>A builder for the Spreadsheet ribbon item collection.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddAlignBottomItem">
+      <summary>
+        <para>Adds the Align Bottom item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddAlignMiddleItem">
+      <summary>
+        <para>Adds the Align Middle item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddAlignParagraphCenterItem">
+      <summary>
+        <para>Adds the Align Paragraph Center item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddAlignParagraphLeftItem">
+      <summary>
+        <para>Adds the Align Paragraph Left item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddAlignParagraphRightItem">
+      <summary>
+        <para>Adds the Align Paragraph Right item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddAlignTopItem">
+      <summary>
+        <para>Adds the Align Top item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddAutoSumItem">
+      <summary>
+        <para>Adds the Auto Sum item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddBackgroundColorItem">
+      <summary>
+        <para>Adds the Background Color item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddBorderLineColorItem">
+      <summary>
+        <para>Adds the Border Line Color item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddBordersItem">
+      <summary>
+        <para>Adds the Borders item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddCalculateNowItem">
+      <summary>
+        <para>Adds the Calculate Now item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddCalculateSheetItem">
+      <summary>
+        <para>Adds the Calculate Sheet item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddCalculationOptionsItem">
+      <summary>
+        <para>Adds the Calculation Options item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartAxesItem">
+      <summary>
+        <para>Adds the Chart Axes item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartAxisTitlesItem">
+      <summary>
+        <para>Adds the Chart Axis Titles item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartBringForwardItem">
+      <summary>
+        <para>Adds the Chart Bring Forward item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartDataLabelsItem">
+      <summary>
+        <para>Adds the Chart Data Labels item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartGridlinesItem">
+      <summary>
+        <para>Adds the Chart Gridlines item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartLayoutItem">
+      <summary>
+        <para>Adds the Chart Layout item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartLegendItem">
+      <summary>
+        <para>Adds the Chart Legend item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartSelectDataItem">
+      <summary>
+        <para>Adds the Chart Select Data item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartSendBackwardItem">
+      <summary>
+        <para>Adds the Chart Send Backward item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartStyleItem">
+      <summary>
+        <para>Adds the Chart Style item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartSwitchRowColumnItem">
+      <summary>
+        <para>Adds the Chart Switch Row Column item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartTitleItem">
+      <summary>
+        <para>Adds the Chart Title item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddChartTypeItem">
+      <summary>
+        <para>Adds the Chart Type item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddClearFilterItem">
+      <summary>
+        <para>Adds the Clear Filter item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddClearItem">
+      <summary>
+        <para>Adds the Clear item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddCopyItem">
+      <summary>
+        <para>Adds the Copy item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddCutItem">
+      <summary>
+        <para>Adds the Cut item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddDataValidationItem">
+      <summary>
+        <para>Adds the Data Validation item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddDateAndTimeFunctionsItem">
+      <summary>
+        <para>Adds the Date And Time Functions item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddDecreaseDecimalItem">
+      <summary>
+        <para>Adds the Decrease Decimal item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddDecreaseFontSizeItem">
+      <summary>
+        <para>Adds the Decrease Font Size item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddDecreaseIndentItem">
+      <summary>
+        <para>Adds the Decrease Indent item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddDeleteCellsItem">
+      <summary>
+        <para>Adds the Delete Cells item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddDeleteCommentItem">
+      <summary>
+        <para>Adds the Delete Comment item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddEditCommentItem">
+      <summary>
+        <para>Adds the Edit Comment item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFillItem">
+      <summary>
+        <para>Adds the Fill item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFilterItem">
+      <summary>
+        <para>Adds the Filter item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFinancialFunctionsItem">
+      <summary>
+        <para>Adds the Financial Functions item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFindItem">
+      <summary>
+        <para>Adds the Find item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFontBoldItem">
+      <summary>
+        <para>Adds the Font Bold item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFontItalicItem">
+      <summary>
+        <para>Adds the Font Italic item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFontNameItem">
+      <summary>
+        <para>Adds the Font Name item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFontSizeItem">
+      <summary>
+        <para>Adds the Font Size item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFontStrikeoutItem">
+      <summary>
+        <para>Adds the Font Strikeout item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFontUnderlineItem">
+      <summary>
+        <para>Adds the Font Underline item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddForeColorItem">
+      <summary>
+        <para>Adds the Font Color item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFormatAsTableItem">
+      <summary>
+        <para>Adds the Format As Table item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFormatItem">
+      <summary>
+        <para>Adds the Format item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFreezePanesItem">
+      <summary>
+        <para>Adds the Freeze Panes item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddFullScreenItem">
+      <summary>
+        <para>Adds the Full Screen item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddGridlinesItem">
+      <summary>
+        <para>Adds the Gridlines item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddHeadingsItem">
+      <summary>
+        <para>Adds the Headings item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddIncreaseDecimalItem">
+      <summary>
+        <para>Adds the Increase Decimal item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddIncreaseFontSizeItem">
+      <summary>
+        <para>Adds the Increase Font Size item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddIncreaseIndentItem">
+      <summary>
+        <para>Adds the Increase Indent item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertAreaChartItem">
+      <summary>
+        <para>Adds the Insert Area Chart item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertBarChartItem">
+      <summary>
+        <para>Adds the Insert Bar Chart item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertCellsItem">
+      <summary>
+        <para>Adds the Insert Cells item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertColumnChartItem">
+      <summary>
+        <para>Adds the Insert Column Chart item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertHyperlinkItem">
+      <summary>
+        <para>Adds the Insert Hyperlink item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertLineChartItem">
+      <summary>
+        <para>Adds the Insert Line Char item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertOtherChartsItem">
+      <summary>
+        <para>Adds the Insert Other Charts item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertPictureItem">
+      <summary>
+        <para>Adds the Insert Picture item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertPieChartItem">
+      <summary>
+        <para>Adds the Insert Pie Chart item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertScatterChartItem">
+      <summary>
+        <para>Adds the Insert Scatter Chart item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddInsertTableItem">
+      <summary>
+        <para>Adds the Insert Table item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddLogicalFunctionsItem">
+      <summary>
+        <para>Adds the Logical Functions item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddLookupAndReferenceFunctionsItem">
+      <summary>
+        <para>Adds the Lookup And Reference Functions item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddMathAndTrigFunctionsItem">
+      <summary>
+        <para>Adds the Math And Trig Functions item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddMergeCellsItem">
+      <summary>
+        <para>Adds the Merge Cells item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddMoreFunctionsItem">
+      <summary>
+        <para>Adds the More Functions item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddNewCommentItem">
+      <summary>
+        <para>Adds the New Comment item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddNumberCurrencyItem">
+      <summary>
+        <para>Adds the Number Currency item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddPasteItem">
+      <summary>
+        <para>Adds the Paste item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddPercentageItem">
+      <summary>
+        <para>Adds the Percentage item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddPictureBringForwardItem">
+      <summary>
+        <para>Adds the Picture Bring Forward item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddPictureSendBackwardItem">
+      <summary>
+        <para>Adds the Picture Send Backward item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddPrintItem">
+      <summary>
+        <para>Adds the Print item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddReapplyFilterItem">
+      <summary>
+        <para>Adds the Reapply Filter item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddRedoItem">
+      <summary>
+        <para>Adds the Redo item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddShowHideCommentItem">
+      <summary>
+        <para>Adds the Show Hide Comment item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddSortAndFilterItem">
+      <summary>
+        <para>Adds the Sort And Filter item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddSortAscendingItem">
+      <summary>
+        <para>Adds the Sort Ascending item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddSortDescendingItem">
+      <summary>
+        <para>Adds the Sort Descending item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddTableConvertToRangeItem">
+      <summary>
+        <para>Adds the Table Convert To Range item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddTableModifyStyleItem">
+      <summary>
+        <para>Adds the Table Modify Style item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddTableStyleOptionsItem">
+      <summary>
+        <para>Adds the Table Style Options item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddTextFunctionsItem">
+      <summary>
+        <para>Adds the Text Functions item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddThousandsSeparatorItem">
+      <summary>
+        <para>Adds the Thousands Separator item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddUndoItem">
+      <summary>
+        <para>Adds the Undo item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.AddWrapTextItem">
+      <summary>
+        <para>Adds the Wrap Text item to the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertAlignBottomItem(System.Int32)">
+      <summary>
+        <para>Inserts the Align Bottom item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertAlignMiddleItem(System.Int32)">
+      <summary>
+        <para>Inserts the Align Middle item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertAlignParagraphCenterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Align Paragraph Center item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertAlignParagraphLeftItem(System.Int32)">
+      <summary>
+        <para>Inserts the Align Paragraph Left item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertAlignParagraphRightItem(System.Int32)">
+      <summary>
+        <para>Inserts the Align Paragraph Right item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertAlignTopItem(System.Int32)">
+      <summary>
+        <para>Inserts the Align Top item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertAutoSumItem(System.Int32)">
+      <summary>
+        <para>Inserts the Auto Sum item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertBackgroundColorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Background Color item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertBorderLineColorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Border Line Color item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertBordersItem(System.Int32)">
+      <summary>
+        <para>Inserts the Borders item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertCalculateNowItem(System.Int32)">
+      <summary>
+        <para>Inserts the Calculate Now item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertCalculateSheetItem(System.Int32)">
+      <summary>
+        <para>Inserts the Calculate Sheet item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertCalculationOptionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Calculation Options item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartAxesItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Axes item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartAxisTitlesItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Axis Titles item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartBringForwardItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Bring Forward item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartDataLabelsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Data Labels item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartGridlinesItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Gridlines item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartLayoutItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Layout item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartLegendItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Legend item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartSelectDataItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Select Data item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartSendBackwardItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Send Backward item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartStyleItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Style item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartSwitchRowColumnItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Switch Row Column item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartTitleItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Title item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertChartTypeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Type item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertClearFilterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Clear Filter item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertClearItem(System.Int32)">
+      <summary>
+        <para>Inserts the Clear item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertCopyItem(System.Int32)">
+      <summary>
+        <para>Inserts the Copy item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertCutItem(System.Int32)">
+      <summary>
+        <para>Inserts the Cut item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertDataValidationItem(System.Int32)">
+      <summary>
+        <para>Inserts the Data Validation item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertDateAndTimeFunctionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Date And Time Functions item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertDecreaseDecimalItem(System.Int32)">
+      <summary>
+        <para>Inserts the Decrease Decimal item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertDecreaseFontSizeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Decrease Font Size item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertDecreaseIndentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Decrease Indent item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertDeleteCellsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Delete Cells item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertDeleteCommentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Delete Comment item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertEditCommentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Edit Comment item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFillItem(System.Int32)">
+      <summary>
+        <para>Inserts the Fill item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFilterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Filter item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFinancialFunctionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Financial Functions item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFindItem(System.Int32)">
+      <summary>
+        <para>Inserts the Find item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFontBoldItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Bold item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFontItalicItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Italic item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFontNameItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Name item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFontSizeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Size item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFontStrikeoutItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Strikeout item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFontUnderlineItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Underline item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertForeColorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Font Color item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFormatAsTableItem(System.Int32)">
+      <summary>
+        <para>Inserts the Format As Table item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFormatItem(System.Int32)">
+      <summary>
+        <para>Inserts the Format item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFreezePanesItem(System.Int32)">
+      <summary>
+        <para>Inserts the Freeze Panes item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertFullScreenItem(System.Int32)">
+      <summary>
+        <para>Inserts the Full Screen item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertGridlinesItem(System.Int32)">
+      <summary>
+        <para>Inserts the Gridlines item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertHeadingsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Headings item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertIncreaseDecimalItem(System.Int32)">
+      <summary>
+        <para>Inserts the Increase Decimal item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertIncreaseFontSizeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Increase Font Size item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertIncreaseIndentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Increase Indent item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertAreaChartItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Area Chart item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertBarChartItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Bar Chart item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertCellsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Cells item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertColumnChartItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Column Chart item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertHyperlinkItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Hyperlink item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertLineChartItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Line Char item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertOtherChartsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Other Charts item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertPictureItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Picture item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertPieChartItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Pie Chart item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertScatterChartItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Scatter Chart item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertInsertTableItem(System.Int32)">
+      <summary>
+        <para>Inserts the Insert Table item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertLogicalFunctionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Logical Functions item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertLookupAndReferenceFunctionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Lookup And Reference Functions item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertMathAndTrigFunctionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Math And Trig Functions item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertMergeCellsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Merge Cells item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertMoreFunctionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the More Functions item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertNewCommentItem(System.Int32)">
+      <summary>
+        <para>Inserts the New Comment item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertNumberCurrencyItem(System.Int32)">
+      <summary>
+        <para>Inserts the Number Currency item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertPasteItem(System.Int32)">
+      <summary>
+        <para>Inserts the Paste item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertPercentageItem(System.Int32)">
+      <summary>
+        <para>Inserts the Percentage item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertPictureBringForwardItem(System.Int32)">
+      <summary>
+        <para>Inserts the Picture Bring Forward item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertPictureSendBackwardItem(System.Int32)">
+      <summary>
+        <para>Inserts the Picture Send Backward item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertPrintItem(System.Int32)">
+      <summary>
+        <para>Inserts the Print item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertReapplyFilterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Reapply Filter item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertRedoItem(System.Int32)">
+      <summary>
+        <para>Inserts the Redo item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertShowHideCommentItem(System.Int32)">
+      <summary>
+        <para>Inserts the Show Hide Comment item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertSortAndFilterItem(System.Int32)">
+      <summary>
+        <para>Inserts the Sort And Filter item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertSortAscendingItem(System.Int32)">
+      <summary>
+        <para>Inserts the Sort Ascending item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertSortDescendingItem(System.Int32)">
+      <summary>
+        <para>Inserts the Sort Descending item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertTableConvertToRangeItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Convert To Range item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertTableModifyStyleItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Modify Style item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertTableStyleOptionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Table Style Options item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertTextFunctionsItem(System.Int32)">
+      <summary>
+        <para>Inserts the Text Functions item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertThousandsSeparatorItem(System.Int32)">
+      <summary>
+        <para>Inserts the Thousands Separator item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertUndoItem(System.Int32)">
+      <summary>
+        <para>Inserts the Undo item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonItemCollectionBuilder.InsertWrapTextItem(System.Int32)">
+      <summary>
+        <para>Inserts the Wrap Text item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonSettingsBuilder">
+      <summary>
+        <para>A builder for a Spreadsheet’s ribbon settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder">
+      <summary>
+        <para>A builder for the Spreadsheet ribbon tab collection.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddChartDesignContextTab">
+      <summary>
+        <para>Adds the Chart Design context tab to the Spreadsheet’s tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddChartFormatContextTab">
+      <summary>
+        <para>Adds the Chart Format context tab to the Spreadsheet’s tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddChartLayoutContextTab">
+      <summary>
+        <para>Adds the Chart Layout context tab to the Spreadsheet’s tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddDataTab">
+      <summary>
+        <para>Adds the Data tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddFormulasTab">
+      <summary>
+        <para>Adds the Formulas tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddHomeTab">
+      <summary>
+        <para>Adds the Home tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddInsertTab">
+      <summary>
+        <para>Adds the Insert tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddPictureFormatContextTab">
+      <summary>
+        <para>Adds the Picture Format context tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddReviewTab">
+      <summary>
+        <para>Adds the Review tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddTableDesignContextTab">
+      <summary>
+        <para>Adds the Table Design context tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.AddViewTab">
+      <summary>
+        <para>Adds the View tab to the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertChartDesignContextTab(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Design context tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertChartFormatContextTab(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Format context tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertChartLayoutContextTab(System.Int32)">
+      <summary>
+        <para>Inserts the Chart Layout context tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertDataTab(System.Int32)">
+      <summary>
+        <para>Inserts the Data tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertFormulasTab(System.Int32)">
+      <summary>
+        <para>Inserts the Formulas tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertHomeTab(System.Int32)">
+      <summary>
+        <para>Inserts the Home tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertInsertTab(System.Int32)">
+      <summary>
+        <para>Inserts the Insert tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertPictureFormatContextTab(System.Int32)">
+      <summary>
+        <para>Inserts the Picture Format context tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertReviewTab(System.Int32)">
+      <summary>
+        <para>Inserts the Review tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertTableDesignContextTab(System.Int32)">
+      <summary>
+        <para>Inserts the Table Design tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabCollectionBuilder.InsertViewTab(System.Int32)">
+      <summary>
+        <para>Inserts the View tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Spreadsheet.SpreadsheetRibbonTabInfoBuilder">
+      <summary>
+        <para>A builder that configures a ribbon tab.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.SpreadsheetOptions">
+      <summary>
+        <para>Contains Spreadsheet options.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.SpreadsheetOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.SpreadsheetOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.SpreadsheetOptionsExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.AspNetCore.SpreadsheetOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.SpreadsheetOptionsExtensions.AddAutoSaving(DevExpress.AspNetCore.SpreadsheetOptions,DevExpress.Web.Office.DocumentAutoSavingEventHandler)">
+      <summary>
+        <para>Connects the event with an event handler function.</para>
+      </summary>
+      <param name="spreadsheetOptions">Spreadsheet options.</param>
+      <param name="handler">A function that handles the document AutoSaving event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet options.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.SpreadsheetOptionsExtensions.AddCellValueChanged(DevExpress.AspNetCore.SpreadsheetOptions,DevExpress.XtraSpreadsheet.CellValueChangedEventHandler)">
+      <summary>
+        <para>Connects the event with an event handler function.</para>
+      </summary>
+      <param name="spreadsheetOptions">Spreadsheet options.</param>
+      <param name="handler">A function that handles the CellValueChanged event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet options.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.SpreadsheetOptionsExtensions.AddHibernation(DevExpress.AspNetCore.SpreadsheetOptions,System.Action{DevExpress.Web.Office.HibernationOptions})">
+      <summary>
+        <para>Sets hibernation options for Spreadsheet.</para>
+      </summary>
+      <param name="spreadsheetOptions">Spreadsheet options.</param>
+      <param name="setupHibernation">A function that configures hibernation options.</param>
+      <returns>An object that can be used to further configure the Spreadsheet options.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.SpreadsheetOptionsExtensions.AddInitializeDocument(DevExpress.AspNetCore.SpreadsheetOptions,DevExpress.Web.ASPxSpreadsheet.InitializeDocumentEventHandler)">
+      <summary>
+        <para>Connects the event with an event handler function.</para>
+      </summary>
+      <param name="spreadsheetOptions">Spreadsheet options.</param>
+      <param name="handler">A function that handles the InitializeDocument event.</param>
+      <returns>An object that can be used to further configure the Spreadsheet options.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.SpreadsheetOptionsExtensions.RegisterGlobalCustomFunction(DevExpress.AspNetCore.SpreadsheetOptions,DevExpress.Spreadsheet.Functions.ICustomFunction)">
+      <summary>
+        <para>Registers the specified <see href="https://docs.devexpress.com/AspNet/117370/components/spreadsheet/formulas/functions/user-defined-functions-udf">global custom function</see>.</para>
+      </summary>
+      <param name="spreadsheetOptions">Spreadsheet options.</param>
+      <param name="customFunction">A custom function.</param>
+      <returns>An object that can be used to further configure the Spreadsheet options.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.SpreadsheetOptionsExtensions.RegisterOfficeStateProvider(DevExpress.AspNetCore.SpreadsheetOptions,DevExpress.Web.Office.OfficeStateProviderBase)">
+      <summary>
+        <para>Registers a custom session state provider.</para>
+      </summary>
+      <param name="spreadsheetOptions">Spreadsheet options.</param>
+      <param name="provider">A custom state provider.</param>
+      <returns>An object that can be used to further configure the Spreadsheet options.</returns>
+    </member>
+  </members>
+</doc>

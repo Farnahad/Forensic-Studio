@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.Dashboards.Blazor.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Blazor.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your ASP.NET Core Blazor application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.DashboardsApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/117449/analytics/dashboards-module">Dashboards Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.DashboardsApplicationBuilderExtensions.AddDashboards(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder},System.Action{DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/117449/analytics/dashboards-module">Dashboards Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <param name="configureOptions">Options that you can use to configure the Dashboards Module.</param>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Dashboards.Blazor">
+      <summary>
+        <para>Contains classes for the Blazor-specific <see href="https://docs.devexpress.com/eXpressAppFramework/117449/analytics/dashboards-module">Dashboards Module</see>.</para>
+      </summary>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Dashboards.Blazor.Components">
+      <summary>
+        <para>Contains components that the Blazor-specific <see href="https://docs.devexpress.com/eXpressAppFramework/117449/analytics/dashboards-module">Dashboards Module</see> uses to display dashboards in the UI.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Dashboards.Blazor.Components.BlazorDashboardViewerViewItem">
+      <summary>
+        <para>A <see href="https://docs.devexpress.com/eXpressAppFramework/112612/ui-construction/view-items-and-property-editors">View Item</see> that displays the <see cref="T:DevExpress.DashboardBlazor.DxDashboard"/> component.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Components.BlazorDashboardViewerViewItem.#ctor(System.Type,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Components.BlazorDashboardViewerViewItem"/> class with specified settings.</para>
+      </summary>
+      <param name="classType">The type of object for which the current View Item’s <see href="https://docs.devexpress.com/eXpressAppFramework/112611/ui-construction/views">View</see> is created.</param>
+      <param name="viewItemId">The View Item’s string identifier.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Components.BlazorDashboardViewerViewItem.Setup(DevExpress.ExpressApp.IObjectSpace,DevExpress.ExpressApp.XafApplication)">
+      <summary>
+        <para>Supplies the Dashboard View Item with information on the application and Object Space of the Dashboard View that uses the View Item.</para>
+      </summary>
+      <param name="objectSpace">An <see cref="T:DevExpress.ExpressApp.IObjectSpace"/> object that represents the Object Space of the Dashboard View that uses the View Item.</param>
+      <param name="application">An <see cref="T:DevExpress.ExpressApp.XafApplication"/> object that can be used to manage the current application.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Components.DxDashboardViewerAdapter.#ctor(DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Components.DxDashboardViewerAdapter"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.DxDashboardViewerAdapter.JSCustomizationModel">
+      <summary>
+        <para>Contains the <see href="https://docs.devexpress.com/eXpressAppFramework/402189/ui-construction/view-items-and-property-editors/property-editors/implement-a-property-editor-based-on-custom-components-blazor#component-model">component model</see> that you can use to modify properties of the Dashboard.</para>
+      </summary>
+      <value>The Dashboard model.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel">
+      <summary>
+        <para>Exposes members of the underlying <see cref="T:DevExpress.DashboardBlazor.DxDashboard"/> component.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.AllowMaximizeItems">
+      <summary>
+        <para>Specifies whether users can maximize dashboard items.</para>
+      </summary>
+      <value>true to allow users to maximize dashboard items; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.ChildContent">
+      <summary>
+        <para>Specifies Dashboard content.</para>
+      </summary>
+      <value>Content markup.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.DashboardId">
+      <summary>
+        <para>Specifies the identifier of the dashboard to be opened in the Dashboard component.</para>
+      </summary>
+      <value>A string that is a dashboard identifier.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.DashboardIdChanged">
+      <summary>
+        <para>Fires after the dashboard identifier is changed.</para>
+      </summary>
+      <value>A string that is a new value of the <see cref="P:DevExpress.DashboardBlazor.DxDashboard.DashboardId"/> property.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.EncodeHtml">
+      <summary>
+        <para>Specifies whether the DxDashboard’s value and element content are rendered as HTML or if HTML markers are omitted.</para>
+      </summary>
+      <value>true if HTML code in DxDashboard’s value and element content are not executed and converted to text; false if DxDashboard’s value and element content can contain HTML code.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.Endpoint">
+      <summary>
+        <para>Specifies the URL that the Dashboard component uses to send data requests to a server.</para>
+      </summary>
+      <value>A string value that specifies the endpoint URL prefix used to send data requests to a server.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.InitialDashboardId">
+      <summary>
+        <para>Specifies the identifier of the dashboard that is loaded to DxDashboard before the component is rendered.</para>
+      </summary>
+      <value>A string value that specifies the dashboard identifier.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.InitialDashboardState">
+      <summary>
+        <para>Specifies the state of the dashboard that is loaded to DxDashboard before the component is rendered.</para>
+      </summary>
+      <value>A string value that specifies the dashboard state in JSON format.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.LimitVisibleDataMode">
+      <summary>
+        <para>Specifies a data limitation mode that allows you to display a reduced form of visible data.</para>
+      </summary>
+      <value>A value that specifies the data limitation mode.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.LoadDefaultDashboard">
+      <summary>
+        <para>Specifies whether the default dashboard should be loaded from dashboard storage.</para>
+      </summary>
+      <value>true to load the default dashboard from the dashboard storage; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.Nonce">
+      <summary>
+        <para>Specifies the nonce value.</para>
+      </summary>
+      <value>A string that specifies the nonce value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.ResizeByTimer">
+      <summary>
+        <para>Specifies whether to redraw the Dashboard component when the size of its container changes.</para>
+      </summary>
+      <value>true to redraw the Dashboard component when the size of its container changes; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.ShowConfirmationOnBrowserClosing">
+      <summary>
+        <para>Specifies whether to show a warning in a browser if a user attempts to leave the page with unsaved data.</para>
+      </summary>
+      <value>true to show a warning; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.UseCardLegacyLayout">
+      <summary>
+        <para>Specifies whether to enable the legacy card layout used before v17.1.</para>
+      </summary>
+      <value>true to enable the legacy card layout used before v17.1; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.UseNeutralFilterMode">
+      <summary>
+        <para>Specifies whether to show all items in the filter elements deselected by default.</para>
+      </summary>
+      <value>true to activate <see href="https://docs.devexpress.com/Dashboard/400262/common-features/interactivity/neutral-filter-mode">Neutral Filter Mode</see>; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.WorkingMode">
+      <summary>
+        <para>Specifies the Dashboard component’s working mode.</para>
+      </summary>
+      <value>A value that specifies the Dashboard component’s working mode.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxDashboardModel.WorkingModeChanged">
+      <summary>
+        <para>Fires after the working mode is changed.</para>
+      </summary>
+      <value>A new <see cref="P:DevExpress.DashboardBlazor.DxDashboard.WorkingMode"/> property value.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxJSCustomizationModel">
+      <summary>
+        <para>Contains options that allow you to customize the Dashboard component with JavaScript.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxJSCustomizationModel.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxJSCustomizationModel"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxJSCustomizationModel.Identifier">
+      <summary>
+        <para>Specifies the name of the object in window that contains the event handlers.</para>
+      </summary>
+      <value>An identifier that is a name of the object in window.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.Components.Models.DxJSCustomizationModel.OnScriptsLoading">
+      <summary>
+        <para>Allows you to add custom scripts after the Dashboard component scripts.</para>
+      </summary>
+      <value>Provides access to the collection of scripts that the DxDashboard component loads.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.BlazorHideDetailViewNewActionController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.BlazorHideDetailViewNewActionController"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.BlazorHideRefreshActionController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.BlazorHideRefreshActionController"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.DashboardConfirmationUnsavedChangesController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.DashboardConfirmationUnsavedChangesController"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.ExportToXmlController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.ExportToXmlController"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.WorkingModeSwitchController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Controllers.WorkingModeSwitchController"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsBlazorModule">
+      <summary>
+        <para>The ASP.NET Core Blazor-specific <see href="https://docs.devexpress.com/eXpressAppFramework/117449/analytics/dashboards-module">Dashboards Module</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsBlazorModule.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsBlazorModule"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsBlazorModule.Setup(DevExpress.ExpressApp.XafApplication)">
+      <summary>
+        <para>For internal use. Sets up the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsBlazorModule"/> added to the <see cref="P:DevExpress.ExpressApp.XafApplication.Modules">XafApplication.Modules</see> collection.</para>
+      </summary>
+      <param name="application">An <see cref="T:DevExpress.ExpressApp.XafApplication"/> object that allows you to manage the current application.</param>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions">
+      <summary>
+        <para>Contains options that you can use to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/117449/analytics/dashboards-module">Dashboards Module</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions.ControllerName">
+      <summary>
+        <para>The Controller name without the Controller suffix.</para>
+      </summary>
+      <value>The Controller name without the Controller suffix. The default value is &quot;XafBlazorDashboard&quot;.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions.DashboardDataType">
+      <summary>
+        <para>Specifies the dashboard data type used by the Dashboards Module.</para>
+      </summary>
+      <value>The report data type used by the Dashboards Module.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions.Endpoint">
+      <summary>
+        <para>The endpoint URL prefix used to send data requests to a server.</para>
+      </summary>
+      <value>The endpoint URL prefix used to send data requests to a server. The default value is &quot;api/dashboard&quot;.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions.GenerateNavigationItem">
+      <summary>
+        <para>Specifies whether or not the Reports | Dashboards <see href="https://docs.devexpress.com/eXpressAppFramework/113198/application-shell-and-base-infrastructure/navigation-system">navigation item</see> is created automatically.</para>
+      </summary>
+      <value>true, if the Dashboards navigation item is created automatically; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions.HideDirectDataSourceConnections">
+      <summary>
+        <para>Specifies if the Data Source Wizard allows setting direct Database connections.</para>
+      </summary>
+      <value>false, if the Data Source Wizard allows setting direct Database connections; otherwise, true.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Dashboards.Blazor.DashboardsOptions.SetupDashboardConfigurator">
+      <summary>
+        <para>Allows you to customize the <see href="https://docs.devexpress.com/eXpressAppFramework/403544/analytics/dashboards/customize-the-dashboard-configurator">Dashboard Configurator</see>.</para>
+      </summary>
+      <value>The delegate that allows you to customize the <see href="https://docs.devexpress.com/eXpressAppFramework/403544/analytics/dashboards/customize-the-dashboard-configurator">Dashboard Configurator</see>.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Services.BlazorDashboardConfigurator.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Services.BlazorDashboardConfigurator"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Services.BlazorDashboardStorage.#ctor(System.Func{System.Type,DevExpress.ExpressApp.IObjectSpace},System.Type)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Services.BlazorDashboardStorage"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.Services.BlazorDashboardStorage.#ctor(System.Lazy{DevExpress.ExpressApp.IObjectSpaceProvider},System.Type)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Dashboards.Blazor.Services.BlazorDashboardStorage"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Dashboards.Blazor.StartupExtensions">
+      <summary>
+        <para>Extends the <see cref="T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder"/> and <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> classes with methods to register the <see href="https://docs.devexpress.com/eXpressAppFramework/117449/analytics/dashboards-module">Dashboards Module</see>‘s services and routes in your ASP.NET Core Blazor application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.StartupExtensions.AddXafDashboards(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{DevExpress.ExpressApp.Dashboards.Blazor.Services.BlazorDashboardConfigurator,System.IServiceProvider})">
+      <summary>
+        <para>Registers the required <see href="https://docs.devexpress.com/eXpressAppFramework/117449/analytics/dashboards-module">Dashboards Module</see> services in the application’s <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</para>
+      </summary>
+      <param name="services">The collection of services registered in your application.</param>
+      <param name="configure">A delegate that allows you to customize the BlazorDashboardConfigurator settings.</param>
+      <returns>The collection of services registered in your application. Allows you to chain further service registrations.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Dashboards.Blazor.StartupExtensions.MapXafDashboards(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.String)">
+      <summary>
+        <para>Registers the required <see href="https://docs.devexpress.com/eXpressAppFramework/117449/analytics/dashboards-module">Dashboards Module</see> routes in the application’s <see cref="T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder"/>.</para>
+      </summary>
+      <param name="endpoints">The application’s route builder.</param>
+      <param name="dashboardEndpoint">The endpoint URL prefix used to send data requests to a server.</param>
+      <param name="dashboardControllerName">The Controller name without the Controller suffix.</param>
+    </member>
+  </members>
+</doc>

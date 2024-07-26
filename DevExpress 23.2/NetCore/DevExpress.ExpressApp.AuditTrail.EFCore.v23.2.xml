@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.AuditTrail.EFCore.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.ApplicationBuilder">
+      <summary>
+        <para>Contains platform-agnostic classes and interfaces that allow you to configure your application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.ApplicationBuilder.AuditedDbContextBuilderExtensions">
+      <summary>
+        <para>Allows you to configure the main (business object) and additional (audit history) DbContext objects in applications with the <see href="https://docs.devexpress.com/eXpressAppFramework/403104/data-security-and-safety/audit-trail/audit-trail-module-efcore">Audit Trail Module</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.AuditedDbContextBuilderExtensions.WithAuditedDbContext``1(DevExpress.ExpressApp.ApplicationBuilder.DbContextBuilder{``0},System.Action{DevExpress.ExpressApp.ApplicationBuilder.AuditedDbContextConfigurator},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+      <summary>
+        <para>Allows you to configure the main (business object) and additional (audit history) DbContext objects in WinForms applications with the <see href="https://docs.devexpress.com/eXpressAppFramework/403104/data-security-and-safety/audit-trail/audit-trail-module-efcore">Audit Trail Module</see>.</para>
+      </summary>
+      <param name="dbContextBuilder">Allows you to configure DbContext objects.</param>
+      <param name="configureContexts">A delegate that configures DbContext objects.</param>
+      <param name="dbContextFactoryServiceLifetime">A <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceLifetime"/> enumeration value that specifies the lifetime of the DbContextFactory service registered by the WithAuditedDbContext method.</param>
+      <typeparam name="TContext">The <see cref="T:DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder"/> type.</typeparam>
+      <returns>Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.AuditedDbContextBuilderExtensions.WithAuditedDbContext``1(DevExpress.ExpressApp.ApplicationBuilder.DbContextServiceBasedBuilder{``0},System.Action{DevExpress.ExpressApp.ApplicationBuilder.AuditedDbContextServiceBasedConfigurator},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+      <summary>
+        <para>Allows you to configure DbContext objects in ASP.NET Core Blazor applications with the <see href="https://docs.devexpress.com/eXpressAppFramework/403104/data-security-and-safety/audit-trail/audit-trail-module-efcore">Audit Trail Module</see>.</para>
+      </summary>
+      <param name="dbContextBuilder">Allows you to configure DbContext objects.</param>
+      <param name="configureContexts">A delegate that configures DbContext objects.</param>
+      <param name="dbContextFactoryServiceLifetime">A <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceLifetime"/> enumeration value that specifies the lifetime of the DbContextFactory service registered by the WithAuditedDbContext method.</param>
+      <typeparam name="TContext">The <see cref="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder"/> type.</typeparam>
+      <returns>Allows you to register and configure Object Space Providers in your application, and chain further provider registrations.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.AuditedDbContextConfigurator.Configure``2(System.Action{DevExpress.ExpressApp.XafApplication,Microsoft.EntityFrameworkCore.DbContextOptionsBuilder},System.Action{DevExpress.ExpressApp.XafApplication,Microsoft.EntityFrameworkCore.DbContextOptionsBuilder},System.Action{DevExpress.Persistent.BaseImpl.EFCore.AuditTrail.AuditTrailOptions})">
+      <summary>
+        <para>Configures the main (business object) and additional (audit history) DbContext objects in WinForms applications with the <see href="https://docs.devexpress.com/eXpressAppFramework/403104/data-security-and-safety/audit-trail/audit-trail-module-efcore">Audit Trail Module</see>.</para>
+      </summary>
+      <param name="configureBusinessObjectDbContext">A delegate that configures the main application DbContext.</param>
+      <param name="configureAuditHistoryDbContext">A delegate that configures the additional DbContext that the Audit Trail Module uses to store records.</param>
+      <param name="configureAuditTrailOptions">Options that you can use to configure the Audit Trail Module.</param>
+      <typeparam name="TBusinessObjectDbContext">The main application DbContext.</typeparam>
+      <typeparam name="TAuditHistoryDbContext">The additional DbContext that the Audit Trail Module uses to store records.</typeparam>
+    </member>
+    <member name="T:DevExpress.ExpressApp.ApplicationBuilder.AuditTrailEFCoreApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/112782/data-security-and-safety/audit-trail-module-overview">Audit Trail Module</see> (EF Core) to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ApplicationBuilder.AuditTrailEFCoreApplicationBuilderExtensions.AddAuditTrailEFCore``1(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{``0})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/112782/data-security-and-safety/audit-trail-module-overview">Audit Trail Module</see> (EF Core) to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <typeparam name="TBuilder">The <see cref="T:DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder"/> or <see cref="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder"/> type.</typeparam>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+  </members>
+</doc>

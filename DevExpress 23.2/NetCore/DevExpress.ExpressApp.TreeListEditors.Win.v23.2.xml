@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.TreeListEditors.Win.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.TreeListEditors.Win">
+      <summary>
+        <para>Contains classes specific to the <see href="https://docs.devexpress.com/eXpressAppFramework/112836/application-shell-and-base-infrastructure/tree-list-editors/tree-list-editors-module-overview">TreeListEditors module</see> Windows Forms functionality.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor">
+      <summary>
+        <para>Represents a <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see> used to display categorized data.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor.#ctor(DevExpress.ExpressApp.Model.IModelListView)">
+      <summary>
+        <para>Creates and initializes an instance of the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor"/> class.</para>
+      </summary>
+      <param name="info">An <see cref="T:DevExpress.ExpressApp.Model.IModelListView"/> object representing the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s node, which contains information on the View that will use the instantiated <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor.CategoriesListView">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor"/>‘s Categories <see href="https://docs.devexpress.com/eXpressAppFramework/112611/ui-construction/views">List View</see>.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.ExpressApp.ListView"/> object that represents the Categories List View.</value>
+    </member>
+    <member name="F:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor.CategoryPropertyName">
+      <summary>
+        <para>Holds the name of the <see cref="P:DevExpress.Persistent.Base.General.ICategorizedItem.Category">ICategorizedItem.Category</see> property.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor.Dispose">
+      <summary>
+        <para>Releases all resources used by the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor"/>.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor.FocusedObject">
+      <summary>
+        <para>Gets or sets the focused object in the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor"/>.</para>
+      </summary>
+      <value>The focused object.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor.ObjectTreeList">
+      <summary>
+        <para>Gets the control that is used to display the <see cref="P:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor.CategoriesListView">CategorizedListEditor.CategoriesListView</see>.</para>
+      </summary>
+      <value>An ObjectTreeList control that is the <see cref="T:DevExpress.XtraTreeList.TreeList"/> descendant and is used to display the Categories List View.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor.SaveModel">
+      <summary>
+        <para>Writes information on a <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>‘s control to the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor.Setup(DevExpress.ExpressApp.CollectionSourceBase,DevExpress.ExpressApp.XafApplication)">
+      <summary>
+        <para>Performs additional initialization of the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.CategorizedListEditor"/>.</para>
+      </summary>
+      <param name="collectionSource">A <see cref="T:DevExpress.ExpressApp.CollectionSourceBase"/> object that represent the Collection Source of the List View that the current <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see> represents in a UI.</param>
+      <param name="application">An <see cref="T:DevExpress.ExpressApp.XafApplication"/> object that can be used to manage the current application.</param>
+    </member>
+    <member name="T:DevExpress.ExpressApp.TreeListEditors.Win.IModelColumnTreeListWin">
+      <summary>
+        <para>Used to extend the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s Column node.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.IModelColumnTreeListWin.AllNodesSummary">
+      <summary>
+        <para>Specifies whether the current column’s summary is calculated against all tree list nodes or against root nodes only.</para>
+      </summary>
+      <value>true if a summary is calculated against all nodes; otherwise, it is calculated only against root nodes.
+The default is false.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor">
+      <summary>
+        <para>Represents a Windows Forms <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see> that displays data in the form of a tree-like structure.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.#ctor(DevExpress.ExpressApp.Model.IModelListView)">
+      <summary>
+        <para>Creates and initializes an instance of the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/> class.</para>
+      </summary>
+      <param name="model">An <see cref="T:DevExpress.ExpressApp.Model.IModelListView"/> object representing the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s node, which contains information on the View that will use the instantiated <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.Adapter">
+      <summary>
+        <para>Provides access to the tree node adapter used by the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>.</para>
+      </summary>
+      <value>A TreeNodeInterfaceAdapter object that represents the tree node adapter used by the TreeListEditor.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.ApplyModel">
+      <summary>
+        <para>Updates the current List Editor’s state in accordance with the information stored in the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.BeginCustomization">
+      <summary>
+        <para>Occurs after the customization form that displays headers of hidden columns has been displayed.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.BeginUpdate">
+      <summary>
+        <para>Prevents the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s control from being updated until the <see cref="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.EndUpdate">TreeListEditor.EndUpdate</see> method is called.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.BorderStyle">
+      <summary>
+        <para>Gets or sets the border style for the target <see href="https://docs.devexpress.com/WindowsForms/2434/controls-and-libraries/tree-list">Tree List</see>.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraEditors.Controls.BorderStyles"/> enumeration value specifying the border style of the target Tree List.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.BreakLinksToControls">
+      <summary>
+        <para>Removes references to the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s control and its event handlers.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.CanShowPopupMenu(System.Drawing.Point)">
+      <summary>
+        <para>Returns a Boolean value that indicates whether it is possible to invoke a context menu at the specified position.</para>
+      </summary>
+      <param name="position">A <see cref="T:System.Drawing.Point"/> object that specifies the position at which a context menu is invoked.</param>
+      <returns>true if it is possible to invoke a context menu at the specified position; otherwise false.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.ClearFocusedObjectOnMouseClick">
+      <summary>
+        <para>Specifies whether the focused object can be deselected by clicking on the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s region not occupied by a node.</para>
+      </summary>
+      <value>true, if the focused object can be deselected by clicking on the TreeListEditor‘s region not occupied by a node; otherwise, false. The default value is true.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.Columns">
+      <summary>
+        <para>Provides access to a collection of objects representing the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s columns.</para>
+      </summary>
+      <value>An IList&lt;ColumnWrapper&gt; object representing a collection of <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s column wrappers.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.ContextMenuTemplate">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s Context Menu Template.</para>
+      </summary>
+      <value>A control which implements the IContextMenuTemplate interface and represents a <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>‘s Context Menu Template.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.DeferredNodeLoading">
+      <summary>
+        <para>Indicates whether deferred node loading is enabled.</para>
+      </summary>
+      <value>true, if the deferred node loading is enabled; otherwise, false. The default is true.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.Dispose">
+      <summary>
+        <para>Releases all resources used by the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.EndCustomization">
+      <summary>
+        <para>Occurs before the customization form that displays headers of hidden columns has been closed.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.EndUpdate">
+      <summary>
+        <para>Unlocks the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s control after a call to the <see cref="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.BeginUpdate">TreeListEditor.BeginUpdate</see> method and causes an immediate update.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.FirstNodeFocusedAndSelected">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.FocusedObject">
+      <summary>
+        <para>Gets or sets the focused object in the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>.</para>
+      </summary>
+      <value>The focused object.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.GetIndexByObject(System.Object)">
+      <summary>
+        <para>Returns the index of an object that represents the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s node.</para>
+      </summary>
+      <param name="obj">An object that represents the TreeListEditor‘s node.</param>
+      <returns>An index of an object that represents the TreeListEditor‘s node.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.GetObjectByIndex(System.Int32)">
+      <summary>
+        <para>Returns an object that represents the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s node with the specified index.</para>
+      </summary>
+      <param name="index">The index of the TreeListEditor‘s node.</param>
+      <returns>An object that represents the TreeListEditor‘s node with the specified index.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.GetOrderedObjects">
+      <summary>
+        <para>Returns an ordered list of objects that represent the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s nodes.</para>
+      </summary>
+      <returns>An ordered list of objects that represent the TreeListEditor‘s nodes.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.GetSelectedObjects">
+      <summary>
+        <para>Provides access to the collection of objects that are currently selected in the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s TreeList control.</para>
+      </summary>
+      <returns>A list of the selected objects.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.HoldRootValue">
+      <summary>
+        <para>Specifies whether the nodes whose parent node is absent in the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s data source should be displayed as root.</para>
+      </summary>
+      <value>true, if the nodes whose parent node is absent in the data source are displayed as root; otherwise, false. The default value is false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.IsFooterVisible">
+      <summary>
+        <para>Specifies whether the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s footer is visible.</para>
+      </summary>
+      <value>true, if the footer is visible; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.Name">
+      <summary>
+        <para>Specifies the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s name.</para>
+      </summary>
+      <value>A String value representing the current <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>‘s name.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.OnExporting">
+      <summary>
+        <para>Performs the required pre-export actions under the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.PopupSite">
+      <summary>
+        <para>Returns the control over which a context menu is being invoked.</para>
+      </summary>
+      <value>A <see cref="T:System.Windows.Forms.Control"/> object that represents the control over which a context menu is being invoked.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.Printable">
+      <summary>
+        <para>Specifies the control to be exported via the <see cref="P:DevExpress.ExpressApp.SystemModule.ExportController.ExportAction">ExportController.ExportAction</see>.</para>
+      </summary>
+      <value>An IPrintable object that is the control used for exporting. The default value is the TreeListEditor’s <see cref="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.TreeList">TreeListEditor.TreeList</see> property value.</value>
+    </member>
+    <member name="E:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.PrintableChanged">
+      <summary>
+        <para>Occurs when the <see cref="P:DevExpress.ExpressApp.SystemModule.IExportable.Printable">IExportable.Printable</see> control is created and disposed of.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.ProcessSelectedItemBySingleClick">
+      <summary>
+        <para>Specifies whether a List View’s record must be processed after a click or a double-click.</para>
+      </summary>
+      <value>true if a List View’s record must be processed after a click; false if a List View’s record must be processed after a double-click.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.Refresh">
+      <summary>
+        <para>Refreshes the bound data source of the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s control.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.RemoveColumn(DevExpress.ExpressApp.Editors.ColumnWrapper)">
+      <summary>
+        <para>Removes a particular column from the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s <see cref="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.TreeList">TreeListEditor.TreeList</see>.</para>
+      </summary>
+      <param name="column">A ColumnWrapper object representing the column to remove.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.RootValue">
+      <summary>
+        <para>Specifies the root node.</para>
+      </summary>
+      <value>An <see cref="T:DevExpress.Persistent.Base.General.ITreeNode"/> object which specifies the root node. The default value is null.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.SaveModel">
+      <summary>
+        <para>Writes information on a <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>‘s control to the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.SelectionType">
+      <summary>
+        <para>Returns the selection type supported by the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.ExpressApp.SelectionType"/> enumeration value that represents the selection type supported by the current List Editor.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.SetMenuManager(DevExpress.Utils.Menu.IDXMenuManager)">
+      <summary>
+        <para>Sets the IDXMenuManager object that controls the Look &amp; Feel options of the Context Menu Template via the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s control.</para>
+      </summary>
+      <param name="manager">An IDXMenuManager object that controls the Look &amp; Feel options of the Context Menu Template via the <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>‘s control.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.Setup(DevExpress.ExpressApp.CollectionSourceBase,DevExpress.ExpressApp.XafApplication)">
+      <summary>
+        <para>Performs additional initialization of the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>.</para>
+      </summary>
+      <param name="collectionSource">A <see cref="T:DevExpress.ExpressApp.CollectionSourceBase"/> object that represent the Collection Source of the List View that the current <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see> represents in a UI.</param>
+      <param name="application">An <see cref="T:DevExpress.ExpressApp.XafApplication"/> object that can be used to manage the current application.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.SupportedExportFormats">
+      <summary>
+        <para>Provides access to the list of export formats supported by the current Tree List Editor.</para>
+      </summary>
+      <value>An List&lt;<see cref="T:DevExpress.XtraPrinting.ExportTarget"/>&gt; object that is a list of supported export formats.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.TrackMousePosition">
+      <summary>
+        <para>Specifies whether mouse tracking is enabled for the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>.</para>
+      </summary>
+      <value>true to enable mouse tracking; otherwise false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.TreeList">
+      <summary>
+        <para>Provides access to the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s control.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraTreeList.TreeList"/> object that is the TreeListEditor‘s control.</value>
+    </member>
+    <member name="E:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor.TreeListDoubleClick">
+      <summary>
+        <para>Occurs when the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor"/>‘s item is double clicked.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorOptions">
+      <summary>
+        <para>Contains options that you can use to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/112841/application-shell-and-base-infrastructure/tree-list-editors-module">Tree List Editors Module</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorOptions.ExportedTypes">
+      <summary>
+        <para>Returns the list of Module-specific types exported to the Application Model.</para>
+      </summary>
+      <value>The list of Module-specific types exported to the Application Model.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorsWindowsFormsModule">
+      <summary>
+        <para>The module contained in the DevExpress.ExpressApp.TreeListEditors.Win.v23.2.dll assembly.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorsWindowsFormsModule.#ctor">
+      <summary>
+        <para>Creates an instance of the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorsWindowsFormsModule"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorsWindowsFormsModule.ExtendModelInterfaces(DevExpress.ExpressApp.Model.ModelInterfaceExtenders)">
+      <summary>
+        <para>Extends the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see> with the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.IModelColumnTreeListWin"/> interface.</para>
+      </summary>
+      <param name="extenders">A ModelInterfaceExtenders object that is a collection of Application Model interface extenders.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorsWindowsFormsModule.GetModuleUpdaters(DevExpress.ExpressApp.IObjectSpace,System.Version)">
+      <summary>
+        <para>Returns the list of <see cref="T:DevExpress.ExpressApp.Updating.ModuleUpdater"/> updaters that handle database updates for the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorsWindowsFormsModule"/> module.</para>
+      </summary>
+      <param name="objectSpace">An <see cref="T:DevExpress.ExpressApp.IObjectSpace"/> object which represents the Object Space used to update the database.</param>
+      <param name="versionFromDB">A System.Version object which represents the current database version.</param>
+      <returns>An IEnumerable&lt;<see cref="T:DevExpress.ExpressApp.Updating.ModuleUpdater"/>&gt; list of updaters that handle database updates for the <see cref="T:DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorsWindowsFormsModule"/> module.</returns>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Win.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your WinForms application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Win.ApplicationBuilder.TreeListEditorsApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/113684/validation-module">Tree List Editors Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.TreeListEditorsApplicationBuilderExtensions.AddTreeListEditors(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder},System.Action{DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditorOptions})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/112841/application-shell-and-base-infrastructure/tree-list-editors-module">Tree List Editors Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <param name="configureOptions">Options that you can use to configure the Tree List Editors Module.</param>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+  </members>
+</doc>

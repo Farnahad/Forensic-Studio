@@ -1,0 +1,54 @@
+﻿<fsc:FsRibbonPage x:Class="ForensicStudio.Module.Main.RibbonPage.FsFunctionRibbonPageView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+                  xmlns:fsc="ForensicStudioControls"
+                  xmlns:fsmc="ForensicStudioMainCore"
+                  mc:Ignorable="d" Caption="FUNCTION"
+                  d:DesignHeight="300" d:DesignWidth="300">
+    <dxr:RibbonPageGroup Caption="FUNCTION">
+        <fsc:FsLargeRibbonBarButtonItem Content="Function Panel"
+                                        LargeGlyph="/Image/Function/FunctionPanel.png"
+                                        Command="{fsmc:FsBinding Path=ShowFunctionPanelViewCommand}" />
+        <fsc:FsLargeRibbonBarSubItem Content="Windows Info">
+            <fsc:FsSmallRibbonBarButtonItem Content="Am Cache"
+                                            Command="{fsmc:FsBinding Path=ShowAmCacheViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="BAM"
+                                            Command="{fsmc:FsBinding Path=ShowBamViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Hibernate"
+                                            Command="{fsmc:FsBinding Path=ShowHibernateViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Jump List"
+                                            Command="{fsmc:FsBinding Path=ShowJumpListViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Link File"
+                                            Command="{fsmc:FsBinding Path=ShowLinkFileViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Memory Dump"
+                                            Command="{fsmc:FsBinding Path=ShowMemoryDumpViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Most Recently Used"
+                                            Command="{fsmc:FsBinding Path=ShowMostRecentlyUsedViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="NTFS"
+                                            Command="{fsmc:FsBinding Path=ShowNtfsViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Page File"
+                                            Command="{fsmc:FsBinding Path=ShowPageFileViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Prefetch"
+                                            Command="{fsmc:FsBinding Path=ShowPrefetchViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Shellbag"
+                                            Command="{fsmc:FsBinding Path=ShowShellbagViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="ShimCache"
+                                            Command="{fsmc:FsBinding Path=ShowShimCacheViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="System Resource Monitoring"
+                                            Command="{fsmc:FsBinding Path=ShowSystemResourceMonitoringViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="User Assist"
+                                            Command="{fsmc:FsBinding Path=ShowUserAssistViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Windows Search"
+                                            Command="{fsmc:FsBinding Path=ShowWindowsSearchViewCommand}" />
+            <fsc:FsSmallRibbonBarButtonItem Content="Windows Timeline"
+                                            Command="{fsmc:FsBinding Path=ShowWindowsTimelineViewCommand}" />
+        </fsc:FsLargeRibbonBarSubItem>
+        <fsc:FsLargeRibbonBarButtonItem Content="Button 02" />
+        <fsc:FsLargeRibbonBarButtonItem Content="Button 03" />
+        <fsc:FsLargeRibbonBarButtonItem Content="Button 04" />
+        <fsc:FsLargeRibbonBarButtonItem Content="Button 05" />
+    </dxr:RibbonPageGroup>
+</fsc:FsRibbonPage>

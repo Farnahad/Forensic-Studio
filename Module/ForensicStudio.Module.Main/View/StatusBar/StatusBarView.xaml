@@ -1,0 +1,10 @@
+﻿<fscm:GeneralView x:Class="ForensicStudio.Module.Main.View.StatusBar.StatusBarView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:fscm="ForensicStudioCoreModule"
+                  xmlns:fsc="ForensicStudioControls"
+                  mc:Ignorable="d" d:DesignWidth="800">
+    <fsc:FsStatusBarControl />
+</fscm:GeneralView>

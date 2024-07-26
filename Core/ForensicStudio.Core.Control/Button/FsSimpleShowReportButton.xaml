@@ -1,0 +1,5 @@
+﻿<button:FsSimpleButton x:Class="ForensicStudio.Core.Control.Button.FsSimpleShowReportButton"
+                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       xmlns:button="clr-namespace:ForensicStudio.Core.Control.Button"
+                       Content="Show Report" />

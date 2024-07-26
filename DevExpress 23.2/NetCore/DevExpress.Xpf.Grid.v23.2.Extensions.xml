@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.Xpf.Grid.v23.2.Extensions</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.Xpf.Grid">
+      <summary>
+        <para>Contains classes which implement the main functionality of the <see href="https://docs.devexpress.com/WPF/6084/controls-and-libraries/data-grid">DXGrid for WPF</see> suite. To use these classes in XAML code, add the xmlns:dxg=”“ namespace reference.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Xpf.Grid.DialogEditFormBehavior">
+      <summary>
+        <para>Allows you to enable edit operations in a Data Grid bound to a <see href="https://docs.devexpress.com/WPF/6279/controls-and-libraries/data-grid/bind-to-data/server-mode-and-instant-feedback-mode">Server Mode or Instant Feedback</see> data source.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Xpf.Grid.DialogEditFormBehavior.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Xpf.Grid.DialogEditFormBehavior"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.AllowCancelAsyncOperations">
+      <summary>
+        <para>Gets or sets whether users can cancel asynchronous “Post Changes” operations.</para>
+      </summary>
+      <value>true to allow users to cancel asynchronous “Post Changes” operations; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.Xpf.Grid.DialogEditFormBehavior.AllowCancelAsyncOperationsProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.AllowCancelAsyncOperations"/> dependency property.</para>
+      </summary>
+      <value>A dependency property identifier.</value>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.CreateCommand">
+      <summary>
+        <para>Invokes the dialog edit form to allow users to add a new row to the control.</para>
+      </summary>
+      <value>A routed command that implements the <see cref="T:System.Windows.Input.ICommand"/>.</value>
+    </member>
+    <member name="E:DevExpress.Xpf.Grid.DialogEditFormBehavior.CreateEditItemViewModel">
+      <summary>
+        <para>Occurs before a user invokes the dialog edit form. This event allows you to specify a view model for the edit operation.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.CreateEditItemViewModelCommand">
+      <summary>
+        <para>Gets or sets a command that specifies a View Model for the edit operation. The behavior executes this command before the edit form dialog appears.</para>
+      </summary>
+      <value>A command that specifies a View Model for the edit operation.</value>
+    </member>
+    <member name="F:DevExpress.Xpf.Grid.DialogEditFormBehavior.CreateEditItemViewModelCommandProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.CreateEditItemViewModelCommand"/> dependency property.</para>
+      </summary>
+      <value>A dependency property identifier.</value>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.DeleteCommand">
+      <summary>
+        <para>Deletes selected rows from the control.</para>
+      </summary>
+      <value>A routed command that implements the <see cref="T:System.Windows.Input.ICommand"/>.</value>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.EditTemplate">
+      <summary>
+        <para>Gets or sets a template that defines editors in the dialog edit form. Use the <see cref="E:DevExpress.Xpf.Grid.DialogEditFormBehavior.CreateEditItemViewModel"/> event or the <see cref="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.CreateEditItemViewModelCommand"/> to specify the template’s data context.</para>
+      </summary>
+      <value>A template that defines editors in the dialog edit form.</value>
+    </member>
+    <member name="F:DevExpress.Xpf.Grid.DialogEditFormBehavior.EditTemplateProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.EditTemplate"/> dependency property.</para>
+      </summary>
+      <value>A dependency property identifier.</value>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.KeyProperty">
+      <summary>
+        <para>Gets or sets a key field that you can use to find rows during edit operations.</para>
+      </summary>
+      <value>A key field.</value>
+    </member>
+    <member name="F:DevExpress.Xpf.Grid.DialogEditFormBehavior.KeyPropertyProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.KeyProperty"/> dependency property.</para>
+      </summary>
+      <value>A dependency property identifier.</value>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.RowDoubleClickCommand">
+      <summary>
+        <para>Executes the <see cref="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.CreateCommand"/> or <see cref="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.UpdateCommand"/> depending on the selected row. This command is designed to allow you to bind it to the <see cref="P:DevExpress.Xpf.Grid.TableView.RowDoubleClickCommand">TableView.RowDoubleClickCommand</see> / <see cref="P:DevExpress.Xpf.Grid.TreeListView.RowDoubleClickCommand">TreeListView.RowDoubleClickCommand</see>.</para>
+      </summary>
+      <value>A command that you can bind to the <see cref="P:DevExpress.Xpf.Grid.TableView.RowDoubleClickCommand">TableView.RowDoubleClickCommand</see> / <see cref="P:DevExpress.Xpf.Grid.TreeListView.RowDoubleClickCommand">TreeListView.RowDoubleClickCommand</see>.</value>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.UpdateCommand">
+      <summary>
+        <para>Invokes the dialog edit form for the selected row.</para>
+      </summary>
+      <value>A routed command that implements the <see cref="T:System.Windows.Input.ICommand"/>.</value>
+    </member>
+    <member name="E:DevExpress.Xpf.Grid.DialogEditFormBehavior.ValidateRow">
+      <summary>
+        <para>Occurs after a user saves changes made in the dialog edit form. This event allows you to validate values, check database constraints, and save changes to the database.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.ValidateRowCommand">
+      <summary>
+        <para>Gets or sets a command that validates input values, checks database constraints, and saves changes to the database. The behavior executes this command after a user saves changes made in the edit form dialog.</para>
+      </summary>
+      <value>A command that validates input values, checks database constraints, and saves changes to the database.</value>
+    </member>
+    <member name="F:DevExpress.Xpf.Grid.DialogEditFormBehavior.ValidateRowCommandProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.ValidateRowCommand"/> dependency property.</para>
+      </summary>
+      <value>A dependency property identifier.</value>
+    </member>
+    <member name="E:DevExpress.Xpf.Grid.DialogEditFormBehavior.ValidateRowDeletion">
+      <summary>
+        <para>Occurs after a user removes selected rows from the control. This event allows you to validate rows, check database constraints, and delete rows from the database.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.ValidateRowDeletionCommand">
+      <summary>
+        <para>Gets or sets a command that validates data, checks database constrains, and deletes rows. The behavior executes this command when user deletes selected rows.</para>
+      </summary>
+      <value>A command that validates data, checks database constrains, and deletes rows.</value>
+    </member>
+    <member name="F:DevExpress.Xpf.Grid.DialogEditFormBehavior.ValidateRowDeletionCommandProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.Xpf.Grid.DialogEditFormBehavior.ValidateRowDeletionCommand"/> dependency property.</para>
+      </summary>
+      <value>A dependency property identifier.</value>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,7 @@
+﻿<dryIoc:PrismApplication x:Class="ForensicStudio.Module.Main.App"
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:dryIoc="http://prismlibrary.com/">
+    <dryIoc:PrismApplication.Resources>
+    </dryIoc:PrismApplication.Resources>
+</dryIoc:PrismApplication>

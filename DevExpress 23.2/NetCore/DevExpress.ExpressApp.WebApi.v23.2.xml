@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.WebApi.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.WebApi.Services">
+      <summary>
+        <para>Contains services related to the <see href="https://docs.devexpress.com/eXpressAppFramework/403394/backend-web-api-service">Web API</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.WebApi.Services.WebApiOptions">
+      <summary>
+        <para>Contains <see href="https://docs.devexpress.com/eXpressAppFramework/403394/backend-web-api-service">Web API Service</see> options.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.WebApi.Services.WebApiOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.WebApi.Services.WebApiOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.WebApi.Services.WebApiOptions.BusinessObject(System.Type)">
+      <summary>
+        <para>Generates HTTP endpoints for a type passed as a parameter.</para>
+      </summary>
+      <param name="objectType">A type for which the <see href="https://docs.devexpress.com/eXpressAppFramework/403394/backend-web-api-service">Web API Service</see> generates HTTP endpoints.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.WebApi.Services.WebApiOptions.BusinessObject``1">
+      <summary>
+        <para>Generates HTTP endpoints for the business object class passed as a parameter.</para>
+      </summary>
+      <typeparam name="T">The business object class for which the <see href="https://docs.devexpress.com/eXpressAppFramework/403394/backend-web-api-service">Web API Service</see> generates HTTP endpoints.</typeparam>
+    </member>
+    <member name="P:DevExpress.ExpressApp.WebApi.Services.WebApiOptions.BusinessObjects">
+      <summary>
+        <para>Contains business objects for which the <see href="https://docs.devexpress.com/eXpressAppFramework/403394/backend-web-api-service">Web API Service</see> generates HTTP endpoints.</para>
+      </summary>
+      <value>Business objects for which the Web API Service generates HTTP endpoints.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.WebApi.Services.WebApiOptions.DeltaTypeProvider">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.WebApi.Services.WebApiStartupExtensions">
+      <summary>
+        <para>Contains extension methods to configure <see href="https://docs.devexpress.com/eXpressAppFramework/403394/backend-web-api-service">Web API</see> services within the project’s Startup class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.WebApi.Services.WebApiStartupExtensions.AddXafWebApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{DevExpress.ExpressApp.WebApi.Services.WebApiOptions})">
+      <summary>
+        <para>An extension method that adds <see href="https://docs.devexpress.com/eXpressAppFramework/403394/backend-web-api-service">Web API</see> services to the service collection.</para>
+      </summary>
+      <param name="services">A service collection for which the AddXafWebApi extension method is called.</param>
+      <param name="configuration">The application configuration.</param>
+      <param name="configureOptions">An Action delegate that configures Web API services.</param>
+    </member>
+  </members>
+</doc>

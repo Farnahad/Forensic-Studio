@@ -1,0 +1,70 @@
+﻿<fscm:GeneralView x:Class="ForensicStudio.Module.Windows.MemoryDump.MemoryDumpView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:fscm="ForensicStudioCoreModule"
+                  xmlns:fsc="ForensicStudioControls"
+                  xmlns:fsmc="ForensicStudioMainCore"
+                  mc:Ignorable="d"
+                  d:DesignHeight="300" d:DesignWidth="500">
+    <fsc:FsBarManager>
+        <fsc:FsBarManager.Bars>
+            <fsc:FsBar Caption="MainMenu" IsMainMenu="True">
+                <fsc:FsBar.DockInfo>
+                    <fsc:FsBarDockInfo ContainerName="TopDockControl" />
+                </fsc:FsBar.DockInfo>
+                <fsc:FsBarSubItem Content="File">
+                    <fsc:FsBarButtonItem Content="Load"
+                                         Command="{fsmc:FsBinding Path=LoadCommand}" />
+                    <fsc:FsBarButtonItem Content="Clear"
+                                         Command="{fsmc:FsBinding Path=ClearCommand}" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Help"
+                                         Command="{fsmc:FsBinding Path=HelpCommand}" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="Edit">
+                    <fsc:FsBarButtonItem Content="Item 01" />
+                    <fsc:FsBarButtonItem Content="Item 02" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Item 03" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="View">
+                    <fsc:FsBarButtonItem Content="Item 01" />
+                    <fsc:FsBarButtonItem Content="Item 02" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Item 03" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="Options">
+                    <fsc:FsBarButtonItem Content="Item 01" />
+                    <fsc:FsBarButtonItem Content="Item 02" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Item 03" />
+                </fsc:FsBarSubItem>
+            </fsc:FsBar>
+            <fsc:FsBar>
+                <fsc:FsBar.DockInfo>
+                    <fsc:FsBarDockInfo ContainerName="TopDockControl" />
+                </fsc:FsBar.DockInfo>
+                <fsc:FsBarButtonItem Content="Load"
+                                     Command="{fsmc:FsBinding Path=LoadCommand}" />
+                <fsc:FsBarButtonItem Content="Clear"
+                                     Command="{fsmc:FsBinding Path=ClearCommand}" />
+                <fsc:FsBarItemSeparator />
+                <fsc:FsBarButtonItem Content="Help"
+                                     Command="{fsmc:FsBinding Path=HelpCommand}" />
+            </fsc:FsBar>
+        </fsc:FsBarManager.Bars>
+        <fsc:FsDockLayoutControl>
+            <fsc:FsBarContainerControl Name="TopDockControl"
+                                       fsc:FsDockLayoutControl.Dock="Top" />
+            <fsc:FsLayoutControl fsc:FsDockLayoutControl.Dock="Client">
+                <fsc:FsVerticalLayoutGroup>
+                    <fsc:FsLayoutItem Label="Output">
+                        <fsc:FsLabel Text="{fsmc:FsBinding Path=MemoryDump.Output}" />
+                    </fsc:FsLayoutItem>
+                </fsc:FsVerticalLayoutGroup>
+            </fsc:FsLayoutControl>
+        </fsc:FsDockLayoutControl>
+    </fsc:FsBarManager>
+</fscm:GeneralView>

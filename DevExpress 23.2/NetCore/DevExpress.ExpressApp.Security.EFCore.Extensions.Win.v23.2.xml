@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.Security.EFCore.Extensions.Win.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Win.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your WinForms application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityEvents">
+      <summary>
+        <para>Stores handlers for <see href="https://docs.devexpress.com/eXpressAppFramework/404389/data-security-and-safety/security-system/security-tiers/middle-tier-security-ef-core">EF Core Middle Tier Security</see> events.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityEvents.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityEvents"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityEvents.OnCustomAuthenticate">
+      <summary>
+        <para>Specifies the delegate that configures custom authentication.</para>
+      </summary>
+      <value>The delegate that configures custom authentication.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityEvents.OnCustomCreateHttpClient">
+      <summary>
+        <para>Specifies the delegate that creates a custom <see cref="T:System.Net.Http.HttpClient"/> that your WinForms application uses to interact with the Middle Tier Security server.</para>
+      </summary>
+      <value>The delegate that creates a custom <see cref="T:System.Net.Http.HttpClient"/> that your WinForms application uses to interact with the Middle Tier Security server.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityEvents.OnHttpClientCreated">
+      <summary>
+        <para>Specifies the delegate that configures the <see cref="T:System.Net.Http.HttpClient"/> that your WinForms application uses to interact with the Middle Tier Security server.</para>
+      </summary>
+      <value>The delegate that configures the <see cref="T:System.Net.Http.HttpClient"/> that your WinForms application uses to interact with the Middle Tier Security server.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.Win.ApplicationBuilder.IWinSecurityBuilder"/> interface with methods to configure <see href="https://docs.devexpress.com/eXpressAppFramework/404389/data-security-and-safety/security-system/security-tiers/middle-tier-security-ef-core">EF Core Middle Tier Security</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityExtensions.UseMiddleTierMode(DevExpress.ExpressApp.Win.ApplicationBuilder.IWinSecurityBuilder,System.Action{DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityOptions},System.Action{DevExpress.ExpressApp.Security.SecurityModuleOptions})">
+      <summary>
+        <para>Enables and configures <see href="https://docs.devexpress.com/eXpressAppFramework/404389/data-security-and-safety/security-system/security-tiers/middle-tier-security-ef-core">EF Core Middle Tier Security</see>.</para>
+      </summary>
+      <param name="securityBuilder">Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</param>
+      <param name="configureOptions">Options that allow you to configure the Security System.</param>
+      <param name="configureSecurityModule">Options that allow you to configure the Security Module.</param>
+      <returns>Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</returns>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityOptions">
+      <summary>
+        <para>Contains options that you can use to configure <see href="https://docs.devexpress.com/eXpressAppFramework/404389/data-security-and-safety/security-system/security-tiers/middle-tier-security-ef-core">EF Core Middle Tier Security</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityOptions.BaseAddress">
+      <summary>
+        <para>Specifies the Middle Tier Security server address.</para>
+      </summary>
+      <value>The Middle Tier Security server address.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityOptions.Events">
+      <summary>
+        <para>Provides access to <see href="https://docs.devexpress.com/eXpressAppFramework/404389/data-security-and-safety/security-system/security-tiers/middle-tier-security-ef-core">EF Core Middle Tier Security</see> events.</para>
+      </summary>
+      <value><see href="https://docs.devexpress.com/eXpressAppFramework/404389/data-security-and-safety/security-system/security-tiers/middle-tier-security-ef-core">EF Core Middle Tier Security</see> events.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityOptions.WaitForMiddleTierServerReady">
+      <summary>
+        <para>Delays the start of the XAF Windows Forms application until the <see href="https://docs.devexpress.com/eXpressAppFramework/404389/data-security-and-safety/security-system/security-tiers/middle-tier-security-ef-core">Middle Tier Server</see> is ready to receive and handle client requests.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.EFCoreMiddleTierSecurityOptions.WaitForMiddleTierServerReady(System.TimeSpan)">
+      <summary>
+        <para>Delays the start of the XAF Windows Forms application for a specified period or until the <see href="https://docs.devexpress.com/eXpressAppFramework/404389/data-security-and-safety/security-system/security-tiers/middle-tier-security-ef-core">Middle Tier Server</see> is ready to receive and handle client requests.</para>
+      </summary>
+      <param name="timeout">A <see cref="T:System.TimeSpan"/> object that specifies the maximum delay duration. When the time runs out, the application starts whether the Middle Tier Server is ready.</param>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Win.ApplicationBuilder.IEFCoreMiddleTierAuthenticationBuilder">
+      <summary>
+        <para>The fluent API-based builder that allows you to configure <see href="https://docs.devexpress.com/eXpressAppFramework/404389/data-security-and-safety/security-system/security-tiers/middle-tier-security-ef-core">EF Core Middle Tier Security</see> in your WinForms application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.IEFCoreMiddleTierAuthenticationBuilder.UseAuthentication(System.String,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+  </members>
+</doc>

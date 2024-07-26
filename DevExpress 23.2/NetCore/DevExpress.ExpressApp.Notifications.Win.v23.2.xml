@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.Notifications.Win.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Notifications.Win">
+      <summary>
+        <para>Contains interfaces and classes that are specific to the WinForms <see href="https://docs.devexpress.com/eXpressAppFramework/113688/event-planning-and-notifications/notifications-module">Notifications Module</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Notifications.Win.NotificationsOptions">
+      <summary>
+        <para>Contains options that you can use to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113688/event-planning-and-notifications/notifications-module">Notifications Module</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Notifications.Win.NotificationsOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Notifications.Win.NotificationsOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Notifications.Win.NotificationsOptions.CanAccessPostponedItems">
+      <summary>
+        <para>Specifies if the ShowNotifications Action remains enabled when there are postponed notifications and no active notifications.</para>
+      </summary>
+      <value>true, if the ShowNotifications Action remains enabled when there are postponed notifications and no active notifications; otherwise, false. The default value is false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Notifications.Win.NotificationsOptions.NotificationsRefreshInterval">
+      <summary>
+        <para>Specifies the amount of time between successive refreshes of the notifications.</para>
+      </summary>
+      <value>A <see cref="T:System.TimeSpan"/> value that specifies the amount of time between successive refreshes of the notifications. The default value is 5 min.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Notifications.Win.NotificationsOptions.NotificationsStartDelay">
+      <summary>
+        <para>Specifies the delay from the application start to the initial <see href="https://docs.devexpress.com/eXpressAppFramework/113692/event-planning-and-notifications/notifications/reminders-window-elements">Reminders Window</see> display.</para>
+      </summary>
+      <value>A <see cref="T:System.TimeSpan"/> value that specifies the delay from the application start to the initial <see href="https://docs.devexpress.com/eXpressAppFramework/113692/event-planning-and-notifications/notifications/reminders-window-elements">Reminders Window</see> display. The default is 5 seconds.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Notifications.Win.NotificationsOptions.ShowDismissAllAction">
+      <summary>
+        <para>Specifies whether or not the DismissAll Action is active in the <see href="https://docs.devexpress.com/eXpressAppFramework/113692/event-planning-and-notifications/notifications/reminders-window-elements">Reminders Window</see>.</para>
+      </summary>
+      <value>true, if the DismissAll Action is active; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Notifications.Win.NotificationsOptions.ShowNotificationsWindow">
+      <summary>
+        <para>Specifies if the <see href="https://docs.devexpress.com/eXpressAppFramework/113692/event-planning-and-notifications/notifications/reminders-window-elements">Reminders Window</see> is displayed automatically or a user should invoke it manually.</para>
+      </summary>
+      <value>true if the window is displayed automatically; otherwise, false. The default is true.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Notifications.Win.NotificationsOptions.ShowRefreshAction">
+      <summary>
+        <para>Specifies whether or not the Refresh Action is active in the <see href="https://docs.devexpress.com/eXpressAppFramework/113692/event-planning-and-notifications/notifications/reminders-window-elements">Reminders Window</see>.</para>
+      </summary>
+      <value>true, if the Refresh Action is active; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Notifications.Win.WinNotificationsController">
+      <summary>
+        <para>Inherits from the <see cref="T:DevExpress.ExpressApp.Notifications.NotificationsController"/> to implement WinForms specific behavior.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Notifications.Win.WinNotificationsController.#ctor">
+      <summary>
+        <para>Creates a new instance of the <see cref="T:DevExpress.ExpressApp.Notifications.Win.WinNotificationsController"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Notifications.Win.WinNotificationsController.RefreshNotifications">
+      <summary>
+        <para>Refreshes the notification list.</para>
+      </summary>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Win.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your WinForms application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Win.ApplicationBuilder.NotificationsApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/113688/event-planning-and-notifications/notifications-module">Notifications Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Win.ApplicationBuilder.NotificationsApplicationBuilderExtensions.AddNotifications(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{DevExpress.ExpressApp.Win.ApplicationBuilder.IWinApplicationBuilder},System.Action{DevExpress.ExpressApp.Notifications.Win.NotificationsOptions})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/113688/event-planning-and-notifications/notifications-module">Notifications Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <param name="configureOptions">Options that you can use to configure the Notifications Module.</param>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+  </members>
+</doc>

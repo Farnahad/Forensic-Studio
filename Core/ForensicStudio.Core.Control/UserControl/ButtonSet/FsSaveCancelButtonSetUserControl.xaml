@@ -1,0 +1,12 @@
+﻿<userControl:FsUserControl x:Class="ForensicStudio.Core.Control.UserControl.ButtonSet.FsSaveCancelButtonSetUserControl"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:userControl="clr-namespace:ForensicStudio.Core.Control.UserControl"
+                           xmlns:container="clr-namespace:ForensicStudio.Core.Control.Container"
+                           xmlns:button="clr-namespace:ForensicStudio.Core.Control.Button"
+                           xmlns:fsmc="ForensicStudioMainCore">
+    <container:FsWrapPanel HorizontalAlignment="Center">
+        <button:FsSimpleSaveButton Command="{fsmc:FsBinding Path=SaveCommand}" />
+        <button:FsSimpleCancelButton Command="{fsmc:FsBinding Path=CancelCommand}" />
+    </container:FsWrapPanel>
+</userControl:FsUserControl>

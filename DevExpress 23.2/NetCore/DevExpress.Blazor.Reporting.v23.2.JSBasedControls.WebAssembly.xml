@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.Blazor.Reporting.v23.2.JSBasedControls.WebAssembly</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.Blazor.Reporting">
+      <summary>
+        <para>Contains classes that implement reporting functionality in Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxWasmDocumentViewer">
+      <summary>
+        <para>A control that displays an interactive preview of a document generated from a report and allows the user to view, print, and export a report document in hosted Blazor WebAssembly apps.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxWasmDocumentViewer.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxWasmDocumentViewer"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxWasmDocumentViewer.DevelopmentMode">
+      <summary>
+        <para>Enables Development Mode for extended diagnostics.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxWasmDocumentViewer.ReportName">
+      <summary>
+        <para>Gets or sets a string that specifies the unique report name.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxWasmDocumentViewer.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)">
+      <summary>
+        <para>This method is intended for internal use. You do not need to call it directly from your code.</para>
+      </summary>
+      <param name="parameters">The parameters supplied by the component’s parent in the render tree.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that completes when the DxDocumentViewer has finished updating and rendering itself.</returns>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxWasmDocumentViewerRequestOptions">
+      <summary>
+        <para>A nested component that allows you to specify where to send requests from the Document Viewer.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxWasmDocumentViewerRequestOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxWasmDocumentViewerRequestOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.Blazor.Reporting.DxWasmReportDesigner">
+      <summary>
+        <para>A control that is the <see href="https://docs.devexpress.com/XtraReports/17103/web-reporting/asp-net-webforms-reporting/end-user-report-designer-in-asp-net-web-forms-reporting">End-User Report Designer</see> in Blazor WebAsssembly applications.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxWasmReportDesigner.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxWasmReportDesigner"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxWasmReportDesigner.DevelopmentMode">
+      <summary>
+        <para>Enables Development Mode for extended diagnostics.</para>
+      </summary>
+      <value>true to enable Development Mode; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Blazor.Reporting.DxWasmReportDesigner.ReportName">
+      <summary>
+        <para>Gets or sets a string that specifies the unique report name.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxWasmReportDesigner.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)">
+      <summary>
+        <para>This method is intended for internal use. You do not need to call it directly from your code.</para>
+      </summary>
+      <param name="parameters">The parameters supplied by the component’s parent in the render tree.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that completes when the DxDocumentViewer has finished updating and rendering itself.</returns>
+    </member>
+    <member name="M:DevExpress.Blazor.Reporting.DxWasmReportDesignerRequestOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Blazor.Reporting.DxWasmReportDesignerRequestOptions"/> class.</para>
+      </summary>
+    </member>
+  </members>
+</doc>

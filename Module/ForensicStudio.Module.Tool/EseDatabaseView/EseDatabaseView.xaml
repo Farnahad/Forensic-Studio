@@ -1,0 +1,103 @@
+﻿<fscm:GeneralView x:Class="ForensicStudio.Module.Tool.EseDatabaseView.EseDatabaseView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:fscm="ForensicStudioCoreModule"
+                  xmlns:fsc="ForensicStudioControls"
+                  xmlns:eseDatabaseView="clr-namespace:ForensicStudio.Module.Tool.EseDatabaseView"
+                  mc:Ignorable="d"
+                  d:DesignHeight="300" d:DesignWidth="600">
+    <fsc:FsBarManager>
+        <fsc:FsBarManager.Bars>
+            <fsc:FsBar Caption="MainMenu" IsMainMenu="True">
+                <fsc:FsBar.DockInfo>
+                    <fsc:FsBarDockInfo ContainerName="TopDockControl" />
+                </fsc:FsBar.DockInfo>
+                <fsc:FsBarSubItem Content="File">
+                    <fsc:FsBarSubItem Content="Open Recent File">
+                        <fsc:FsBarItemSeparator />
+                        <fsc:FsBarButtonItem Content="Clear Recent Files List" />
+                    </fsc:FsBarSubItem>
+                    <fsc:FsBarButtonItem Content="Open ESE Database File" />
+                    <fsc:FsBarButtonItem Content="Open Locked IE10/IE11 Database" />
+                    <fsc:FsBarButtonItem Content="Open spartan.edb Database (IE11 Favorites)" />
+                    <fsc:FsBarButtonItem Content="Open SoftwareDistribution Database" />
+                    <fsc:FsBarButtonItem Content="New ESEDatabaseView Instance" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Save Selected Items" />
+                    <fsc:FsBarButtonItem Content="Save All Items" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Properties" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Exit" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="Edit">
+                    <fsc:FsBarButtonItem Content="Find" />
+                    <fsc:FsBarButtonItem Content="Copy Selected Items" />
+                    <fsc:FsBarButtonItem Content="Copy Sorted Column Data" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Select All" />
+                    <fsc:FsBarButtonItem Content="Deselect All" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="View">
+                    <fsc:FsBarButtonItem Content="User Quick Filter" />
+                    <fsc:FsBarButtonItem Content="Show Grid Lines" />
+                    <fsc:FsBarButtonItem Content="Show Tooltips" />
+                    <fsc:FsBarButtonItem Content="Mark Odd/Even Rows" />
+                    <fsc:FsBarButtonItem Content="Full Screen" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="HTML Report - All Items" />
+                    <fsc:FsBarButtonItem Content="HTML Report - Selected Items" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Choose Columns" />
+                    <fsc:FsBarButtonItem Content="Auto Size Columns" />
+                    <fsc:FsBarButtonItem Content="Auto Size Columns + headers" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Refresh" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="Options">
+                    <fsc:FsBarSubItem Content="Save File Encoding">
+                        <fsc:FsBarButtonItem Content="Default" />
+                        <fsc:FsBarButtonItem Content="Always ANSI" />
+                        <fsc:FsBarButtonItem Content="Always Unicode(UTF-16)" />
+                        <fsc:FsBarButtonItem Content="Always UTF-8" />
+                    </fsc:FsBarSubItem>
+                    <fsc:FsBarButtonItem Content="Auto Detect 64-bit Date/Time Value" />
+                    <fsc:FsBarButtonItem Content="Convert Data/Time From GMT to Local Time" />
+                    <fsc:FsBarButtonItem Content="Show Milliseconds in Time" />
+                    <fsc:FsBarButtonItem Content="Show Binary URL as String" />
+                    <fsc:FsBarButtonItem Content="Detect UTF-16 Strings in Binary Data" />
+                    <fsc:FsBarButtonItem Content="Detect Ascii Strings in Binary Data" />
+                    <fsc:FsBarButtonItem Content="Auto Size Columns + Headers on Table Change" />
+                    <fsc:FsBarButtonItem Content="Align Numeric Columns to Right" />
+                    <fsc:FsBarButtonItem Content="Put Icon on Try" />
+                </fsc:FsBarSubItem>
+            </fsc:FsBar>
+            <fsc:FsBar>
+                <fsc:FsBar.DockInfo>
+                    <fsc:FsBarDockInfo ContainerName="TopDockControl" />
+                </fsc:FsBar.DockInfo>
+                <fsc:FsBarButtonItem Content="Open ESE Database File" />
+                <fsc:FsBarButtonItem Content="Open Recent File" />
+                <fsc:FsBarButtonItem Content="Save Selected Items" />
+                <fsc:FsBarButtonItem Content="Refresh" />
+                <fsc:FsBarButtonItem Content="Copy Selected Items" />
+                <fsc:FsBarButtonItem Content="Properties" />
+                <fsc:FsBarButtonItem Content="Find" />
+                <fsc:FsBarButtonItem Content="Sort" />
+                <fsc:FsBarButtonItem Content="Exit" />
+            </fsc:FsBar>
+        </fsc:FsBarManager.Bars>
+        <fsc:FsDockLayoutControl>
+            <fsc:FsBarContainerControl Name="TopDockControl"
+                                       fsc:FsDockLayoutControl.Dock="Top" />
+            <fsc:FsLayoutControl fsc:FsDockLayoutControl.Dock="Top">
+                <fsc:FsLayoutItem Label="Table Name">
+                    <fsc:FsComboBoxEdit />
+                </fsc:FsLayoutItem>
+            </fsc:FsLayoutControl>
+            <eseDatabaseView:DataTableView fsc:FsDockLayoutControl.Dock="Client" />
+        </fsc:FsDockLayoutControl>
+    </fsc:FsBarManager>
+</fscm:GeneralView>

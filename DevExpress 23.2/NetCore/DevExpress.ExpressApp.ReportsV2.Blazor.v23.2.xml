@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.ReportsV2.Blazor.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Blazor.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your ASP.NET Core Blazor application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.ReportsApplicationBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder`1"/> interface with a method to add the <see href="https://docs.devexpress.com/eXpressAppFramework/113591/shape-export-print-data/reports/reports-v2-module-overview">Reports V2 Module</see> to your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.ReportsApplicationBuilderExtensions.AddReports(DevExpress.ExpressApp.ApplicationBuilder.IModuleBuilder{DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder},System.Action{DevExpress.ExpressApp.ReportsV2.Blazor.ReportsOptions})">
+      <summary>
+        <para>Adds the <see href="https://docs.devexpress.com/eXpressAppFramework/113591/shape-export-print-data/reports/reports-v2-module-overview">Reports V2 Module</see> to your application.</para>
+      </summary>
+      <param name="builder">Allows you to register and configure Modules in your application, and chain further Module registrations.</param>
+      <param name="configureOptions">Options that you can use to configure the Reports V2 Module.</param>
+      <returns>Allows you to register and configure Modules in your application, and chain further Module registrations.</returns>
+    </member>
+    <member name="N:DevExpress.ExpressApp.ReportsV2.Blazor">
+      <summary>
+        <para>Contains classes that are specific to the ASP.NET Core Blazor <see href="https://docs.devexpress.com/eXpressAppFramework/113591/shape-export-print-data/reports/reports-v2-module-overview">Reports V2 Module</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.ReportsV2.Blazor.ReportsOptions">
+      <summary>
+        <para>Contains options that you can use to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113591/shape-export-print-data/reports/reports-v2-module-overview">Reports V2 Module</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.ReportsV2.Blazor.ReportsOptions.#ctor(DevExpress.ExpressApp.ReportsV2.IReportOptions)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.ReportsV2.Blazor.ReportsOptions"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.ReportsV2.Blazor.ReportsOptions.DesignAndPreviewDisplayMode">
+      <summary>
+        <para>Specifies whether the report viewer and designer are displayed in a popup or main window.</para>
+      </summary>
+      <value>An enumeration value that specifies how the report viewer and designer are displayed.</value>
+    </member>
+  </members>
+</doc>

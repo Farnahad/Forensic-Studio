@@ -1,0 +1,117 @@
+﻿<fscm:GeneralView x:Class="ForensicStudio.Module.Tool.FtkImager.FtkImagerView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:fscm="ForensicStudioCoreModule"
+                  xmlns:fsc="ForensicStudioControls"
+                  xmlns:ftkImager="clr-namespace:ForensicStudio.Module.Tool.FtkImager"
+                  mc:Ignorable="d"
+                  d:DesignHeight="300" d:DesignWidth="300">
+    <fsc:FsBarManager>
+        <fsc:FsBarManager.Bars>
+            <fsc:FsBar Caption="MainMenu" IsMainMenu="True">
+                <fsc:FsBar.DockInfo>
+                    <fsc:FsBarDockInfo ContainerName="TopDockControl" />
+                </fsc:FsBar.DockInfo>
+                <fsc:FsBarSubItem Content="File">
+                    <fsc:FsBarButtonItem Content="Add Evidence Item" />
+                    <fsc:FsBarButtonItem Content="Add All Attached Devices" />
+                    <fsc:FsBarButtonItem Content="Image Mounting" />
+                    <fsc:FsBarButtonItem Content="Remove Evidence Item" />
+                    <fsc:FsBarButtonItem Content="Remove All Evidence Items" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Create Disk Image" />
+                    <fsc:FsBarButtonItem Content="Export Disk Image" />
+                    <fsc:FsBarButtonItem Content="Export Logical Image (AD1)" />
+                    <fsc:FsBarButtonItem Content="Add to Custom Content Image (AD1)" />
+                    <fsc:FsBarButtonItem Content="Create Custom Content Image (AD1)" />
+                    <fsc:FsBarButtonItem Content="Decrypt Ad1 Image" />
+                    <fsc:FsBarButtonItem Content="Verify Drive/Image" />
+                    <fsc:FsBarButtonItem Content="Capture Memory" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Obtain Protected Files" />
+                    <fsc:FsBarButtonItem Content="Detect EFS Encryption" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Export Files" />
+                    <fsc:FsBarButtonItem Content="Export File Hash List" />
+                    <fsc:FsBarButtonItem Content="Export Directory Listing" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Exit" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="View">
+                    <fsc:FsBarButtonItem Content="Tool Bar" />
+                    <fsc:FsBarButtonItem Content="Status Bar" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Evidence Tree" />
+                    <fsc:FsBarButtonItem Content="File List" />
+                    <fsc:FsBarButtonItem Content="Properties" />
+                    <fsc:FsBarButtonItem Content="Hex Value Interpreter" />
+                    <fsc:FsBarButtonItem Content="Custom Content Sources" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Icons" />
+                    <fsc:FsBarButtonItem Content="List" />
+                    <fsc:FsBarButtonItem Content="Details" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Show Hex Position Values" />
+                    <fsc:FsBarButtonItem Content="Reset Docked Windows" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="Mode">
+                    <fsc:FsBarButtonItem Content="Expand Compound Files" />
+                    <fsc:FsBarItemSeparator />
+                    <fsc:FsBarButtonItem Content="Automatic (IE)" />
+                    <fsc:FsBarButtonItem Content="Text" />
+                    <fsc:FsBarButtonItem Content="Hex" />
+                </fsc:FsBarSubItem>
+                <fsc:FsBarSubItem Content="Help" />
+            </fsc:FsBar>
+            <fsc:FsBar>
+                <fsc:FsBar.DockInfo>
+                    <fsc:FsBarDockInfo ContainerName="TopDockControl" />
+                </fsc:FsBar.DockInfo>
+                <fsc:FsBarButtonItem Content="Add Evidence Item" />
+                <fsc:FsBarButtonItem Content="Add All Attached Devices" />
+                <fsc:FsBarButtonItem Content="Image Mounting" />
+                <fsc:FsBarButtonItem Content="Remove Evidence Item" />
+                <fsc:FsBarButtonItem Content="Remove All Evidence Items" />
+                <fsc:FsBarItemSeparator />
+                <fsc:FsBarButtonItem Content="Create Disk Image" />
+                <fsc:FsBarButtonItem Content="Export Disk Image" />
+                <fsc:FsBarButtonItem Content="Export Logical Image (AD1)" />
+                <fsc:FsBarButtonItem Content="Add to Custom Content Image (AD1)" />
+                <fsc:FsBarButtonItem Content="Create Custom `Content Image (AD1)" />
+                <fsc:FsBarButtonItem Content="Verify Drive/Image" />
+                <fsc:FsBarButtonItem Content="Capture Memory" />
+                <fsc:FsBarItemSeparator />
+                <fsc:FsBarButtonItem Content="Obtain Protected Files" />
+                <fsc:FsBarButtonItem Content="Detect EFS Encryption" />
+                <fsc:FsBarItemSeparator />
+                <fsc:FsBarButtonItem Content="Export Files" />
+                <fsc:FsBarButtonItem Content="Export File Hash List" />
+                <fsc:FsBarButtonItem Content="Export Directory Listing" />
+                <fsc:FsBarItemSeparator />
+                <fsc:FsBarButtonItem Content="Automatic (IE)" />
+                <fsc:FsBarButtonItem Content="Text" />
+                <fsc:FsBarButtonItem Content="Hex" />
+                <fsc:FsBarItemSeparator />
+                <fsc:FsBarButtonItem Content="User Guid" />
+                <fsc:FsBarItemSeparator />
+            </fsc:FsBar>
+        </fsc:FsBarManager.Bars>
+        <fsc:FsDockLayoutControl>
+            <fsc:FsBarContainerControl Name="TopDockControl"
+                                       fsc:FsDockLayoutControl.Dock="Top" />
+            <fsc:FsLayoutControl fsc:FsDockLayoutControl.Dock="Client">
+                <fsc:FsHorizontalLayoutGroup>
+                    <fsc:FsVerticalLayoutGroup>
+                        <ftkImager:EvidenceTreeView />
+                        <ftkImager:CustomContentSourceView />
+                    </fsc:FsVerticalLayoutGroup>
+                    <fsc:FsVerticalLayoutGroup>
+                        <ftkImager:FileListView />
+                    </fsc:FsVerticalLayoutGroup>
+                </fsc:FsHorizontalLayoutGroup>
+            </fsc:FsLayoutControl>
+        </fsc:FsDockLayoutControl>
+    </fsc:FsBarManager>
+</fscm:GeneralView>

@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.AspNetCore.Common.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.AspNetCore">
+      <summary>
+        <para>Contains classes that implement common functionality for the ASP.NET Core controls.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.ApplicationBuilderExtensions">
+      <summary>
+        <para>Contain a method that registers the DevExpress middleware in an application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.ApplicationBuilderExtensions.UseDevExpressControls(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+      <summary>
+        <para>Registers the DevExpress middleware.</para>
+      </summary>
+      <param name="appBuilder">An object that provides the mechanisms to configure an application’s request pipeline.</param>
+      <returns>An object that provides the mechanisms to configure an application’s request pipeline.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.ApplicationOptions">
+      <summary>
+        <para>Contains application options.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.ApplicationOptions.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.ApplicationOptions"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.AspNetCore.ApplicationOptions.AccessibilityCompliant">
+      <summary>
+        <para>Enables support for Section 508.</para>
+      </summary>
+      <value>true to enable support for Section 508; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.AspNetCore.ApplicationOptions.Resources">
+      <summary>
+        <para>Specifies resources that can be automatically added.</para>
+      </summary>
+      <value>The resource type.</value>
+    </member>
+    <member name="T:DevExpress.AspNetCore.BuilderFactory">
+      <summary>
+        <para>Provides access to ASP.NET Core controls.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactory.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.BuilderFactory"/> class.</para>
+      </summary>
+      <param name="htmlHelper">A helper object for rendering ASP.NET Core controls.</param>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactory.Scripts">
+      <summary>
+        <para>Returns control-specific scripts located on a web page.</para>
+      </summary>
+      <returns>An IHtmlContent instance that stores control-specific scripts.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactory.Scripts(System.Action{DevExpress.AspNetCore.ScriptSettings})">
+      <summary>
+        <para>Returns control-specific scripts located on a web page.</para>
+      </summary>
+      <param name="config">A method that configures the script settings.</param>
+      <returns>An IHtmlContent instance that stores control-specific scripts.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactory.StyleSheets">
+      <summary>
+        <para>Returns control-specific styles.</para>
+      </summary>
+      <returns>An IHtmlContent instance that stores control-specific styles.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactory.StyleSheets(System.Action{DevExpress.AspNetCore.StyleSheetSettings})">
+      <summary>
+        <para>Returns control-specific styles.</para>
+      </summary>
+      <param name="config">Control rendering specific settings.</param>
+      <returns>An IHtmlContent instance that stores control-specific styles.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.BuilderFactory`1">
+      <summary>
+        <para>Provides access to ASP.NET Core controls from a View.</para>
+      </summary>
+      <typeparam name="TModel">An MVC model type.</typeparam>
+    </member>
+    <member name="M:DevExpress.AspNetCore.BuilderFactory`1.#ctor(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper{`0})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.BuilderFactory`1"/> class.</para>
+      </summary>
+      <param name="htmlHelper">A helper object for rendering ASP.NET controls configured by MVC models.</param>
+    </member>
+    <member name="T:DevExpress.AspNetCore.HtmlHelperExtensions">
+      <summary>
+        <para>Contains HtmlHelper extensions.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.HtmlHelperExtensions.DevExpress(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+      <summary>
+        <para>Provides access to helper methods that allow you to render individual DevExpress ASP.NET Core extensions.</para>
+      </summary>
+      <param name="htmlHelper">An HTML helper instance that this method extends.</param>
+      <returns>An object that contains helper methods to render DevExpress ASP.NET Core extensions.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.HtmlHelperExtensions.DevExpress``1(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper{``0})">
+      <summary>
+        <para>Provides access to strongly typed helper methods that allow you to render individual DevExpress ASP.NET Core extensions.</para>
+      </summary>
+      <param name="htmlHelper">A strongly typed object that is HTML helper instance that this method extends.</param>
+      <typeparam name="TModel">A model type.</typeparam>
+      <returns>An object that contains strongly typed helper methods to render DevExpress ASP.NET Core extensions.</returns>
+    </member>
+    <member name="N:DevExpress.AspNetCore.Office">
+      <summary>
+        <para>Contains builder classes for ribbon elements in office-inspired suites (Rich Text Editor, Spreadsheet).</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.ConfirmOnLosingChangesBuilder">
+      <summary>
+        <para>A builder for settings of a confirmation message that can be displayed when any unsaved data changes are going to be lost.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.ConfirmOnLosingChangesBuilder.Enabled(System.Boolean)">
+      <summary>
+        <para>Specifies whether a confirmation alert should be displayed when any unsaved changes are going to be lost.</para>
+      </summary>
+      <param name="value">true, to display the confirmation alert; otherwise, false.</param>
+      <returns>An object that can be used to further configure the settings of the confirmation message.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.ConfirmOnLosingChangesBuilder.Message(System.String)">
+      <summary>
+        <para>Sets the text of the confirmation message that is displayed when any unsaved data changes are going to be lost.</para>
+      </summary>
+      <param name="value">The confirmation message text.</param>
+      <returns>An object that can be used to further configure the settings of the confirmation message.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonButtonItemBuilder">
+      <summary>
+        <para>A builder for a ribbon button item.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonButtonItemBuilder.BeginGroup(System.Boolean)">
+      <summary>
+        <para>Sets whether an item separator should be displayed before the current item.</para>
+      </summary>
+      <param name="value">true, to display a separator before the item; otherwise, false.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonButtonItemBuilder.CommandName(System.String)">
+      <summary>
+        <para>Sets the command name associated with the item.</para>
+      </summary>
+      <param name="value">The command name.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonButtonItemBuilder.Icon(System.String)">
+      <summary>
+        <para>Sets the item’s icon identifier.</para>
+      </summary>
+      <param name="value">An icon identifier.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonButtonItemBuilder.ShowText(System.Boolean)">
+      <summary>
+        <para>Sets the item’s text visibility.</para>
+      </summary>
+      <param name="value">true, to display the item text; otherwise, false.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonButtonItemBuilder.Text(System.String)">
+      <summary>
+        <para>Sets the text content of the current item.</para>
+      </summary>
+      <param name="value">The item text.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonColorBoxItemBuilder">
+      <summary>
+        <para>A builder for a ribbon color box item.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonColorBoxItemBuilder.BeginGroup(System.Boolean)">
+      <summary>
+        <para>Sets whether an item separator should be displayed before the current item.</para>
+      </summary>
+      <param name="value">true, to display a separator before the item; otherwise, false.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonColorBoxItemBuilder.Color(System.String)">
+      <summary>
+        <para>Sets the item’s color.</para>
+      </summary>
+      <param name="value">The color value.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonColorBoxItemBuilder.CommandName(System.String)">
+      <summary>
+        <para>Sets the command name associated with the item.</para>
+      </summary>
+      <param name="value">The command name.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonColorBoxItemBuilder.TextOptions(System.String,System.Boolean)">
+      <summary>
+        <para>Sets options of the text displayed next to the item.</para>
+      </summary>
+      <param name="text">The ribbon item text.</param>
+      <param name="displayAfterEditor">true to display the text after the editor; false to display the text before the editor.</param>
+      <returns>The builder for a color box item.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonContextTabCategoriesBuilder`5">
+      <summary>
+        <para>A builder for a ribbon context tab category collection.</para>
+      </summary>
+      <typeparam name="TContextTabCategoriesBuilder">An object that can be used to configure a context tab category collection.</typeparam>
+      <typeparam name="TContextTabCategoryInfoBuilder">An object that can be used to configure a context tab category.</typeparam>
+      <typeparam name="TTabCollectionBuilder">An object that can be used to configure a tab collection.</typeparam>
+      <typeparam name="TTabInfoBuilder">An object that can be used to configure a tab.</typeparam>
+      <typeparam name="TItemCollectionBuilder">An object that can be used to configure an item collection.</typeparam>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonContextTabCategoriesBuilder`5.Add(System.String)">
+      <summary>
+        <para>Adds a new category to the end of the context tab category collection.</para>
+      </summary>
+      <param name="name">A category name.</param>
+      <returns>An object that can be used to further configure the added context tab category.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonContextTabCategoriesBuilder`5.Clear">
+      <summary>
+        <para>Removes all categories from the context tab category collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonContextTabCategoriesBuilder`5.RemoveByName(System.String)">
+      <param name="name">The option value.</param>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonContextTabCategoryInfoBuilder`3">
+      <summary>
+        <para>A builder for a ribbon context tab category.</para>
+      </summary>
+      <typeparam name="TTabCollectionBuilder">An object that can be used to configure a tab collection.</typeparam>
+      <typeparam name="TTabInfoBuilder">An object that can be used to configure a tab.</typeparam>
+      <typeparam name="TItemCollectionBuilder">An object that can be used to configure an item collection.</typeparam>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonContextTabCategoryInfoBuilder`3.Name(System.String)">
+      <summary>
+        <para>Sets the category name.</para>
+      </summary>
+      <param name="value">The category name.</param>
+      <returns>An object that can be used to further configure the context tab category.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonContextTabCategoryInfoBuilder`3.Tabs(System.Action{`0})">
+      <summary>
+        <para>Allows you to customize the category’s tab collection.</para>
+      </summary>
+      <param name="configure">A method that configures the collection of tabs.</param>
+      <returns>An object that can be used to further configure the context tab category.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1">
+      <summary>
+        <para>A builder for a ribbon item collection.</para>
+      </summary>
+      <typeparam name="TItemCollectionBuilder">An object that can be used to further configure the item collection.</typeparam>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddButton">
+      <summary>
+        <para>Adds a new item to the end of the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddButton(System.String,System.String,System.Boolean,System.String,System.Boolean)">
+      <summary>
+        <para>Adds a new item with the specified settings to the end of the ribbon item collection.</para>
+      </summary>
+      <param name="text">The item’s text.</param>
+      <param name="commandName">The item’s command name.</param>
+      <param name="beginGroup">true, to display a separator before the item; otherwise, false.</param>
+      <param name="icon">The item’s <b>icon identifier</b>.</param>
+      <param name="showText">true, to display the item text; otherwise, false</param>
+      <returns>An object that can be used to further configure the item collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddColorBox">
+      <summary>
+        <para>Adds a new color box item to the end of the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddColorBox(System.String,System.String,System.Boolean,System.String)">
+      <summary>
+        <para>Adds a new color box item with the specified settings to the end of the ribbon item collection.</para>
+      </summary>
+      <param name="text">The item’s text.</param>
+      <param name="name">The item’s command name.</param>
+      <param name="beginGroup">true, to display a separator before the item; otherwise, false.</param>
+      <param name="color">The item’s color value.</param>
+      <returns>An object that can be used to further configure the item collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddMenu">
+      <summary>
+        <para>Adds a new menu item to the end of the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddNumberBox">
+      <summary>
+        <para>Adds a new number box item to the end of the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddNumberBox(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32)">
+      <summary>
+        <para>Adds a new number box item to the end of the ribbon item collection.</para>
+      </summary>
+      <param name="text">The item’s text.</param>
+      <param name="name">The item’s command name.</param>
+      <param name="beginGroup">true, to display a separator before the item; otherwise, false.</param>
+      <param name="min">The minimum item value.</param>
+      <param name="max">The maximum item value.</param>
+      <param name="step">The incremental step.</param>
+      <param name="width">The item width.</param>
+      <param name="format">The value’s display format.</param>
+      <param name="value">The item value.</param>
+      <returns>An item collection builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddSelectBox">
+      <summary>
+        <para>Adds a new select box item to the end of the ribbon item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddToggleButton(System.Boolean)">
+      <summary>
+        <para>Adds a new button item to the end of the ribbon item collection.</para>
+      </summary>
+      <param name="selected">true to select the button; otherwise, false.</param>
+      <returns>The builder for the ribbon button item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.AddToggleButton(System.String,System.String,System.Boolean,System.String,System.Boolean,System.Boolean)">
+      <summary>
+        <para>Adds a new button item to the end of the ribbon item collection.</para>
+      </summary>
+      <param name="text">The item’s text.</param>
+      <param name="commandName">The item’s command name.</param>
+      <param name="beginGroup">true, to display a separator before the item; otherwise, false.</param>
+      <param name="icon">An <b>icon identifier</b>.</param>
+      <param name="showText">true to display the item&#39;s text; otherwise, false.</param>
+      <param name="selected">true to select the button; otherwise, false.</param>
+      <returns>An item collection builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.Clear">
+      <summary>
+        <para>Removes all items from the collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the item collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.InsertButton(System.Int32)">
+      <summary>
+        <para>Inserts a new button item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.InsertColorBox(System.Int32)">
+      <summary>
+        <para>Inserts a new color box item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.InsertMenu(System.Int32)">
+      <summary>
+        <para>Inserts a new menu item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.InsertNumberBox(System.Int32)">
+      <summary>
+        <para>Inserts a new number box item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.InsertSelectBox(System.Int32)">
+      <summary>
+        <para>Inserts a new select box item to the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.InsertToggleButton(System.Int32,System.Boolean)">
+      <summary>
+        <para>Inserts a new button item into the ribbon item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <param name="selected">true to select the button; otherwise, false.</param>
+      <returns>The builder for the ribbon button item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonItemCollectionBuilder`1.RemoveAt(System.Int32)">
+      <summary>
+        <para>Removes an item at the specified position from the ribbon item collection.</para>
+      </summary>
+      <param name="index">A zero-based index of the item to remove.</param>
+      <returns>An object that can be used to further configure the item collection.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonMenuItemBuilder">
+      <summary>
+        <para>A builder for a ribbon menu item.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuItemBuilder.BeginGroup(System.Boolean)">
+      <summary>
+        <para>Sets whether an item separator should be displayed before the current item.</para>
+      </summary>
+      <param name="value">true, to display a separator before the item; otherwise, false.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuItemBuilder.CommandName(System.String)">
+      <summary>
+        <para>Sets the command name associated with the item.</para>
+      </summary>
+      <param name="value">The command name.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuItemBuilder.Icon(System.String)">
+      <summary>
+        <para>Sets the item’s icon identifier.</para>
+      </summary>
+      <param name="value">An icon identifier.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuItemBuilder.Items(System.Action{DevExpress.AspNetCore.Office.RibbonMenuSubItemCollectionBuilder})">
+      <summary>
+        <para>Allows you to customize the ribbon menu item’s sub-item collection.</para>
+      </summary>
+      <param name="configure">A method that configures the collection of items.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuItemBuilder.ShowText(System.Boolean)">
+      <summary>
+        <para>Sets the item’s text visibility.</para>
+      </summary>
+      <param name="value">true, to display the item text; otherwise, false.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuItemBuilder.Text(System.String)">
+      <summary>
+        <para>Sets the text content of the current item.</para>
+      </summary>
+      <param name="value">The item text.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonMenuSubItemBuilder">
+      <summary>
+        <para>A builder for a ribbon menu sub-item.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemBuilder.BeginGroup(System.Boolean)">
+      <summary>
+        <para>Sets whether an item separator should be displayed before the current item.</para>
+      </summary>
+      <param name="value">true, to display a separator before the item; otherwise, false.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemBuilder.CommandName(System.String)">
+      <summary>
+        <para>Sets the command name associated with the item.</para>
+      </summary>
+      <param name="value">The command name.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemBuilder.Icon(System.String)">
+      <summary>
+        <para>Sets the item’s icon identifier.</para>
+      </summary>
+      <param name="value">An icon identifier.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemBuilder.Text(System.String)">
+      <summary>
+        <para>Sets the text content of the current item.</para>
+      </summary>
+      <param name="value">The item text.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonMenuSubItemCollectionBuilder">
+      <summary>
+        <para>A builder for a menu item’s sub-item collection.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemCollectionBuilder.Add">
+      <summary>
+        <para>Adds a new item to the end of the menu item’s sub-item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added sub-item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemCollectionBuilder.Add(System.String,System.String,System.String,System.Boolean)">
+      <summary>
+        <para>Adds a new item with the specified settings to the end of the menu item’s sub-item collection.</para>
+      </summary>
+      <param name="text">The item’s text.</param>
+      <param name="name">The item’s command name.</param>
+      <param name="icon">The item’s icon identifier.</param>
+      <param name="beginGroup">true, to display the item text; otherwise, false.</param>
+      <returns>An object that can be used to further configure the sub-item collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemCollectionBuilder.Clear">
+      <summary>
+        <para>Removes all items from the menu item’s sub-item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the sub-item collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemCollectionBuilder.GetAt(System.Int32)">
+      <summary>
+        <para>Retrieves an item from the collection by an item index.</para>
+      </summary>
+      <param name="index">A zero-based index of the item.</param>
+      <returns>An object that can be used to further configure the found item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemCollectionBuilder.Insert(System.Int32)">
+      <summary>
+        <para>Inserts a new item to the menu item’s sub-item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonMenuSubItemCollectionBuilder.RemoveAt(System.Int32)">
+      <summary>
+        <para>Removes an item at the specified position.</para>
+      </summary>
+      <param name="index">The position of the item to remove.</param>
+      <returns>An object that can be used to further configure the sub-item collection.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder">
+      <summary>
+        <para>A builder for a ribbon number box item.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.BeginGroup(System.Boolean)">
+      <summary>
+        <para>Sets whether an item separator should be displayed before the current item.</para>
+      </summary>
+      <param name="value">true, to display a separator before the item; otherwise, false.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.CommandName(System.String)">
+      <summary>
+        <para>Sets the command name associated with the item.</para>
+      </summary>
+      <param name="value">The command name.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.Format(System.String)">
+      <summary>
+        <para>Specifies the item value’s display format and controls user input accordingly.</para>
+      </summary>
+      <param name="format">The format. Default value: “<see cref="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.Text(System.String)">text</see> #0.#”.</param>
+      <returns>The number box item builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.Max(System.Int32)">
+      <summary>
+        <para>Sets the item’s maximum value.</para>
+      </summary>
+      <param name="value">The maximum value.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.Min(System.Int32)">
+      <summary>
+        <para>Sets the item’s minimum value.</para>
+      </summary>
+      <param name="value">The minimum value.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.Step(System.Int32)">
+      <summary>
+        <para>Sets the incremental step for item’s value.</para>
+      </summary>
+      <param name="value">The incremental step.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.Text(System.String)">
+      <summary>
+        <para>Sets the text content of the current item.</para>
+      </summary>
+      <param name="value">The item text.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.Value(System.Int32)">
+      <summary>
+        <para>Sets the current item value.</para>
+      </summary>
+      <param name="value">The item value.</param>
+      <returns>The number box item builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonNumberBoxItemBuilder.Width(System.Int32)">
+      <summary>
+        <para>Sets the item width.</para>
+      </summary>
+      <param name="value">The item width.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder">
+      <summary>
+        <para>A builder for a ribbon select box item.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.AcceptCustomValue(System.Boolean)">
+      <summary>
+        <para>Specifies whether the item accepts custom values.</para>
+      </summary>
+      <param name="value">true to accept custom values; otherwise, false.</param>
+      <returns>The select box item builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.BeginGroup(System.Boolean)">
+      <summary>
+        <para>Sets whether an item separator should be displayed before the current item.</para>
+      </summary>
+      <param name="value">true, to display a separator before the item; otherwise, false.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.CommandName(System.String)">
+      <summary>
+        <para>Sets the command name associated with the item.</para>
+      </summary>
+      <param name="value">The command name.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.Icon(System.String)">
+      <summary>
+        <para>Sets the item’s icon identifier.</para>
+      </summary>
+      <param name="value">An icon identifier.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.Items(System.Action{DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemCollectionBuilder})">
+      <summary>
+        <para>Allows you to customize the ribbon select box item’s sub-item collection.</para>
+      </summary>
+      <param name="configure">A method that configures the collection of items.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.OnCustomItemCreating(System.String)">
+      <summary>
+        <para>Specifies a function that is executed when a user adds a custom item.</para>
+      </summary>
+      <param name="callback">A function that creates a new data source entry.</param>
+      <returns>The select box item builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.Placeholder(System.String)">
+      <summary>
+        <para>Sets the text displayed in the item when its value is empty.</para>
+      </summary>
+      <param name="value">The placeholder text.</param>
+      <returns>The builder for a select box item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.ShowClearButton(System.Boolean)">
+      <summary>
+        <para>Sets whether to display the Clear button in the item.</para>
+      </summary>
+      <param name="value">true to display the Clear button; otherwise, false.</param>
+      <returns>The builder for a select box item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.TextOptions(System.String,System.Boolean)">
+      <summary>
+        <para>Sets options of the text displayed next to the item.</para>
+      </summary>
+      <param name="text">The ribbon item text.</param>
+      <param name="displayAfterEditor">true to display the text after the editor; false to display the text before the editor.</param>
+      <returns>The builder for a select box item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.Value(System.Object)">
+      <summary>
+        <para>Selects an item value.</para>
+      </summary>
+      <param name="value">The item value.</param>
+      <returns>The builder for a select box item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxItemBuilder.Width(System.Int32)">
+      <summary>
+        <para>Sets the item width.</para>
+      </summary>
+      <param name="value">The item width.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemBuilder">
+      <summary>
+        <para>A builder for a ribbon select box sub-item.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemBuilder.Text(System.String)">
+      <summary>
+        <para>Sets the text content of the current item.</para>
+      </summary>
+      <param name="value">The item text.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemBuilder.Value(System.Object)">
+      <summary>
+        <para>Sets the item value.</para>
+      </summary>
+      <param name="value">An object that specifies the item value.</param>
+      <returns>An object that can be used to further configure the ribbon item.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemCollectionBuilder">
+      <summary>
+        <para>A builder for a ribbon select box sub-item collection.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemCollectionBuilder.Add">
+      <summary>
+        <para>Adds a new item to the end of the select box sub-item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemCollectionBuilder.Add(System.String,System.Object)">
+      <summary>
+        <para>Adds a new item with the specified settings to the end of the select box sub-item collection.</para>
+      </summary>
+      <param name="text">The item’s text.</param>
+      <param name="value">The item’s value.</param>
+      <returns>An object that can be used to further configure the sub-item collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemCollectionBuilder.Clear">
+      <summary>
+        <para>Removes all items from the select box sub-item collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemCollectionBuilder.GetAt(System.Int32)">
+      <summary>
+        <para>Retrieves an item from the collection by an item index.</para>
+      </summary>
+      <param name="index">A zero-based index of the item.</param>
+      <returns>An object that can be used to further configure the found item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemCollectionBuilder.Insert(System.Int32)">
+      <summary>
+        <para>Inserts a new item to the select box sub-item collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the item.</param>
+      <returns>An object that can be used to further configure the inserted item.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSelectBoxSubItemCollectionBuilder.RemoveAt(System.Int32)">
+      <summary>
+        <para>Removes an item at the specified position.</para>
+      </summary>
+      <param name="index">The position of the item to remove.</param>
+      <returns>An object that can be used to further configure the collection.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonSettingsBuilder`5">
+      <summary>
+        <para>A builder for ribbon settings.</para>
+      </summary>
+      <typeparam name="TContextTabCategoriesBuilder">An object that can be used to configure a context tab category collection.</typeparam>
+      <typeparam name="TContextTabCategoryInfoBuilder">An object that can be used to configure a context tab category.</typeparam>
+      <typeparam name="TTabCollectionBuilder">An object that can be used to configure a tab collection.</typeparam>
+      <typeparam name="TTabInfoBuilder">An object that can be used to configure a tab.</typeparam>
+      <typeparam name="TItemCollectionBuilder">An object that can be used to configure an item collection.</typeparam>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSettingsBuilder`5.ActiveTabIndex(System.Int32)">
+      <summary>
+        <para>Sets the active tab by its index.</para>
+      </summary>
+      <param name="value">A zero-based tab index.</param>
+      <returns>An object that can be used to further configure the ribbon settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSettingsBuilder`5.ContextTabCategories(System.Action{`0})">
+      <summary>
+        <para>Allows you to customize the ribbon’s context tab category collection.</para>
+      </summary>
+      <param name="configure">A method that configures the collection of context tab categories.</param>
+      <returns>An object that can be used to further configure the ribbon settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSettingsBuilder`5.Tabs(System.Action{`2})">
+      <summary>
+        <para>Allows you to customize the ribbon tab collection.</para>
+      </summary>
+      <param name="configure">A method that configures the collection of tabs.</param>
+      <returns>An object that can be used to further configure the ribbon settings.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonSettingsBuilder`5.Visible(System.Boolean)">
+      <summary>
+        <para>Sets the ribbon visibility.</para>
+      </summary>
+      <param name="value">true, to display the ribbon; otherwise, false.</param>
+      <returns>An object that can be used to further configure the ribbon settings.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3">
+      <summary>
+        <para>A builder for a ribbon tab collection.</para>
+      </summary>
+      <typeparam name="TTabCollectionBuilder">An object that can be used to configure a tab collection.</typeparam>
+      <typeparam name="TTabInfoBuilder">An object that can be used to configure a tab.</typeparam>
+      <typeparam name="TItemCollectionBuilder">An object that can be used to configure an item collection.</typeparam>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.Add">
+      <summary>
+        <para>Adds a new tab to the end of the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.Add(System.String,System.String)">
+      <summary>
+        <para>Adds a new tab to the end of the ribbon tab collection.</para>
+      </summary>
+      <param name="title">The tab title.</param>
+      <param name="name">The tab name.</param>
+      <returns>The tab builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.Add(System.String)">
+      <summary>
+        <para>Adds a new tab with the specified title to the end of the ribbon tab collection.</para>
+      </summary>
+      <param name="title">The tab’s title.</param>
+      <returns>An object that can be used to further configure the added tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.Clear">
+      <summary>
+        <para>Removes all tabs from the ribbon tab collection.</para>
+      </summary>
+      <returns>An object that can be used to further configure the tab collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.GetAt(System.Int32)">
+      <summary>
+        <para>Retrieves a tab from the collection by a tab index.</para>
+      </summary>
+      <param name="index">A zero-based index of the tab.</param>
+      <returns>An object that can be used to further configure the tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.GetByName(System.String)">
+      <summary>
+        <para>Retrieves a specific tab from the collection.</para>
+      </summary>
+      <param name="name">The name of the tab.</param>
+      <returns>The tab builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.GetByTitle(System.String)">
+      <summary>
+        <para>Retrieves a tab from the collection by a tab title.</para>
+      </summary>
+      <param name="title">The title of the tab.</param>
+      <returns>The tab builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.Insert(System.Int32)">
+      <summary>
+        <para>Inserts a new tab to the ribbon tab collection at the specified position.</para>
+      </summary>
+      <param name="index">The position to insert the tab.</param>
+      <returns>An object that can be used to further configure the inserted tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.RemoveAt(System.Int32)">
+      <summary>
+        <para>Removes a tab at the specified position from the ribbon tab collection.</para>
+      </summary>
+      <param name="index">A zero-based index of the tab to remove.</param>
+      <returns>An object that can be used to further configure the tab collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.RemoveByName(System.String)">
+      <summary>
+        <para>Removes a tab with the specified name from the ribbon tab collection.</para>
+      </summary>
+      <param name="name">The item name.</param>
+      <returns>The builder for the tab collection.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabCollectionBuilder`3.RemoveByTitle(System.String)">
+      <summary>
+        <para>Removes a tab with the specified title from the ribbon tab collection.</para>
+      </summary>
+      <param name="title">The item title.</param>
+      <returns>An object that can be used to further configure the tab collection.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.Office.RibbonTabInfoBuilder`2">
+      <summary>
+        <para>A builder for a ribbon tab.</para>
+      </summary>
+      <typeparam name="TTabInfoBuilder">An object that can be used to configure a tab.</typeparam>
+      <typeparam name="TItemCollectionBuilder">An object that can be used to configure an item collection.</typeparam>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabInfoBuilder`2.Items(System.Action{`1})">
+      <summary>
+        <para>Allows you to customize the tab’s item collection.</para>
+      </summary>
+      <param name="configure">A method that configures the collection of items.</param>
+      <returns>An object that can be used to further configure the tab.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabInfoBuilder`2.Name(System.String)">
+      <summary>
+        <para>Sets the tab name.</para>
+      </summary>
+      <param name="value">The tab name.</param>
+      <returns>The tab builder.</returns>
+    </member>
+    <member name="M:DevExpress.AspNetCore.Office.RibbonTabInfoBuilder`2.Title(System.String)">
+      <summary>
+        <para>Sets the tab title.</para>
+      </summary>
+      <param name="value">The tab title.</param>
+      <returns>The tab builder.</returns>
+    </member>
+    <member name="T:DevExpress.AspNetCore.ResourcesType">
+      <summary>
+        <para>Lists resources that can be automatically added.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.ResourcesType.DevExtreme">
+      <summary>
+        <para>Specifies that a reference to the DevExtreme package should be added. For a complete list of these references, see <b>DevExtreme.Guide.UI_Components.Common.Advanced.3rd-Party_Frameworks_Integration_API</b>.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.ResourcesType.None">
+      <summary>
+        <para>Specifies that no references should be added.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.AspNetCore.ResourcesType.ThirdParty">
+      <summary>
+        <para>Specifies that references to external libraries required by a specific control should be added. For a complete list of these references, see <see href="https://docs.devexpress.com/AspNet/17153/common-concepts/webconfig-modifications/webconfig-options/external-client-libraries">Embedding Third-Party Libraries</see>.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.ScriptSettings">
+      <summary>
+        <para>Contains settings related to scripts.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.ScriptSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="M:DevExpress.AspNetCore.ScriptSettings.#ctor"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.AspNetCore.StyleSheetSettings">
+      <summary>
+        <para>Contains settings related to style sheets.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.AspNetCore.StyleSheetSettings.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.AspNetCore.StyleSheetSettings"/> class.</para>
+      </summary>
+    </member>
+  </members>
+</doc>

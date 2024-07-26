@@ -1,0 +1,1542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>DevExpress.ExpressApp.Blazor.v23.2</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.ExpressApp.Blazor">
+      <summary>
+        <para>Contains interfaces and classes that are specific to XAF ASP.NET Core Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Blazor.ApplicationBuilder">
+      <summary>
+        <para>Contains classes and interfaces that allow you to configure your ASP.NET Core Blazor application in the fluent API-based application builder.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.BlazorSecurityBuilderExtensions">
+      <summary>
+        <para>Extends the <see cref="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder"/> interface with methods to configure authentication in your application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.BlazorSecurityBuilderExtensions.AddExternalAuthentication(DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder,System.Action{DevExpress.ExpressApp.Security.ExternalAuthenticationProviderOptions})">
+      <summary>
+        <para>Enables external authentication (custom or OAuth2) in your application.</para>
+      </summary>
+      <param name="builder">Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</param>
+      <param name="configureOptions">Options that you can use to configure external authentication (custom or OAuth2).</param>
+      <returns>Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.BlazorSecurityBuilderExtensions.AddExternalAuthentication``1(DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder,System.Action{DevExpress.ExpressApp.Security.ExternalAuthenticationProviderOptions})">
+      <summary>
+        <para>Enables external authentication (custom or OAuth2) in your application.</para>
+      </summary>
+      <param name="builder">Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</param>
+      <param name="configureOptions">Options that you can use to configure external authentication (custom or OAuth2).</param>
+      <typeparam name="TPrincipalProvider">The IPrincipalProvider service.</typeparam>
+      <returns>Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.BlazorSecurityBuilderExtensions.AddPasswordAuthentication(DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder,System.Action{DevExpress.ExpressApp.Security.AuthenticationStandardProviderOptions})">
+      <summary>
+        <para>Enables standard authentication (with a login and password) in your application.</para>
+      </summary>
+      <param name="builder">Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</param>
+      <param name="configureOptions">Options that you can use to configure standard authentication (with a login and password).</param>
+      <returns>Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.BlazorSecurityBuilderExtensions.AddWindowsAuthentication(DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder,System.Action{DevExpress.ExpressApp.Security.Authentication.WindowsAuthenticationOptions})">
+      <summary>
+        <para>Enables Windows Authentication in your application.</para>
+      </summary>
+      <param name="builder">Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</param>
+      <param name="configureOptions">Options that you can use to configure Windows Authentication.</param>
+      <returns>Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</returns>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder">
+      <summary>
+        <para>The fluent API-based application builder that allows you to configure your ASP.NET Core Blazor application (add extra Modules, enable the Security System, and so on).</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder.ApplicationFactory">
+      <summary>
+        <para>Specifies the delegate that creates <see cref="T:DevExpress.ExpressApp.Blazor.BlazorApplication"/>. We recommend that you use the BlazorApplicationBuilderExtensions.UseApplication method instead.</para>
+      </summary>
+      <value>The delegate that creates <see cref="T:DevExpress.ExpressApp.Blazor.BlazorApplication"/>.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder.ObjectSpaceProviders">
+      <summary>
+        <para>Provides access to IObjectSpaceProviderServiceBasedBuilder that allows you to configure <see href="https://docs.devexpress.com/eXpressAppFramework/113707/data-manipulation-and-business-logic/object-space">Object Spaces</see> used in your application.</para>
+      </summary>
+      <value>Allows you to configure <see href="https://docs.devexpress.com/eXpressAppFramework/113707/data-manipulation-and-business-logic/object-space">Object Spaces</see> used in your application.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder.Security">
+      <summary>
+        <para>Provides access to IBlazorSecurityBuilder that allows you to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see>.</para>
+      </summary>
+      <value>Allows you to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see>.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder">
+      <summary>
+        <para>The fluent API-based builder that allows you to configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your ASP.NET Core Blazor application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder.AddAuthenticationProvider``1">
+      <returns>Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder.Context">
+      <summary>
+        <para>Provides access to the application builder.</para>
+      </summary>
+      <value>The <see cref="T:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorApplicationBuilder"/> type.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder.RegisteredProviders">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.ApplicationBuilder.IBlazorSecurityBuilder.UseIntegratedMode(System.Action{DevExpress.ExpressApp.Security.SecurityOptions},System.Action{DevExpress.ExpressApp.Security.SecurityModuleOptions})">
+      <summary>
+        <para>Enables and configures the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in <see href="https://docs.devexpress.com/eXpressAppFramework/113436/data-security-and-safety/security-system/security-tiers/2-tier-security-integrated-mode-and-ui-level#integrated-mode">Integrated Mode</see>.</para>
+      </summary>
+      <param name="configureOptions">Options that allow you to configure the Security System.</param>
+      <param name="configureSecurityModule">Options that allow you to configure the Security Module.</param>
+      <returns>Allows you to enable and configure the <see href="https://docs.devexpress.com/eXpressAppFramework/113366/data-security-and-safety/security-system">Security System</see> in your application, and chain further configuration.</returns>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.BlazorApplication">
+      <summary>
+        <para>Manages an XAF Blazor UI application.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.BlazorApplication.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.BlazorApplication"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.BlazorApplication.#ctor(DevExpress.ExpressApp.DC.ITypesInfo)">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.BlazorApplication.CreateDetailView(DevExpress.ExpressApp.IObjectSpace,System.String,System.Boolean,System.Object,System.Boolean,System.Collections.IEnumerable)">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.BlazorApplication.CreateLogonAction">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.BlazorApplication.CreateMainWindow">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.ExpressApp.Blazor.BlazorApplication.CurrentWindowChanged">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.BlazorApplication.EnableDefaultSelectionDependencyType">
+      <summary>
+        <para>Gets or sets whether the selection-dependent Actions are visible regardless of the selected list view items.</para>
+      </summary>
+      <value>true if selection dependent Actions are visible if no items were selected; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.BlazorApplication.ExceptionService">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.BlazorApplication.LogOff">
+      <summary>
+        <para>Performs the ASP.NET Core Blazor application logout.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.BlazorApplication.MainWindow">
+      <summary>
+        <para>Provides access to the Blazor application’s main <see href="https://docs.devexpress.com/eXpressAppFramework/112608/ui-construction/windows-and-frames">Window</see>.</para>
+      </summary>
+      <value>An object that represents the current application’s main Window.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.BlazorApplication.StartUpActionWindow">
+      <summary>
+        <para>Provides access to the Blazor application’s startup <see href="https://docs.devexpress.com/eXpressAppFramework/112608/ui-construction/windows-and-frames">Window</see>.</para>
+      </summary>
+      <value>An object that represents the current application’s startup Window.</value>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Blazor.Editors">
+      <summary>
+        <para>Contains base classes for ASP.NET Core Blazor Editors used in XAF applications to display business object properties in a UI.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem">
+      <summary>
+        <para>The Action Container View Item used in XAF ASP.NET Core Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem.#ctor(System.Type,DevExpress.ExpressApp.Model.IModelActionContainerViewItem)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem"/> class with specified settings.</para>
+      </summary>
+      <param name="objectType">A <see cref="T:System.Type"/> object that is the type of the object for which the current View Item’s <see href="https://docs.devexpress.com/eXpressAppFramework/112611/ui-construction/views">View</see> is created. This value is assigned to the <see cref="P:DevExpress.ExpressApp.Editors.ViewItem.ObjectType">ViewItem.ObjectType</see> property.</param>
+      <param name="model">An <see cref="T:DevExpress.ExpressApp.Model.IModelActionContainerViewItem"/> object that represents the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s Views | &lt;DetailView&gt; | Items | ActionContainerViewItem node that defines the current View Item.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem.Actions">
+      <summary>
+        <para>Provides access to a collection of <see href="https://docs.devexpress.com/eXpressAppFramework/112622/ui-construction/controllers-and-actions/actions">Actions</see> which are displayed by the ASP.NET Core Blazor <see href="https://docs.devexpress.com/eXpressAppFramework/112610/ui-construction/action-containers">Action Container</see> View Item.</para>
+      </summary>
+      <value>An object that represents a ReadOnlyCollection&lt;<see cref="T:DevExpress.ExpressApp.Actions.ActionBase"/>&gt; collection that contains Actions of the current ASP.NET Core Blazor Action Container View Item.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem.BeginUpdate">
+      <summary>
+        <para>Prevents the View Item’s <see href="https://docs.devexpress.com/eXpressAppFramework/112610/ui-construction/action-containers">Action Container</see> control from being updated until the <see cref="M:DevExpress.ExpressApp.Editors.ActionContainerViewItem.EndUpdate">ActionContainerViewItem.EndUpdate</see> method is called.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem.Clear">
+      <summary>
+        <para>Clears the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem"/>‘s [Action Container](xref:11261</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem.ContainerId">
+      <summary>
+        <para>Specifies the ASP.NET Core Blazor Action Container View Item’s <see href="https://docs.devexpress.com/eXpressAppFramework/112610/ui-construction/action-containers">Action Container</see> identifier.</para>
+      </summary>
+      <value>A string value that represents the ASP.NET Core Blazor Action Container View Item’s <see href="https://docs.devexpress.com/eXpressAppFramework/112610/ui-construction/action-containers">Action Container</see> identifier.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem.EndUpdate">
+      <summary>
+        <para>Unlocks the View Item’s <see href="https://docs.devexpress.com/eXpressAppFramework/112610/ui-construction/action-containers">Action Container</see> control after a call to the <see cref="M:DevExpress.ExpressApp.Editors.ActionContainerViewItem.BeginUpdate">ActionContainerViewItem.BeginUpdate</see> method and causes an immediate update.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.BlazorActionContainerViewItem.Register(DevExpress.ExpressApp.Actions.ActionBase)">
+      <summary>
+        <para>Adds a specified <see href="https://docs.devexpress.com/eXpressAppFramework/112622/ui-construction/controllers-and-actions/actions">Action</see> to an ASP.NET Core Blazor <see href="https://docs.devexpress.com/eXpressAppFramework/112610/ui-construction/action-containers">Action Container</see> View Item’s <see cref="P:DevExpress.ExpressApp.Editors.ActionContainerViewItem.Actions">ActionContainerViewItem.Actions</see> collection and creates its component.</para>
+      </summary>
+      <param name="action">An <see cref="T:DevExpress.ExpressApp.Actions.ActionBase"/> object that represents the Action to be registered within the current ASP.NET Core Blazor Action Container View Item.</param>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Editors.BlazorPropertyEditorBase">
+      <summary>
+        <para>A base class for Property Editors that use DevExpress ASP.NET Core Blazor controls.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.BlazorPropertyEditorBase.ComponentModel">
+      <summary>
+        <para>Returns an IComponentModel descendant that wraps properties and events of a corresponding <see href="https://docs.devexpress.com/Blazor/401156/components/data-editors">ASP.NET Core Blazor Editor</see>.</para>
+      </summary>
+      <value>A <see href="https://docs.devexpress.com/eXpressAppFramework/402189/ui-construction/view-items-and-property-editors/property-editors/implement-a-property-editor-based-on-custom-components-blazor#component-model">component model</see> of an <see href="https://docs.devexpress.com/Blazor/401156/components/data-editors">ASP.NET Core Blazor Editor</see>.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.BlazorPropertyEditorBase.SupportInlineEdit">
+      <summary>
+        <para>Specifies whether the Property Editor is displayed in read-only mode when its used for in-line editing in a Grid List Editor.</para>
+      </summary>
+      <value>true to display the Property editor in edit mode; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor">
+      <summary>
+        <para><see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see> that can be used in XAF ASP.NET Core Blazor applications to display <see href="https://docs.devexpress.com/eXpressAppFramework/112611/ui-construction/views">List Views</see> in a UI.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.#ctor(DevExpress.ExpressApp.Model.IModelListView)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor"/> class with specified settings.</para>
+      </summary>
+      <param name="model">An object that represents the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s node. This object contains information on the View that will use the instantiated <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.ApplyModel">
+      <summary>
+        <para>Updates the current List Editor’s state in accordance with the information stored in the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.BeginUpdate">
+      <summary>
+        <para>Prevents the DxGridListEditor from being updated until the <see cref="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.EndUpdate"/> method is called.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.Columns">
+      <summary>
+        <para>Provides access to grid columns.</para>
+      </summary>
+      <value>A collection of grid columns.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.CustomizeViewItemControl``1(DevExpress.ExpressApp.Controller,System.Action{``0})">
+      <summary>
+        <para>Accesses the DxGridListEditor’s Property Editors and allows to customize them.</para>
+      </summary>
+      <param name="controller">The controller.</param>
+      <param name="customizeControl">The customization function.</param>
+      <typeparam name="T">The editor type.</typeparam>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.Dispose">
+      <summary>
+        <para>Releases all resources the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor"/> uses.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.EndUpdate">
+      <summary>
+        <para>Unlocks the DxGridListEditor after a call to the <see cref="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.BeginUpdate"/> method and causes an immediate update.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.FocusedObject">
+      <summary>
+        <para>Returns the focused object.</para>
+      </summary>
+      <value>The focused object.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.GetGridAdapter">
+      <summary>
+        <para>Provides access to a data grid adapter.</para>
+      </summary>
+      <returns>A data grid adapter.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.GetSelectedObjects">
+      <summary>
+        <para>Returns a collection of selected objects.</para>
+      </summary>
+      <returns>A collection of the selected objects.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.Refresh">
+      <summary>
+        <para>Refreshes the bound data source of the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor"/>‘s control.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.RemoveColumn(DevExpress.ExpressApp.Editors.ColumnWrapper)">
+      <summary>
+        <para>Removes a specific column from the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor"/>.</para>
+      </summary>
+      <param name="column">A ColumnWrapper object that specifies a column to remove.</param>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.RowClickMode">
+      <summary>
+        <para>Specifies the action that opens the Detail View: a click or double-click on a DxGrid row.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.ExpressApp.Blazor.Editors.RowClickMode"/> enumeration value that specifies the action that opens the Detail View from the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor"/>.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.SaveModel">
+      <summary>
+        <para>Saves runtime customizations a user makes to the grid control to the <see href="https://docs.devexpress.com/eXpressAppFramework/112579/ui-construction/application-model-ui-settings-storage">Application Model</see> differences.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.SelectionType">
+      <summary>
+        <para>Returns the selection type supported by the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor"/>.</para>
+      </summary>
+      <value>A value that indicates the selection type supported by the current List Editor.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.SelectObject(System.Object)">
+      <summary>
+        <para>Selects a specified object.</para>
+      </summary>
+      <param name="objectToSelect">An object to select.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.SelectObjects(System.Collections.IEnumerable)">
+      <summary>
+        <para>Selects a set of specified objects.</para>
+      </summary>
+      <param name="objectsToSelect">A collection of objects to select.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.SetSelectedObjects(System.Collections.IEnumerable)">
+      <summary>
+        <para>Deselects all previously selected objects and selects a set of specified objects.</para>
+      </summary>
+      <param name="objectsToSelect">A collection of objects to select.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.UnselectAll">
+      <summary>
+        <para>Deselects all the selected objects.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.UnselectObject(System.Object)">
+      <summary>
+        <para>Deselects a specified object.</para>
+      </summary>
+      <param name="objectToUnselect">An object to deselect.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor.UnselectObjects(System.Collections.IEnumerable)">
+      <summary>
+        <para>Deselects a set of specified objects.</para>
+      </summary>
+      <param name="objectsToUnselect">A collection of objects to deselect.</param>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Blazor.Editors.Grid">
+      <summary>
+        <para>Contains classes for a Grid List Editor used in XAF ASP.NET Core Blazor UI applications to display data in List Views.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor">
+      <summary>
+        <para>[Maintenance Mode] <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see> used in XAF ASP.NET Core Blazor UI applications to display <see href="https://docs.devexpress.com/eXpressAppFramework/112611/ui-construction/views">List Views</see> in a UI.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.#ctor(DevExpress.ExpressApp.Model.IModelListView)">
+      <summary>
+        <para>Initializes a new instance of the GridListEditor class with specified settings.</para>
+      </summary>
+      <param name="model">An object that represents the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s node. This object contains information on the View that will use the instantiated <see href="https://docs.devexpress.com/eXpressAppFramework/113189/ui-construction/list-editors">List Editor</see>.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.ApplyModel">
+      <summary>
+        <para>Updates the current List Editor’s state in accordance with the information stored in the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.BeginUpdate">
+      <summary>
+        <para>Prevents the GridListEditor from being updated until the GridListEditor.EndUpdate method is called.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.Columns">
+      <summary>
+        <para>Provides access to grid columns.</para>
+      </summary>
+      <value>A collection of grid columns.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.Dispose">
+      <summary>
+        <para>Releases all resources the GridListEditor uses.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.Disposed">
+      <summary>
+        <para>Occurs before a GridListEditor is disposed of.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.EndUpdate">
+      <summary>
+        <para>Unlocks the GridListEditor after a call to the GridListEditor.BeginUpdate method and causes an immediate update.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.GetDataGridAdapter">
+      <summary>
+        <para>Provides access to a data grid adapter.</para>
+      </summary>
+      <returns>A data grid adapter.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.GetDataGridAdapter``1">
+      <summary>
+        <para>Provides access to a data grid adapter for specified business objects.</para>
+      </summary>
+      <typeparam name="T">A type of business objects for which you want to get a grid adapter.</typeparam>
+      <returns>A data grid adapter.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.GetSelectedObjects">
+      <summary>
+        <para>Returns a collection of selected objects.</para>
+      </summary>
+      <returns>A collection of the selected objects.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.KeyMember">
+      <summary>
+        <para>Gets the key member’s name.</para>
+      </summary>
+      <value>A member name.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.Refresh">
+      <summary>
+        <para>Refreshes the bound data source of the GridListEditor‘s control.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.Refreshed">
+      <summary>
+        <para>Occurs after the GridListEditor‘s bound data source was refreshed.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.RemoveColumn(DevExpress.ExpressApp.Editors.ColumnWrapper)">
+      <summary>
+        <para>Removes a specific column from the GridListEditor.</para>
+      </summary>
+      <param name="column">A ColumnWrapper object that specifies a column to remove.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.SaveModel">
+      <summary>
+        <para>Saves runtime customizations a user makes to the grid control to the <see href="https://docs.devexpress.com/eXpressAppFramework/112579/ui-construction/application-model-ui-settings-storage">Application Model</see> differences.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.SelectionType">
+      <summary>
+        <para>Returns the selection type supported by the GridListEditor.</para>
+      </summary>
+      <value>A value that indicates the selection type supported by the current List Editor.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.SelectObject(System.Object)">
+      <summary>
+        <para>Selects a specified object.</para>
+      </summary>
+      <param name="objectToSelect">An object to select.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.SelectObjects(System.Collections.IEnumerable)">
+      <summary>
+        <para>Selects a set of specified objects.</para>
+      </summary>
+      <param name="objectsToSelect">A collection of objects to select.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.SetSelectedObjects(System.Collections.IEnumerable)">
+      <summary>
+        <para>Deselects all previously selected objects and selects a set of specified objects.</para>
+      </summary>
+      <param name="objectsToSelect">A collection of objects to select.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.UnselectAll">
+      <summary>
+        <para>Deselects all the selected objects.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.UnselectObject(System.Object)">
+      <summary>
+        <para>Deselects a specified object.</para>
+      </summary>
+      <param name="objectToUnselect">An object to deselect.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor.UnselectObjects(System.Collections.IEnumerable)">
+      <summary>
+        <para>Deselects a set of specified objects.</para>
+      </summary>
+      <param name="objectsToUnselect">A collection of objects to deselect.</param>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Editors.IDxGridAdapter">
+      <summary>
+        <para>Declares API for an adapter that provides access to a grid list editor in runtime.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.IDxGridAdapter.GridCommandColumnModel">
+      <summary>
+        <para>Return an object with a list editor’s <see cref="T:DevExpress.Blazor.DxGridCommandColumn">command column</see> settings.</para>
+      </summary>
+      <value>An object that exposes DxGrid command column settings.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.IDxGridAdapter.GridDataColumnModels">
+      <summary>
+        <para>Provides access to list editor column settings.</para>
+      </summary>
+      <value>A collection of DxGridDataColumnModel objects. Each object exposes DxGrid data column settings.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.IDxGridAdapter.GridModel">
+      <summary>
+        <para>Provides access to the DxGridListEditor inner component (DxGrid) settings.</para>
+      </summary>
+      <value>An object that exposes DxGrid settings.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.IDxGridAdapter.GridSelectionColumnModel">
+      <summary>
+        <para>Provides access to the selection column’s settings.</para>
+      </summary>
+      <value>The selection column’s settings.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Editors.IDxGridInstanceProvider">
+      <summary>
+        <para>Exposes API used to access the DxGrid instance at runtime.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.ExpressApp.Blazor.Editors.IDxGridInstanceProvider.ComponentCaptured">
+      <summary>
+        <para>Allows you to access the DxGrid instance.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.IDxGridInstanceProvider.GridInstance">
+      <summary>
+        <para>Provides access to the DxGrid’s properties and methods.</para>
+      </summary>
+      <value>An object that exposes the DxGrid’s properties and methods.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel">
+      <summary>
+        <para>Exposes members of the underlying <see cref="T:DevExpress.Blazor.DxGrid">DxGrid</see> component.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.#ctor">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.AllowGroup">
+      <summary>
+        <para>Specifies whether users can group grid data.</para>
+      </summary>
+      <value>true to allow users to group grid data; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.AllowSelectRowByClick">
+      <summary>
+        <para>Specifies whether users can select and deselect rows by mouse clicks.</para>
+      </summary>
+      <value>true to allow users to select and deselect rows by mouse clicks; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.AllowSort">
+      <summary>
+        <para>Specifies whether users can sort grid data.</para>
+      </summary>
+      <value>true to allow users to sort grid data; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.AutoCollapseDetailRow">
+      <summary>
+        <para>Specifies whether an expanded detail row should be automatically collapsed when a user expands another detail row.</para>
+      </summary>
+      <value>true to automatically collapse an expanded detail row; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.AutoExpandAllGroupRows">
+      <summary>
+        <para>Specifies whether to expand all group rows automatically when the grid loads data or users interact with the grid.</para>
+      </summary>
+      <value>true to expand all group rows; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ColumnFooterTemplate">
+      <summary>
+        <para>Specifies a common template used to display all footer cells in the grid.</para>
+      </summary>
+      <value>The template for all footer cells.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ColumnGroupFooterTemplate">
+      <summary>
+        <para>Specifies a common template for all group footer cells in the Grid.</para>
+      </summary>
+      <value>The template for all group footer cells.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ColumnHeaderCaptionTemplate">
+      <summary>
+        <para>Specifies a common template used to display captions of all column headers in the Grid.</para>
+      </summary>
+      <value>The template for all column headers.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ColumnResizeMode">
+      <summary>
+        <para>Specifies whether and how users can resize grid columns.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.GridColumnResizeMode"/> enumeration value. The default is Disabled.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.Columns">
+      <summary>
+        <para>Allows you to add Grid columns.</para>
+      </summary>
+      <value>A template (<see cref="T:Microsoft.AspNetCore.Components.RenderFragment">render fragment</see>) that allows you to declare Grid columns.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CssClass">
+      <summary>
+        <para>Specifies the name of a CSS class applied to the grid.</para>
+      </summary>
+      <value>The CSS class name.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomGroup">
+      <summary>
+        <para>Enables you to implement custom logic used to group data in the grid.</para>
+      </summary>
+      <value>Provides access to grid data.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomizeCellDisplayText">
+      <summary>
+        <para>Allows you to customize the text displayed within a cell.</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomizeDataRowEditor">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.CustomizeDataRowEditor</para>
+      </summary>
+      <value>Stores information for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomizeEditModel">
+      <summary>
+        <para>Allows you to create a custom edit model or customize an automatically-generated edit model.</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomizeElement">
+      <summary>
+        <para>Allows you to color grid cells and rows according to their values.</para>
+      </summary>
+      <value>An object that defines data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomizeFilterMenu">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.CustomizeFilterMenu</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomizeFilterRowEditor">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.CustomizeFilterRowEditor</para>
+      </summary>
+      <value>Stores information for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomizeGroupValueDisplayText">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.CustomizeGroupValueDisplayText</para>
+      </summary>
+      <value>An object that contains data for this event.’</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomizeSummaryDisplayText">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.CustomizeSummaryDisplayText</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomSort">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.CustomSort</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomSummary">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.CustomSummary</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.CustomValidators">
+      <summary>
+        <para>Allows you to declare custom validator components.</para>
+      </summary>
+      <value>A template (<see cref="T:Microsoft.AspNetCore.Components.RenderFragment">render fragment</see>) that allows you to declare custom validators.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.Data">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.Data</para>
+      </summary>
+      <value>Supplies Grid data.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.DataColumnCellDisplayTemplate">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.DataColumnCellDisplayTemplate</para>
+      </summary>
+      <value>The template for all data column cells.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.DataColumnCellEditTemplate">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.DataColumnCellEditTemplate</para>
+      </summary>
+      <value>The common template for data column edit cells.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.DataColumnFilterMenuTemplate">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.DataColumnFilterMenuTemplate</para>
+      </summary>
+      <value>The template content.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.DataColumnFilterRowCellTemplate">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.DataColumnFilterRowCellTemplate</para>
+      </summary>
+      <value>The common template for filter row cells.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.DataColumnGroupRowTemplate">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.DataColumnGroupRowTemplate</para>
+      </summary>
+      <value>The template for all group rows.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.DataItemDeleting">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.DataItemDeleting</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.DetailExpandButtonDisplayMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.DetailExpandButtonDisplayMode</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.GridDetailExpandButtonDisplayMode"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.DetailRowDisplayMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.DetailRowDisplayMode</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.GridDetailRowDisplayMode"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.DetailRowTemplate">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.DetailRowTemplate</para>
+      </summary>
+      <value>The detail row template.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.EditCanceling">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.EditCanceling</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.EditFormButtonsVisible">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.EditFormButtonsVisible</para>
+      </summary>
+      <value>true if the edit form contains the Save and Cancel buttons; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.EditFormTemplate">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.EditFormTemplate</para>
+      </summary>
+      <value>The edit form template.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.EditMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.EditMode</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.GridEditMode"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.EditModelSaving">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.EditModelSaving</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.EditNewRowPosition">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.EditNewRowPosition</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.GridEditNewRowPosition"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.EditorRenderMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.EditorRenderMode</para>
+      </summary>
+      <value>The render mode.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.EditStart">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.EditStart</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.FilterCriteriaChanged">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.FilterCriteriaChanged</para>
+      </summary>
+      <value>An event handler delegate.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.FocusedRowChanged">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.FocusedRowChanged</para>
+      </summary>
+      <value>An event handler delegate.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.FocusedRowEnabled">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.FocusedRowEnabled</para>
+      </summary>
+      <value>true to enable the focused row; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.FooterDisplayMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.FooterDisplayMode</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.GridFooterDisplayMode"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.GroupFooterDisplayMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.GroupFooterDisplayMode</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.GridGroupFooterDisplayMode"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.GroupSummary">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.GroupSummary</para>
+      </summary>
+      <value>A collection of group summary items (UI fragment) that the browser renders in the grid’s markup.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.KeyboardNavigationEnabled">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.KeyboardNavigationEnabled</para>
+      </summary>
+      <value>true if keyboard navigation is enabled; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.KeyFieldName">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.KeyFieldName</para>
+      </summary>
+      <value>The key field’s name.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.KeyFieldNames">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.KeyFieldNames</para>
+      </summary>
+      <value>The list of key field names.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.LayoutAutoLoading">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.LayoutAutoLoading</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.LayoutAutoSaving">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.LayoutAutoSaving</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PageIndex">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PageIndex</para>
+      </summary>
+      <value>A zero-based value that specifies the active page index.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PageIndexChanged">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PageIndexChanged</para>
+      </summary>
+      <value>A new value of the PageIndex property.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PagerAutoHideNavButtons">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PagerAutoHideNavButtons</para>
+      </summary>
+      <value>true to hide navigation buttons when all numeric buttons are displayed; false to display navigation buttons in addition to numeric buttons.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PagerNavigationMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PagerNavigationMode</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.PagerNavigationMode"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PagerPosition">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PagerPosition</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.GridPagerPosition"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PagerSwitchToInputBoxButtonCount">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PagerSwitchToInputBoxButtonCount</para>
+      </summary>
+      <value>Specifies the number of pages when the pager switches to the input box. The default is 11.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PagerVisible">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PagerVisible</para>
+      </summary>
+      <value>true to display the pager; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PagerVisibleNumericButtonCount">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PagerVisibleNumericButtonCount</para>
+      </summary>
+      <value>Specifies the maximum number of numeric buttons displayed in the pager. The default is 5.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PageSize">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PageSize</para>
+      </summary>
+      <value>The number of rows displayed on a page.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PageSizeChanged">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PageSizeChanged</para>
+      </summary>
+      <value>A new PageSize property value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PageSizeSelectorAllRowsItemVisible">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PageSizeSelectorAllRowsItemVisible</para>
+      </summary>
+      <value>true to display the All item; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PageSizeSelectorItems">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PageSizeSelectorItems</para>
+      </summary>
+      <value>Items available in the page size selector.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PageSizeSelectorVisible">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PageSizeSelectorVisible</para>
+      </summary>
+      <value>true to display the page size selector; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PopupEditFormCssClass">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PopupEditFormCssClass</para>
+      </summary>
+      <value>A CSS class name.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.PopupEditFormHeaderText">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.PopupEditFormHeaderText</para>
+      </summary>
+      <value>Header text. When not specified, predefined text is displayed.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.RowClick">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.RowClick</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.RowDoubleClick">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.RowDoubleClick</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SearchBoxInputDelay">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SearchBoxInputDelay</para>
+      </summary>
+      <value>The time interval, in milliseconds.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SearchBoxNullText">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SearchBoxNullText</para>
+      </summary>
+      <value>A string value that specifies the prompt text.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SearchBoxTemplate">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SearchBoxTemplate</para>
+      </summary>
+      <value>The search box template.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SearchText">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SearchText</para>
+      </summary>
+      <value>The search text.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SearchTextChanged">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SearchTextChanged</para>
+      </summary>
+      <value>An event handler delegate.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SearchTextParseMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SearchTextParseMode</para>
+      </summary>
+      <value>The text parse mode.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SelectAllCheckboxMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SelectAllCheckboxMode</para>
+      </summary>
+      <value>The selection mode.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SelectedDataItem">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SelectedDataItem</para>
+      </summary>
+      <value>The data item.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SelectedDataItemChanged">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SelectedDataItemChanged</para>
+      </summary>
+      <value>The data item that corresponds to the newly selected row.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SelectedDataItems">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SelectedDataItems</para>
+      </summary>
+      <value>A collection of data items.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SelectedDataItemsChanged">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SelectedDataItemsChanged</para>
+      </summary>
+      <value>A collection that stores information about selection changes.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SelectionMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SelectionMode</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.Blazor.GridSelectionMode"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ShowAllRows">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.ShowAllRows</para>
+      </summary>
+      <value>true to display all rows on one page; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ShowAllRowsChanged">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.ShowAllRowsChanged</para>
+      </summary>
+      <value>The new ShowAllRows property value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ShowFilterRow">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.ShowFilterRow</para>
+      </summary>
+      <value>true to display the filter row; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ShowGroupedColumns">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.ShowGroupedColumns</para>
+      </summary>
+      <value>true to display grouped columns in the data area; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ShowGroupPanel">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.ShowGroupPanel</para>
+      </summary>
+      <value>true to show the Group Panel; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ShowSearchBox">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.ShowSearchBox</para>
+      </summary>
+      <value>true to display the search box; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.SizeMode">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.SizeMode</para>
+      </summary>
+      <value>The size mode. If the property is not specified (the value is null), the size is determined by the <see cref="P:DevExpress.Blazor.Configuration.GlobalOptions.SizeMode"/> global option.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.TextWrapEnabled">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.TextWrapEnabled</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.TotalSummary">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.TotalSummary</para>
+      </summary>
+      <value>A collection of total summary items that the browser renders in the grid’s markup.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.UnboundColumnData">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.UnboundColumnData</para>
+      </summary>
+      <value>An object that contains data for this event.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.ValidationEnabled">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.ValidationEnabled</para>
+      </summary>
+      <value>true if input validation is enabled; otherwise, false</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Editors.Models.DxGridModel.VirtualScrollingEnabled">
+      <summary>
+        <para>DevExpress.Blazor.DxGrid.VirtualScrollingEnabled</para>
+      </summary>
+      <value>true to enable vertical virtual scrolling; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Editors.RowClickMode">
+      <summary>
+        <para>Lists user actions that open a Detail View opens from a <see cref="T:DevExpress.Blazor.DxGrid"/>.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.ExpressApp.Blazor.Editors.RowClickMode.ProcessOnDouble">
+      <summary>
+        <para>A double click on a <see cref="T:DevExpress.Blazor.DxGrid"/> row opens the Detail View.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.ExpressApp.Blazor.Editors.RowClickMode.ProcessOnSingle">
+      <summary>
+        <para>A single click on a <see cref="T:DevExpress.Blazor.DxGrid"/> row opens the Detail View.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.ExpressApp.Blazor.Editors.RowClickMode.SelectOnSingleProcessOnDouble">
+      <summary>
+        <para>A double click on a <see cref="T:DevExpress.Blazor.DxGrid"/> row opens the Detail View, while a single click selects the row.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Editors.StaticTextViewItem">
+      <summary>
+        <para>The Static Text <see href="https://docs.devexpress.com/eXpressAppFramework/112612/ui-construction/view-items-and-property-editors">View Item</see> used in XAF ASP.NET Core Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.StaticTextViewItem.#ctor(System.Type,DevExpress.ExpressApp.Model.IModelStaticText)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.StaticTextViewItem"/> class with specified settings.</para>
+      </summary>
+      <param name="objectType">A <see cref="T:System.Type"/> object that is the type of the object for which the current View Item’s <see href="https://docs.devexpress.com/eXpressAppFramework/112611/ui-construction/views">View</see> is created. This value is assigned to the <see cref="P:DevExpress.ExpressApp.Editors.ViewItem.ObjectType">ViewItem.ObjectType</see> property.</param>
+      <param name="model">An <see cref="T:DevExpress.ExpressApp.Model.IModelStaticText"/> object that is the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s Views | &lt;DetailView&gt; | Items | DetailViewItem node that defines the current View Item. This value is assigned to the <see cref="P:DevExpress.ExpressApp.Editors.StaticText.Model">StaticText.Model</see> property.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Editors.StaticTextViewItem.StaticTextComponentAdapter.#ctor(DevExpress.ExpressApp.Blazor.Components.Models.StaticTextComponentModel)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.StaticTextViewItem.StaticTextComponentAdapter"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Blazor.Services">
+      <summary>
+        <para>Contains service classes used in XAF ASP.NET Core Blazor UI applications.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Services.ExceptionService">
+      <summary>
+        <para>A service that provides access to a custom exception handling.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Services.ExceptionService.#ctor(Microsoft.Extensions.Logging.ILogger{DevExpress.ExpressApp.Blazor.Services.ExceptionService})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.Services.ExceptionService"/> class with specified settings.</para>
+      </summary>
+      <param name="logger">The logger to which the processed exceptions are written.</param>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Services.ExceptionService.HandleException(System.Exception)">
+      <summary>
+        <para>Processes all XAF-handled exceptions if the <see cref="T:DevExpress.ExpressApp.Blazor.Services.ExceptionService"/> service is registered.</para>
+      </summary>
+      <param name="exception">An exception to wrap.</param>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Services.ISplitLayoutSizeService">
+      <summary>
+        <para>Allows you to set the relative size of the List View in split layout.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Services.IXafApplicationProvider">
+      <summary>
+        <para>Provides access to an ASP.NET Core Blazor XAF application instance.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Services.IXafApplicationProvider.GetApplication">
+      <summary>
+        <para>Returns an ASP.NET Core Blazor XAF application instance.</para>
+      </summary>
+      <returns>An ASP.NET Core Blazor XAF application instance.</returns>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Services.IXafCultureInfoService">
+      <summary>
+        <para>Declares members of a localization service.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Services.IXafCultureInfoService.CurrentCulture">
+      <summary>
+        <para>Returns the currect culture.</para>
+      </summary>
+      <value>The current culture information.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Services.IXafCultureInfoService.CurrentUICulture">
+      <summary>
+        <para>Returns the current UI culture.</para>
+      </summary>
+      <value>The current UI culture information.</value>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Services.IXafCultureInfoService.SetCultureAsync(System.String,System.String)">
+      <summary>
+        <para>Saves the specified culture in CookieRequestCultureProvider.DefaultCookie and reloads the page.</para>
+      </summary>
+      <param name="culture">A new culture.</param>
+      <param name="uiCulture">A new UI culture.</param>
+      <returns>A task that sets a new culture.</returns>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.Services.IXafCultureInfoService.SetCultureAsync(System.String)">
+      <summary>
+        <para>Saves the specified culture in CookieRequestCultureProvider.DefaultCookie and reloads the page.</para>
+      </summary>
+      <param name="culture">A new culture.</param>
+      <returns>A task that sets a new culture.</returns>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Services.IXafCultureInfoService.SupportedCultures">
+      <summary>
+        <para>Returns a list of supported cultures. These cultures are defined in the Languages section in appsettings.json.</para>
+      </summary>
+      <value>A list of supported UI cultures.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Services.IXafCultureInfoService.SupportedUICultures">
+      <summary>
+        <para>Returns a list of supported UI cultures. These cultures are defined in the Languages section in appsettings.json.</para>
+      </summary>
+      <value>A list of supported UI cultures.</value>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Blazor.SystemModule">
+      <summary>
+        <para>Contains classes used by default in XAF ASP.NET Core Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.BlazorExportController">
+      <summary>
+        <para>The ASP.NET Core Blazor-specific descendant of the <see cref="T:DevExpress.ExpressApp.SystemModule.ExportController"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.SystemModule.BlazorExportController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.SystemModule.BlazorExportController"/> class.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.ExpressApp.Blazor.SystemModule.BlazorExportController.CustomizeGridExport">
+      <summary>
+        <para>Fires before the export operation.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.ExpressApp.Blazor.SystemModule.BlazorExportController.GridExported">
+      <summary>
+        <para>Fires when the export operation finishes.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.BlazorModificationsController">
+      <summary>
+        <para>Inherits from the <see cref="T:DevExpress.ExpressApp.SystemModule.ModificationsController"/> to implement ASP.NET Core Blazor specific behavior.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.SystemModule.BlazorModificationsController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.SystemModule.BlazorModificationsController"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.BlazorModificationsController.ShowSaveAndCloseActionInDetailView">
+      <summary>
+        <para>Sets the Save and Close Action’s default visibility in Detail Views.</para>
+      </summary>
+      <value>true to display the action; otherwise false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.BlazorModificationsController.ShowSaveAndNewActionInDetailView">
+      <summary>
+        <para>Sets the Save and New Action’s default visibility in Detail Views.</para>
+      </summary>
+      <value>true to display the action; otherwise false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.BlazorModificationsController.ShowSaveButtonsInPopup">
+      <summary>
+        <para>Sets the Save and New Action’s default visibility in Popup Detail Views.</para>
+      </summary>
+      <value>true to display the action; otherwise false.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.BlazorNewObjectViewController">
+      <summary>
+        <para>A <see cref="T:DevExpress.ExpressApp.SystemModule.NewObjectViewController"/> descendant that allows you to customize the New Action in Detail Views.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.SystemModule.BlazorNewObjectViewController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.SystemModule.BlazorNewObjectViewController"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.BlazorNewObjectViewController.ShowNewObjectActionInDetailView">
+      <summary>
+        <para>Sets the New Action’s default visibility in Detail Views.</para>
+      </summary>
+      <value>true to display the action; otherwise false.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.CloseDetailViewController">
+      <summary>
+        <para>A <see cref="T:DevExpress.ExpressApp.ViewController"/> descendant that allows you to customize the Close Action in Detail Views.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.SystemModule.CloseDetailViewController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.SystemModule.CloseDetailViewController"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.CloseDetailViewController.CloseAction">
+      <summary>
+        <para>Stores settings of the Close Action.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.ExpressApp.Actions.SimpleAction"/> object that is the Close Action.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.CloseDetailViewController.ShowCloseActionInDetailView">
+      <summary>
+        <para>Sets the Close Action’s default visibility in Detail Views.</para>
+      </summary>
+      <value>true to display the action; otherwise false.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.GridExportEventArgs">
+      <summary>
+        <para>Stores data for the <see cref="E:DevExpress.ExpressApp.Blazor.SystemModule.BlazorExportController.CustomizeGridExport"/> and <see cref="E:DevExpress.ExpressApp.Blazor.SystemModule.BlazorExportController.GridExported"/> events.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.SystemModule.GridExportEventArgs.#ctor(DevExpress.XtraPrinting.ExportTarget,DevExpress.Blazor.GridExportOptions)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.SystemModule.GridExportEventArgs"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.GridExportEventArgs.ExportTarget">
+      <summary>
+        <para>Returns the target format of the exported document.</para>
+      </summary>
+      <value>The target format.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.GridExportEventArgs.Options">
+      <summary>
+        <para>Returns an object that specifies export options.</para>
+      </summary>
+      <value>Export options.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.IModelActionBlazor">
+      <summary>
+        <para>Used to extend the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s <see cref="T:DevExpress.ExpressApp.Model.IModelAction"/> node.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelActionBlazor.AdaptivePriority">
+      <summary>
+        <para>Specifies the Action’s priority with regards to the adaptive and responsive layout used in the <see href="https://docs.devexpress.com/eXpressAppFramework/113153/application-shell-and-base-infrastructure/themes/asp-net-web-application-appearance">new web UI</see>. Actions with a lower AdaptivePriority value remain visible when the browser window shrinks, while Actions with a higher priority become hidden.</para>
+      </summary>
+      <value>An integer value that specifies the Action’s priority with regards to the adaptive and responsive layout.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelActionBlazor.ConfirmUnsavedChanges">
+      <summary>
+        <para>Specifies whether or not a confirmation dialog is displayed by a browser when there are unsaved changes and a user executes the current Action.</para>
+      </summary>
+      <value>true, if a confirmation dialog is enabled; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelActionBlazor.CustomCSSClassName">
+      <summary>
+        <para>Specifies the name of the CSS class to be applied to the control that visualizes the current <see href="https://docs.devexpress.com/eXpressAppFramework/112622/ui-construction/controllers-and-actions/actions">Action</see>.</para>
+      </summary>
+      <value>A string which is the name of the custom CSS class.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.IModelColumnBlazor">
+      <summary>
+        <para>Implements the interface of a Grid column in Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelColumnBlazor.MinWidth">
+      <summary>
+        <para>Specifies the minimum width of a column, in pixels.</para>
+      </summary>
+      <value>The minimum width of a column, in pixels.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.IModelListViewBlazor">
+      <summary>
+        <para>Used to extend the <see href="https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works">Application Model</see>‘s Views node.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelListViewBlazor.EnableColumnChooser">
+      <summary>
+        <para>Specifies whether the column chooser is enabled.</para>
+      </summary>
+      <value>true if the column chooser is enabled; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelListViewBlazor.InlineEditMode">
+      <summary>
+        <para>Specifies the way cell values are edited.</para>
+      </summary>
+      <value>An <see cref="T:DevExpress.ExpressApp.Blazor.SystemModule.InlineEditMode"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelListViewBlazor.PageIndex">
+      <summary>
+        <para>Specifies the zero-based index of the currently selected page.</para>
+      </summary>
+      <value>An integer value specifying the zero-based index of the currently selected page.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelListViewBlazor.PageSize">
+      <summary>
+        <para>Specifies the number of records displayed on a List Editor page.</para>
+      </summary>
+      <value>A number of records displayed on a List Editor page.</value>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelListViewBlazor.ShowSelectionColumn">
+      <summary>
+        <para>Specifies whether selection checkboxes are displayed for the records in the <see cref="T:DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor"/>.</para>
+      </summary>
+      <value>true, if selection checkboxes are displayed for the records; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.IModelTabbedGroupBlazor">
+      <summary>
+        <para>Extends <see cref="T:DevExpress.ExpressApp.Model.IModelTabbedGroup"/> with properties specific to ASP.NET Core Blazor applications.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelTabbedGroupBlazor.ActiveTabIndex">
+      <summary>
+        <para>Specifies the selected tab’s index.</para>
+      </summary>
+      <value>The selected tab’s index.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.IModelViewLayoutElementBlazor">
+      <summary>
+        <para>Used to extend the <see cref="T:DevExpress.ExpressApp.Model.IModelViewLayoutElement"/> interface.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.IModelViewLayoutElementBlazor.CustomCSSClassName">
+      <summary>
+        <para>Specifies a custom CSS class name applied to the layout item or group.</para>
+      </summary>
+      <value>A custom CSS class name.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.InlineEditMode">
+      <summary>
+        <para>Lists values that specify how users edit list view data.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.ExpressApp.Blazor.SystemModule.InlineEditMode.EditForm">
+      <summary>
+        <para>The list view displays inline editors instead of the edited data row.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.ExpressApp.Blazor.SystemModule.InlineEditMode.Inline">
+      <summary>
+        <para>The list view displays inline editors instead of the edited data row.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.ExpressApp.Blazor.SystemModule.InlineEditMode.PopupEditForm">
+      <summary>
+        <para>The list view displays the edit form in a pop-up window.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.ListEditorInplaceEditController">
+      <summary>
+        <para>A <see cref="T:DevExpress.ExpressApp.ViewController"/> descendant that allows you to customize inplace editing behavior.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.SystemModule.ListEditorInplaceEditController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.SystemModule.ListEditorInplaceEditController"/> class.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.PopupWindowTemplateClosingController">
+      <summary>
+        <para>A <see cref="T:DevExpress.ExpressApp.WindowController"/> descendant that allows you to control the Close button visibility in a pop-up window.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.SystemModule.PopupWindowTemplateClosingController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.SystemModule.PopupWindowTemplateClosingController"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.PopupWindowTemplateClosingController.ShowCloseButtonInPopup">
+      <summary>
+        <para>Sets the Close button’s default visibility in pop-up windows.</para>
+      </summary>
+      <value>true to display the button; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.SystemModule.PopupWindowTemplateSizeController">
+      <summary>
+        <para>A <see cref="T:DevExpress.ExpressApp.WindowController"/> descendant that allows you to control drag and resize settings of a pop-up window.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.ExpressApp.Blazor.SystemModule.PopupWindowTemplateSizeController.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.Blazor.SystemModule.PopupWindowTemplateSizeController"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.SystemModule.PopupWindowTemplateSizeController.AllowPopupDragAndResize">
+      <summary>
+        <para>Allows users to resize and drag pop-up windows.</para>
+      </summary>
+      <value>true to allow users to drag and resize pop-up windows; otherwise, false.</value>
+    </member>
+    <member name="N:DevExpress.ExpressApp.Blazor.Templates.Navigation">
+      <summary>
+        <para>Implements API for navigation components.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxAccordionAdapter">
+      <summary>
+        <para>Allows you to configure the <see cref="T:DevExpress.Blazor.DxAccordion"/> component.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxAccordionAdapter.Component">
+      <summary>
+        <para>Contains a reference to the <see cref="T:DevExpress.Blazor.DxAccordion"/> component.</para>
+      </summary>
+      <value>The Accordion instance.</value>
+    </member>
+    <member name="E:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxAccordionAdapter.ComponentCaptured">
+      <summary>
+        <para>Fires when the <see cref="P:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxAccordionAdapter.Component"/> property is populated with a reference to an Accordion.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxAccordionAdapter.ComponentModel">
+      <summary>
+        <para>Contains the <see href="https://docs.devexpress.com/eXpressAppFramework/402189/ui-construction/view-items-and-property-editors/property-editors/implement-a-property-editor-based-on-custom-components-blazor#component-model">component model</see> that you can use to modify properties of the Accordion.</para>
+      </summary>
+      <value>The Accordion model.</value>
+    </member>
+    <member name="T:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxTreeViewAdapter">
+      <summary>
+        <para>Allows you to configure the <see cref="T:DevExpress.Blazor.DxTreeView"/> component.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxTreeViewAdapter.Component">
+      <summary>
+        <para>Contains a reference to the <see cref="T:DevExpress.Blazor.DxTreeView"/> component.</para>
+      </summary>
+      <value>The TreeView instance.</value>
+    </member>
+    <member name="E:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxTreeViewAdapter.ComponentCaptured">
+      <summary>
+        <para>Fires when the <see cref="P:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxTreeViewAdapter.Component"/> property is populated with a reference to a TreeView.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.ExpressApp.Blazor.Templates.Navigation.DxTreeViewAdapter.ComponentModel">
+      <summary>
+        <para>Contains the <see href="https://docs.devexpress.com/eXpressAppFramework/402189/ui-construction/view-items-and-property-editors/property-editors/implement-a-property-editor-based-on-custom-components-blazor#component-model">component model</see> that you can use to modify properties of the TreeView.</para>
+      </summary>
+      <value>The TreeView model.</value>
+    </member>
+  </members>
+</doc>
